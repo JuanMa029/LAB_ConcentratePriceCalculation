@@ -1,0 +1,639 @@
+RazonSocial_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    rss_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    rss_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogo Maestro Razón Social"
+        Width: =1366
+        ZIndex: =2
+
+    rss_img_backRazonSoc As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =3
+
+    rss_btn_backRazonSoc As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(Geografia_Screen,ScreenTransition.UnCoverRight);
+            Reset(rss_txt_buscarNombre);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =4
+
+    rss_cnt_headerRazonSoc As groupContainer.manualLayoutContainer:
+        Height: =50
+        Width: =1366
+        Y: =175
+        ZIndex: =5
+
+        rss_btn_headerID As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="ID"
+            Width: =91
+            X: =246
+            ZIndex: =1
+
+        rss_btn_headerNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre"
+            Width: =608
+            X: =337
+            ZIndex: =2
+
+        rss_btn_headerEstatus As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Estatus"
+            X: =945
+            ZIndex: =3
+
+        rss_img_nuevo As image:
+            Height: =40
+            Image: =add
+            Width: =63
+            X: =1119
+            Y: =5
+            ZIndex: =5
+
+        rss_btn_nuevo As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewRazonS:true});
+            PressedFill: =Color.Transparent
+            Text: =""
+            Width: =63
+            X: =1119
+            Y: =5
+            ZIndex: =6
+
+    rss_cnt_dataRazonSoc As groupContainer.manualLayoutContainer:
+        Height: =490
+        Width: =1366
+        Y: =225
+        ZIndex: =6
+
+        rss_gal_dataRazonSoc As gallery.galleryVertical:
+            Height: =490
+            Items: |-
+                =SortByColumns(
+                    Filter(
+                        RazonSocial,
+                        StartsWith(
+                            NombreRazonSocial,
+                            rss_txt_buscarNombre.Text
+                        ) 
+                    ),
+                    "IdRazonSocial",
+                    SortOrder.Ascending
+                )
+            Layout: =Layout.Vertical
+            TemplateSize: =41
+            Width: =1366
+            ZIndex: =1
+
+            rss_txt_id As text:
+                Align: =Align.Center
+                Default: =ThisItem.IdRazonSocial
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =rss_btn_headerID.Width
+                X: =rss_btn_headerID.X
+                ZIndex: =1
+
+            rss_txt_nombre As text:
+                Align: =Align.Center
+                Default: =ThisItem.NombreRazonSocial
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =rss_btn_headerNombre.Width
+                X: =rss_btn_headerNombre.X
+                ZIndex: =2
+
+            rss_icn_estatus As circle:
+                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
+                Height: =30
+                OnSelect: =Select(Parent)
+                Width: =40
+                X: =1000
+                Y: =5
+                ZIndex: =5
+
+            rss_img_edit As image:
+                Height: =35
+                Image: =edit
+                OnSelect: =Select(Parent)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =41
+                X: =1128
+                ZIndex: =6
+
+            rss_btn_edit As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =Color.Transparent
+                Height: =35
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(varTempID,ThisItem.ID);
+                    Set(varTempIDRazonS,ThisItem.IdRazonSocial);
+                    Set(varTempNombreRazonS,ThisItem.NombreRazonSocial);
+                    Set(varTempNombreRazonS2,ThisItem.NombreRazonSocial);
+                    Set(varTempEstatusRazonS,ThisItem.Estatus);
+                    UpdateContext({vsbPopupEditRazonS:true});
+                PressedFill: =Color.Transparent
+                Text: =""
+                Width: =41
+                X: =1128
+                ZIndex: =7
+
+    rss_cnt_dataFilterRazonSoc As groupContainer.manualLayoutContainer:
+        Height: =70
+        Width: =1366
+        Y: =100
+        ZIndex: =7
+
+        rss_btn_buscarNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre Razón Social"
+            Width: =196
+            X: =385
+            Y: =15
+            ZIndex: =1
+
+        rss_txt_buscarNombre As text:
+            Default: =""
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Width: =356
+            X: =591
+            Y: =15
+            ZIndex: =2
+
+    rss_grp_nuevoRazonSoc As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        rss_fig_fondo As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupNewRazonS
+            Width: =1366
+            ZIndex: =8
+
+        rss_fig_subfondo As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =184
+            Visible: =vsbPopupNewRazonS
+            Width: =708
+            X: =322
+            Y: =260
+            ZIndex: =9
+
+        rss_lbl_tituloNuevoRazonSoc As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Nueva Razón Social"
+            Visible: =vsbPopupNewRazonS
+            Width: =708
+            X: =322
+            Y: =260
+            ZIndex: =10
+
+        rss_lbl_nuevoNombreRazonSoc As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre Razón Social"
+            Visible: =vsbPopupNewRazonS
+            Width: =178
+            X: =332
+            Y: =308
+            ZIndex: =11
+
+        rss_txt_nuevoNombreRazonSoc As text:
+            Default: =varNameMayus
+            Font: =Font.Lato
+            MaxLength: =250
+            OnChange: |-
+                =Set(varNameMayus,Upper(rss_txt_nuevoNombreRazonSoc.Text));
+                Reset(rss_txt_nuevoNombreRazonSoc);
+            Visible: =vsbPopupNewRazonS
+            Width: =494
+            X: =520
+            Y: =310
+            ZIndex: =12
+
+        rss_icn_cancelar As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewRazonS:false});
+                Reset(rss_txt_nuevoNombreRazonSoc);
+                Set(varNameMayus,Blank());
+                Set(responseNuevoRazonS,Blank());
+            Visible: =vsbPopupNewRazonS
+            Width: =34
+            X: =991
+            Y: =266
+            ZIndex: =15
+
+        rss_icn_agregar As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingRazonS:true});
+                //__ Realizamos Reset
+                Set(responseNuevoRazonS,Blank());
+                Clear(colNewRazonS);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rss_txt_nuevoNombreRazonSoc) || IsEmpty(rss_txt_nuevoNombreRazonSoc),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colNewRazonS,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        RazonSocial: rss_txt_nuevoNombreRazonSoc.Text,
+                        TipoCatalogo: "Catalogo Maestro - Razon Social",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now()))
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colNewRazonS));
+                Set(responseNuevoRazonS,'[CPC]_SaveRazonSocial'.Run(varJSON));
+                Set(responseRegion,responseNuevoRazonS.response);
+                If(responseRegion = "Ok",
+                    UpdateContext({vsbPopupNewRazonS:false});
+                    Reset(rss_txt_nuevoNombreRazonSoc);
+                    Set(varNameMayus,Blank());
+                    Refresh(RazonSocial);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoRazonS,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingRazonS:false});
+            Visible: =vsbPopupNewRazonS
+            Width: =34
+            X: =332
+            Y: =266
+            ZIndex: =16
+
+        rss_lbl_msjError As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =52
+            Size: =12
+            Text: =responseNuevoRazonS.response
+            Visible: =vsbPopupNewRazonS
+            Width: =693
+            X: =332
+            Y: =366
+            ZIndex: =17
+
+    rss_grp_msjCorrecto As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        rss_fig_fondoOk As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbMsjOk
+            Width: =1366
+            ZIndex: =18
+
+        rss_fig_subfondoOk As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =19
+
+        rss_lbl_tituloOk As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =20
+
+        rss_lbl_msjOk As label:
+            Align: =Align.Center
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: ="Registro Guardado con Éxito"
+            Visible: =vsbMsjOk
+            Width: =514
+            X: =426
+            Y: =337
+            ZIndex: =21
+
+        rss_icn_ok As icon.Information:
+            Color: =RGBA(54, 176, 75, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =UpdateContext({vsbMsjOk:false});
+            Visible: =vsbMsjOk
+            X: =651
+            Y: =243
+            ZIndex: =22
+
+    rss_grp_editarRazonSoc As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        rss_fig_fondoEdit As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupEditRazonS
+            Width: =1366
+            ZIndex: =23
+
+        rss_fig_subfondoEdit As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =290
+            Visible: =vsbPopupEditRazonS
+            Width: =801
+            X: =275
+            Y: =247
+            ZIndex: =24
+
+        rss_lbl_tituloEditRazonS As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Editar Razón Social"
+            Visible: =vsbPopupEditRazonS
+            Width: =801
+            X: =275
+            Y: =247
+            ZIndex: =25
+
+        rss_lbl_editIdRazonS As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="ID"
+            Visible: =vsbPopupEditRazonS
+            X: =291
+            Y: =299
+            ZIndex: =26
+
+        rss_txt_editIdRazon As text:
+            Default: =varTempIDRazonS
+            DisplayMode: =DisplayMode.View
+            Visible: =vsbPopupEditRazonS
+            X: =453
+            Y: =299
+            ZIndex: =27
+
+        rss_lbl_editNombreRazonS As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre"
+            Visible: =vsbPopupEditRazonS
+            X: =291
+            Y: =345
+            ZIndex: =30
+
+        rss_txt_editNombreRazonS As text:
+            Default: =varTempNombreRazonS2
+            MaxLength: =250
+            OnChange: |-
+                =Set(varTempNombreRazonS2,Upper(rss_txt_editNombreRazonS.Text));
+                Reset(rss_txt_editNombreRazonS);
+            Visible: =vsbPopupEditRazonS
+            Width: =602
+            X: =451
+            Y: =345
+            ZIndex: =31
+
+        rss_lbl_editEstatusRazonS As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Estatus"
+            Visible: =vsbPopupEditRazonS
+            X: =291
+            Y: =395
+            ZIndex: =32
+
+        rss_tgg_editEstatusRazonS As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varTempEstatusRazonS
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =40
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbPopupEditRazonS
+            Width: =206
+            X: =451
+            Y: =395
+            ZIndex: =33
+
+        rss_icn_cancelarEdit As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =UpdateContext({vsbPopupEditRazonS:false});
+                Set(responseNuevoRazonSoc,Blank());
+                Set(varTempNombreRazonS,Blank());
+                Set(varTempNombreRazonS2,Blank());
+                Reset(rss_tgg_editEstatusRazonS);
+                Reset(rss_txt_editNombreRazonS);
+            Visible: =vsbPopupEditRazonS
+            Width: =34
+            X: =1037
+            Y: =254
+            ZIndex: =34
+
+        rss_icn_agregarEdit As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingRazonS:true});
+                //__ Realizamos Reset
+                Set(responseNuevoRazonSoc,Blank());
+                Clear(colEditRazonS);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rss_txt_editIdRazon) || IsEmpty(rss_txt_editIdRazon) || IsBlank(rss_txt_editNombreRazonS) || IsEmpty(rss_txt_editNombreRazonS),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colEditRazonS,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        RazonSocial: rss_txt_editNombreRazonS.Text,
+                        Estatus: rss_tgg_editEstatusRazonS.Value,
+                        TipoCatalogo: "Catalogo Maestro - Razon Social",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        ID_List: varTempID,
+                        RazonSocial_old: varTempNombreRazonS,
+                        Estatus_old:varTempEstatusRazonS
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditRazonS));
+                Set(responseNuevoRazonSoc,'[CPC]_EditRazonSocial'.Run(varJSON));
+                Set(responseRazonSoc,responseNuevoRazonSoc.response);
+                If(responseRazonSoc = "Ok",
+                    UpdateContext({vsbPopupEditRazonS:false});
+                    Reset(rss_tgg_editEstatusRazonS);
+                    Reset(rss_txt_editNombreRazonS);
+                    Set(varTempNombreRazonS,Blank());
+                    Set(varTempNombreRazonS2,Blank());
+                    Refresh(RazonSocial);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoRazonSoc,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingRazonS:false});
+            Visible: =vsbPopupEditRazonS
+            Width: =34
+            X: =280
+            Y: =254
+            ZIndex: =35
+
+        rss_lbl_msjErrorEdit As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =55
+            Size: =12
+            Text: =responseNuevoRazonSoc.response
+            Visible: =vsbPopupEditRazonS
+            Width: =781
+            X: =286
+            Y: =459
+            ZIndex: =36
+
+    rss_cmp_loading As Loading:
+        Visible: =vsbLoadingRazonS
+        ZIndex: =37
+

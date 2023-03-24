@@ -1,0 +1,50 @@
+CalculoNotasAjuste_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    cms_img_logo_11 As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    cms_lbl_titulo_11 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Cálculo Notas de Ajuste"
+        Width: =1366
+        ZIndex: =2
+
+    ps_img_backP_12 As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =9
+
+    ps_btn_backP_12 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: =Back();
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =10
+

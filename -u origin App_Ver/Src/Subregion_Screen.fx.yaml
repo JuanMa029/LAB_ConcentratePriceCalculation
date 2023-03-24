@@ -1,0 +1,623 @@
+Subregion_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    ss_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    ss_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogo Maestro de Subregiones"
+        Width: =1366
+        ZIndex: =2
+
+    ss_img_backSubreg As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =3
+
+    ss_btn_backSubreg As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(Geografia_Screen,ScreenTransition.UnCoverRight);
+            Reset(ss_txt_buscarNombre);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =4
+
+    ss_cnt_headerSubregion As groupContainer.manualLayoutContainer:
+        Height: =50
+        Width: =1366
+        Y: =175
+        ZIndex: =5
+
+        ss_btn_headerID As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="ID"
+            Width: =91
+            X: =345
+            ZIndex: =1
+
+        ss_btn_headerNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre"
+            Width: =260
+            X: =ss_btn_headerID.X + ss_btn_headerID.Width
+            ZIndex: =2
+
+        ss_btn_headerEstatus As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Estatus"
+            X: =ss_btn_headerNombre.X + ss_btn_headerNombre.Width
+            ZIndex: =3
+
+        ss_img_nuevo As image:
+            Height: =40
+            Image: =add
+            Width: =63
+            X: =872
+            Y: =5
+            ZIndex: =5
+
+        ss_btn_nuevo As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewSubreg:true})
+            PressedFill: =Color.Transparent
+            Text: =""
+            Width: =63
+            X: =872
+            Y: =5
+            ZIndex: =6
+
+    ss_cnt_dataSubregion As groupContainer.manualLayoutContainer:
+        Height: =490
+        Width: =1366
+        Y: =225
+        ZIndex: =6
+
+        ss_gal_dataSubregion As gallery.galleryVertical:
+            Height: =490
+            Items: |-
+                =SortByColumns(
+                    Filter(
+                        Subregion,
+                        StartsWith(
+                            NombreSubregion,
+                            ss_txt_buscarNombre.Text
+                        ) 
+                    ),
+                    "IdSubregion",
+                    SortOrder.Ascending
+                )
+            Layout: =Layout.Vertical
+            TemplateSize: =41
+            Width: =1366
+            ZIndex: =1
+
+            ss_txt_id As text:
+                Align: =Align.Center
+                Default: =ThisItem.IdSubregion
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =ss_btn_headerID.Width
+                X: =ss_btn_headerID.X
+                ZIndex: =1
+
+            ss_txt_nombre As text:
+                Align: =Align.Center
+                Default: =ThisItem.NombreSubregion
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =ss_btn_headerNombre.Width
+                X: =ss_btn_headerNombre.X
+                ZIndex: =2
+
+            ss_icn_estatus As circle:
+                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
+                Height: =30
+                OnSelect: =Select(Parent)
+                Width: =40
+                X: =747
+                Y: =5
+                ZIndex: =5
+
+            ss_img_edit As image:
+                Height: =35
+                Image: =edit
+                OnSelect: =Select(Parent)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =41
+                X: =875
+                ZIndex: =6
+
+            ss_btn_edit As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =Color.Transparent
+                Height: =35
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(varTempID,ThisItem.ID);
+                    Set(varTempIDSubregion,ThisItem.IdSubregion);
+                    Set(varTempNombreSubreg,ThisItem.NombreSubregion);
+                    Set(varTempEstatusSubreg,ThisItem.Estatus);
+                    UpdateContext({vsbPopupEditSubreg:true});
+                PressedFill: =Color.Transparent
+                Text: =""
+                Width: =41
+                X: =875
+                ZIndex: =7
+
+    ss_cnt_dataFilterSubregion As groupContainer.manualLayoutContainer:
+        Height: =70
+        Width: =1366
+        Y: =100
+        ZIndex: =7
+
+        ss_btn_buscarNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre Subregión"
+            Width: =175
+            X: =317
+            Y: =10
+            ZIndex: =1
+
+        ss_txt_buscarNombre As text:
+            Default: =""
+            Font: =Font.Lato
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Width: =356
+            X: =502
+            Y: =10
+            ZIndex: =2
+
+    ss_grp_nuevoSubregion As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        ss_fig_fondo As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupNewSubreg
+            Width: =1366
+            ZIndex: =8
+
+        ss_fig_subfondo As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =184
+            Visible: =vsbPopupNewSubreg
+            Width: =524
+            X: =432
+            Y: =259
+            ZIndex: =9
+
+        ss_lbl_tituloNuevoSubreg As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Nueva Subregión"
+            Visible: =vsbPopupNewSubreg
+            Width: =524
+            X: =432
+            Y: =259
+            ZIndex: =10
+
+        ss_lbl_nuevoNombreSubreg As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre Subregión"
+            Visible: =vsbPopupNewSubreg
+            X: =442
+            Y: =309
+            ZIndex: =11
+
+        ss_txt_nuevoNombreSubreg As text:
+            Default: =""
+            Font: =Font.Lato
+            OnChange: =
+            Visible: =vsbPopupNewSubreg
+            X: =602
+            Y: =309
+            ZIndex: =12
+
+        ss_icn_cancelar As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewSubreg:false});
+                Reset(ss_txt_nuevoNombreSubreg);
+                Set(responseNuevoSubreg,Blank());
+            Visible: =vsbPopupNewSubreg
+            Width: =34
+            X: =917
+            Y: =265
+            ZIndex: =15
+
+        ss_icn_agregar As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingSubreg:true});
+                //__ Realizamos Reset
+                Set(responseNuevoSubreg,Blank());
+                Clear(colNewSubregion);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ss_txt_nuevoNombreSubreg) || IsEmpty(ss_txt_nuevoNombreSubreg),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colNewSubregion,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        Subregion: ss_txt_nuevoNombreSubreg.Text,
+                        TipoCatalogo: "Catalogo Maestro - Subregion",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now()))
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colNewSubregion));
+                Set(responseNuevoSubreg,'[CPC]_SaveSubregion'.Run(varJSON));
+                Set(responseSubreg,responseNuevoSubreg.response);
+                If(responseSubreg = "Ok",
+                    UpdateContext({vsbPopupNewSubreg:false});
+                    Reset(ss_txt_nuevoNombreSubreg);
+                    Refresh(Subregion);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoSubreg,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingSubreg:false});
+            Visible: =vsbPopupNewSubreg
+            Width: =34
+            X: =437
+            Y: =265
+            ZIndex: =16
+
+        ss_lbl_msjError As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoSubreg.response
+            Visible: =vsbPopupNewSubreg
+            Width: =514
+            X: =437
+            Y: =365
+            ZIndex: =17
+
+    ss_grp_msjCorrecto As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        ps_fig_fondoOk_2 As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbMsjOk
+            Width: =1366
+            ZIndex: =18
+
+        ps_fig_subfondoOk_2 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =19
+
+        ps_lbl_tituloOk_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =20
+
+        ps_lbl_msjOk_2 As label:
+            Align: =Align.Center
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: ="Registro Guardado con Éxito"
+            Visible: =vsbMsjOk
+            Width: =514
+            X: =426
+            Y: =337
+            ZIndex: =21
+
+        ps_icn_ok_2 As icon.Information:
+            Color: =RGBA(54, 176, 75, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =UpdateContext({vsbMsjOk:false});
+            Visible: =vsbMsjOk
+            X: =651
+            Y: =243
+            ZIndex: =22
+
+    ss_grp_editarSubregion As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        ss_fig_fondoEdit As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupEditSubreg
+            Width: =1366
+            ZIndex: =23
+
+        ss_fig_subfondoEdit As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =313
+            Visible: =vsbPopupEditSubreg
+            Width: =524
+            X: =426
+            Y: =227
+            ZIndex: =24
+
+        ss_lbl_tituloEditSubreg As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Editar Subregión"
+            Visible: =vsbPopupEditSubreg
+            Width: =524
+            X: =426
+            Y: =227
+            ZIndex: =25
+
+        ss_lbl_editIdSubreg As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="ID"
+            Visible: =vsbPopupEditSubreg
+            X: =436
+            Y: =277
+            ZIndex: =26
+
+        ss_txt_editIdSubreg As text:
+            Default: =varTempIDSubregion
+            DisplayMode: =DisplayMode.View
+            Visible: =vsbPopupEditSubreg
+            X: =596
+            Y: =277
+            ZIndex: =27
+
+        ss_lbl_editNombreSubreg As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre"
+            Visible: =vsbPopupEditSubreg
+            X: =436
+            Y: =332
+            ZIndex: =30
+
+        ss_txt_editNombreSubreg As text:
+            Default: =varTempNombreSubreg
+            Visible: =vsbPopupEditSubreg
+            X: =596
+            Y: =332
+            ZIndex: =31
+
+        ss_lbl_editEstatusSubreg As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Estatus"
+            Visible: =vsbPopupEditSubreg
+            X: =436
+            Y: =382
+            ZIndex: =32
+
+        ss_tgg_editEstatusSubreg As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varTempEstatusSubreg
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =40
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbPopupEditSubreg
+            Width: =206
+            X: =596
+            Y: =382
+            ZIndex: =33
+
+        ss_icn_cancelarEdit As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =UpdateContext({vsbPopupEditSubreg:false});
+                Set(responseNuevoSubreg,Blank());
+                Reset(ss_tgg_editEstatusSubreg);
+                Reset(ss_txt_editNombreSubreg);
+            Visible: =vsbPopupEditSubreg
+            Width: =34
+            X: =911
+            Y: =233
+            ZIndex: =34
+
+        ss_icn_agregarEdit As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingSubreg:true});
+                //__ Realizamos Reset
+                Set(responseNuevoSubreg,Blank());
+                Clear(colEditSubreg);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ss_txt_editIdSubreg) || IsEmpty(ss_txt_editIdSubreg) || IsBlank(ss_txt_editNombreSubreg) || IsEmpty(ss_txt_editNombreSubreg),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colEditSubreg,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        Subregion: ss_txt_editNombreSubreg.Text,
+                        Estatus: ss_tgg_editEstatusSubreg.Value,
+                        TipoCatalogo: "Catalogo Maestro - Region",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        ID_List: varTempID,
+                        Subregion_old: varTempNombreSubreg,
+                        Estatus_old:varTempEstatusSubreg
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditSubreg));
+                Set(responseNuevoSubreg,'[CPC]_EditSubregion'.Run(varJSON));
+                Set(responseSubreg,responseNuevoSubreg.response);
+                If(responseSubreg = "Ok",
+                    UpdateContext({vsbPopupEditSubreg:false});
+                    Reset(ss_tgg_editEstatusSubreg);
+                    Reset(ss_txt_editNombreSubreg);
+                    Refresh(Subregion);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoSubreg,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingSubreg:false});
+            Visible: =vsbPopupEditSubreg
+            Width: =34
+            X: =431
+            Y: =233
+            ZIndex: =35
+
+        ss_lbl_msjErrorEdit As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoSubreg.response
+            Visible: =vsbPopupEditSubreg
+            Width: =514
+            X: =431
+            Y: =455
+            ZIndex: =36
+
+    ss_cmp_loading As Loading:
+        Visible: =vsbLoadingSubreg
+        ZIndex: =37
+

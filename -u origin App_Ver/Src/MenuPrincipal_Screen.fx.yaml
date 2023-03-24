@@ -1,0 +1,417 @@
+MenuPrincipal_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    mps_lbl_version As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =27
+        Size: =11
+        Text: ="V.160323.1.02"
+        Y: =740
+        ZIndex: =1
+
+    mps_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =2
+
+    mps_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Concentrate Pricing Calculator"
+        Width: =1366
+        ZIndex: =3
+
+    mps_grp_notasAjuste As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_notasAj As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =notas
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =424
+            ZIndex: =19
+
+        mps_btn_notasAj As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =Set(vsbLoading,true);
+                Navigate(CalculoNotasAjuste_Screen,ScreenTransition.CoverRight);
+                Set(vsbLoading,false);
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =424
+            ZIndex: =20
+
+        mps_lbl_notasAj As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Text: ="Notas de Ajuste"
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =564
+            ZIndex: =21
+
+    mps_grp_auditoria As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_auditoria As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =audit
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =424
+            ZIndex: =16
+
+        mps_btn_auditoria As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =Set(vsbLoading,true);
+                Navigate(Auditoria_Screen,ScreenTransition.CoverRight);
+                Set(vsbLoading,false);
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =424
+            ZIndex: =17
+
+        mps_lbl_auditoria As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Text: ="Auditoria"
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =564
+            ZIndex: =18
+
+    mps_grp_importarArchivos As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_importAr As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =importar
+            OnSelect: =Navigate(ImportarArchivos_Screen,ScreenTransition.Fade)
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =424
+            ZIndex: =13
+
+        mps_btn_importAr As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: =Navigate(ImportarArchivos_Screen,ScreenTransition.CoverRight)
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =424
+            ZIndex: =14
+
+        mps_lbl_importAr As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            OnSelect: =Navigate(ImportarArchivos_Screen,ScreenTransition.Fade)
+            Text: ="Importar Archivos"
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =564
+            ZIndex: =15
+
+    mps_grp_calculoPrecio As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_calculoPr As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =calculator
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =206
+            ZIndex: =10
+
+        mps_btn_calculoPr As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =Set(vsbLoading,true);
+                Navigate(PaisesEmbotellador_Screen,ScreenTransition.CoverRight);
+                Set(vsbLoading,false);
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =206
+            ZIndex: =11
+
+        mps_lbl_calculoPr As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Text: ="Cálculo de Precio"
+            Visible: =vsbBtn
+            Width: =170
+            X: =840
+            Y: =346
+            ZIndex: =12
+
+    mps_grp_catalogosMaestros As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_catalogosM As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =catalogos
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =206
+            ZIndex: =7
+
+        mps_btn_catalogosM As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =Set(vsbLoading,true);
+                Navigate(CatalogosMaestros_Screen,ScreenTransition.CoverRight);
+                Set(vsbLoading,false);
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =206
+            ZIndex: =8
+
+        mps_lbl_catalogosM As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Text: ="Catálogos Maestros"
+            Visible: =vsbBtn
+            Width: =170
+            X: =598
+            Y: =346
+            ZIndex: =9
+
+    mps_grp_configuraciones As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        mps_img_configuraciones As image:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =140
+            Image: =configuracion
+            PaddingBottom: =20
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =20
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =206
+            ZIndex: =4
+
+        mps_btn_configuraciones As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =140
+            HoverFill: =Color.Transparent
+            OnSelect: =Navigate(Configuraciones_Screen,ScreenTransition.CoverRight)
+            PressedFill: =Color.Transparent
+            Text: =""
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =206
+            ZIndex: =5
+
+        mps_lbl_configuraciones As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =36
+            Text: ="Configuraciones"
+            Visible: =vsbBtn
+            Width: =170
+            X: =356
+            Y: =346
+            ZIndex: =6
+
+    mps_cmp_loading As Loading:
+        Visible: =vsbLoading
+        ZIndex: =22
+
+    mps_grp_mensajeError As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        mps_lbl_mensajeError As label:
+            Align: =Align.Center
+            Color: =RGBA(9, 33, 98, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =394
+            Size: =18
+            Text: ="Actualmente no cuentas con los permisos necesarios para acceder al portal, favor de comunicarte con el administrador"
+            Visible: =flagErrorFlow
+            Width: =654
+            X: =356
+            Y: =206
+            ZIndex: =23
+
+        mps_fig_error As rectangle:
+            Fill: =RGBA(9, 33, 98, 1)
+            Height: =40
+            Visible: =flagErrorFlow
+            Width: =654
+            X: =356
+            Y: =206
+            ZIndex: =24
+
+        mps_icn_error As icon.Error:
+            Color: =RGBA(184, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.Error
+            Visible: =flagErrorFlow
+            X: =651
+            Y: =262
+            ZIndex: =25
+

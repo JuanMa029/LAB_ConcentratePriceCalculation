@@ -1,0 +1,716 @@
+Pais_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    ps_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    ps_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogo Maestros de Países"
+        Width: =1366
+        ZIndex: =2
+
+    ps_img_backP As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =3
+
+    ps_btn_backP As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(Geografia_Screen,ScreenTransition.UnCoverRight);
+            Reset(ps_txt_buscarNombre);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =4
+
+    ps_cnt_headerPais As groupContainer.manualLayoutContainer:
+        Height: =50
+        Width: =1366
+        Y: =175
+        ZIndex: =5
+
+        ps_btn_headerID As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="ID"
+            Width: =91
+            X: =345
+            ZIndex: =1
+
+        ps_btn_headerCodigoPais As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Código País"
+            X: =ps_btn_headerID.X + ps_btn_headerID.Width
+            ZIndex: =2
+
+        ps_btn_headerNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre"
+            Width: =260
+            X: =ps_btn_headerCodigoPais.X + ps_btn_headerCodigoPais.Width
+            ZIndex: =3
+
+        ps_btn_headerEstatus As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Estatus"
+            Width: =106
+            X: =ps_btn_headerNombre.X + ps_btn_headerNombre.Width
+            ZIndex: =4
+
+        ps_img_nuevo As image:
+            Height: =40
+            Image: =add
+            Width: =63
+            X: =986
+            Y: =5
+            ZIndex: =5
+
+        ps_btn_nuevo As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewP:true})
+            PressedFill: =Color.Transparent
+            Text: =""
+            Width: =63
+            X: =986
+            Y: =5
+            ZIndex: =6
+
+    ps_cnt_dataPais As groupContainer.manualLayoutContainer:
+        Height: =490
+        Width: =1366
+        Y: =225
+        ZIndex: =6
+
+        ps_gal_dataPais As gallery.galleryVertical:
+            Height: =490
+            Items: |-
+                =
+                SortByColumns(
+                    Filter(
+                        Pais,
+                        StartsWith(
+                            NombrePais,
+                            ps_txt_buscarNombre.Text
+                        ) 
+                    ),
+                    "IdPais",
+                    SortOrder.Ascending
+                )
+            Layout: =Layout.Vertical
+            TemplateSize: =41
+            Width: =1366
+            ZIndex: =1
+
+            ps_txt_id As text:
+                Align: =Align.Center
+                Default: =ThisItem.IdPais
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =ps_btn_headerID.Width
+                X: =ps_btn_headerID.X
+                ZIndex: =1
+
+            ps_txt_codigoPais As text:
+                Align: =Align.Center
+                Default: =ThisItem.CodigoPais
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =ps_btn_headerCodigoPais.Width
+                X: =ps_btn_headerCodigoPais.X
+                ZIndex: =2
+
+            ps_txt_nombre As text:
+                Default: =ThisItem.NombrePais
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =ps_btn_headerNombre.Width
+                X: =ps_btn_headerNombre.X
+                ZIndex: =3
+
+            ps_tgg_estatus As toggleSwitch:
+                BorderStyle: =BorderStyle.None
+                Default: =ThisItem.Estatus
+                DisabledBorderColor: =RGBA(255, 0, 0, 1)
+                FalseFill: =RGBA(255, 0, 0, 1)
+                Font: =Font.Lato
+                Height: =40
+                OnSelect: =Select(Parent)
+                ShowLabel: =false
+                TextPosition: =TextPosition.Left
+                TrueFill: =RGBA(54, 176, 75, 1)
+                Visible: =false
+                Width: =gs_btn_headerEstatus.Width
+                X: =gs_btn_headerEstatus.X
+                ZIndex: =4
+
+            ps_icn_estatus As circle:
+                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
+                Height: =30
+                OnSelect: =Select(Parent)
+                Width: =40
+                X: =879
+                Y: =5
+                ZIndex: =5
+
+            ps_img_edit As image:
+                Height: =35
+                Image: =edit
+                OnSelect: =Select(Parent)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =41
+                X: =963
+                ZIndex: =6
+
+            ps_btn_edit As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =Color.Transparent
+                Height: =35
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(varTempID,ThisItem.ID);
+                    Set(varTempIDPais,ThisItem.IdPais);
+                    Set(varTempCdgPais,ThisItem.CodigoPais);
+                    Set(varTempCdgPais2,ThisItem.CodigoPais);
+                    Set(varTempNombreP,ThisItem.NombrePais);
+                    Set(varTempEstatusP,ThisItem.Estatus);
+                    UpdateContext({vsbPopupEditP:true});
+                PressedFill: =Color.Transparent
+                Text: =""
+                Width: =41
+                X: =963
+                ZIndex: =7
+
+    ps_cnt_dataFilterPais As groupContainer.manualLayoutContainer:
+        Height: =70
+        Width: =1366
+        Y: =100
+        ZIndex: =7
+
+        ps_btn_buscarNombre As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre País"
+            Width: =147
+            X: =345
+            Y: =10
+            ZIndex: =1
+
+        ps_txt_buscarNombre As text:
+            Default: =""
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Width: =356
+            X: =502
+            Y: =10
+            ZIndex: =2
+
+    ps_grp_nuevoPais As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        ps_fig_fondo As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupNewP
+            Width: =1366
+            ZIndex: =8
+
+        ps_fig_subfondo As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbPopupNewP
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =9
+
+        ps_lbl_tituloNuevoPais As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Nuevo País"
+            Visible: =vsbPopupNewP
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =10
+
+        ps_lbl_nuevoCodigoPais As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Código País"
+            Visible: =vsbPopupNewP
+            X: =431
+            Y: =225
+            ZIndex: =11
+
+        ps_txt_nuevoCodigoPais As text:
+            Default: =varMayusCDPais
+            OnChange: |-
+                =Set(varMayusCDPais,Upper(ps_txt_nuevoCodigoPais));
+                Reset(ps_txt_nuevoCodigoPais);
+            Visible: =vsbPopupNewP
+            X: =591
+            Y: =225
+            ZIndex: =12
+
+        ps_lbl_nuevoNombre As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre"
+            Visible: =vsbPopupNewP
+            X: =431
+            Y: =280
+            ZIndex: =13
+
+        ps_txt_nuevoNombre As text:
+            Default: =""
+            Visible: =vsbPopupNewP
+            X: =591
+            Y: =280
+            ZIndex: =14
+
+        ps_icn_cancelar As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =UpdateContext({vsbPopupNewP:false});
+                Reset(ps_txt_nuevoCodigoPais);
+                Set(varMayusCDPais,Blank());
+                Reset(ps_txt_nuevoNombre);
+                Set(responseNuevoPais,Blank());
+            Visible: =vsbPopupNewP
+            Width: =34
+            X: =906
+            Y: =181
+            ZIndex: =15
+
+        ps_icn_agregar As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingPais:true});
+                //__ Realizamos Reset
+                Set(responseNuevoPais,Blank());
+                Clear(colNewPais);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ps_txt_nuevoCodigoPais) || IsEmpty(ps_txt_nuevoCodigoPais) || IsBlank(ps_txt_nuevoNombre) || IsEmpty(ps_txt_nuevoNombre),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colNewPais,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        CodigoPais: varMayusCDPais,
+                        Pais: ps_txt_nuevoNombre.Text,
+                        TipoCatalogo: "Catalogo Maestro - Pais",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now()))
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colNewPais));
+                Set(responseNuevoPais,'[CPC]_SavePais'.Run(varJSON));
+                Set(responsePais,responseNuevoPais.response);
+                If(responsePais = "Ok",
+                    UpdateContext({vsbPopupNewP:false});
+                    Reset(ps_txt_nuevoCodigoPais);
+                    Set(varMayusCDPais,Blank());
+                    Reset(ps_txt_nuevoNombre);
+                    Refresh(Pais);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoPais,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingPais:false});
+            Visible: =vsbPopupNewP
+            Width: =34
+            X: =426
+            Y: =181
+            ZIndex: =16
+
+        ps_lbl_msjError As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoPais.response
+            Visible: =vsbPopupNewP
+            Width: =514
+            X: =426
+            Y: =342
+            ZIndex: =17
+
+    ps_grp_msjCorrecto As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        ps_fig_fondoOk As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbMsjOk
+            Width: =1366
+            ZIndex: =18
+
+        ps_fig_subfondoOk As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =19
+
+        ps_lbl_tituloOk As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =20
+
+        ps_lbl_msjOk As label:
+            Align: =Align.Center
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: ="Registro Guardado con Exito"
+            Visible: =vsbMsjOk
+            Width: =514
+            X: =426
+            Y: =337
+            ZIndex: =21
+
+        ps_icn_ok As icon.Information:
+            Color: =RGBA(54, 176, 75, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =UpdateContext({vsbMsjOk:false});
+            Visible: =vsbMsjOk
+            X: =651
+            Y: =243
+            ZIndex: =22
+
+    ps_grp_editarPais As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        ps_fig_fondoEdit As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupEditP
+            Width: =1366
+            ZIndex: =23
+
+        ps_fig_subfondoEdit As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =353
+            Visible: =vsbPopupEditP
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =24
+
+        ps_lbl_tituloEditPais As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Editar País"
+            Visible: =vsbPopupEditP
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =25
+
+        ps_lbl_editIdPais As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="ID"
+            Visible: =vsbPopupEditP
+            X: =431
+            Y: =225
+            ZIndex: =26
+
+        ps_txt_editIdPais As text:
+            Default: =varTempIDPais
+            DisplayMode: =DisplayMode.View
+            Visible: =vsbPopupEditP
+            X: =591
+            Y: =225
+            ZIndex: =27
+
+        ps_lbl_editCodigoPais As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Código País"
+            Visible: =vsbPopupEditP
+            X: =431
+            Y: =280
+            ZIndex: =28
+
+        ps_txt_editCodigoPais As text:
+            Default: =varTempCdgPais2
+            MaxLength: =3
+            OnChange: |-
+                =Set(varTempCdgPais2,Upper(ps_txt_editCodigoPais));
+                Reset(ps_txt_editCodigoPais);
+            Visible: =vsbPopupEditP
+            X: =591
+            Y: =280
+            ZIndex: =29
+
+        ps_lbl_editNombrePais As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre"
+            Visible: =vsbPopupEditP
+            X: =431
+            Y: =331
+            ZIndex: =30
+
+        ps_txt_editNombrePais As text:
+            Default: =varTempNombreP
+            Visible: =vsbPopupEditP
+            X: =591
+            Y: =331
+            ZIndex: =31
+
+        ps_lbl_editEstatusPais As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Estatus"
+            Visible: =vsbPopupEditP
+            X: =431
+            Y: =381
+            ZIndex: =32
+
+        ps_tgg_editEstatusPais As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varTempEstatusP
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =40
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbPopupEditP
+            Width: =206
+            X: =591
+            Y: =381
+            ZIndex: =33
+
+        ps_icn_cancelarEdit As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({vsbPopupEditP:false});
+                Set(responseNuevoPais,Blank());
+                Reset(ps_tgg_editEstatusPais);
+                Reset(ps_txt_editNombrePais);
+                Reset(ps_txt_editCodigoPais);
+            Visible: =vsbPopupEditP
+            Width: =34
+            X: =906
+            Y: =181
+            ZIndex: =34
+
+        ps_icn_agregarEdit As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingPais:true});
+                //__ Realizamos Reset
+                Set(responseNuevoPais,Blank());
+                Clear(colEditPais);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ps_txt_editIdPais) || IsEmpty(ps_txt_editIdPais) || IsBlank(ps_txt_editCodigoPais) || IsEmpty(ps_txt_editCodigoPais) || IsBlank(ps_txt_editNombrePais) || IsEmpty(ps_txt_editNombrePais),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colEditPais,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        CodigoPais: ps_txt_editCodigoPais.Text,
+                        Pais: ps_txt_editNombrePais.Text,
+                        Estatus: ps_tgg_editEstatusPais.Value,
+                        TipoCatalogo: "Catalogo Maestro - Pais",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        ID_List: varTempID,
+                        CodigoPais_old: varTempCdgPais,
+                        Pais_old: varTempNombreP,
+                        Estatus_old:varTempEstatusP
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditPais));
+                Set(responseNuevoPais,'[CPC]_EditPais'.Run(varJSON));
+                Set(responsePais,responseNuevoPais.response);
+                If(responsePais = "Ok",
+                    UpdateContext({vsbPopupEditP:false});
+                    Reset(ps_tgg_editEstatusPais);
+                    Reset(ps_txt_editNombrePais);
+                    Reset(ps_txt_editCodigoPais);
+                    Refresh(Pais);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoPais,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingPais:false});
+            Visible: =vsbPopupEditP
+            Width: =34
+            X: =426
+            Y: =181
+            ZIndex: =35
+
+        ps_lbl_msjErrorEdit As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoPais.response
+            Visible: =vsbPopupEditP
+            Width: =514
+            X: =426
+            Y: =454
+            ZIndex: =36
+
+    ps_cmp_loading As Loading:
+        Visible: =vsbLoadingPais
+        ZIndex: =37
+

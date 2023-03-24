@@ -1,0 +1,1636 @@
+Periodos_Screen_v2 As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    ps_img_backP_13 As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =1
+
+    ps_btn_backP_13 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: =Navigate(CatalogosMaestros_Screen,ScreenTransition.UnCover);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =2
+
+    ps2_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =3
+
+    ps2_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogos de Periodos"
+        Width: =1366
+        ZIndex: =4
+
+    ps2_cnt_filter As groupContainer.manualLayoutContainer:
+        Height: =70
+        Width: =1366
+        Y: =100
+        ZIndex: =5
+
+        ps2_dpd_frecuencia As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: |-
+                =ForAll(Distinct(CatalogoFrecuencia,Frecuencia), {Result: ThisRecord.Value})
+            OnChange: |
+                =UpdateContext({vsbLoading1:true});
+                //__
+                Set(contEjecucion,0);
+                Reset(ps2_dpd_anio);
+                Reset(ps2_sld_dataPeriodo);
+                Clear(ColPeriodoFn);
+                //__
+                //__ validamos que exista una seleccion
+                If(IsBlank(ps2_dpd_frecuencia),"",
+                
+                //__ Ejecución del flujo para obter anio de acuerdo a la frecuencia seleccionada
+                Set(responseFlow,'[CPC]_Get_YearFrequency'.Run(Self.Selected.Result));
+                
+                If(IsBlank(responseFlow),Set(varMsjError,"No existe datos");UpdateContext({flagContinuar:false}),UpdateContext({flagContinuar:true}));
+                
+                If(flagContinuar = true,
+                    Set(varJSONAnio,ParseJSON(responseFlow.response));
+                    ClearCollect(ColJSONAnio,Table(varJSONAnio));
+                    ClearCollect(colAnio,ForAll(ColJSONAnio,
+                        {
+                            anio:Value(ThisRecord.Value.AnioFrecuencia)
+                        }
+                        )
+                    )
+                );
+                );
+                UpdateContext({vsbLoading1:false});
+            Reset: =true
+            Width: =220
+            X: =226
+            Y: =15
+            ZIndex: =1
+
+        ps2_btn_frecuencia As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Frecuencia"
+            X: =60
+            Y: =15
+            ZIndex: =2
+
+        ps2_dpd_anio As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: =colAnio
+            OnChange: |-
+                =UpdateContext({vsbLoading1:true});
+                //__ Validamos si existe una seleccion
+                If(IsBlank(ps2_dpd_anio),"",
+                //__ Validamos si el contador es igual a 1
+                If(contEjecucion = 1,
+                    //_ Clear
+                    Clear(colPeriodo);
+                    //__
+                    Collect(colPeriodo,{
+                        Frecuencia: ps2_dpd_frecuencia.Selected.Result,
+                        Anio: ps2_dpd_anio.Selected.anio
+                    });    
+                //__ Ejecución del flujo para obter anio de acuerdo a la frecuencia seleccionada
+                Set(responseFlow,'[CPC]_GetDataPeriods'.Run(JSON(colPeriodo)));
+                Set(varJSONPeriodo,ParseJSON(responseFlow.response));
+                        //Set(varJSON,ParseJSON(Label5.Text));
+                        ClearCollect(ColJSONPeriodo,Table(varJSONPeriodo));
+                        //__ Convertimos la coleccion 
+                        ClearCollect(ColPeriodoFn,ForAll(ColJSONPeriodo,
+                        {
+                            Frecuencia:Text(ThisRecord.Value.Frecuencia),
+                            Anio: Value(ThisRecord.Value.Anio),
+                            Periodo: Text(ThisRecord.Value.Periodo),
+                            FechaElaboracionCalculo: Text(ThisRecord.Value.FechaElaboracionCalculo),
+                            FechaInicialInput: Text(ThisRecord.Value.FechaInicialInput),
+                            FechaFinalInpput: Text(ThisRecord.Value.FechaFinalInpput),
+                            FechaVigenciaPrecioInicial: Text(ThisRecord.Value.FechaVigenciaPrecioInicial),
+                            FechaVigenciaPrecioFinal: Text(ThisRecord.Value.FechaVigenciaPrecioFinal),
+                            IDList: Value(ThisRecord.Value.IDList)
+                
+                        }));
+                );
+                //__ IF
+                );
+                
+                UpdateContext({vsbLoading1:false});
+            OnSelect: =Set(contEjecucion,1);
+            Reset: =true
+            Width: =220
+            X: =661
+            Y: =15
+            ZIndex: =3
+
+        ps2_btn_anio As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Año"
+            X: =495
+            Y: =15
+            ZIndex: =4
+
+        ps2_img_nuevo As image:
+            Height: =40
+            Image: =add
+            Width: =63
+            X: =1106
+            Y: =15
+            ZIndex: =7
+
+        ps2_btn_nuevo As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoading1:true});
+                
+                UpdateContext({vsbNewPeriodo:true});
+                //__ Desactivamos componente loading
+                UpdateContext({vsbLoading1:false});
+            PressedFill: =Color.Transparent
+            Text: =""
+            Width: =63
+            X: =1106
+            Y: =15
+            ZIndex: =8
+
+    ps2_cnt_headePeriodo As groupContainer.manualLayoutContainer:
+        Height: =45
+        Width: =1366
+        Y: =170
+        ZIndex: =6
+
+        ps2_btn_headerFrecuencia As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Frecuencia"
+            Width: =128
+            X: =100
+            ZIndex: =1
+
+        ps2_btn_headerAnio As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Año"
+            Width: =128
+            X: =ps2_btn_headerFrecuencia.X + ps2_btn_headerFrecuencia.Width
+            ZIndex: =2
+
+        ps2_btn_headerPeriodo As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Periodo"
+            Width: =128
+            X: =ps2_btn_headerAnio.X + ps2_btn_headerAnio.Width
+            ZIndex: =3
+
+        ps2_btn_headerFechaElaboracion As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Fecha Elaboración Cálculo"
+            Width: =158
+            X: =ps2_btn_headerPeriodo.X + ps2_btn_headerPeriodo.Width
+            ZIndex: =4
+
+        ps2_btn_headerFechaInicial_in As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Fecha Inicial Input"
+            Width: =128
+            X: =ps2_btn_headerFechaElaboracion.X + ps2_btn_headerFechaElaboracion.Width
+            ZIndex: =5
+
+        ps2_btn_headerFechaFinal_in As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Fecha Final Input"
+            Width: =128
+            X: =ps2_btn_headerFechaInicial_in.X + ps2_btn_headerFechaInicial_in.Width
+            ZIndex: =6
+
+        ps2_btn_headerFechaVigenciaPrcIn As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Fecha Vigencia Precio Inicial"
+            Width: =138
+            X: =ps2_btn_headerFechaFinal_in.X + ps2_btn_headerFechaFinal_in.Width
+            ZIndex: =7
+
+        ps2_btn_headerFechaVigenciaPrcFin As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Fecha Vigencia Precio Final"
+            Width: =138
+            X: =ps2_btn_headerFechaVigenciaPrcIn.X + ps2_btn_headerFechaVigenciaPrcIn.Width
+            ZIndex: =8
+
+        ps2_btn_headerEmbotellador As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Embotellador"
+            Visible: =false
+            Width: =300
+            X: =ps2_btn_headerFechaVigenciaPrcFin.X + ps2_btn_headerFechaVigenciaPrcFin.Width
+            ZIndex: =9
+
+        ps2_btn_headerRazonsocial As button:
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Height: =45
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =13
+            Text: ="Razon Social"
+            Visible: =false
+            Width: =300
+            X: =ps2_btn_headerEmbotellador.X + ps2_btn_headerEmbotellador.Width
+            ZIndex: =10
+
+        ps2_btn_headerNull As button:
+            Text: ="Botón"
+            Visible: =false
+            Width: =34
+            X: =ps2_btn_headerFechaVigenciaPrcFin.X + ps2_btn_headerFechaVigenciaPrcFin.Width
+            ZIndex: =11
+
+        ps2_btn_headerNull_1 As button:
+            Text: ="Botón"
+            Visible: =false
+            Width: =42
+            X: =ps2_btn_headerNull.X + ps2_btn_headerNull.Width
+            ZIndex: =12
+
+    ps2_cnt_dataPeriodo As groupContainer.manualLayoutContainer:
+        Height: =495
+        Width: =1366
+        Y: =215
+        ZIndex: =7
+
+        ps2_gal_dataPerido As gallery.galleryVertical:
+            Height: =495
+            Items: =ColPeriodoFn
+            Layout: =Layout.Vertical
+            TemplatePadding: =1
+            TemplateSize: =40
+            Width: =1277
+            ZIndex: =1
+
+            ps2_txt_frecuencia As text:
+                Default: =ThisItem.Frecuencia
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFrecuencia.Width
+                X: =ps2_btn_headerFrecuencia.X
+                ZIndex: =1
+
+            ps2_txt_anio As text:
+                Default: =ThisItem.Anio
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerAnio.Width
+                X: =ps2_btn_headerAnio.X
+                ZIndex: =2
+
+            ps2_txt_periodo As text:
+                Default: =ThisItem.Periodo
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerPeriodo.Width
+                X: =ps2_btn_headerPeriodo.X
+                ZIndex: =3
+
+            ps2_txt_fechaElaboracionCal As text:
+                Default: =ThisItem.FechaElaboracionCalculo
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFechaElaboracion.Width
+                X: =ps2_btn_headerFechaElaboracion.X
+                ZIndex: =4
+
+            ps2_txt_fechaInicial_in As text:
+                Default: =ThisItem.FechaInicialInput
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFechaInicial_in.Width
+                X: =ps2_btn_headerFechaInicial_in.X
+                ZIndex: =5
+
+            ps2_txt_fechaFinal_in As text:
+                Default: =ThisItem.FechaFinalInpput
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFechaFinal_in.Width
+                X: =ps2_btn_headerFechaFinal_in.X
+                ZIndex: =6
+
+            ps2_txt_fechaVigenciaPrcIni As text:
+                Default: =ThisItem.FechaVigenciaPrecioInicial
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFechaVigenciaPrcIn.Width
+                X: =ps2_btn_headerFechaVigenciaPrcIn.X
+                ZIndex: =7
+
+            ps2_txt_fechaVigenciaPrcFin As text:
+                Default: =ThisItem.FechaVigenciaPrecioFinal
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Width: =ps2_btn_headerFechaVigenciaPrcFin.Width
+                X: =ps2_btn_headerFechaVigenciaPrcFin.X
+                ZIndex: =8
+
+            ps2_tx_embotellador As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Visible: =false
+                Width: =ps2_btn_headerEmbotellador.Width
+                X: =ps2_btn_headerEmbotellador.X
+                ZIndex: =9
+
+            ps2_txt_razonSocial As text:
+                Default: =""
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                OnSelect: =Select(Parent)
+                Visible: =false
+                Width: =ps2_btn_headerRazonsocial.Width
+                X: =ps2_btn_headerRazonsocial.X
+                ZIndex: =10
+
+            ps2_img_edit As image:
+                Height: =40
+                Image: =edit
+                OnSelect: =Select(Parent)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =ps2_btn_headerNull_1.Width
+                X: =ps2_btn_headerNull_1.X
+                ZIndex: =11
+
+            ps2_btn_edit As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =Color.Transparent
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(varIDPeriodo,ThisItem.IDList);
+                    Set(varTempFrecuencia,ThisItem.Frecuencia);
+                    Set(varTempAnio,ThisItem.Anio);
+                    Set(varTempPeriodo,ThisItem.Periodo);
+                    Set(varTempFechaElabCal,ThisItem.FechaElaboracionCalculo);
+                    Set(varTempFechaInicial,ThisItem.FechaInicialInput);
+                    Set(varTempFechaFinal,ThisItem.FechaFinalInpput);
+                    Set(varTempFechaVigPrcIni,ThisItem.FechaVigenciaPrecioInicial);
+                    Set(varTempFechaVigPrcFin,ThisItem.FechaVigenciaPrecioFinal);
+                    Set(varTempEmbotelladorP,"");
+                    Set(varTempRazonSocial,"");
+                    UpdateContext({vsbEditPeriodo:true})
+                PressedFill: =Color.Transparent
+                Text: =""
+                Width: =ps2_btn_headerNull_1.Width
+                X: =ps2_btn_headerNull_1.X
+                ZIndex: =12
+
+    ps2_grp_newPeriodo As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =26
+
+        ps2_sld_dataPeriodo As slider:
+            Default: =0
+            Max: =150
+            ShowValue: =false
+            Visible: =false
+            X: =523
+            Y: =710
+            ZIndex: =8
+
+        ps2_fig_fondo As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbNewPeriodo
+            Width: =1366
+            ZIndex: =9
+
+        ps2_fig_subFondo As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =723
+            Visible: =vsbNewPeriodo
+            Width: =1306
+            X: =31
+            Y: =27
+            ZIndex: =10
+
+        ps2_lbl_newTitulo As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Nuevo Periodo"
+            Visible: =vsbNewPeriodo
+            Width: =1306
+            X: =31
+            Y: =7
+            ZIndex: =11
+
+        ps2_lbl_busquedaFrecuencia As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Frecuencia"
+            Visible: =vsbNewPeriodo
+            Width: =125
+            X: =47
+            Y: =76
+            ZIndex: =12
+
+        ps2_dpd_busquedaFrecuencia As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: |-
+                =ForAll(Distinct(CatalogoFrecuencia,Frecuencia), {Result: ThisRecord.Value})
+            OnChange: |-
+                =Set(contEjecucion,0);
+                Set(responsePeriodo,Blank());
+                Reset(ps2_dpd_busquedaAnio);
+            Reset: =true
+            Visible: =vsbNewPeriodo
+            Width: =250
+            X: =177
+            Y: =76
+            ZIndex: =13
+
+        ps2_lbl_busquedaAnio As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Año"
+            Visible: =vsbNewPeriodo
+            Width: =125
+            X: =457
+            Y: =76
+            ZIndex: =14
+
+        ps2_dpd_busquedaAnio As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: =[Year(Now()),Year(Now())+1,Year(Now())+2]
+            OnChange: |-
+                =UpdateContext({vsbLoading1:true});
+                Clear(colNewPeriodo);
+                //__ ********** Validamos si existe Frecuencia y Año  ******************
+                //__ Validamos si existe una seleccion
+                If(IsBlank(ps2_dpd_busquedaAnio),"",
+                //__ Validamos si el contador es igual a 1
+                If(contEjecucion = 1,
+                    //_ Clear
+                    Clear(colPeriodo);
+                    //__
+                    Collect(colPeriodo,{
+                        Frecuencia: ps2_dpd_busquedaFrecuencia.Selected.Result,
+                        Anio: ps2_dpd_busquedaAnio.Selected.Value
+                    });    
+                //__ Ejecución del flujo para obter anio de acuerdo a la frecuencia seleccionada
+                Set(responseFlow_,'[CPC]_GetDataPeriods'.Run(JSON(colPeriodo)).response);
+                //Set(varJSONPeriodo,ParseJSON(responseFlow.response));
+                        If(IsBlank(responseFlow_) || IsEmpty(responseFlow_),UpdateContext({flagContPerd:true});Set(responsePeriodo,Blank()),UpdateContext({flagContPerd:false});Set(responsePeriodo,"Frecuencia y Año ya existen, favor de realizar los cambios correspondientes"));
+                );
+                //__ IF
+                );
+                
+                UpdateContext({vsbLoading1:false});
+            OnSelect: =Set(contEjecucion,1);
+            Reset: =true
+            Visible: =vsbNewPeriodo
+            Width: =220
+            X: =587
+            Y: =76
+            ZIndex: =15
+
+        ps2_lbl_busquedaEmbotellador As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Embotellador"
+            Visible: =false
+            Width: =125
+            X: =47
+            Y: =100
+            ZIndex: =16
+
+        ps2_dpd_busquedaEmbotellador As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: =Filter(Embotelladores,Estatus = true)
+            OnChange: =
+            Reset: =true
+            Visible: =false
+            Width: =250
+            X: =177
+            Y: =100
+            ZIndex: =17
+
+        ps2_lbl_busquedaRazonSocial As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Razon Social"
+            Visible: =false
+            Width: =125
+            X: =457
+            Y: =99
+            ZIndex: =18
+
+        ps2_dpd_busquedaRazonSocial As dropdown:
+            AllowEmptySelection: =true
+            ChevronBackground: =RGBA(9, 33, 98, 1)
+            Font: =Font.Lato
+            Items: =Filter(RazonSocial,Estatus = true)
+            OnChange: =
+            Reset: =true
+            Visible: =false
+            Width: =400
+            X: =587
+            Y: =99
+            ZIndex: =19
+
+        ps2_sld_newPeriodo As slider:
+            BorderStyle: =BorderStyle.None
+            Default: =0
+            Max: =450
+            ShowValue: =false
+            Visible: =false//vsbNewPeriodo
+            X: =537
+            Y: =687
+            ZIndex: =20
+
+        ps2_btn_crearNewPeriodo As button:
+            DisplayMode: =If(flagContPerd = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            OnSelect: |-
+                =UpdateContext({vsbLoading1:true});
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ps2_dpd_busquedaFrecuencia.Selected) || IsEmpty(ps2_dpd_busquedaFrecuencia.Selected) || IsBlank(ps2_dpd_busquedaAnio.Selected) || IsEmpty(ps2_dpd_busquedaAnio.Selected),
+                    Notify("Para continuar, es necesario seleccionar los datos correspondientes",NotificationType.Error,5000),
+                ClearCollect(colNewPeriodo,ForAll(Filter(CatalogoFrecuencia,Frecuencia = ps2_dpd_busquedaFrecuencia.Selected.Result),
+                        {
+                            Frecuencia:ThisRecord.Frecuencia,
+                            Anio: ps2_dpd_busquedaAnio.Selected.Value,
+                            Periodo: ThisRecord.Periodo,
+                            FechaElaboracionCalculo: If(ThisRecord.Frecuencia = "Mensual" && Value(ThisRecord.Periodo) = 12 || ThisRecord.Frecuencia = "Trimestral" && ThisRecord.Periodo = "Q4" || ThisRecord.Frecuencia = "Semestral" && ThisRecord.Periodo = "H2",ThisRecord.'Fecha Calculo' & Right(ps2_dpd_busquedaAnio.Selected.Value,2)+1,ThisRecord.'Fecha Calculo' & Right(ps2_dpd_busquedaAnio.Selected.Value,2)),
+                            FechaInicialInput: "",
+                            FechaFinalInpput: "",
+                            FechaVigenciaPrecioInicial:"",
+                            FechaVigenciaPrecioFinal: "",
+                            Embotellador: "",//ps2_dpd_busquedaEmbotellador.Selected.NombreEmbotelladores,
+                            RazonSocial: ""//ps2_dpd_busquedaRazonSocial.Selected.NombreRazonSocial
+                            //IDList: ThisRecord.Value.IDList)
+                
+                        }));
+                );
+                
+                UpdateContext({vsbLoading1:false});
+            Size: =13
+            Text: ="Crear"
+            Visible: =vsbNewPeriodo
+            Width: =107
+            X: =1131
+            Y: =76
+            ZIndex: =21
+
+        ps2_btn_cancelarNewPeriodo As button:
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            OnSelect: |-
+                =UpdateContext({vsbNewPeriodo:false});
+                Clear(colNewPeriodo);
+                Reset(ps2_dpd_busquedaFrecuencia);
+                Reset(ps2_dpd_busquedaAnio);
+                Set(responsePeriodo,Blank());
+                //Reset(ps2_dpd_busquedaEmbotellador);
+                ///Reset(ps2_dpd_busquedaRazonSocial);
+            Size: =13
+            Text: ="Cancelar"
+            Visible: =vsbNewPeriodo
+            Width: =107
+            X: =935
+            Y: =700
+            ZIndex: =22
+
+        ps2_btn_borrarNewPeriodo As button:
+            DisplayMode: =If(CountRows(colNewPeriodo) = 0,DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            OnSelect: |-
+                =Clear(colNewPeriodo);
+                Reset(ps2_dpd_busquedaFrecuencia);
+                Reset(ps2_dpd_busquedaAnio);
+                Set(responsePeriodo,Blank());
+                //Reset(ps2_dpd_busquedaEmbotellador);
+                //Reset(ps2_dpd_busquedaRazonSocial);
+            Size: =13
+            Text: ="Borrar"
+            Visible: =vsbNewPeriodo
+            Width: =107
+            X: =1071
+            Y: =700
+            ZIndex: =23
+
+        ps2_btn_guardarNewPeriodo As button:
+            DisplayMode: =If(CountRows(colNewPeriodo) = 0,DisplayMode.Disabled, DisplayMode.Edit)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            OnSelect: |-
+                =UpdateContext({vsbLoading1:true});
+                //__ Clear a la coleccion
+                Clear(colNewReqPeriodo);
+                Set(responsePeriodo,Blank());
+                
+                //__ Validamos los campos Vacios ____
+                //__ Validamos campos vacios Fecha 1
+                ClearCollect(colCountRowsFecha1,
+                    ForAll(ps2_gal_dataNewPerido.AllItems,
+                        If(IsBlank(ps2_dp_newFechaInicial_in.SelectedDate),
+                            {
+                                CampoVacio: true
+                            }
+                        )
+                    )
+                );
+                
+                //__ Validamos campos vacios Fecha 2
+                ClearCollect(colCountRowsFecha2,
+                    ForAll(ps2_gal_dataNewPerido.AllItems,
+                        If(IsBlank(ps2_dp_newFechaFinal_in.SelectedDate),
+                            {
+                                CampoVacio: true
+                            }
+                        )
+                    )
+                );
+                
+                //__ Validamos campos vacios Fecha 3
+                ClearCollect(colCountRowsFecha3,
+                    ForAll(ps2_gal_dataNewPerido.AllItems,
+                        If(IsBlank(ps2_dp_newFechaVigPrcInicial.SelectedDate),
+                            {
+                                CampoVacio: true
+                            }
+                        )
+                    )
+                );
+                
+                //__ Validamos campos vacios Fecha 4
+                ClearCollect(colCountRowsFecha4,
+                    ForAll(ps2_gal_dataNewPerido.AllItems,
+                        If(IsBlank(ps2_dp_newFechaVigPrcFinal.SelectedDate),
+                            {
+                                CampoVacio: true
+                            }
+                        )
+                    )
+                );
+                
+                If((CountRows(colCountRowsFecha1) + CountRows(colCountRowsFecha2) + CountRows(colCountRowsFecha3) + CountRows(colCountRowsFecha4)) >0,
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Inicia toda la magia
+                ClearCollect(colDataPeriodo,ForAll(ps2_gal_dataNewPerido.AllItems,{Frecuencia:ThisRecord.Frecuencia,Anio:ThisRecord.Anio, Periodo: ThisRecord.Periodo,FechaElaboracionCalculo:ThisRecord.FechaElaboracionCalculo,FechaInicialInput:Text( DateTimeValue( ps2_dp_newFechaInicial_in.SelectedDate ), "dd/mm/yyyy" ),FechaFinalInpput:Text( DateTimeValue( ps2_dp_newFechaFinal_in.SelectedDate ), "dd/mm/yyyy" ),FechaVigenciaPrecioInicial:Text( DateTimeValue( ps2_dp_newFechaVigPrcInicial.SelectedDate ), "dd/mm/yyyy" ),FechaVigenciaPrecioFinal:Text( DateTimeValue( ps2_dp_newFechaVigPrcFinal.SelectedDate ), "dd/mm/yyyy" )}));
+                //__ Guardamos en una colección los datos del Periodo
+                    Collect(
+                        colNewReqPeriodo,
+                        {
+                            EmailUser: varEmail,
+                            GPID: varUserGPID,
+                            NombreUser: varUserName,
+                            FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                            HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                            FrecuenciaNew: ps2_dpd_busquedaFrecuencia.Selected.Result,
+                            AnioNew: Value(ps2_dpd_busquedaAnio.Selected.Value),
+                            Data: colDataPeriodo,
+                            TipoCatalogo: "Catalogo Periodo - "& ps2_dpd_busquedaFrecuencia.Selected.Result ,
+                            MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                            YearSolicitud:Value(Year(Now()))
+                        }
+                    );
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colNewReqPeriodo));
+                Set(responseNuevoPeriodo,'[CPC]_SavePeriodo'.Run(varJSON));
+                Set(responsePeriodo,responseNuevoPeriodo.response);
+                If(responsePeriodo="Ok",
+                    UpdateContext({vsbNewPeriodo:false});
+                    Clear(colNewPeriodo);
+                    Clear(ColPeriodoFn);
+                    Reset(ps2_dpd_busquedaFrecuencia);
+                    Reset(ps2_dpd_busquedaAnio);
+                    Reset(ps2_dpd_frecuencia);
+                    Reset(ps2_dpd_anio);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responsePeriodo,Blank());
+                );
+                //__ Termina la magia
+                );
+                
+                UpdateContext({vsbLoading1:false});
+            Size: =13
+            Text: ="Guardar"
+            Visible: =vsbNewPeriodo
+            Width: =107
+            X: =1205
+            Y: =700
+            ZIndex: =24
+
+        ps2_cnt_headeNewPeriodo As groupContainer.manualLayoutContainer:
+            Height: =45
+            Visible: =vsbNewPeriodo
+            Width: =1306
+            X: =30
+            Y: =145
+            ZIndex: =25
+
+            ps2_btn_headerFrecuencia_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Frecuencia"
+                Width: =128
+                X: =87
+                ZIndex: =1
+
+            ps2_btn_headerAnio_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Año"
+                Width: =128
+                X: =ps2_btn_headerFrecuencia_1.X + ps2_btn_headerFrecuencia_1.Width
+                ZIndex: =2
+
+            ps2_btn_headerPeriodo_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Periodo"
+                Width: =128
+                X: =ps2_btn_headerAnio_1.X + ps2_btn_headerAnio_1.Width
+                ZIndex: =3
+
+            ps2_btn_headerFechaElaboracion_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Fecha Elaboración Cálculo"
+                Width: =158
+                X: =ps2_btn_headerPeriodo_1.X + ps2_btn_headerPeriodo_1.Width
+                ZIndex: =4
+
+            ps2_btn_headerFechaInicial_in_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Fecha Inicial Input"
+                Width: =150
+                X: =ps2_btn_headerFechaElaboracion_1.X + ps2_btn_headerFechaElaboracion_1.Width
+                ZIndex: =5
+
+            ps2_btn_headerFechaFinal_in_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Fecha Final Input"
+                Width: =150
+                X: =ps2_btn_headerFechaInicial_in_1.X + ps2_btn_headerFechaInicial_in_1.Width
+                ZIndex: =6
+
+            ps2_btn_headerFechaVigenciaPrcIn_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Fecha Vigencia Precio Inicial"
+                Width: =150
+                X: =ps2_btn_headerFechaFinal_in_1.X + ps2_btn_headerFechaFinal_in_1.Width
+                ZIndex: =7
+
+            ps2_btn_headerFechaVigenciaPrcFin_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Fecha Vigencia Precio Final"
+                Width: =150
+                X: =ps2_btn_headerFechaVigenciaPrcIn_1.X + ps2_btn_headerFechaVigenciaPrcIn_1.Width
+                ZIndex: =8
+
+            ps2_btn_headerEmbotellador_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Embotellador"
+                Visible: =false
+                Width: =300
+                X: =ps2_btn_headerFechaVigenciaPrcFin_1.X + ps2_btn_headerFechaVigenciaPrcFin_1.Width
+                ZIndex: =9
+
+            ps2_btn_headerRazonsocial_1 As button:
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =45
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Text: ="Razon Social"
+                Visible: =false
+                Width: =300
+                X: =ps2_btn_headerEmbotellador_1.X + ps2_btn_headerEmbotellador_1.Width
+                ZIndex: =10
+
+        ps2_cnt_dataNewPeriodo As groupContainer.manualLayoutContainer:
+            Height: =495
+            Visible: =vsbNewPeriodo
+            Width: =1306
+            X: =31
+            Y: =192
+            ZIndex: =26
+
+            ps2_gal_dataNewPerido As gallery.galleryVertical:
+                Height: =495
+                Items: =colNewPeriodo
+                Layout: =Layout.Vertical
+                TemplatePadding: =1
+                TemplateSize: =45
+                Width: =1366
+                ZIndex: =1
+
+                ps2_txt_newFrecuencia As text:
+                    Default: =ThisItem.Frecuencia
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Width: =ps2_btn_headerFrecuencia_1.Width
+                    X: =ps2_btn_headerFrecuencia_1.X
+                    ZIndex: =1
+
+                ps2_txt_newAnio As text:
+                    Default: =ThisItem.Anio
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Width: =ps2_btn_headerAnio_1.Width
+                    X: =ps2_btn_headerAnio_1.X
+                    ZIndex: =2
+
+                ps2_txt_newPeriodo As text:
+                    Default: =ThisItem.Periodo
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Width: =ps2_btn_headerPeriodo_1.Width
+                    X: =ps2_btn_headerPeriodo_1.X
+                    ZIndex: =3
+
+                ps2_txt_newFechaElaboracionCal As text:
+                    Default: =ThisItem.FechaElaboracionCalculo
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Height: =45
+                    OnSelect: =Select(Parent)
+                    Width: =ps2_btn_headerFechaElaboracion_1.Width
+                    X: =ps2_btn_headerFechaElaboracion_1.X
+                    ZIndex: =4
+
+                ps2_dp_newFechaInicial_in As datepicker:
+                    DefaultDate: =//Today()
+                    Height: =45
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+                    OnSelect: =Select(Parent)
+                    StartYear: =If(ThisItem.Frecuencia = "Anual",Blank(),ps2_dpd_busquedaAnio.Selected.Value)
+                    Width: =ps2_btn_headerFechaInicial_in_1.Width
+                    X: =ps2_btn_headerFechaInicial_in_1.X
+                    ZIndex: =11
+
+                ps2_dp_newFechaFinal_in As datepicker:
+                    DefaultDate: =//Today()
+                    Height: =45
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+                    OnSelect: =Select(Parent)
+                    StartYear: =If(ThisItem.Frecuencia = "Anual",Blank(),ps2_dpd_busquedaAnio.Selected.Value)
+                    Width: =ps2_btn_headerFechaFinal_in_1.Width
+                    X: =ps2_btn_headerFechaFinal_in_1.X
+                    ZIndex: =12
+
+                ps2_dp_newFechaVigPrcInicial As datepicker:
+                    DefaultDate: =//Today()
+                    Height: =45
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+                    OnSelect: =Select(Parent)
+                    StartYear: =ps2_dpd_busquedaAnio.Selected.Value
+                    Width: =ps2_btn_headerFechaVigenciaPrcIn_1.Width
+                    X: =ps2_btn_headerFechaVigenciaPrcIn_1.X
+                    ZIndex: =13
+
+                ps2_dp_newFechaVigPrcFinal As datepicker:
+                    DefaultDate: =//Today()
+                    Height: =45
+                    InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+                    OnSelect: =Select(Parent)
+                    StartYear: =ps2_dpd_busquedaAnio.Selected.Value
+                    Width: =ps2_btn_headerFechaVigenciaPrcFin_1.Width
+                    X: =ps2_btn_headerFechaVigenciaPrcFin_1.X
+                    ZIndex: =14
+
+                ps_txt_newEmbotellador As text:
+                    Align: =Align.Center
+                    Default: =ThisItem.Embotellador
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =45
+                    Mode: =TextMode.MultiLine
+                    OnSelect: =Select(Parent)
+                    Visible: =false
+                    Width: =ps2_btn_headerEmbotellador_1.Width
+                    X: =ps2_btn_headerEmbotellador_1.X
+                    ZIndex: =15
+
+                ps_txt_newRazonSocial As text:
+                    Default: =ThisItem.RazonSocial
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Height: =45
+                    Mode: =TextMode.MultiLine
+                    OnSelect: =Select(Parent)
+                    Visible: =false
+                    Width: =ps2_btn_headerRazonsocial_1.Width
+                    X: =ps2_btn_headerRazonsocial_1.X
+                    ZIndex: =16
+
+    ps2_lbl_msjError As label:
+        Color: =RGBA(184, 0, 0, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Text: =responsePeriodo
+        Visible: =vsbNewPeriodo
+        Width: =456
+        X: =47
+        Y: =700
+        ZIndex: =52
+
+    ps2_grp_editPeriodo As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =52
+
+        ps2_fig_fondoEdit As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbEditPeriodo
+            Width: =1366
+            ZIndex: =27
+
+        ps2_fig_subFondoEdit As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =455
+            Visible: =vsbEditPeriodo
+            Width: =496
+            X: =435
+            Y: =107
+            ZIndex: =28
+
+        ps2_lbl_tituloEdit As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Text: ="Editar Periodo"
+            Visible: =vsbEditPeriodo
+            Width: =496
+            X: =435
+            Y: =107
+            ZIndex: =29
+
+        ps2_lbl_editFrecuencia As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Frecuencia"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =162
+            ZIndex: =30
+
+        ps2_lbl_editFrecuenciaDt As label:
+            Font: =Font.Lato
+            Text: =varTempFrecuencia
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =162
+            ZIndex: =31
+
+        ps2_lbl_editAnio As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Año"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =207
+            ZIndex: =32
+
+        ps2_lbl_editAnioDt As label:
+            Font: =Font.Lato
+            Text: =varTempAnio
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =207
+            ZIndex: =33
+
+        ps2_lbl_editPeriodo As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Periodo"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =252
+            ZIndex: =34
+
+        ps2_lbl_editPeriodoDt As label:
+            Font: =Font.Lato
+            Text: =varTempPeriodo
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =252
+            ZIndex: =35
+
+        ps2_lbl_editFechaElabCalculo As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Fecha Elaboración Cálculo"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =297
+            ZIndex: =36
+
+        ps2_lbl_editFechaElabCalculoDt As label:
+            Font: =Font.Lato
+            Text: =varTempFechaElabCal
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =297
+            ZIndex: =37
+
+        ps2_lbl_editFechaInicial As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Fecha Inicial Input"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =342
+            ZIndex: =38
+
+        ps2_dt_editFechaInicial As datepicker:
+            DefaultDate: =varTempFechaInicial
+            Font: =Font.Lato
+            InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+            StartYear: =If(ps2_lbl_editFrecuenciaDt.Text = "Anual",Blank(),varTempAnio)
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =342
+            ZIndex: =39
+
+        ps2_lbl_editFechaFinal As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Fecha Final Input"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =387
+            ZIndex: =40
+
+        ps2_dt_editFechaFinal As datepicker:
+            DefaultDate: =varTempFechaFinal
+            Font: =Font.Lato
+            InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+            StartYear: =If(ps2_lbl_editFrecuenciaDt.Text = "Anual",Blank(),varTempAnio)
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =387
+            ZIndex: =41
+
+        ps2_lbl_editFechaVigPrcIn As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Fecha Vigencia Precio Inicial"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =432
+            ZIndex: =42
+
+        ps2_dt_editFechaVigPrcIn As datepicker:
+            DefaultDate: =varTempFechaVigPrcIni
+            Font: =Font.Lato
+            InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+            StartYear: =varTempAnio
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =432
+            ZIndex: =43
+
+        ps2_lbl_editFechaVigPrcFinal As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Fecha Vigencia Precio Final"
+            Visible: =vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =477
+            ZIndex: =44
+
+        ps2_dt_editFechaVigPrcFinal As datepicker:
+            DefaultDate: =varTempFechaVigPrcFin
+            Font: =Font.Lato
+            InputTextPlaceholder: =If(IsBlank(Self.SelectedDate), Text(Date(Year(Now()),12,31), Self.Format, Self.Language))
+            StartYear: =varTempAnio
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =477
+            ZIndex: =45
+
+        ps2_lbl_editEmbotellador As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Embotellador"
+            Visible: =false//vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =522
+            ZIndex: =46
+
+        ps2_lbl_editEmbotelladorDt As label:
+            Text: =varTempEmbotelladorP
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =522
+            ZIndex: =47
+
+        ps2_lbl_editRazonsSocial As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: ="Razon Social"
+            Visible: =false//vsbEditPeriodo
+            Width: =185
+            X: =459
+            Y: =567
+            ZIndex: =48
+
+        ps2_lbl_editRazonSocialDt As label:
+            Text: =varTempRazonSocial
+            Visible: =vsbEditPeriodo
+            Width: =200
+            X: =649
+            Y: =567
+            ZIndex: =49
+
+        ps2_icn_cancelarEdit As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =37
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({vsbEditPeriodo:false});
+                Set(varTempFechaInicial,Blank());
+                Set(varTempFechaFinal,Blank());
+                Set(varTempFechaVigPrcIni,Blank());
+                Set(varTempFechaVigPrcFin,Blank());
+            PaddingBottom: =3
+            PaddingTop: =3
+            Visible: =vsbEditPeriodo
+            Width: =46
+            X: =880
+            Y: =107
+            ZIndex: =50
+
+        ps2_icn_guardarEdit As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =37
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoading1:true});
+                //__ Realizamos Reset
+                Set(responseEditPeriodo,Blank());
+                Clear(colEditPeriodo);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(ps2_dt_editFechaInicial.SelectedDate) || IsEmpty(ps2_dt_editFechaInicial.SelectedDate) || IsBlank(ps2_dt_editFechaFinal.SelectedDate) || IsEmpty(ps2_dt_editFechaFinal.SelectedDate) || IsBlank(ps2_dt_editFechaVigPrcIn.SelectedDate) || IsEmpty(ps2_dt_editFechaVigPrcIn.SelectedDate) || IsBlank(ps2_dt_editFechaVigPrcFinal.SelectedDate) || IsEmpty(ps2_dt_editFechaVigPrcFinal.SelectedDate),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos a editar
+                    Collect(
+                    colEditPeriodo,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        Frecuencia: varTempFrecuencia,
+                        Anio: varTempAnio,
+                        Periodo:varTempPeriodo,
+                        FechaElabCalc: varTempFechaElabCal,
+                        FechaInicialIn: Text( DateTimeValue(ps2_dt_editFechaInicial.SelectedDate), "dd/mm/yyyy" ),
+                        FechaFinalIn:Text( DateTimeValue(ps2_dt_editFechaFinal.SelectedDate), "dd/mm/yyyy" ),
+                        FechaVigPrcInicial:Text( DateTimeValue(ps2_dt_editFechaVigPrcIn.SelectedDate), "dd/mm/yyyy" ),
+                        FechaVigPrcFinal:Text( DateTimeValue(ps2_dt_editFechaVigPrcFinal.SelectedDate), "dd/mm/yyyy" ),
+                        TipoCatalogo: "Catalogo Periodo - "& varTempFrecuencia,
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        FechaInicialIn_old: varTempFechaInicial,
+                        FechaFinalIn_old:varTempFechaFinal,
+                        FechaVigPrcInicial_old:varTempFechaVigPrcIni,
+                        FechaVigPrcFinal_old:varTempFechaVigPrcFin,
+                        IDList: varIDPeriodo
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditPeriodo));
+                Set(responseEditPeriodo,'[CPC]_EditPeriodo'.Run(varJSON));
+                Set(responsePeriodo,responseEditPeriodo.response);
+                If(responsePeriodo = "Ok",
+                    UpdateContext({vsbEditPeriodo:false});
+                    Reset(ps2_dpd_frecuencia);
+                    Reset(ps2_dpd_anio);
+                    Clear(ColPeriodoFn);
+                    Set(varTempFechaInicial,Blank());
+                    Set(varTempFechaFinal,Blank());
+                    Set(varTempFechaVigPrcIni,Blank());
+                    Set(varTempFechaVigPrcFin,Blank());
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseEditPeriodo,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoading1:false});
+            PaddingBottom: =3
+            PaddingTop: =3
+            Visible: =vsbEditPeriodo
+            Width: =46
+            X: =440
+            Y: =107
+            ZIndex: =51
+
+        ps2_lbl_msjErroEdit As label:
+            Height: =33
+            Text: =responseEditPeriodo.response
+            Visible: =vsbEditPeriodo
+            Width: =448
+            X: =459
+            Y: =522
+            ZIndex: =53
+
+    ps2_grp_msjCorrecto As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =58
+
+        ps2s_fig_fondoOk As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbMsjOk
+            Width: =1366
+            ZIndex: =54
+
+        ps2_fig_subfondoOk As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =55
+
+        ps2_lbl_tituloOk As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =56
+
+        ps2_lbl_msjOk As label:
+            Align: =Align.Center
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: ="Registro Guardado con Exito"
+            Visible: =vsbMsjOk
+            Width: =514
+            X: =426
+            Y: =337
+            ZIndex: =57
+
+        ps2_icn_ok As icon.Information:
+            Color: =RGBA(54, 176, 75, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =UpdateContext({vsbMsjOk:false});
+            Visible: =vsbMsjOk
+            X: =651
+            Y: =243
+            ZIndex: =58
+
+    ps2_cmp_loading As Loading:
+        Visible: =vsbLoading1
+        ZIndex: =59
+

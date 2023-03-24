@@ -1,0 +1,195 @@
+Auditoria_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    cms_img_logo_7 As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    cms_lbl_titulo_7 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Auditoría"
+        Width: =1366
+        ZIndex: =2
+
+    cms_img_geografia_7 As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =357
+        Y: =291
+        ZIndex: =3
+
+    cms_btn_logConfiguracion_7 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(LogConfiguraciones_Screen,ScreenTransition.CoverRight);
+            //Refresh(JerarquiaGeografica);;
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =357
+        Y: =291
+        ZIndex: =4
+
+    cms_lbl_logConfiguracion_7 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        Text: ="Log Configuraciones"
+        Visible: =vsbBtn
+        Width: =170
+        X: =357
+        Y: =431
+        ZIndex: =5
+
+    cms_img_productos_8 As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =599
+        Y: =291
+        ZIndex: =6
+
+    cms_btn_catMaestro_8 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(LogMttoCatalogosMaestros_Screen,ScreenTransition.CoverRight);
+            //Refresh(JerarquiaGeografica);;
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =599
+        Y: =291
+        ZIndex: =7
+
+    cms_lbl_catMaestro_8 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        Text: ="Log Mtto Catalogos Maestros"
+        Visible: =vsbBtn
+        Width: =170
+        X: =599
+        Y: =431
+        ZIndex: =8
+
+    cms_img_productos_9 As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =839
+        Y: =291
+        ZIndex: =15
+
+    cms_btn_logProcesamiento_9 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =839
+        Y: =291
+        ZIndex: =16
+
+    cms_lbl_logProcesamiento_9 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =64
+        Size: =12
+        Text: ="Log con Fecha de Procesamiento por Embotellador"
+        Visible: =vsbBtn
+        Width: =170
+        X: =839
+        Y: =431
+        ZIndex: =17
+
+    ps_img_backP_8 As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =18
+
+    ps_btn_backP_8 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: =Back();
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =19
+

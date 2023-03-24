@@ -1,0 +1,51 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =//__ Inicializamos el componente loading
+        Set(vsbLoading,true);
+        //__ Obtenemos Email del Usuario
+        Set(varEmail,User().Email);
+        //__ Inicializamos Variables
+        Set(vsbBtn,false);
+        Set(flagErrorFlow,false);
+        // Realizamos limpieza en coleccion
+        Clear(col_DataUser);
+        //__ Ejecutamos el Flujo para obtener Datos del Usuario (email)
+        Set(responseFlow,'[CPC]_GetUserData'.Run(varEmail));
+        //__ Validamos que no exista error al ejecutar el flujo
+        If(IsBlank(responseFlow.error),
+            //__ Validamos que el usuario este activo
+            If(IsBlank(responseFlow.response),
+                Set(flagNoUser,true),
+                Set(responseUserData,ParseJSON(responseFlow.response));
+                ClearCollect(col_TempDataUser,Table(responseUserData));
+                ForAll(col_TempDataUser,
+                    Collect(col_DataUser,
+                        {
+                        GPID:Value(ThisRecord.Value.GPID),
+                        NombreUsuario:Text(ThisRecord.Value.NombreUsuario),
+                        CorreoUsuario: Text(ThisRecord.Value.Correo),
+                        RolUsuario: Text(ThisRecord.Value.RolUsuario)
+                        }
+                    )
+                );
+                Set(flagUser,true);
+                Set(vsbBtn,true);
+            ),
+            Set(flagErrorFlow,true);
+            Set(vsbBtn,false);
+        );
+        
+        //__ guardamos los datos del usuario
+        Set(varUserName,Last(col_DataUser).NombreUsuario);
+        Set(varUserGPID,Last(col_DataUser).GPID);
+        Set(varUserEmail,Last(col_DataUser).CorreoUsuario);
+        Set(varUserRol,Last(col_DataUser).RolUsuario);
+        
+        //__ cambiamos visibilidad componente loading
+        Set(vsbLoading,false);
+        
+        //__ cambiamos visibilidad Maestro Producto
+        Set(vsbProduct,false);
+        Set(vsbContainer,false);
+

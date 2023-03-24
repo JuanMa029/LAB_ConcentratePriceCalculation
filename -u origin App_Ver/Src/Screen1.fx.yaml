@@ -1,0 +1,63 @@
+Screen1 As screen:
+
+    Dropdown1 As dropdown:
+        AllowEmptySelection: =true
+        Default: =""
+        Items: =Filter(RazonSocial,Estatus = true)
+        Reset: =true
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+    ComboBox2 As combobox:
+        DisplayFields: =["Result"]
+        Height: =48
+        IsSearchable: =false
+        Items: |-
+            =ForAll(Distinct(colLABProduct,SUBCATEGORY), {Result: ThisRecord.Value})
+        OnChange: |-
+            =//__ generacion de colecciones
+            /*Reset(ComboBox3);
+            ClearCollect(colBrand,Distinct(Filter(colLABProduct,SUBCATEGORY in Self.SelectedItems)
+            ,BRAND))*/
+        SearchFields: =["Result"]
+        SearchItems: =[]
+        Width: =451
+        X: =40
+        Y: =110
+        ZIndex: =2
+
+    ComboBox3 As combobox:
+        DisplayFields: =["Result"]
+        Height: =55
+        Items: |-
+            =ForAll(Distinct(Filter(colLABProduct, SUBCATEGORY in ComboBox2.SelectedItems),BRAND), {Result: ThisRecord.Value})
+        SearchFields: =["Result"]
+        SearchItems: |-
+            =Search(ForAll(Distinct(Filter(colLABProduct, SUBCATEGORY in ComboBox2.SelectedItems),BRAND), {Result: ThisRecord.Value}),ComboBox3.SearchText,"Result")
+        Width: =451
+        X: =40
+        Y: =201
+        ZIndex: =3
+
+    Button1 As button:
+        OnSelect: |
+            =ClearCollect(colLABProduct,LAB_PRODUCT);
+        Text: ="Botón"
+        X: =1078
+        Y: =40
+        ZIndex: =5
+
+    ComboBox4 As combobox:
+        DisplayFields: =["Result"]
+        Height: =52
+        Items: |-
+            =ForAll(Distinct(Filter(colLABProduct, BRAND in ComboBox3.SelectedItems),PRODUCT_ID), {Result: ThisRecord.Value})
+        SearchFields: =["Result"]
+        SearchItems: |-
+            =Search(ForAll(Distinct(Filter(colLABProduct, BRAND in ComboBox3.SelectedItems),PRODUCT_ID), {Result: ThisRecord.Value}),ComboBox4.SearchText,"Result")
+        Width: =413
+        X: =40
+        Y: =297
+        ZIndex: =7
+

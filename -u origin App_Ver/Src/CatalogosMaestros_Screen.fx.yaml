@@ -1,0 +1,248 @@
+CatalogosMaestros_Screen As screen:
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+
+    cms_img_logo As image:
+        Image: =logo5
+        PaddingBottom: =3
+        PaddingLeft: =3
+        PaddingRight: =3
+        PaddingTop: =3
+        Width: =200
+        X: =6
+        ZIndex: =1
+
+    cms_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogos Maestros"
+        Width: =1366
+        ZIndex: =2
+
+    cms_img_geografia As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =232
+        ZIndex: =3
+
+    cms_btn_geografia As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Navigate(Geografia_Screen,ScreenTransition.CoverRight);
+            Refresh(JerarquiaGeografica);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =232
+        ZIndex: =4
+
+    cms_lbl_geografia As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Text: ="Geografia"
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =372
+        ZIndex: =5
+
+    cms_img_productos As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =232
+        ZIndex: =6
+
+    cms_btn_productos As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        OnSelect: |
+            =Navigate(MaestroProductos_Screen,ScreenTransition.CoverRight);
+            //Refresh(LAB_PRODUCT);;
+            Set(vsbProduct,false);
+            Set(vsbContainer,false);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =232
+        ZIndex: =7
+
+    cms_lbl_productos As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Text: ="Productos"
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =372
+        ZIndex: =8
+
+    cms_img_crossReference As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =450
+        ZIndex: =9
+
+    cms_btn_crossReference As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =450
+        ZIndex: =10
+
+    cms_lbl_crossReference As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Text: ="Cross Reference"
+        Visible: =vsbBtn
+        Width: =170
+        X: =477
+        Y: =590
+        ZIndex: =11
+
+    cms_img_peridosMes As image:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =140
+        Image: =catalogos2
+        PaddingBottom: =20
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =450
+        ZIndex: =12
+
+    cms_btn_periodosMes As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =140
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =Reset(ps2_dpd_frecuencia);
+            Reset(ps2_dpd_anio);
+            Clear(ColPeriodoFn);
+            
+            Navigate(Periodos_Screen_v2,ScreenTransition.UnCover)
+        PressedFill: =Color.Transparent
+        Text: =""
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =450
+        ZIndex: =13
+
+    cms_lbl_periodosMes As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Text: ="Periodos/Mes"
+        Visible: =vsbBtn
+        Width: =170
+        X: =719
+        Y: =590
+        ZIndex: =14
+
+    ps_img_backP_7 As image:
+        Height: =47
+        Image: =back
+        PaddingBottom: =3
+        PaddingTop: =3
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =15
+
+    ps_btn_backP_7 As button:
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =Color.Transparent
+        Height: =47
+        HoverFill: =Color.Transparent
+        OnSelect: =Navigate(MenuPrincipal_Screen,ScreenTransition.UnCover);
+        PressedFill: =Color.Transparent
+        Text: =""
+        Width: =58
+        X: =46
+        Y: =715
+        ZIndex: =16
+

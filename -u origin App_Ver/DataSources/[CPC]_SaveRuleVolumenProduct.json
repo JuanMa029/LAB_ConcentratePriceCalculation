@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "88ae7ec8-41b6-4a4b-b09e-44844c0fe5d7",
+    "Name": "[CPC]_SaveRuleVolumenProduct",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

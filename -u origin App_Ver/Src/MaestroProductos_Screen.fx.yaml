@@ -1,0 +1,960 @@
+"MaestroProductos_Screen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: =FondoAzulClasico
+    ImagePosition: =ImagePosition.Stretch
+    OnVisible: |-
+        =UpdateContext({vsbProduct:false});
+        UpdateContext({vsbContainer:false});
+
+    MaestroProductos_Canvas As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =768
+        Width: =1364
+        X: =2
+        Y: =
+        ZIndex: =3
+
+        Options_DataCard As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =56
+            Width: =1364
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            po_btn_searchProduct_2 As button:
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =50
+                OnSelect: |-
+                    =UpdateContext({vsbContainer:false});
+                    UpdateContext({vsbProduct:true});
+                    Reset(po_cmb_searchProduct_1);
+                    Reset(po_cmb_searchCompetive_1);
+                    Reset(po_cmb_searchCategory_1);
+                    Reset(po_cmb_searchBrand_1);
+                    Reset(po_sld_product_1);
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Product"
+                Width: =412
+                X: =142
+                Y: =15
+                ZIndex: =1
+
+            po_btn_searchProduct_3 As button:
+                Fill: =RGBA(9, 33, 98, 1)
+                Font: =Font.Lato
+                Height: =50
+                OnSelect: |+
+                    =UpdateContext({vsbContainer:true});
+                    UpdateContext({vsbProduct:false});
+                    Reset(co_cmb_searchContainer_1);
+                    Reset(co_cmb_searchCPack_1);
+                    Reset(co_cmb_searchContainerT_1);
+                    
+                    
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Container"
+                Width: =412
+                X: =718
+                Y: =15
+                ZIndex: =2
+
+        Product_DataCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =743
+            Visible: =vsbProduct
+            Width: =1364
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            po_cnt_buttons As groupContainer.manualLayoutContainer:
+                Height: =63
+                Visible: =vsbProduct
+                Width: =1343
+                Y: =634
+                ZIndex: =1
+
+                mps_btn_descargarContainer_1 As button:
+                    Fill: =RGBA(0, 18, 107, 1)
+                    Font: =Font.Lato
+                    OnSelect: |
+                        =UpdateContext({vsbLoading_:true});
+                        //__ Inicializamos flujo
+                        Set(responseUpdateD,'[CPC]_Get_UpdateProduct_Apps'.Run(User().Email).response);
+                        
+                        If(IsBlank(responseUpdateD), Set(varMsjUpadte,"Ya cuenta con datos actuales");UpdateContext({vsbPopUpUpdateAc:true}),Set(varMsjUpadte,"Proceso en ejecución, en minutos recibirá una notificación de finalización");UpdateContext({vsbPopUpUpdateAc:true}));
+                        
+                        UpdateContext({vsbLoading_:false});
+                    Size: =13
+                    Text: ="Actualizar Datos"
+                    X: =1179
+                    Y: =15
+                    ZIndex: =1
+
+                po_btn_descagar As button:
+                    Fill: =RGBA(0, 16, 96, 1)
+                    OnSelect: |-
+                        =UpdateContext({vsbLoading_:true});
+                        Set(_url,'[CPC]_ExportarExcel'.Run("product"));
+                        Launch(_url.url);
+                        UpdateContext({vsbLoading_:false});
+                    Text: ="Descargar"
+                    X: =996
+                    Y: =15
+                    ZIndex: =2
+
+                po_img_atras As image:
+                    Height: =47
+                    Image: =back
+                    Width: =58
+                    X: =31
+                    Y: =8
+                    ZIndex: =3
+
+                po_btn_atrass As button:
+                    Fill: =Color.Transparent
+                    Height: =47
+                    HoverFill: =Color.Transparent
+                    OnSelect: |-
+                        =Navigate(CatalogosMaestros_Screen,ScreenTransition.UnCover);
+                        Reset(po_cmb_searchProduct_1);
+                        Reset(po_cmb_searchCompetive_1);
+                        Reset(po_cmb_searchCategory_1);
+                        Reset(po_cmb_searchBrand_1);
+                        Reset(po_sld_product_1);
+                    PressedFill: =Color.Transparent
+                    Text: =""
+                    Width: =58
+                    X: =31
+                    Y: =8
+                    ZIndex: =4
+
+            po_cnt_filter_2 As groupContainer.manualLayoutContainer:
+                Height: =140
+                Width: =1366
+                Y: =24
+                ZIndex: =2
+
+                po_btn_searchProduct_4 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Product"
+                    Width: =206
+                    X: =27
+                    ZIndex: =2
+
+                po_btn_searchCategory_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Category"
+                    Width: =206
+                    X: =752
+                    ZIndex: =4
+
+                po_btn_searchCompetive_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Competitive Category"
+                    Width: =206
+                    X: =752
+                    Y: =69
+                    ZIndex: =7
+
+                po_btn_searchBrand_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Brand"
+                    Width: =206
+                    X: =27
+                    Y: =69
+                    ZIndex: =9
+
+                po_cmb_searchProduct_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(Filter(LAB_PRODUCT, CATEGORY = po_cmb_searchCategory_1.Selected.Result || po_cmb_searchCategory_1.Selected.Result = Blank(),
+                        (COMPETITIVE_CATEGORY = po_cmb_searchCompetive_1.Selected.Result || po_cmb_searchCompetive_1.Selected.Result = Blank()),
+                        ( BRAND = po_cmb_searchBrand_1.Selected.Result || po_cmb_searchBrand_1.Selected.Result = Blank())
+                        ),PRODUCT), {Result: ThisRecord.Value})
+                    Reset: =true
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(Filter(LAB_PRODUCT, CATEGORY = po_cmb_searchCategory_1.Selected.Result || po_cmb_searchCategory_1.Selected.Result = Blank(),
+                        (COMPETITIVE_CATEGORY = po_cmb_searchCompetive_1.Selected.Result || po_cmb_searchCompetive_1.Selected.Result = Blank()),
+                        ( BRAND = po_cmb_searchBrand_1.Selected.Result || po_cmb_searchBrand_1.Selected.Result = Blank())
+                        ),PRODUCT), {Result: ThisRecord.Value}),po_cmb_searchProduct_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =464
+                    X: =242
+                    ZIndex: =11
+
+                po_cmb_searchCompetive_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(Filter(LAB_PRODUCT,BRAND = po_cmb_searchBrand_1.Selected.Result || po_cmb_searchBrand_1.Selected.Result = Blank())
+                        ,COMPETITIVE_CATEGORY), {Result: ThisRecord.Value})
+                    Reset: =true
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(Filter(LAB_PRODUCT,BRAND = po_cmb_searchBrand_1.Selected.Result || po_cmb_searchBrand_1.Selected.Result = Blank())
+                        ,COMPETITIVE_CATEGORY), {Result: ThisRecord.Value}),po_cmb_searchCompetive_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =246
+                    X: =974
+                    Y: =69
+                    ZIndex: =12
+
+                po_cmb_searchCategory_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(LAB_PRODUCT,CATEGORY), {Result: ThisRecord.Value})
+                    Reset: =true
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(LAB_PRODUCT,CATEGORY), {Result: ThisRecord.Value}),po_cmb_searchCategory_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =246
+                    X: =974
+                    ZIndex: =13
+
+                po_cmb_searchBrand_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(Filter(LAB_PRODUCT,CATEGORY = po_cmb_searchCategory_1.Selected.Result || po_cmb_searchCategory_1.Selected.Result = Blank()),BRAND), {Result: ThisRecord.Value})
+                    Reset: =true
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(Filter(LAB_PRODUCT,CATEGORY = po_cmb_searchCategory_1.Selected.Result || po_cmb_searchCategory_1.Selected.Result = Blank()),BRAND), {Result: ThisRecord.Value}),po_cmb_searchBrand_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =464
+                    X: =242
+                    Y: =69
+                    ZIndex: =14
+
+            po_cnt_headerBtn_2 As groupContainer.manualLayoutContainer:
+                Height: =50
+                Width: =1343
+                Y: =164
+                ZIndex: =3
+
+                po_btn_product_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Text: ="Product"
+                    Width: =472
+                    X: =21-po_sld_product_1.Value
+                    ZIndex: =1
+
+                po_btn_category_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Category"
+                    Width: =92
+                    X: =po_btn_product_1.X + po_btn_product_1.Width
+                    ZIndex: =2
+
+                po_btn_competitive_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Competitive Category"
+                    Width: =192
+                    X: =po_btn_category_1.X + po_btn_category_1.Width
+                    ZIndex: =3
+
+                po_btn_subcategory_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Subcategory"
+                    Width: =142
+                    X: =po_btn_competitive_1.X + po_btn_competitive_1.Width
+                    ZIndex: =4
+
+                po_btn_brand_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Brand"
+                    Width: =176
+                    X: =po_btn_subcategory_1.X + po_btn_subcategory_1.Width
+                    ZIndex: =5
+
+                po_btn_sugarC_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Sugar Content"
+                    Width: =132
+                    X: =po_btn_brand_1.X + po_btn_brand_1.Width
+                    ZIndex: =6
+
+                po_btn_OwnerG_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Owner Group"
+                    Width: =134
+                    X: =po_btn_sugarC_1.X + po_btn_sugarC_1.Width
+                    ZIndex: =7
+
+                po_btn_hfmC_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="HFM Category"
+                    Width: =134
+                    X: =po_btn_OwnerG_1.X + po_btn_OwnerG_1.Width
+                    ZIndex: =8
+
+                po_btn_hfmS_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="HFM Subcategory"
+                    Width: =134
+                    X: =po_btn_hfmC_1.X + po_btn_hfmC_1.Width
+                    ZIndex: =9
+
+            po_cnt_dataProduct_2 As groupContainer.manualLayoutContainer:
+                Height: =425
+                Width: =1366
+                Y: =225
+                ZIndex: =4
+
+                po_gal_dataProduct_2 As gallery.galleryVertical:
+                    Height: =367
+                    Items: |
+                        = Filter(
+                                LAB_PRODUCT,
+                                PRODUCT = po_cmb_searchProduct_1.Selected.Result || po_cmb_searchProduct_1.Selected.Result = Blank(),
+                                CATEGORY = po_cmb_searchCategory_1.Selected.Result || po_cmb_searchCategory_1.Selected.Result = Blank(),
+                                COMPETITIVE_CATEGORY = po_cmb_searchCompetive_1.Selected.Result || po_cmb_searchCompetive_1.Selected.Result = Blank(),        
+                                BRAND = po_cmb_searchBrand_1.Selected.Result || po_cmb_searchBrand_1.Selected.Result = Blank()
+                        )
+                    Layout: =Layout.Vertical
+                    TemplateSize: =41
+                    Width: =1344
+                    ZIndex: =1
+
+                    po_txt_category_2 As text:
+                        Default: =ThisItem.CATEGORY
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =po_btn_category_1.Width
+                        X: =po_btn_category_1.X
+                        ZIndex: =2
+
+                    po_txt_competitive_2 As text:
+                        Default: =ThisItem.COMPETITIVE_CATEGORY
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =po_btn_competitive_1.Width
+                        X: =po_btn_competitive_1.X
+                        ZIndex: =3
+
+                    po_txt_subcategory_2 As text:
+                        Default: =ThisItem.SUBCATEGORY
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_subcategory_1.Width
+                        X: =po_btn_subcategory_1.X
+                        ZIndex: =4
+
+                    po_txt_region_2 As text:
+                        Default: =ThisItem.BRAND
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_brand_1.Width
+                        X: =po_btn_brand_1.X
+                        ZIndex: =5
+
+                    po_txt_sugarC_2 As text:
+                        Default: =ThisItem.SUGAR_CONTENT
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_sugarC_1.Width
+                        X: =po_btn_sugarC_1.X
+                        ZIndex: =6
+
+                    po_txt_ownerG_2 As text:
+                        Default: =ThisItem.OWNER_GROUP
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_OwnerG_1.Width
+                        X: =po_btn_OwnerG_1.X
+                        ZIndex: =7
+
+                    po_txt_hfmC_2 As text:
+                        Default: =ThisItem.HFM_CATEGORY
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_hfmC_1.Width
+                        X: =po_btn_hfmC_1.X
+                        ZIndex: =8
+
+                    po_txt_hfmS_2 As text:
+                        Default: =ThisItem.HFM_SUBCATEGORY
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =po_btn_hfmS_1.Width
+                        X: =po_btn_hfmS_1.X
+                        ZIndex: =9
+
+                    po_txt_product_1 As text:
+                        Default: =ThisItem.PRODUCT
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =po_btn_product_1.Width
+                        X: =po_btn_product_1.X
+                        ZIndex: =10
+
+            po_sld_product_1 As slider:
+                BorderStyle: =BorderStyle.None
+                Default: =0
+                HandleSize: =20
+                Height: =28
+                Max: =320
+                ShowValue: =false
+                Visible: =vsbProduct
+                X: =523
+                Y: =606
+                ZIndex: =5
+
+        Container_DataCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =700
+            Visible: =vsbContainer
+            Width: =1364
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            co_cnt_filter_2 As groupContainer.manualLayoutContainer:
+                Height: =138
+                Width: =1360
+                ZIndex: =1
+
+                co_btn_searchContainer_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Container"
+                    X: =132
+                    Y: =21
+                    ZIndex: =2
+
+                co_btn_searchCPack_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Pack Size"
+                    X: =132
+                    Y: =83
+                    ZIndex: =4
+
+                co_btn_searchContainerT_2 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Container Type"
+                    X: =658
+                    Y: =83
+                    ZIndex: =9
+
+                co_cmb_searchContainer_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(Filter(LAB_CONTAINER, PACK_SIZE = co_cmb_searchCPack_1.Selected.Result || co_cmb_searchCPack_1.Selected.Result = Blank(),
+                                                    CONTAINER_TYPE = co_cmb_searchContainerT_1.Selected.Result || co_cmb_searchContainerT_1.Selected.Result = Blank())
+                        ,CONTAINER), {Result: ThisRecord.Value})
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(Filter(LAB_CONTAINER, PACK_SIZE = co_cmb_searchCPack_1.Selected.Result || co_cmb_searchCPack_1.Selected.Result = Blank(),
+                                                    CONTAINER_TYPE = co_cmb_searchContainerT_1.Selected.Result || co_cmb_searchContainerT_1.Selected.Result = Blank())
+                        ,CONTAINER), {Result: ThisRecord.Value}),co_cmb_searchContainer_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =768
+                    X: =308
+                    Y: =21
+                    ZIndex: =11
+
+                co_cmb_searchContainerT_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    Items: |-
+                        =ForAll(Distinct(Filter(LAB_CONTAINER, PACK_SIZE = co_cmb_searchCPack_1.Selected.Result || co_cmb_searchCPack_1.Selected.Result = Blank())
+                        ,CONTAINER_TYPE), {Result: ThisRecord.Value})
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Distinct(Filter(LAB_CONTAINER, PACK_SIZE = co_cmb_searchCPack_1.Selected.Result || co_cmb_searchCPack_1.Selected.Result = Blank())
+                        ,CONTAINER_TYPE), {Result: ThisRecord.Value}),co_cmb_searchContainerT_1.SearchText,"Result")
+                    SelectMultiple: =false
+                    Width: =236
+                    X: =840
+                    Y: =83
+                    ZIndex: =13
+
+                co_cmb_searchCPack_1 As combobox:
+                    ChevronBackground: =RGBA(0, 18, 107, 1)
+                    DisplayFields: =["Result"]
+                    IsSearchable: =false
+                    Items: |-
+                        =ForAll(Distinct(LAB_CONTAINER,PACK_SIZE), {Result: ThisRecord.Value})
+                    SearchFields: =["Result"]
+                    SearchItems: =[]
+                    SelectMultiple: =false
+                    Width: =236
+                    X: =308
+                    Y: =83
+                    ZIndex: =14
+
+            co_cnt_headerBtn_2 As groupContainer.manualLayoutContainer:
+                Height: =50
+                Width: =1366
+                Y: =163
+                ZIndex: =2
+
+                co_btn_container_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Text: ="Container"
+                    Width: =436
+                    X: =129
+                    ZIndex: =1
+
+                co_btn_pack_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Pack Size"
+                    Width: =166
+                    X: =565
+                    ZIndex: =2
+
+                co_btn_containerT_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Container Type"
+                    Width: =192
+                    X: =731
+                    ZIndex: =3
+
+                co_btn_disposition_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Disposition"
+                    Width: =151
+                    X: =923
+                    ZIndex: =4
+
+                co_btn_serving_1 As button:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(9, 33, 98, 1)
+                    Font: =Font.Lato
+                    Height: =50
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =14
+                    Text: ="Serving Size"
+                    Width: =142
+                    X: =1074
+                    ZIndex: =5
+
+            co_cnt_dataContainer_2 As groupContainer.manualLayoutContainer:
+                Height: =425
+                Width: =1366
+                Y: =202
+                ZIndex: =3
+
+                co_gal_dataContainer_2 As gallery.galleryVertical:
+                    Height: =415
+                    Items: |
+                        =Filter(
+                                LAB_CONTAINER,
+                                CONTAINER = co_cmb_searchContainer_1.Selected.Result || co_cmb_searchContainer_1.Selected.Result = Blank(), 
+                                PACK_SIZE = co_cmb_searchCPack_1.Selected.Result || co_cmb_searchCPack_1.Selected.Result = Blank(),
+                                CONTAINER_TYPE = co_cmb_searchContainerT_1.Selected.Result || co_cmb_searchContainerT_1.Selected.Result = Blank()
+                        )
+                          
+                    Layout: =Layout.Vertical
+                    TemplateSize: =41
+                    Width: =1366
+                    Y: =10
+                    ZIndex: =1
+
+                    co_txt_pack_3 As text:
+                        Default: =ThisItem.PACK_SIZE
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =co_btn_pack_1.Width
+                        X: =co_btn_pack_1.X
+                        ZIndex: =2
+
+                    co_txt_containerT_2 As text:
+                        Default: =ThisItem.CONTAINER_TYPE
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =co_btn_containerT_1.Width
+                        X: =co_btn_containerT_1.X
+                        ZIndex: =3
+
+                    co_txt_disposition_2 As text:
+                        Default: =ThisItem.DISPOSITION
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =co_btn_disposition_1.Width
+                        X: =co_btn_disposition_1.X
+                        ZIndex: =4
+
+                    co_txt_serving_2 As text:
+                        Default: =ThisItem.SERVING_SIZE
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Size: =12
+                        Width: =co_btn_serving_1.Width
+                        X: =co_btn_serving_1.X
+                        ZIndex: =5
+
+                    co_txt_container_1 As text:
+                        Default: =ThisItem.CONTAINER
+                        DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                        DisabledColor: =RGBA(0, 0, 0, 1)
+                        DisabledFill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =DisplayMode.Disabled
+                        Font: =Font.Lato
+                        Height: =39
+                        OnSelect: =Select(Parent)
+                        Size: =12
+                        Width: =co_btn_container_1.Width
+                        X: =co_btn_container_1.X
+                        Y: =1
+                        ZIndex: =6
+
+            mps_btn_descargarContainer As button:
+                Fill: =RGBA(0, 18, 107, 1)
+                Font: =Font.Lato
+                OnSelect: |
+                    =UpdateContext({vsbLoading_:true});
+                    //__ Inicializamos flujo
+                    Set(varEmail_,User().Email);
+                    Set(responseUpdateD,'[CPC]_Get_UpdateCONTAINER'.Run(varEmail_).response);
+                    
+                    If(IsBlank(responseUpdateD), Set(varMsjUpadte,"Ya cuenta con datos actuales");UpdateContext({vsbPopUpUpdateAc:true}),Set(varMsjUpadte,"Proceso en ejecución, en minutos recibirá una notificación de finalización");UpdateContext({vsbPopUpUpdateAc:true}));
+                    
+                    UpdateContext({vsbLoading_:false});
+                Size: =13
+                Text: ="Actualizar Datos"
+                X: =1110
+                Y: =84
+                ZIndex: =6
+
+            co_cnt_buttons As groupContainer.manualLayoutContainer:
+                Height: =46
+                Visible: =vsbContainer
+                Width: =1342
+                Y: =640
+                ZIndex: =7
+
+                co_img_atras As image:
+                    Height: =46
+                    Image: =back
+                    Width: =58
+                    X: =40
+                    ZIndex: =1
+
+                co_btn_atras As button:
+                    Fill: =Color.Transparent
+                    Height: =46
+                    HoverFill: =Color.Transparent
+                    OnSelect: |-
+                        =Navigate(CatalogosMaestros_Screen,ScreenTransition.UnCover);
+                        Reset(co_cmb_searchContainer_1);
+                        Reset(co_cmb_searchCPack_1);
+                        Reset(co_cmb_searchContainerT_1);
+                    PressedFill: =Color.Transparent
+                    Text: =""
+                    Width: =58
+                    X: =40
+                    ZIndex: =2
+
+                co_btn_descargar As button:
+                    Fill: =RGBA(0, 16, 96, 1)
+                    OnSelect: |-
+                        =UpdateContext({vsbLoading_:true});
+                        Set(_url,'[CPC]_ExportarExcel'.Run("container"));
+                        Launch(_url.url);
+                        UpdateContext({vsbLoading_:false});
+                    Text: ="Descargar"
+                    X: =1182
+                    ZIndex: =3
+
+    mps_cmp_loading_ As Loading:
+        Visible: =vsbLoading_
+        ZIndex: =9
+
+    mps_grp_actualizarDatos As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        mps_fig_fondoActualizar As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =vsbPopUpUpdateAc
+            Width: =1366
+            ZIndex: =4
+
+        mps_fig_subfondoActualizar As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =295
+            Visible: =vsbPopUpUpdateAc
+            Width: =598
+            X: =385
+            Y: =192
+            ZIndex: =5
+
+        mps_lbl_tituloActualizar As label:
+            Align: =Align.Center
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbPopUpUpdateAc
+            Width: =598
+            X: =385
+            Y: =192
+            ZIndex: =6
+
+        mps_icn_cerrarActualizar As icon.ChevronDown:
+            Color: =RGBA(65, 65, 65, 1)
+            Height: =40
+            Icon: =Icon.BackArrow
+            OnSelect: |-
+                =UpdateContext({vsbPopUpUpdateAc:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbPopUpUpdateAc
+            Width: =40
+            X: =392
+            Y: =192
+            ZIndex: =7
+
+        mps_lbl_msjActualizar As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =86
+            Text: =varMsjUpadte
+            Visible: =vsbPopUpUpdateAc
+            Width: =598
+            X: =384
+            Y: =296
+            ZIndex: =8
+
