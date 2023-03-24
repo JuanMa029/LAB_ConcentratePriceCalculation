@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 256,
+                  "charOffset": 257,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -104,9 +104,9 @@
                 },
                 "region": {
                   "charLength": 153,
-                  "charOffset": 125,
+                  "charOffset": 126,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 279,
+                  "charOffset": 280,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -184,9 +184,9 @@
                 },
                 "region": {
                   "charLength": 169,
-                  "charOffset": 116,
+                  "charOffset": 117,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND)"
                   }
                 }
               },
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 286,
+                  "charOffset": 287,
                   "snippet": {
                     "text": "Value"
                   }
@@ -265,9 +265,9 @@
                 },
                 "region": {
                   "charLength": 187,
-                  "charOffset": 109,
+                  "charOffset": 110,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
                   }
                 }
               },
@@ -345,7 +345,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 258,
+                  "charOffset": 259,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -385,9 +385,9 @@
                 },
                 "region": {
                   "charLength": 155,
-                  "charOffset": 125,
+                  "charOffset": 126,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -425,7 +425,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 281,
+                  "charOffset": 282,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -465,9 +465,9 @@
                 },
                 "region": {
                   "charLength": 171,
-                  "charOffset": 116,
+                  "charOffset": 117,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND)"
                   }
                 }
               },
@@ -505,7 +505,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 288,
+                  "charOffset": 289,
                   "snippet": {
                     "text": "Value"
                   }
@@ -546,9 +546,9 @@
                 },
                 "region": {
                   "charLength": 189,
-                  "charOffset": 109,
+                  "charOffset": 110,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
                   }
                 }
               },
@@ -19265,35 +19265,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen2"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen2",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "Screen2",
-                "type": "Screen2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.flagNoUser"
                 }
               ],
@@ -20043,7 +20014,7 @@
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Limite los datos recopilados del origen de datos actualizando la fórmula \"ClearCollect(colLABProduct, LAB_PRODUCT)\" para incluir una función de filtrado, como \"Filter\" o \"Search\"."
+                  "Limite los datos recopilados del origen de datos actualizando la fórmula \"ClearCollect(colLABProduct; LAB_PRODUCT)\" para incluir una función de filtrado, como \"Filter\" o \"Search\"."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
