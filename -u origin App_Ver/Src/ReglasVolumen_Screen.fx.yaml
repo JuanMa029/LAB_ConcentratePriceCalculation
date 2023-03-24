@@ -2285,7 +2285,7 @@
             ChevronHoverBackground: =RGBA(255, 255, 255, 1)
             ChevronHoverFill: =RGBA(0, 18, 107, 1)
             Color: =RGBA(71, 71, 71, 1)
-            DisplayFields: =["Value","CONTAINER_ID"]
+            DisplayFields: =["Value"]
             Font: =Font.Lato
             HoverColor: =RGBA(71, 71, 71, 1)
             Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_newContainerType.SelectedItems),CONTAINER)
@@ -2544,7 +2544,7 @@
                 =Distinct(
                     Filter(
                         Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_editContainerType.SelectedItems),CONTAINER in ForAll(varListContainer,{Value:ThisRecord.Value})),CONTAINER)
-            DisplayFields: =["Value","CONTAINER_ID"]
+            DisplayFields: =["Value"]
             Font: =Font.Lato
             HoverColor: =RGBA(71, 71, 71, 1)
             Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_editContainerType.SelectedItems),CONTAINER)

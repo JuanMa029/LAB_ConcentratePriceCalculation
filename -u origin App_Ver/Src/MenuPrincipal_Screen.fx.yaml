@@ -426,3 +426,9 @@ MenuPrincipal_Screen As screen:
         Y: =84
         ZIndex: =26
 
+    Label3 As label:
+        Text: ="PRUEBS"
+        X: =949
+        Y: =722
+        ZIndex: =27
+
