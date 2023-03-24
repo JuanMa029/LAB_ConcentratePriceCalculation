@@ -415,3 +415,14 @@ MenuPrincipal_Screen As screen:
             Y: =262
             ZIndex: =25
 
+    Label2 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =122
+        Size: =15
+        Text: ="Prueba Colaborativa"
+        Width: =376
+        X: =964
+        Y: =84
+        ZIndex: =26
+
