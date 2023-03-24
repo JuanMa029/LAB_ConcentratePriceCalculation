@@ -415,9 +415,3 @@ MenuPrincipal_Screen As screen:
             Y: =262
             ZIndex: =25
 
-    Label3 As label:
-        Text: ="PRUEBA DOS"
-        X: =949
-        Y: =722
-        ZIndex: =27
-
