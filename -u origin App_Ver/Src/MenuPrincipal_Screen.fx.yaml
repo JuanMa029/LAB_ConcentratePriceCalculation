@@ -415,3 +415,9 @@ MenuPrincipal_Screen As screen:
             Y: =262
             ZIndex: =25
 
+    Label2 As label:
+        Text: ="Texto"
+        X: =919
+        Y: =692
+        ZIndex: =26
+
