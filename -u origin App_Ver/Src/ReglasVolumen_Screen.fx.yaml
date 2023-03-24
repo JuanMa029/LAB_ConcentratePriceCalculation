@@ -1186,7 +1186,8 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: =Distinct(colProductVlmRule,RAZONSOCIAL)
+                IsSearchable: =false
+                Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
                 OnChange: |
                     =// Reset al componente SubCategory
                     Reset(rvs_dpd_subcategory_Product);
@@ -1195,7 +1196,7 @@
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(colProductVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Meses.SearchText,"Value")
+                SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400
@@ -1458,7 +1459,7 @@
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =300
-                Items: =Search(Search(Search(Filter(colProductVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value || rvs_dpd_razonSocial_Product.Selected.Value = Blank()),rvs_dpd_subcategory_Product.Selected.Value,"SUBCATEGORY0"),rvs_dpd_brand_Product.Selected.Value,"BRAND0"),rvs_dpd_Product.Selected.Value,"PRODUCT0")
+                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Product_1.Selected.Value,"BRAND")
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
@@ -1513,8 +1514,7 @@
                     DisplayFields: =["Result"]
                     DisplayMode: =DisplayMode.View
                     IsSearchable: =false
-                    Items: |-
-                        =ForAll(Split(ThisItem.PRODUCT,";"), {Result: ThisRecord.Value})
+                    Items: =ThisItem.'3MONTHSVOLUME'
                     OnSelect: =Select(Parent)
                     SearchFields: =["Result"]
                     SearchItems: =[]
