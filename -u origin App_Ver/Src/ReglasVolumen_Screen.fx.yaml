@@ -1192,7 +1192,7 @@
                     =// Reset al componente SubCategory
                     Reset(rvs_dpd_subcategory_Product);
                     // Generamos la lista Subcategory
-                    Set(varConcatSubcategory,Concat(Distinct(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),SUBCATEGORY),Value,";"))
+                    Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),SUBCATEGORY),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
@@ -1204,7 +1204,7 @@
                 Y: =47
                 ZIndex: =2
 
-            rvs_lbl_subCategory_1 As label:
+            rvs_lbl_subCategory_Meses As label:
                 Color: =RGBA(65, 65, 65, 1)
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
@@ -1215,7 +1215,7 @@
                 Y: =7
                 ZIndex: =3
 
-            rvs_dpd_subcategory_Product_1 As combobox:
+            rvs_dpd_subcategory_Meses As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -1227,17 +1227,17 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: |-
-                    =Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result)
+                    =Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result)
                 OnChange: |
                     =// Reset al componente Brand
-                    Reset(rvs_dpd_brand_Product_1);
+                    Reset(rvs_dpd_brand_Meses);
                     // Generamos la lista Brand
-                    Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY0"),BRAND),Value,";"))
+                    Set(varConcatBrandInnova,Concat(Distinct(Search(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Product_1.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Meses.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -1245,7 +1245,7 @@
                 Y: =47
                 ZIndex: =4
 
-            rvs_lbl_brand_Product_1 As label:
+            rvs_lbl_brand_Meses As label:
                 Color: =RGBA(65, 65, 65, 1)
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
@@ -1256,7 +1256,7 @@
                 Y: =7
                 ZIndex: =5
 
-            rvs_dpd_brand_Product_1 As combobox:
+            rvs_dpd_brand_Meses As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -1268,19 +1268,21 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: |-
-                    =Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result)
-                OnChange: |
-                    =// Reset al componente Prodcut
+                    =Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result)
+                OnChange: |-
+                    =/*
+                    // Reset al componente Prodcut
                     Reset(rvs_dpd_Product);
                     // Generamos lista Product
                     Set(varConcatProduct,Concat(Distinct(Search(
-                        Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY0"),rvs_dpd_brand_Product_1.Selected.Value,"BRAND0")
+                        Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY0"),rvs_dpd_brand_Meses.Selected.Value,"BRAND0")
                         ,PRODUCT),Value,";"))
+                    */
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Product_1.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Meses.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -1349,7 +1351,7 @@
             Y: =12
             ZIndex: =13
 
-            rvs_btn_headerRazonSocial_Prd_1 As button:
+            rvs_btn_headerRazonSocial_Mes As button:
                 Align: =Align.Left
                 Color: =RGBA(65, 65, 65, 1)
                 DisplayMode: =DisplayMode.View
@@ -1365,7 +1367,7 @@
                 X: =40
                 ZIndex: =1
 
-            rvs_btn_headerSubcategory_Prd_1 As button:
+            rvs_btn_headerSubcategory_Mes As button:
                 Align: =Align.Left
                 Color: =RGBA(65, 65, 65, 1)
                 DisplayMode: =DisplayMode.View
@@ -1381,7 +1383,7 @@
                 X: =480
                 ZIndex: =2
 
-            rvs_btn_headerBrand_Prd_1 As button:
+            rvs_btn_headerBrand_Mes As button:
                 Align: =Align.Left
                 Color: =RGBA(65, 65, 65, 1)
                 DisplayMode: =DisplayMode.View
@@ -1397,7 +1399,7 @@
                 X: =700
                 ZIndex: =3
 
-            rvs_btn_headerProduct_Prd_1 As button:
+            rvs_btn_header3MesesVlm As button:
                 Align: =Align.Left
                 Color: =RGBA(65, 65, 65, 1)
                 DisplayMode: =DisplayMode.View
@@ -1413,7 +1415,7 @@
                 X: =920
                 ZIndex: =4
 
-            rvs_btn_headerStatus_Prd_1 As button:
+            rvs_btn_headerStatus_Mes As button:
                 Color: =RGBA(65, 65, 65, 1)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(196, 222, 251, 1)
@@ -1428,7 +1430,7 @@
                 X: =1140
                 ZIndex: =5
 
-            rvs_btn_headerEdit_Prd_1 As button:
+            rvs_btn_headerEdit_Mes As button:
                 Color: =RGBA(71, 71, 71, 1)
                 DisplayMode: =DisplayMode.View
                 Fill: =RGBA(196, 222, 251, 1)
@@ -1454,12 +1456,12 @@
             Y: =13
             ZIndex: =14
 
-            rvs_gal_dataReglasVlmProduct_1 As gallery.galleryVertical:
+            rvs_gal_dataReglasVlmMeses As gallery.galleryVertical:
                 BorderColor: =RGBA(56, 136, 210, 1)
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =300
-                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Product_1.Selected.Value,"BRAND")
+                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
@@ -1468,7 +1470,7 @@
                 Y: =1
                 ZIndex: =1
 
-                gal_dpd_razonSocial_Product_1 As label:
+                gal_dpd_razonSocial_Meses As label:
                     Color: =RGBA(65, 65, 65, 1)
                     Font: =Font.Lato
                     OnSelect: =Select(Parent)
@@ -1476,7 +1478,7 @@
                     Width: =rvs_btn_headerRazonSocial_Prd.Width
                     ZIndex: =1
 
-                gal_dpd_subcategory_Product_1 As combobox:
+                gal_dpd_subcategory_Meses As combobox:
                     Color: =RGBA(65, 65, 65, 1)
                     DefaultSelectedItems: |-
                         =ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value})
@@ -1488,12 +1490,12 @@
                     OnSelect: =Select(Parent)
                     SearchFields: =["Result"]
                     SearchItems: |-
-                        =Search(ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value}),gal_dpd_subcategory_Product_1.SearchText,"Result")
+                        =Search(ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value}),gal_dpd_subcategory_Meses.SearchText,"Result")
                     Width: =rvs_btn_headerSubcategory_Prd.Width
                     X: =440
                     ZIndex: =2
 
-                gal_dpd_brand_Product_1 As combobox:
+                gal_dpd_brand_Meses As combobox:
                     DefaultSelectedItems: |-
                         =ForAll(Split(ThisItem.BRAND,";"), {Result: ThisRecord.Value})
                     DisplayFields: =["Result"]
@@ -1508,21 +1510,7 @@
                     X: =660
                     ZIndex: =3
 
-                gal_dpd_product_Product_1 As combobox:
-                    DefaultSelectedItems: |-
-                        =ForAll(Split(ThisItem.PRODUCT,";"), {Result: ThisRecord.Value})
-                    DisplayFields: =["Result"]
-                    DisplayMode: =DisplayMode.View
-                    IsSearchable: =false
-                    Items: =ThisItem.'3MONTHSVOLUME'
-                    OnSelect: =Select(Parent)
-                    SearchFields: =["Result"]
-                    SearchItems: =[]
-                    Width: =rvs_btn_headerProduct_Prd.Width
-                    X: =880
-                    ZIndex: =4
-
-                gal_fig_separador_Product_1 As rectangle:
+                gal_fig_separador_Meses As rectangle:
                     Fill: =RGBA(201, 201, 201, 1)
                     Height: =1
                     OnSelect: =Select(Parent)
@@ -1530,7 +1518,7 @@
                     Y: =39
                     ZIndex: =5
 
-                gal_fig_status_Product_1 As circle:
+                gal_fig_status_Meses As circle:
                     DisplayMode: =DisplayMode.View
                     Fill: =If(ThisItem.STATUS = true,RGBA(101, 201, 135, 1),RGBA(227, 55, 44, 1))
                     Height: =15
@@ -1540,7 +1528,7 @@
                     Y: =13
                     ZIndex: =6
 
-                gal_img_edit_Product_1 As image:
+                gal_img_edit_Meses As image:
                     Height: =25
                     Image: =btnEdit
                     OnSelect: =Select(Parent)
@@ -1549,7 +1537,7 @@
                     Y: =9
                     ZIndex: =7
 
-                gal_btn_edit_Product_1 As button:
+                gal_btn_edit_Meses As button:
                     Fill: =Color.Transparent
                     Height: =25
                     HoverFill: =RGBA(56, 136, 210, 0.5)
@@ -1570,14 +1558,11 @@
                         Set(varRazonSocial,ThisItem.RAZONSOCIAL);
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varProduct,ThisItem.PRODUCT);
-                        Set(varProductID,ThisItem.PRODUCT_ID);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL,";"));
                         Set(varListSubcategory,Split(ThisItem.SUBCATEGORY,";"));
                         Set(varListBrand,Split(ThisItem.BRAND,";"));
-                        Set(varListProduct,Split(ThisItem.PRODUCT,";"));
                         
                         
                         UpdateContext({vsbEditRglProduct:true});
@@ -1590,7 +1575,17 @@
                     Y: =9
                     ZIndex: =8
 
-            rvs_btn_newProduct_Agregar_2 As button:
+                gal_cbx_3Meses As checkbox:
+                    Default: =ThisItem.'3MONTHSVOLUME'
+                    DisplayMode: =DisplayMode.View
+                    Height: =39
+                    OnSelect: =Select(Parent)
+                    Text: =""
+                    Width: =35
+                    X: =880
+                    ZIndex: =9
+
+            rvs_btn_descargarArchivo_Meses As button:
                 Fill: =RGBA(107, 165, 231, 1)
                 Font: =Font.Lato
                 HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
