@@ -315,7 +315,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label3",
-      "ParentIndex": 25,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2736,7 +2736,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_auditoria",
-      "ParentIndex": 27,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2787,7 +2787,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_calculoPrecio",
-      "ParentIndex": 29,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2838,7 +2838,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_catalogosMaestros",
-      "ParentIndex": 30,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2889,7 +2889,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_configuraciones",
-      "ParentIndex": 31,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2940,7 +2940,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_importarArchivos",
-      "ParentIndex": 28,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2991,7 +2991,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_mensajeError",
-      "ParentIndex": 32,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3042,7 +3042,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "mps_grp_notasAjuste",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
