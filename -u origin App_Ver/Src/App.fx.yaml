@@ -8,6 +8,8 @@ App As appinfo:
         //__ Inicializamos Variables
         Set(vsbBtn,false);
         Set(flagErrorFlow,false);
+        Set(varTempID,Blank());
+        
         // Realizamos limpieza en coleccion
         Clear(col_DataUser);
         //__ Ejecutamos el Flujo para obtener Datos del Usuario (email)
