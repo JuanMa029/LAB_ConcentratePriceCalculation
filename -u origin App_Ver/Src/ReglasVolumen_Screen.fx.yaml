@@ -1579,11 +1579,13 @@
                 gal_cbx_3Meses As checkbox:
                     Default: =ThisItem.'3MONTHSVOLUME'
                     DisplayMode: =DisplayMode.View
-                    Height: =39
+                    Font: =Font.Lato
+                    Height: =40
                     OnSelect: =Select(Parent)
                     Text: =""
-                    Width: =35
-                    X: =880
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =40
+                    X: =933
                     ZIndex: =9
 
             rvs_btn_descargarArchivo_Meses As button:
@@ -2007,7 +2009,6 @@
                     Reset(rvs_dpd_editBrand_Product);
                     Reset(rvs_dpd_editProduct);
                     Reset(rvs_tgg_editProduct);
-                    Refresh(JerarquiaGeografica);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
                     Refresh(ProductVolumeRule);
@@ -2827,7 +2828,6 @@
                     Reset(rvs_dpd_editContainerType);
                     Reset(rvs_dpd_editContainer);
                     Reset(rvs_tgg_editContainer);
-                    Refresh(JerarquiaGeografica);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
                     Refresh(ContainerVolumeRule);
@@ -3352,9 +3352,9 @@
                 If(IsBlank(rvs_dpd_editRazonSocial_Innova.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Innova.Selected) || IsBlank(rvs_dpd_editSubcategory_Innova.Selected) || IsEmpty(rvs_dpd_editSubcategory_Innova.Selected) || IsBlank(rvs_dpd_editBrand_Innova.Selected) || IsEmpty(rvs_dpd_editBrand_Innova.Selected),
                     Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
                 //__ Guardamos en una colección los datos de la solicitud
-                Clear(colReglaVolProduct);
+                Clear(colReglaVolInnova);
                     Collect(
-                    colReglaVolProduct,
+                    colReglaVolInnova,
                     {
                         EmailUser: varEmail,
                         GPID: varUserGPID,
@@ -3363,7 +3363,7 @@
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Innova.Selected.NombreRazonSocial,
                         Subcategory: Concat(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,";"),
-                        Brand: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Value,";"),
+                        Brand: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Result,";"),
                         ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
                         Estatus: rvs_tgg_editEstatus_Innova.Value,
                         IDList: IdListRglInnova,
@@ -3378,25 +3378,24 @@
                     );
                 
                     //__ Invocamos el Flujo de Automate
-                Set(varJSONRegla,JSON(colReglaVolProduct));
+                Set(varJSONRegla,JSON(colReglaVolInnova));
                 Set(responseSave,'[CPC]_EditRuleVolumenContainer'.Run(varJSONRegla));
                 Set(responseNewProd,responseSave.response);
                 //__ Realizamos Clear a la coleccion de Solicitud
                 If(responseNewProd = "Ok",
-                    UpdateContext({vsbEditRglContainer:false});
+                    UpdateContext({vsbEditRglInnova:false});
                     Reset(rvs_dpd_editRazonSocial_Innova);
                     Reset(rvs_dpd_editSubcategory_Innova);
                     Reset(rvs_dpd_editBrand_Innova);
                     Reset(rvs_tgg_editEstatus_Innova);
-                    Refresh(JerarquiaGeografica);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
-                    Refresh(ContainerVolumeRule);
+                    Refresh(InnovationVolumeRule);
                 // Obtenemos Catalogo Volumen Product completo
                 ClearCollect(
-                        colContainerVlmRule,
-                        Filter(ContainerVolumeRule, IDRegla <= 2000),
-                        Filter(ContainerVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                        colInnovationVlmRule,
+                        Filter(InnovationVolumeRule, IDRegla <= 2000),
+                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
                 );
                     );
                 );

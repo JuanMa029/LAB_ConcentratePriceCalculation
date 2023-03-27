@@ -998,13 +998,27 @@
         "DisabledColor",
         "Fill",
         "DisabledFill",
-        "Font",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Font",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PressedColor",
         "HoverColor",
         "PressedFill",
         "HoverFill",
         "FontWeight",
-        "VerticalAlign",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "VerticalAlign",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "X",
         "Y",
         {
@@ -1041,6 +1055,14 @@
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
           "InvariantPropertyName": "Default",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "CheckboxSize",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -1246,6 +1268,11 @@
         {
           "Category": "Design",
           "PropertyName": "FocusedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "CheckboxSize",
           "RuleProviderType": "Unknown"
         },
         {

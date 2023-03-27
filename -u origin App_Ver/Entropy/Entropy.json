@@ -1427,7 +1427,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/27/2023 15:35:00",
+  "HeaderLastSavedDateTimeUTC": "03/27/2023 16:57:38",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d388ce0-914b-4f05-9f0f-ae6297681ed5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/336a7b7664ad4115b5c857004c57e8cf-d71eacea344a3763\"",
@@ -1580,6 +1580,7 @@
     "colRazonSoc_Jer": 79,
     "colRegion_Jer": 80,
     "colReglaVolContainer": 81,
+    "colReglaVolInnova": 87,
     "colReglaVolInnovacion": 82,
     "colReglaVolProduct": 83,
     "colSubregion_Jer": 84,
@@ -5376,7 +5377,7 @@
       "toggleSwitch": 10
     },
     "DeserializationLoadTime": 12.0106976,
-    "ErrorCount": 26
+    "ErrorCount": 24
   },
   "WasLocalDatabaseReferencesEmpty": true
 }
