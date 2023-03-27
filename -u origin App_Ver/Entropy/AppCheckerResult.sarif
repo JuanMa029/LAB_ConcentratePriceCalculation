@@ -21056,6 +21056,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.flagNoUser"
                 }
               ],
