@@ -146,6 +146,9 @@
           },
           "Subregion": {
             "tableName": "8ec9f6c7-8993-470f-85cc-50207a4ca872"
+          },
+          "VolumeRuleConversion": {
+            "tableName": "eb76644e-8705-446f-b371-cf1c128e5fc6"
           }
         }
       }
@@ -163,7 +166,8 @@
       "ProductVolumeRule",
       "CatalogoPeriodos",
       "ContainerVolumeRule",
-      "InnovationVolumeRule"
+      "InnovationVolumeRule",
+      "VolumeRuleConversion"
     ],
     "dependencies": {},
     "dependents": [
@@ -194,9 +198,51 @@
       "65e4410e-a7b5-4a24-9215-59540890758e",
       "446c3332-b13e-49a8-a8ed-3620b60b910a",
       "475d7d5f-0e04-4cdb-8601-5caaba779325",
-      "466669ef-35ff-4413-b5dc-260a01a64d84"
+      "466669ef-35ff-4413-b5dc-260a01a64d84",
+      "33ee41d1-1b8a-49f9-b470-49ee1231d4de"
     ],
     "id": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
+  },
+  "33ee41d1-1b8a-49f9-b470-49ee1231d4de": {
+    "connectionParameters": {
+      "logicAppHostType": "ARM",
+      "workFlowCallbackUri": "https://prod-90.westus.logic.azure.com:443/workflows/c2376886647a43e89fd06bcc1094afda/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=IAK4R87IzwPDHvwaT8yCxtTRqXjnvQhI0hTIlJ4Ehpo",
+      "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/42cc3295cd0e449cb98e5ce5b560c1d3-d72e014001294773bb1607ffd15ad574/providers/Microsoft.Logic/workflows/70aa993b-4004-453d-a061-7c99c8177009",
+      "workflowName": "70aa993b-4004-453d-a061-7c99c8177009",
+      "workflowPath": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/42cc3295cd0e449cb98e5ce5b560c1d3-d72e014001294773bb1607ffd15ad574/providers/Microsoft.Logic/workflows/70aa993b-4004-453d-a061-7c99c8177009"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "2d1852a4-e812-43d7-89b4-43baa0a622e4": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "70aa993b-4004-453d-a061-7c99c8177009"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "70aa993b-4004-453d-a061-7c99c8177009"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "[CPC]_SaveRuleVolumenConversion"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
+    },
+    "dependents": [],
+    "id": "33ee41d1-1b8a-49f9-b470-49ee1231d4de"
   },
   "384afbba-6052-4bc5-8f6b-9743eb156284": {
     "connectionParameters": {
@@ -294,12 +340,18 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "2d1852a4-e812-43d7-89b4-43baa0a622e4": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"
         }
       },
       "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"

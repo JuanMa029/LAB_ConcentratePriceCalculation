@@ -3847,7 +3847,7 @@
                 Reset(rvs_dpd_newBrand_Conver);
                 Reset(rvs_cbx_conversionHect);
                 Set(responseSave,Blank());
-                UpdateContext({vsbNewRglMeses:false});
+                UpdateContext({vsbNewRglConver:false});
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -3890,23 +3890,23 @@
                 
                     //__ Invocamos el Flujo de Automate
                 Set(varJSONRegla,JSON(colReglaVolInnovacion));
-                Set(responseSave,'[CPC]_SaveRuleVolumenInnovation'.Run(varJSONRegla));
+                Set(responseSave,'[CPC]_SaveRuleVolumenConversion'.Run(varJSONRegla));
                 Set(responseNewProd,responseSave.response);
                 //__ Realizamos Clear a la coleccion de Solicitud
                 If(responseNewProd = "Ok",
-                    UpdateContext({vsbNewRglMeses:false});
+                    UpdateContext({vsbNewRglConver:false});
                     Reset(rvs_dpd_newRazonSocial_Conver);
                     Reset(rvs_dpd_newSubcategory_Conver);
                     Reset(rvs_dpd_newBrand_Conver);
                     Reset(rvs_cbx_conversionHect);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
-                    Refresh(InnovationVolumeRule);
+                    Refresh(VolumeRuleConversion);
                 // Obtenemos Catalogo Volumen Container completo
                 ClearCollect(
-                        colInnovationVlmRule,
-                        Filter(InnovationVolumeRule, IDRegla <= 2000),
-                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                        colConversionVlmRule,
+                        Filter(VolumeRuleConversion, IDRegla <= 2000),
+                        Filter(VolumeRuleConversion, IDRegla > 2000 && IDRegla <= 4000)
                 );
                     );
                 );
