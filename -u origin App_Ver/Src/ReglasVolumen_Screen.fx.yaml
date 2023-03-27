@@ -1467,7 +1467,6 @@
                 TemplateSize: =40
                 Width: =1320
                 X: =24
-                Y: =1
                 ZIndex: =1
 
                 gal_dpd_razonSocial_Meses As label:
@@ -1980,9 +1979,9 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Product.Selected.NombreRazonSocial,
-                        Subcategory: Concat(rvs_dpd_editSubcategory_Product.SelectedItems,Value,";"),
-                        Brand: Concat(rvs_dpd_editBrand_Product.SelectedItems,Result,";"),
-                        Product: Concat(rvs_dpd_editProduct.SelectedItems,PRODUCT,";"),
+                        Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Product.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                        Brand: Concat(Sort(rvs_dpd_editBrand_Product.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        Product: Concat(Sort(rvs_dpd_editProduct.SelectedItems,PRODUCT,SortOrder.Ascending),PRODUCT,";"),
                         ProductID: Concat(rvs_dpd_editProduct.SelectedItems,PRODUCT_ID,";"),
                         Estatus: rvs_tgg_editProduct.Value,
                         IDList: IdListRglProduct,
@@ -2297,9 +2296,9 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_newRazonSocial_Product.Selected.NombreRazonSocial,
-                        Subcategory: Concat(rvs_dpd_newSubcategory_Product.SelectedItems,Result,";"),
-                        Brand: Concat(rvs_dpd_newBrand_Product.SelectedItems,Result,";"),
-                        Product: Concat(rvs_dpd_newProduct.SelectedItems,PRODUCT,";"),
+                        Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Product.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        Brand: Concat(Sort(rvs_dpd_newBrand_Product.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        Product: Concat(Sort(rvs_dpd_newProduct.SelectedItems,PRODUCT,SortOrder.Ascending),PRODUCT,";"),
                         ProductID: Concat(rvs_dpd_newProduct.SelectedItems,PRODUCT_ID,";"),
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -2542,8 +2541,8 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_newRazonSocial_Container.Selected.NombreRazonSocial,
-                        ContainerType: Concat(rvs_dpd_newContainerType.SelectedItems,Result,";"),
-                        Container: Concat(rvs_dpd_newContainer.SelectedItems,Value,";"),
+                        ContainerType: Concat(Sort(rvs_dpd_newContainerType.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        Container: Concat(Sort(rvs_dpd_newContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         //ContainerID: Concat(rvs_dpd_newContainer.SelectedItems,CONTAINER_ID,";"),
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -2802,8 +2801,8 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Container.Selected.NombreRazonSocial,
-                        ContainerType: Concat(rvs_dpd_editContainerType.SelectedItems,Value,";"),
-                        Container: Concat(rvs_dpd_editContainer.SelectedItems,Value,";"),
+                        ContainerType: Concat(Sort(rvs_dpd_editContainerType.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                        Container: Concat(Sort(rvs_dpd_editContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         //ContainerID: Concat(rvs_dpd_editContainer.SelectedItems,CONTAINER_ID,";"),
                         Estatus: rvs_tgg_editContainer.Value,
                         IDList: IdListRglContainer,
@@ -3097,8 +3096,8 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_newRazonSocial_Meses.Selected.NombreRazonSocial,
-                        Subcategory: Concat(rvs_dpd_newSubcategory_Meses.SelectedItems,Result,";"),
-                        Brand: Concat(rvs_dpd_newBrand_Meses.SelectedItems,Result,";"),
+                        Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        Brand: Concat(Sort(rvs_dpd_newBrand_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -3362,8 +3361,8 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Innova.Selected.NombreRazonSocial,
-                        Subcategory: Concat(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,";"),
-                        Brand: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Result,";"),
+                        Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                        Brand: Concat(Sort(rvs_dpd_editBrand_Innova.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
                         Estatus: rvs_tgg_editEstatus_Innova.Value,
                         IDList: IdListRglInnova,
@@ -3379,7 +3378,7 @@
                 
                     //__ Invocamos el Flujo de Automate
                 Set(varJSONRegla,JSON(colReglaVolInnova));
-                Set(responseSave,'[CPC]_EditRuleVolumenContainer'.Run(varJSONRegla));
+                Set(responseSave,'[CPC]_EditRuleVolumenInnovation'.Run(varJSONRegla));
                 Set(responseNewProd,responseSave.response);
                 //__ Realizamos Clear a la coleccion de Solicitud
                 If(responseNewProd = "Ok",
