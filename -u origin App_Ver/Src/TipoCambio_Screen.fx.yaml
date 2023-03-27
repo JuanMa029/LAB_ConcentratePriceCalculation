@@ -13,68 +13,44 @@ TipoCambio_Screen As screen:
         Width: =1366
         ZIndex: =4
 
-    gs_cnt_filter_1 As groupContainer.manualLayoutContainer:
+    tc_cnt_filter_1 As groupContainer.manualLayoutContainer:
         Height: =70
         Width: =1366
         Y: =100
         ZIndex: =5
 
-        gs_dpd_buscarPais_1 As dropdown:
+        tc_dpd_buscarPais_1 As dropdown:
             AllowEmptySelection: =true
-            ChevronBackground: =RGBA(9, 33, 98, 1)
+            BorderColor: =RGBA(107, 165, 231, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
             Font: =Font.Lato
             Items: =Filter(Pais,Estatus = true)
-            OnChange: =Reset(gs_dpd_buscarRegion_1);
+            OnChange: =Reset(tc_dpd_buscarPeriodo_1);
             Reset: =true
+            SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
             X: =226
             Y: =15
             ZIndex: =1
 
-        gs_btn_searchPais_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="País"
-            X: =60
-            Y: =15
-            ZIndex: =2
-
-        gs_dpd_buscarRegion_1 As dropdown:
+        tc_dpd_buscarPeriodo_1 As dropdown:
             AllowEmptySelection: =true
-            ChevronBackground: =RGBA(9, 33, 98, 1)
+            BorderColor: =RGBA(107, 165, 231, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
             Font: =Font.Lato
             Items: =Filter(Region,Estatus = true)
-            OnChange: |-
-                =//__ Cambiamos vsb del componente Loading
-                UpdateContext({vsbLoadingJG:true});
-                //__ Cambiamos vsb del componente Loading
-                UpdateContext({vsbLoadingJG:false});
+            OnChange: =
             OnSelect: =//Set(contEjecucion,1);
             Reset: =true
+            SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =661
+            X: =647
             Y: =15
             ZIndex: =3
-
-        gs_btn_buscarRegion_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Región"
-            X: =495
-            Y: =15
-            ZIndex: =4
 
         gs_dpd_buscarEmbotellador_1 As dropdown:
             AllowEmptySelection: =true
@@ -107,8 +83,8 @@ TipoCambio_Screen As screen:
             Height: =40
             Image: =add
             Width: =63
-            X: =1144
-            Y: =15
+            X: =1218
+            Y: =27
             ZIndex: =7
 
         gs_btn_nuevo_1 As button:
@@ -133,9 +109,160 @@ TipoCambio_Screen As screen:
             PressedFill: =Color.Transparent
             Text: =""
             Width: =63
-            X: =1144
+            X: =1218
             Y: =15
             ZIndex: =8
+
+        tc_btn_pais_1 As button:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            Color: =RGBA(5, 28, 87, 1)
+            DisabledBorderColor: =RGBA(107, 165, 231, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(107, 165, 231, 1)
+            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+            OnSelect: |-
+                =// Desabilitamos el boton Product
+                UpdateContext({vsbBtnProduct:false});
+                // Habilitamos los botones Container y Meses
+                UpdateContext({vsbBtnContainer:true});
+                UpdateContext({vsbBtnMeses:true});
+                UpdateContext({vsbBtnConversion:true});
+                // Activamos visibilidad para dtc de Product
+                UpdateContext({vsbDtcProduct:true});
+                
+                // Desactivamos dtc Contanier
+                UpdateContext({vsbDtcContainer:false});
+                Reset(rvs_dpd_razonSocial_Container);
+                Reset(rvs_dpd_containerType);
+                Reset(rvs_dpd_container);
+                Set(varConcatContainerType,Blank());
+                Set(varConcatContainer,Blank());
+                
+                // Desactivamos dtc Meses
+                UpdateContext({vsbDtcMeses:false});
+                Reset(rvs_dpd_razonSocial_Meses);
+                Reset(rvs_dpd_subcategory_Meses);
+                Reset(rvs_dpd_brand_Meses);
+                Set(varConcatSubcategoryInnova,Blank());
+                Set(varConcatBrandInnova,Blank());
+            PressedBorderColor: =RGBA(107, 165, 231, 1)
+            PressedFill: =RGBA(107, 165, 231, 1)
+            Size: =13
+            Text: ="País"
+            Width: =154
+            X: =59
+            Y: =15
+            ZIndex: =9
+
+        tc_btn_periodo_1 As button:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            Color: =RGBA(5, 28, 87, 1)
+            DisabledBorderColor: =RGBA(107, 165, 231, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(107, 165, 231, 1)
+            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+            OnSelect: |-
+                =// Desabilitamos el boton Product
+                UpdateContext({vsbBtnProduct:false});
+                // Habilitamos los botones Container y Meses
+                UpdateContext({vsbBtnContainer:true});
+                UpdateContext({vsbBtnMeses:true});
+                UpdateContext({vsbBtnConversion:true});
+                // Activamos visibilidad para dtc de Product
+                UpdateContext({vsbDtcProduct:true});
+                
+                // Desactivamos dtc Contanier
+                UpdateContext({vsbDtcContainer:false});
+                Reset(rvs_dpd_razonSocial_Container);
+                Reset(rvs_dpd_containerType);
+                Reset(rvs_dpd_container);
+                Set(varConcatContainerType,Blank());
+                Set(varConcatContainer,Blank());
+                
+                // Desactivamos dtc Meses
+                UpdateContext({vsbDtcMeses:false});
+                Reset(rvs_dpd_razonSocial_Meses);
+                Reset(rvs_dpd_subcategory_Meses);
+                Reset(rvs_dpd_brand_Meses);
+                Set(varConcatSubcategoryInnova,Blank());
+                Set(varConcatBrandInnova,Blank());
+            PressedBorderColor: =RGBA(107, 165, 231, 1)
+            PressedFill: =RGBA(107, 165, 231, 1)
+            Size: =13
+            Text: ="Periodo"
+            Width: =154
+            X: =476
+            Y: =15
+            ZIndex: =10
+
+        tc_dpd_buscarPais_2 As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(107, 165, 231, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            Items: =Filter(Pais,Estatus = true)
+            OnChange: =Reset(tc_dpd_buscarPeriodo_1);
+            Reset: =true
+            SelectionFill: =RGBA(102, 182, 227, 1)
+            Width: =220
+            X: =1049
+            Y: =15
+            ZIndex: =11
+
+        tc_btn_anio_1 As button:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            Color: =RGBA(5, 28, 87, 1)
+            DisabledBorderColor: =RGBA(107, 165, 231, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(107, 165, 231, 1)
+            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+            OnSelect: |-
+                =// Desabilitamos el boton Product
+                UpdateContext({vsbBtnProduct:false});
+                // Habilitamos los botones Container y Meses
+                UpdateContext({vsbBtnContainer:true});
+                UpdateContext({vsbBtnMeses:true});
+                UpdateContext({vsbBtnConversion:true});
+                // Activamos visibilidad para dtc de Product
+                UpdateContext({vsbDtcProduct:true});
+                
+                // Desactivamos dtc Contanier
+                UpdateContext({vsbDtcContainer:false});
+                Reset(rvs_dpd_razonSocial_Container);
+                Reset(rvs_dpd_containerType);
+                Reset(rvs_dpd_container);
+                Set(varConcatContainerType,Blank());
+                Set(varConcatContainer,Blank());
+                
+                // Desactivamos dtc Meses
+                UpdateContext({vsbDtcMeses:false});
+                Reset(rvs_dpd_razonSocial_Meses);
+                Reset(rvs_dpd_subcategory_Meses);
+                Reset(rvs_dpd_brand_Meses);
+                Set(varConcatSubcategoryInnova,Blank());
+                Set(varConcatBrandInnova,Blank());
+            PressedBorderColor: =RGBA(107, 165, 231, 1)
+            PressedFill: =RGBA(107, 165, 231, 1)
+            Size: =13
+            Text: ="Año"
+            Width: =154
+            X: =882
+            Y: =15
+            ZIndex: =12
 
     gs_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
         Height: =50
@@ -258,8 +385,8 @@ TipoCambio_Screen As screen:
                             Subregion,
                             ""
                         ) 
-                        && (Pais = gs_dpd_buscarPais_1.Selected.NombrePais || gs_dpd_buscarPais_1.Selected.NombrePais = Blank())
-                        && (Region = gs_dpd_buscarRegion_1.Selected.NombreRegion || gs_dpd_buscarRegion_1.Selected.NombreRegion = Blank())
+                        && (Pais = tc_dpd_buscarPais_1.Selected.NombrePais || tc_dpd_buscarPais_1.Selected.NombrePais = Blank())
+                        && (Region = tc_dpd_buscarPeriodo_1.Selected.NombreRegion || tc_dpd_buscarPeriodo_1.Selected.NombreRegion = Blank())
                     ),
                     "IdJerarquiaGeografica",
                     SortOrder.Ascending
@@ -505,8 +632,8 @@ TipoCambio_Screen As screen:
             HoverFill: =Color.Transparent
             OnSelect: |-
                 =Navigate(CatalogosMaestros_Screen,ScreenTransition.UnCover);
-                Reset(gs_dpd_buscarPais_1);
-                Reset(gs_dpd_buscarRegion_1);
+                Reset(tc_dpd_buscarPais_1);
+                Reset(tc_dpd_buscarPeriodo_1);
             PressedFill: =Color.Transparent
             Text: =""
             Width: =58
