@@ -88,6 +88,11 @@
                         
                         // Desactivamos dtc Meses
                         UpdateContext({vsbDtcMeses:false});
+                        Reset(rvs_dpd_razonSocial_Meses);
+                        Reset(rvs_dpd_subcategory_Meses);
+                        Reset(rvs_dpd_brand_Meses);
+                        Set(varConcatSubcategoryInnova,Blank());
+                        Set(varConcatBrandInnova,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -131,6 +136,11 @@
                         
                         // Desactivamos dtc Meses
                         UpdateContext({vsbDtcMeses:false});
+                        Reset(rvs_dpd_razonSocial_Meses);
+                        Reset(rvs_dpd_subcategory_Meses);
+                        Reset(rvs_dpd_brand_Meses);
+                        Set(varConcatSubcategoryInnova,Blank());
+                        Set(varConcatBrandInnova,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -227,6 +237,11 @@
                         
                         // Desactivamos dtc Meses
                         UpdateContext({vsbDtcMeses:false});
+                        Reset(rvs_dpd_razonSocial_Meses);
+                        Reset(rvs_dpd_subcategory_Meses);
+                        Reset(rvs_dpd_brand_Meses);
+                        Set(varConcatSubcategoryInnova,Blank());
+                        Set(varConcatBrandInnova,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -1186,7 +1201,6 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                IsSearchable: =false
                 Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
                 OnChange: |
                     =// Reset al componente SubCategory
@@ -1196,7 +1210,7 @@
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =[]
+                SearchItems: =Search(Distinct(colInnovationVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Meses.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400
