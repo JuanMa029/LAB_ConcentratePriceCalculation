@@ -217,6 +217,9 @@
                         UpdateContext({vsbBtnContainer:true});
                         UpdateContext({vsbBtnMeses:true});
                         
+                        // Habilitamos dtc Meses
+                        UpdateContext({vsbDtcConver:true});
+                        
                         //Desactivamos visibilidad para dtc de Product
                         UpdateContext({vsbDtcProduct:false});
                         Reset(rvs_dpd_razonSocial_Product);
@@ -1204,7 +1207,7 @@
                 Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
                 OnChange: |
                     =// Reset al componente SubCategory
-                    Reset(rvs_dpd_subcategory_Product);
+                    Reset(rvs_dpd_subcategory_Meses);
                     // Generamos la lista Subcategory
                     Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),SUBCATEGORY),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
@@ -1458,7 +1461,7 @@
                 X: =1234
                 ZIndex: =6
 
-        DataCard1 As dataCard.blankCard:
+        rvs_dtc_dataReglaMeses As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -1609,7 +1612,7 @@
                     =// Activamos componente loading
                     UpdateContext({vsbLoadingNewRglProd:true});
                     
-                    Set(responseURL,'[CPC]_ExportarCSVs_RuleVolume'.Run(varEmail,1).response);
+                    Set(responseURL,'[CPC]_ExportarCSVs_RuleVolume'.Run(varEmail,3).response);
                     Download(responseURL);
                     
                     // Desactivamos componente loading
@@ -1621,6 +1624,191 @@
                 X: =635
                 Y: =320
                 ZIndex: =2
+
+        rvs_dtc_filtrosConversion As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =vsbDtcConver
+            Width: =1366
+            X: =0
+            Y: =14
+            ZIndex: =15
+
+            rvs_lbl_razonSocial_Conver As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Razón Social"
+                Width: =400
+                X: =166
+                Y: =7
+                ZIndex: =1
+
+            rvs_dpd_razonSocial_Conver As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
+                OnChange: |
+                    =// Reset al componente SubCategory
+                    Reset(rvs_dpd_subcategory_Conver);
+                    // Generamos la lista Subcategory
+                    Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),SUBCATEGORY),Value,";"))
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Distinct(colInnovationVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Conver.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =400
+                X: =166
+                Y: =47
+                ZIndex: =2
+
+            rvs_lbl_subCategory_Conver As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="SubCategory"
+                Width: =250
+                X: =594
+                Y: =7
+                ZIndex: =3
+
+            rvs_dpd_subcategory_Conver As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: |-
+                    =Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result)
+                OnChange: |
+                    =// Reset al componente Brand
+                    Reset(rvs_dpd_brand_Conver);
+                    // Generamos la lista Brand
+                    Set(varConcatBrandInnova,Concat(Distinct(Search(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),rvs_dpd_subcategory_Conver.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Conver.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =250
+                X: =594
+                Y: =48
+                ZIndex: =4
+
+            rvs_lbl_brand_Conver As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Brand"
+                Width: =250
+                X: =872
+                Y: =7
+                ZIndex: =5
+
+            rvs_dpd_brand_Conver As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: |-
+                    =Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result)
+                OnChange: |-
+                    =/*
+                    // Reset al componente Prodcut
+                    Reset(rvs_dpd_Product);
+                    // Generamos lista Product
+                    Set(varConcatProduct,Concat(Distinct(Search(
+                        Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY0"),rvs_dpd_brand_Meses.Selected.Value,"BRAND0")
+                        ,PRODUCT),Value,";"))
+                    */
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Conver.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =250
+                X: =872
+                Y: =48
+                ZIndex: =6
+
+            rvs_img_newReglaConver As image:
+                Height: =50
+                Image: =add
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1150
+                Y: =37
+                ZIndex: =7
+
+            rvs_btn_newReglaConver As button:
+                Fill: =Color.Transparent
+                Height: =50
+                HoverFill: =RGBA(56, 136, 210, 0.5)
+                OnSelect: |-
+                    =// Iniciamos loading
+                    UpdateContext({vsbLoadingNewRglProd:true});
+                    
+                    //Obtenemos Catalogo LAB_PRODUCT completo
+                    ClearCollect(
+                        colLabProductCompleto,
+                        Filter(LAB_PRODUCT,NumberProduct <=2000),
+                        Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
+                        );
+                    //Aplicamos Distinct SubCategory
+                    ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
+                    
+                    UpdateContext({vsbNewRglMeses:true});
+                    // Finalizamos loading
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 0.2)
+                Text: =""
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1150
+                Y: =37
+                ZIndex: =8
+
+        rvs_dtc_lineConver As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =30
+            Width: =1366
+            X: =0
+            Y: =15
+            ZIndex: =16
 
     rvs_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =2
