@@ -189,6 +189,9 @@
                         Reset(rvs_dpd_container);
                         Set(varConcatContainerType,Blank());
                         Set(varConcatContainer,Blank());
+                        
+                        // Desactivamos dtc Conversion
+                        UpdateContext({vsbDtcConver:false});
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -1803,6 +1806,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =30
+            Visible: =vsbDtcConver
             Width: =1366
             X: =0
             Y: =15
@@ -1814,6 +1818,7 @@
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
+            Visible: =vsbDtcConver
             Width: =1366
             X: =0
             Y: =16
@@ -1878,7 +1883,7 @@
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =14
-                Text: ="3 Meses Volumen"
+                Text: ="Conversion Hectolitros"
                 Width: =220
                 X: =904
                 ZIndex: =4
@@ -1911,6 +1916,18 @@
                 Width: =110
                 X: =1234
                 ZIndex: =6
+
+        DataCard1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Visible: =vsbDtcConver
+            Width: =1366
+            X: =0
+            Y: =17
+            ZIndex: =18
 
     rvs_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =2
