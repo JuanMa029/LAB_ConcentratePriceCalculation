@@ -38,7 +38,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataCard1",
-      "ParentIndex": 13,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1077,7 +1077,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_cbx_3Meses",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1378,7 +1378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_dpd_brand_Meses",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3307,7 +3307,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_dpd_razonSocial_Meses",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3917,7 +3917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gal_dpd_subcategory_Meses",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7248,7 +7248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_editContainer_Actualizar",
-      "ParentIndex": 76,
+      "ParentIndex": 77,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7547,7 +7547,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_editInnova_Actualizar",
-      "ParentIndex": 81,
+      "ParentIndex": 78,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7846,7 +7846,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_editProduct_Agregar",
-      "ParentIndex": 87,
+      "ParentIndex": 88,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13940,7 +13940,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_newContainer_agregar",
-      "ParentIndex": 85,
+      "ParentIndex": 87,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14538,7 +14538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_newMeses_agregar",
-      "ParentIndex": 89,
+      "ParentIndex": 90,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14837,7 +14837,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_newProduct_Agregar",
-      "ParentIndex": 84,
+      "ParentIndex": 86,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16994,7 +16994,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_cbx_edit3MesesRegla",
-      "ParentIndex": 72,
+      "ParentIndex": 76,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19438,7 +19438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editBrand_Innova",
-      "ParentIndex": 65,
+      "ParentIndex": 67,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19840,7 +19840,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editBrand_Product",
-      "ParentIndex": 66,
+      "ParentIndex": 65,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20245,7 +20245,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editContainer",
-      "ParentIndex": 67,
+      "ParentIndex": 66,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20649,7 +20649,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editContainerType",
-      "ParentIndex": 54,
+      "ParentIndex": 53,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21056,7 +21056,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editProduct",
-      "ParentIndex": 77,
+      "ParentIndex": 79,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21485,7 +21485,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editRazonSocial_Container",
-      "ParentIndex": 41,
+      "ParentIndex": 40,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21934,7 +21934,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editRazonSocial_Innova",
-      "ParentIndex": 39,
+      "ParentIndex": 41,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22383,7 +22383,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editRazonSocial_Product",
-      "ParentIndex": 40,
+      "ParentIndex": 39,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22802,7 +22802,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editSubcategory_Innova",
-      "ParentIndex": 52,
+      "ParentIndex": 54,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23211,7 +23211,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editSubcategory_Product",
-      "ParentIndex": 53,
+      "ParentIndex": 52,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -25218,7 +25218,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_newProduct",
-      "ParentIndex": 78,
+      "ParentIndex": 80,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30063,7 +30063,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_botones",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30153,7 +30153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_dataReglaContainer",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30248,7 +30248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_dataReglaProduct",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30336,7 +30336,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_filtrosContainer",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30424,7 +30424,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_filtrosMeses",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30512,7 +30512,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_filtrosProduct",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30607,7 +30607,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_headerContainer",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30702,7 +30702,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_headerMeses",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30797,7 +30797,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_headerProduct",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30892,7 +30892,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_lineContainer",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -30987,7 +30987,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_lineMeses",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31082,7 +31082,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dtc_lineProduct",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31533,7 +31533,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_fondoEditInnova",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31954,7 +31954,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_fondoNewMeses",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32368,7 +32368,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoEditContainer",
-      "ParentIndex": 16,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32506,7 +32506,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoEditInnova",
-      "ParentIndex": 11,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32644,7 +32644,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoEditProduct",
-      "ParentIndex": 14,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32782,7 +32782,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoNew_Product",
-      "ParentIndex": 18,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32920,7 +32920,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoNewContainer",
-      "ParentIndex": 20,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33058,7 +33058,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoNewMeses",
-      "ParentIndex": 22,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34550,7 +34550,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_icn_editContainer_Cerrar",
-      "ParentIndex": 25,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34808,7 +34808,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_icn_editInnova_Cerrar",
-      "ParentIndex": 13,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -35066,7 +35066,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_icn_editProduct_Cerrar",
-      "ParentIndex": 24,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38450,7 +38450,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_ediStatus_Container",
-      "ParentIndex": 74,
+      "ParentIndex": 73,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38767,7 +38767,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_ediStatus_Innova",
-      "ParentIndex": 80,
+      "ParentIndex": 74,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39084,7 +39084,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editBrand_Innova",
-      "ParentIndex": 59,
+      "ParentIndex": 61,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39401,7 +39401,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editBrand_Product",
-      "ParentIndex": 60,
+      "ParentIndex": 59,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -39718,7 +39718,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editContainer",
-      "ParentIndex": 61,
+      "ParentIndex": 60,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40035,7 +40035,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editContainerType",
-      "ParentIndex": 48,
+      "ParentIndex": 47,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40338,7 +40338,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editMsj_Container",
-      "ParentIndex": 83,
+      "ParentIndex": 84,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40641,7 +40641,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editMsj_Innova",
-      "ParentIndex": 90,
+      "ParentIndex": 85,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41578,7 +41578,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editProduct_1",
-      "ParentIndex": 82,
+      "ParentIndex": 83,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41895,7 +41895,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editRazonSocial_Container",
-      "ParentIndex": 35,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42212,7 +42212,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editRazonSocial_Innova",
-      "ParentIndex": 33,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42529,7 +42529,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editRazonSocial_Product",
-      "ParentIndex": 34,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -42846,7 +42846,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editSubcategory_Innova",
-      "ParentIndex": 46,
+      "ParentIndex": 48,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43163,7 +43163,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editSubcategory_Product",
-      "ParentIndex": 47,
+      "ParentIndex": 46,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45946,7 +45946,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_newProduct",
-      "ParentIndex": 73,
+      "ParentIndex": 72,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50292,7 +50292,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloEditContainer",
-      "ParentIndex": 17,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50616,7 +50616,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloEditInnova",
-      "ParentIndex": 12,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50940,7 +50940,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloEditProduct",
-      "ParentIndex": 15,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51264,7 +51264,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloNewContainer",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51588,7 +51588,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloNewMeses",
-      "ParentIndex": 23,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -51912,7 +51912,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloNewProduct",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -52528,7 +52528,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_tgg_editContainer",
-      "ParentIndex": 79,
+      "ParentIndex": 81,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -52780,7 +52780,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_tgg_editEstatus_Innova",
-      "ParentIndex": 86,
+      "ParentIndex": 82,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -53032,7 +53032,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_tgg_editProduct",
-      "ParentIndex": 88,
+      "ParentIndex": 89,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
