@@ -114,9 +114,6 @@
           "CatalogoFrecuencia": {
             "tableName": "ce0b16aa-370d-4ac6-86bd-87b62c115add"
           },
-          "ConfiguracionTipoCambio": {
-            "tableName": "b3f666a5-4073-483a-aff4-39c6e145f3ce"
-          },
           "ContainerVolumeRule": {
             "tableName": "4e2fe87b-cf41-4e9d-9aa7-e4582b96e05a"
           },
@@ -166,8 +163,7 @@
       "ProductVolumeRule",
       "CatalogoPeriodos",
       "ContainerVolumeRule",
-      "InnovationVolumeRule",
-      "ConfiguracionTipoCambio"
+      "InnovationVolumeRule"
     ],
     "dependencies": {},
     "dependents": [
@@ -340,18 +336,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "2d1852a4-e812-43d7-89b4-43baa0a622e4": {
-          "value": "shared_sharepointonline"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"
         }
       },
       "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"
