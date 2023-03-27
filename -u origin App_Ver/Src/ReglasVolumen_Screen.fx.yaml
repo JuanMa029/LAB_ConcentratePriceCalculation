@@ -1934,7 +1934,7 @@
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =300
-                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
+                Items: =Search(Search(Filter(colConversionVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
@@ -1991,7 +1991,7 @@
                     ZIndex: =4
 
                 gal_cbx_conversionHectolitro As checkbox:
-                    Default: =ThisItem.'3MONTHSVOLUME'
+                    Default: =ThisItem.HECTOLITORSCONVERSION
                     DisplayMode: =DisplayMode.View
                     Height: =40
                     OnSelect: =Select(Parent)
@@ -2036,11 +2036,11 @@
                         ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
                         
                         //__
-                        Set(IdListRglInnova, ThisItem.ID);
+                        Set(IdListRglConver, ThisItem.ID);
                         Set(varRazonSocial,ThisItem.RAZONSOCIAL);
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varCheckMeses,ThisItem.'3MONTHSVOLUME');
+                        Set(varConverHct,ThisItem.HECTOLITORSCONVERSION);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL,";"));
