@@ -9,7 +9,7 @@ TipoCambio_Screen As screen:
         FontWeight: =FontWeight.Bold
         Height: =60
         Size: =35
-        Text: ="Jerarquía Geográfica"
+        Text: ="Configuración de tipo de cambio"
         Width: =1366
         ZIndex: =4
 
