@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 257,
+                  "charOffset": 256,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -104,9 +104,9 @@
                 },
                 "region": {
                   "charLength": 153,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -144,7 +144,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 280,
+                  "charOffset": 279,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -184,9 +184,9 @@
                 },
                 "region": {
                   "charLength": 169,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -224,7 +224,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 287,
+                  "charOffset": 286,
                   "snippet": {
                     "text": "Value"
                   }
@@ -265,9 +265,9 @@
                 },
                 "region": {
                   "charLength": 187,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -345,7 +345,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 259,
+                  "charOffset": 258,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -385,9 +385,9 @@
                 },
                 "region": {
                   "charLength": 155,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -425,7 +425,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 282,
+                  "charOffset": 281,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -465,9 +465,9 @@
                 },
                 "region": {
                   "charLength": 171,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -505,7 +505,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 289,
+                  "charOffset": 288,
                   "snippet": {
                     "text": "Value"
                   }
@@ -546,9 +546,9 @@
                 },
                 "region": {
                   "charLength": 189,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -626,7 +626,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 256,
+                  "charOffset": 255,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -666,9 +666,9 @@
                 },
                 "region": {
                   "charLength": 152,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -706,7 +706,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 279,
+                  "charOffset": 278,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -746,9 +746,9 @@
                 },
                 "region": {
                   "charLength": 168,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -786,7 +786,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 286,
+                  "charOffset": 285,
                   "snippet": {
                     "text": "Value"
                   }
@@ -827,9 +827,9 @@
                 },
                 "region": {
                   "charLength": 186,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -1011,6 +1011,366 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 20,
+                  "charOffset": 1973,
+                  "snippet": {
+                    "text": "VolumeRuleConversion"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "VolumeRuleConversion"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 29,
+                  "charOffset": 1965,
+                  "snippet": {
+                    "text": "Refresh(VolumeRuleConversion)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Refresh"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 20,
+                  "charOffset": 2108,
+                  "snippet": {
+                    "text": "VolumeRuleConversion"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "VolumeRuleConversion"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 45,
+                  "charOffset": 2101,
+                  "snippet": {
+                    "text": "Filter(VolumeRuleConversion, IDRegla <= 2000)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 2130,
+                  "snippet": {
+                    "text": "IDRegla"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IDRegla"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 20,
+                  "charOffset": 2164,
+                  "snippet": {
+                    "text": "VolumeRuleConversion"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "VolumeRuleConversion"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 63,
+                  "charOffset": 2157,
+                  "snippet": {
+                    "text": "Filter(VolumeRuleConversion, IDRegla > 2000 && IDRegla <= 4000)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 2186,
+                  "snippet": {
+                    "text": "IDRegla"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IDRegla"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_btn_newConver_agregar.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 2204,
+                  "snippet": {
+                    "text": "IDRegla"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_btn_newConver_agregar"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IDRegla"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -18986,6 +19346,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "TipoCambio_Screen.ComboBox1_6.AccessibleLabel"
                 }
               ],
@@ -21954,7 +22374,7 @@
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Limite los datos recopilados del origen de datos actualizando la fórmula \"ClearCollect(colLABProduct; LAB_PRODUCT)\" para incluir una función de filtrado, como \"Filter\" o \"Search\"."
+                  "Limite los datos recopilados del origen de datos actualizando la fórmula \"ClearCollect(colLABProduct, LAB_PRODUCT)\" para incluir una función de filtrado, como \"Filter\" o \"Search\"."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
