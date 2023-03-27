@@ -93,6 +93,14 @@
                         Reset(rvs_dpd_brand_Meses);
                         Set(varConcatSubcategoryInnova,Blank());
                         Set(varConcatBrandInnova,Blank());
+                        
+                        // Desactivamos dtc Conversion
+                        UpdateContext({vsbDtcConver:false});
+                        Reset(rvs_dpd_razonSocial_Conver);
+                        Reset(rvs_dpd_subcategory_Conver);
+                        Reset(rvs_dpd_brand_Conver);
+                        Set(varConcatSubcategoryConver,Blank());
+                        Set(varConcatBrandConver,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -141,6 +149,14 @@
                         Reset(rvs_dpd_brand_Meses);
                         Set(varConcatSubcategoryInnova,Blank());
                         Set(varConcatBrandInnova,Blank());
+                        
+                        // Desactivamos dtc Conversion
+                        UpdateContext({vsbDtcConver:false});
+                        Reset(rvs_dpd_razonSocial_Conver);
+                        Reset(rvs_dpd_subcategory_Conver);
+                        Reset(rvs_dpd_brand_Conver);
+                        Set(varConcatSubcategoryConver,Blank());
+                        Set(varConcatBrandConver,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
@@ -192,13 +208,18 @@
                         
                         // Desactivamos dtc Conversion
                         UpdateContext({vsbDtcConver:false});
+                        Reset(rvs_dpd_razonSocial_Conver);
+                        Reset(rvs_dpd_subcategory_Conver);
+                        Reset(rvs_dpd_brand_Conver);
+                        Set(varConcatSubcategoryConver,Blank());
+                        Set(varConcatBrandConver,Blank());
                     PressedBorderColor: =RGBA(107, 165, 231, 1)
                     PressedFill: =RGBA(107, 165, 231, 1)
                     Size: =13
                     Text: ="Rule 3 - Innovación > 3 Meses"
                     Width: =230
                     X: =719
-                    Y: =21
+                    Y: =28
                     ZIndex: =4
 
                 rvs_btn_conversion As button:
@@ -1660,16 +1681,16 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
+                Items: =Distinct(colConversionVlmRule,RAZONSOCIAL)
                 OnChange: |
                     =// Reset al componente SubCategory
                     Reset(rvs_dpd_subcategory_Conver);
                     // Generamos la lista Subcategory
-                    Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),SUBCATEGORY),Value,";"))
+                    Set(varConcatSubcategoryConver,Concat(Distinct(Filter(colConversionVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),SUBCATEGORY),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(colInnovationVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Conver.SearchText,"Value")
+                SearchItems: =Search(Distinct(colConversionVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Conver.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400
@@ -1700,12 +1721,12 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: |-
-                    =Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result)
+                    =Distinct(ForAll(Split(varConcatSubcategoryConver,";"), {Result: ThisRecord.Value}),Result)
                 OnChange: |
                     =// Reset al componente Brand
                     Reset(rvs_dpd_brand_Conver);
                     // Generamos la lista Brand
-                    Set(varConcatBrandInnova,Concat(Distinct(Search(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),rvs_dpd_subcategory_Conver.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
+                    Set(varConcatBrandConver,Concat(Distinct(Search(Filter(colConversionVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value),rvs_dpd_subcategory_Conver.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
@@ -2066,7 +2087,7 @@
                     =// Activamos componente loading
                     UpdateContext({vsbLoadingNewRglProd:true});
                     
-                    Set(responseURL,'[CPC]_ExportarCSVs_RuleVolume'.Run(varEmail,3).response);
+                    Set(responseURL,'[CPC]_ExportarCSVs_RuleVolume'.Run(varEmail,4).response);
                     Download(responseURL);
                     
                     // Desactivamos componente loading
