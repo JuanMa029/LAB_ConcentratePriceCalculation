@@ -17986,19 +17986,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses"
               }
             }
           ],
@@ -18016,19 +18016,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.TabIndex"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.TabIndex",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses"
               }
             }
           ],
@@ -18046,19 +18046,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_subcategory_Meses"
               }
             }
           ],
@@ -18076,19 +18076,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataReglaMeses.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmMeses.gal_dpd_brand_Meses"
               }
             }
           ],
@@ -19859,96 +19859,6 @@
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
                 "type": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Innova"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_razonSocial_Conver.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_razonSocial_Conver.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_razonSocial_Conver"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_subcategory_Conver.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_subcategory_Conver.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_subcategory_Conver"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_brand_Conver.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_brand_Conver.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_filtrosConversion.rvs_dpd_brand_Conver"
               }
             }
           ],
