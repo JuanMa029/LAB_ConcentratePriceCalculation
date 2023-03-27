@@ -20996,19 +20996,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1"
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
               }
             }
           ],
@@ -21026,19 +21026,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.TabIndex"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1.TabIndex",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.Gallery1"
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
               }
             }
           ],
