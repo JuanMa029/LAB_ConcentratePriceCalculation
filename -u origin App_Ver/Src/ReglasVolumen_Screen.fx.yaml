@@ -1808,16 +1808,109 @@
             Y: =15
             ZIndex: =16
 
-        rvs_dtc_dataReglaConver As dataCard.blankCard:
+        rvs_dtc_headerConver As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =40
             Width: =1366
             X: =0
             Y: =16
             ZIndex: =17
+
+            rvs_btn_headerRazonSocial_Mes_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Razón Social"
+                Width: =440
+                X: =24
+                ZIndex: =1
+
+            rvs_btn_headerSubcategory_Mes_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="SubCategory"
+                Width: =220
+                X: =464
+                ZIndex: =2
+
+            rvs_btn_headerBrand_Mes_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Brand"
+                Width: =220
+                X: =684
+                ZIndex: =3
+
+            rvs_btn_header3MesesVlm_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="3 Meses Volumen"
+                Width: =220
+                X: =904
+                ZIndex: =4
+
+            rvs_btn_headerStatus_Mes_1 As button:
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Status"
+                Width: =110
+                X: =1124
+                ZIndex: =5
+
+            rvs_btn_headerEdit_Mes_1 As button:
+                Color: =RGBA(71, 71, 71, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: =""
+                Width: =110
+                X: =1234
+                ZIndex: =6
 
     rvs_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =2
