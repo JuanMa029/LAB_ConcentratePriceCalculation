@@ -31,7 +31,7 @@ TipoCambio_Screen As screen:
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =226
+            X: =190
             Y: =15
             ZIndex: =1
 
@@ -48,7 +48,7 @@ TipoCambio_Screen As screen:
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =647
+            X: =619
             Y: =15
             ZIndex: =3
 
@@ -93,7 +93,7 @@ TipoCambio_Screen As screen:
             Size: =13
             Text: ="País"
             Width: =154
-            X: =59
+            X: =21
             Y: =15
             ZIndex: =9
 
@@ -138,7 +138,7 @@ TipoCambio_Screen As screen:
             Size: =13
             Text: ="Periodo"
             Width: =154
-            X: =476
+            X: =451
             Y: =15
             ZIndex: =10
 
@@ -199,7 +199,7 @@ TipoCambio_Screen As screen:
             Size: =13
             Text: ="Año"
             Width: =154
-            X: =882
+            X: =883
             Y: =15
             ZIndex: =12
 
