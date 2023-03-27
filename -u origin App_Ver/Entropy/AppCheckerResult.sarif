@@ -1097,12 +1097,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPeriodo_1.Items"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPeriodo_1.Items",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_2.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1115,7 +1115,7 @@
               "properties": {
                 "member": "Items",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPeriodo_1"
+                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_2"
               }
             }
           ],
