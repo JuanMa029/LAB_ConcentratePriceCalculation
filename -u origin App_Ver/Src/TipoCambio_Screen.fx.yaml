@@ -149,6 +149,7 @@ TipoCambio_Screen As screen:
             ChevronFill: =RGBA(0, 18, 107, 1)
             Color: =RGBA(65, 65, 65, 1)
             Font: =Font.Lato
+            Items: =CatalogoFrecuencia
             OnChange: =
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
