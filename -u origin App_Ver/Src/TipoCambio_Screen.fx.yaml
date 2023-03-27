@@ -209,38 +209,10 @@ TipoCambio_Screen As screen:
         Y: =220
         ZIndex: =6
 
-        gs_btn_headerRazonS_1 As button:
+        tc_btn_headerPais_1 As button:
+            Color: =RGBA(0, 18, 107, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Razón Social"
-            Width: =418
-            X: =93
-            ZIndex: =2
-
-        gs_btn_headerEmbotellador_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Embotellador"
-            X: =gs_btn_headerRazonS_1.X + gs_btn_headerRazonS_1.Width
-            ZIndex: =3
-
-        gs_btn_headerPais_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
+            Fill: =RGBA(204, 231, 246, 1)
             Font: =Font.Lato
             Height: =50
             RadiusBottomLeft: =0
@@ -249,12 +221,44 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="País"
-            X: =gs_btn_headerEmbotellador_1.X + gs_btn_headerEmbotellador_1.Width
+            Width: =418
+            X: =93
+            ZIndex: =2
+
+        gs_btc_headerPeriodo_1 As button:
+            Color: =RGBA(0, 18, 107, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(204, 231, 246, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Periodo"
+            X: =tc_btn_headerPais_1.X + tc_btn_headerPais_1.Width
+            ZIndex: =3
+
+        tc_btn_headerAnio_1 As button:
+            Color: =RGBA(0, 18, 107, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(204, 231, 246, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Año"
+            X: =gs_btc_headerPeriodo_1.X + gs_btc_headerPeriodo_1.Width
             ZIndex: =4
 
-        gs_btn_headerRegion_1 As button:
+        tc_btn_headerTipoC_1 As button:
+            Color: =RGBA(0, 18, 107, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
+            Fill: =RGBA(204, 231, 246, 1)
             Font: =Font.Lato
             Height: =50
             RadiusBottomLeft: =0
@@ -262,27 +266,14 @@ TipoCambio_Screen As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =14
-            Text: ="Región"
-            X: =gs_btn_headerPais_1.X + gs_btn_headerPais_1.Width
+            Text: ="Tipo Cambio"
+            X: =tc_btn_headerAnio_1.X + tc_btn_headerAnio_1.Width
             ZIndex: =5
 
-        gs_btn_headerSubregion_1 As button:
+        tc_btn_headerEstatus_1 As button:
+            Color: =RGBA(0, 18, 107, 1)
             DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Subregión"
-            X: =gs_btn_headerRegion_1.X + gs_btn_headerRegion_1.Width
-            ZIndex: =6
-
-        gs_btn_headerEstatus_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
+            Fill: =RGBA(204, 231, 246, 1)
             Font: =Font.Lato
             Height: =50
             RadiusBottomLeft: =0
@@ -292,7 +283,7 @@ TipoCambio_Screen As screen:
             Size: =14
             Text: ="Estatus"
             Width: =116
-            X: =gs_btn_headerSubregion_1.X + gs_btn_headerSubregion_1.Width
+            X: =991
             ZIndex: =7
 
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
