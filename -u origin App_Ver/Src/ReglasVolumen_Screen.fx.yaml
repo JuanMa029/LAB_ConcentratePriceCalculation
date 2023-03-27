@@ -1473,6 +1473,156 @@
             Y: =13
             ZIndex: =14
 
+            rvs_gal_dataReglasVlmInnovation As gallery.galleryVertical:
+                BorderColor: =RGBA(56, 136, 210, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =300
+                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
+                Layout: =Layout.Vertical
+                TemplatePadding: =1
+                TemplateSize: =40
+                Width: =1320
+                X: =24
+                ZIndex: =1
+
+                gal_dpd_razonSocial_Innova As label:
+                    Color: =RGBA(65, 65, 65, 1)
+                    Font: =Font.Lato
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.RAZONSOCIAL
+                    Width: =rvs_btn_headerRazonSocial_Prd.Width
+                    ZIndex: =1
+
+                gal_dpd_subcategory_Innova As combobox:
+                    Color: =RGBA(65, 65, 65, 1)
+                    DefaultSelectedItems: |-
+                        =ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value})
+                    DisplayFields: =["Result"]
+                    DisplayMode: =DisplayMode.View
+                    Font: =Font.Lato
+                    Items: |-
+                        =ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value})
+                    OnSelect: =Select(Parent)
+                    SearchFields: =["Result"]
+                    SearchItems: |-
+                        =Search(ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value}),gal_dpd_subcategory_Innova.SearchText,"Result")
+                    Width: =rvs_btn_headerSubcategory_Prd.Width
+                    X: =440
+                    ZIndex: =2
+
+                gal_dpd_brand_Innova As combobox:
+                    DefaultSelectedItems: |-
+                        =ForAll(Split(ThisItem.BRAND,";"), {Result: ThisRecord.Value})
+                    DisplayFields: =["Result"]
+                    DisplayMode: =DisplayMode.View
+                    IsSearchable: =false
+                    Items: |-
+                        =ForAll(Split(ThisItem.BRAND,";"), {Result: ThisRecord.Value})
+                    OnSelect: =Select(Parent)
+                    SearchFields: =["Result"]
+                    SearchItems: =[]
+                    Width: =rvs_btn_headerBrand_Prd.Width
+                    X: =660
+                    ZIndex: =3
+
+                gal_fig_separador_Product_1 As rectangle:
+                    Fill: =RGBA(201, 201, 201, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =39
+                    ZIndex: =4
+
+                gal_cbx_mesesVlm As checkbox:
+                    Default: =ThisItem.'3MONTHSVOLUME'
+                    DisplayMode: =DisplayMode.View
+                    Height: =40
+                    OnSelect: =Select(Parent)
+                    Text: =""
+                    Width: =40
+                    X: =915
+                    ZIndex: =5
+
+                gal_fig_status_Innova As circle:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =If(ThisItem.STATUS = true,RGBA(101, 201, 135, 1),RGBA(227, 55, 44, 1))
+                    Height: =15
+                    OnSelect: =Select(Parent)
+                    Width: =15
+                    X: =1143
+                    Y: =13
+                    ZIndex: =6
+
+                gal_img_edit_Innova As image:
+                    Height: =25
+                    Image: =btnEdit
+                    OnSelect: =Select(Parent)
+                    Width: =25
+                    X: =1236
+                    Y: =9
+                    ZIndex: =7
+
+                gal_btn_edit_Innova As button:
+                    Fill: =Color.Transparent
+                    Height: =25
+                    HoverFill: =RGBA(56, 136, 210, 0.5)
+                    OnSelect: |-
+                        =UpdateContext({vsbLoadingNewRglProd:true});
+                        Select(Parent);
+                        //Obtenemos Catalogo LAB_PRODUCT completo
+                        ClearCollect(
+                            colLabProductCompleto,
+                            Filter(LAB_PRODUCT,NumberProduct <=2000),
+                            Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
+                            );
+                        //Aplicamos Distinct SubCategory
+                        ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
+                        
+                        //__
+                        Set(IdListRglInnova, ThisItem.ID);
+                        Set(varRazonSocial,ThisItem.RAZONSOCIAL);
+                        Set(varSubcategory,ThisItem.SUBCATEGORY);
+                        Set(varBrand,ThisItem.BRAND);
+                        Set(varCheckMeses,ThisItem.'3MONTHSVOLUME');
+                        Set(varEstatus,ThisItem.STATUS);
+                        //__ generar los datos seleccionados en los combox
+                        Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL,";"));
+                        Set(varListSubcategory,Split(ThisItem.SUBCATEGORY,";"));
+                        Set(varListBrand,Split(ThisItem.BRAND,";"));
+                        
+                        
+                        UpdateContext({vsbEditRglInnova:true});
+                        
+                        UpdateContext({vsbLoadingNewRglProd:false});
+                    PressedFill: =RGBA(56, 136, 210, 0.2)
+                    Text: =""
+                    Width: =25
+                    X: =1236
+                    Y: =9
+                    ZIndex: =8
+
+            rvs_btn_innovation_Descrgar As button:
+                Fill: =RGBA(107, 165, 231, 1)
+                Font: =Font.Lato
+                HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+                OnSelect: |
+                    =// Activamos componente loading
+                    UpdateContext({vsbLoadingNewRglProd:true});
+                    
+                    Set(responseURL,'[CPC]_ExportarCSVs_RuleVolume'.Run(varEmail,3).response);
+                    Download(responseURL);
+                    
+                    // Desactivamos componente loading
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 1)
+                Text: ="Descargar"
+                Visible: =vsbDtcMeses
+                Width: =130
+                X: =619
+                Y: =320
+                ZIndex: =2
+
         rvs_dtc_filtrosConversion As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
