@@ -52,67 +52,6 @@ TipoCambio_Screen As screen:
             Y: =15
             ZIndex: =3
 
-        gs_dpd_buscarEmbotellador_1 As dropdown:
-            AllowEmptySelection: =true
-            ChevronBackground: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            Items: =Filter(Embotelladores,Estatus = true)
-            Reset: =true
-            Visible: =false
-            Width: =239
-            X: =1091
-            Y: =6
-            ZIndex: =5
-
-        gs_btn_buscarEmbotellador_1 As button:
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(9, 33, 98, 1)
-            Font: =Font.Lato
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Embotellador"
-            Visible: =false
-            X: =925
-            Y: =6
-            ZIndex: =6
-
-        gs_img_nuevo_1 As image:
-            Height: =40
-            Image: =add
-            Width: =63
-            X: =1218
-            Y: =27
-            ZIndex: =7
-
-        gs_btn_nuevo_1 As button:
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            Fill: =Color.Transparent
-            HoverFill: =Color.Transparent
-            OnSelect: |-
-                =//__ Activamos componente loading
-                UpdateContext({vsbLoadingJerarquia:true});
-                //__ Creamos colecciones para los catalogos
-                ClearCollect(colRazonSoc_Jer,Filter(RazonSocial,Estatus = true));
-                ClearCollect(colEmbotellador_Jer,Filter(Embotelladores,Estatus = true));
-                ClearCollect(colPais_Jer,Filter(Pais,Estatus = true));
-                ClearCollect(colRegion_Jer,Filter(Region,Estatus = true));
-                ClearCollect(colSubregion_Jer,Filter(Subregion,Estatus = true));
-                
-                UpdateContext({vsbNewJerarquia:true});
-                //__ Desactivamos componente loading
-                UpdateContext({vsbLoadingJerarquia:false});
-            PressedFill: =Color.Transparent
-            Text: =""
-            Width: =63
-            X: =1218
-            Y: =15
-            ZIndex: =8
-
         tc_btn_pais_1 As button:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
