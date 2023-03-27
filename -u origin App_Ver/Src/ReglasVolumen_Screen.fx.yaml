@@ -1364,7 +1364,7 @@
                 Size: =14
                 Text: ="Razón Social"
                 Width: =440
-                X: =40
+                X: =24
                 ZIndex: =1
 
             rvs_btn_headerSubcategory_Mes As button:
@@ -1380,7 +1380,7 @@
                 Size: =14
                 Text: ="SubCategory"
                 Width: =220
-                X: =480
+                X: =464
                 ZIndex: =2
 
             rvs_btn_headerBrand_Mes As button:
@@ -1396,7 +1396,7 @@
                 Size: =14
                 Text: ="Brand"
                 Width: =220
-                X: =700
+                X: =684
                 ZIndex: =3
 
             rvs_btn_header3MesesVlm As button:
@@ -1412,7 +1412,7 @@
                 Size: =14
                 Text: ="3 Meses Volumen"
                 Width: =220
-                X: =920
+                X: =904
                 ZIndex: =4
 
             rvs_btn_headerStatus_Mes As button:
@@ -1427,7 +1427,7 @@
                 Size: =14
                 Text: ="Status"
                 Width: =110
-                X: =1140
+                X: =1124
                 ZIndex: =5
 
             rvs_btn_headerEdit_Mes As button:
@@ -1441,7 +1441,7 @@
                 RadiusTopRight: =0
                 Text: =""
                 Width: =110
-                X: =1250
+                X: =1234
                 ZIndex: =6
 
         DataCard1 As dataCard.blankCard:
@@ -1466,7 +1466,7 @@
                 TemplatePadding: =1
                 TemplateSize: =40
                 Width: =1320
-                X: =40
+                X: =24
                 Y: =1
                 ZIndex: =1
 
@@ -1558,6 +1558,7 @@
                         Set(varRazonSocial,ThisItem.RAZONSOCIAL);
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
+                        Set(varCheckMeses,ThisItem.'3MONTHSVOLUME');
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL,";"));
@@ -1565,7 +1566,7 @@
                         Set(varListBrand,Split(ThisItem.BRAND,";"));
                         
                         
-                        UpdateContext({vsbEditRglProduct:true});
+                        UpdateContext({vsbEditRglInnova:true});
                         
                         UpdateContext({vsbLoadingNewRglProd:false});
                     PressedFill: =RGBA(56, 136, 210, 0.2)
@@ -2888,10 +2889,6 @@
             Y: =506
             ZIndex: =66
 
-    rvs_cmp_loading As Loading:
-        Visible: =vsbLoadingNewRglProd
-        ZIndex: =80
-
     rvs_grp_newMeses As group:
         Height: =5
         Width: =5
@@ -3153,4 +3150,316 @@
             X: =464
             Y: =641
             ZIndex: =79
+
+    rvs_cmp_loading As Loading:
+        Visible: =vsbLoadingNewRglProd
+        ZIndex: =95
+
+    rvs_grp_editInnovation As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =96
+
+        rvs_fig_fondoEditInnova As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =vsbEditRglInnova
+            Width: =1366
+            ZIndex: =80
+
+        rvs_fig_subfondoEditInnova As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =If(IsBlank(responseSave.response),465,545)
+            Visible: =vsbEditRglInnova
+            Width: =466
+            X: =448
+            Y: =145
+            ZIndex: =81
+
+        rvs_lbl_tituloEditInnova As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =15
+            Text: ="Editar Regla de Volumen"
+            Visible: =vsbEditRglInnova
+            Width: =466
+            X: =448
+            Y: =145
+            ZIndex: =82
+
+        rvs_lbl_editRazonSocial_Innova As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Razón Social"
+            Visible: =vsbEditRglInnova
+            X: =606
+            Y: =223
+            ZIndex: =83
+
+        rvs_dpd_editRazonSocial_Innova As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    Filter(RazonSocial,Estatus = true),NombreRazonSocial = varRazonSocial)
+            DisplayFields: =["NombreRazonSocial"]
+            Font: =Font.Lato
+            Height: =41
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Items: =Filter(RazonSocial,Estatus = true)
+            OnChange: |
+                =// Reset al componente Brand
+                Reset(rvs_dpd_brand_Product);
+                // Generamos la lista Brand
+                Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,"SUBCATEGORY0"),BRAND),Value,";"))
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["NombreRazonSocial"]
+            SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_editRazonSocial_Innova.SearchText,"NombreRazonSocial")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbEditRglInnova
+            Width: =437
+            X: =462
+            Y: =247
+            ZIndex: =84
+
+        rvs_lbl_editSubcategory_Innova As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="SubCategory"
+            Visible: =vsbEditRglInnova
+            X: =606
+            Y: =302
+            ZIndex: =85
+
+        rvs_dpd_editSubcategory_Innova As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value}),Value in ForAll(varListSubcategory,{Value:ThisRecord.Value}))
+            DisplayFields: =["Value"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            IsSearchable: =false
+            Items: |-
+                =ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value})
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Visible: =vsbEditRglInnova
+            Width: =438
+            X: =462
+            Y: =327
+            ZIndex: =86
+
+        rvs_lbl_editBrand_Innova As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Brand"
+            Visible: =vsbEditRglInnova
+            X: =606
+            Y: =381
+            ZIndex: =87
+
+        rvs_dpd_editBrand_Innova As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Innova.SelectedItems),BRAND), {Result: ThisRecord.Value}),Result in ForAll(varListBrand,{Value:ThisRecord.Value}))
+            DisplayFields: =["Result"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            Items: |-
+                =ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Innova.SelectedItems),BRAND), {Result: ThisRecord.Value})
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["Result"]
+            SearchItems: |-
+                =Search(ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Innova.SelectedItems),BRAND), {Result: ThisRecord.Value}),rvs_dpd_editBrand_Innova.SearchText,"Result")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Visible: =vsbEditRglInnova
+            Width: =438
+            X: =462
+            Y: =406
+            ZIndex: =88
+
+        rvs_icn_editInnova_Cerrar As icon.CancelBadge:
+            Color: =RGBA(71, 71, 71, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =// Realizamos Reset a los componentes
+                Reset(rvs_dpd_editRazonSocial_Innova);
+                Reset(rvs_dpd_editSubcategory_Innova);
+                Reset(rvs_dpd_editBrand_Innova);
+                Reset(rvs_tgg_editEstatus_Innova);
+                Set(responseSave,Blank());
+                UpdateContext({vsbEditRglInnova:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbEditRglInnova
+            Width: =35
+            X: =865
+            Y: =152
+            ZIndex: =89
+
+        rvs_btn_editInnova_Actualizar As button:
+            Fill: =RGBA(107, 165, 231, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+            OnSelect: |
+                =// Activamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:true});
+                Set(responseSave,Blank());
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rvs_dpd_editRazonSocial_Innova.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Innova.Selected) || IsBlank(rvs_dpd_editSubcategory_Innova.Selected) || IsEmpty(rvs_dpd_editSubcategory_Innova.Selected) || IsBlank(rvs_dpd_editBrand_Innova.Selected) || IsEmpty(rvs_dpd_editBrand_Innova.Selected),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
+                //__ Guardamos en una colección los datos de la solicitud
+                Clear(colReglaVolProduct);
+                    Collect(
+                    colReglaVolProduct,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        RazonSocial:rvs_dpd_editRazonSocial_Innova.Selected.NombreRazonSocial,
+                        ContainerType: Concat(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,";"),
+                        Container: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Value,";"),
+                        //ContainerID: Concat(rvs_dpd_editContainer.SelectedItems,CONTAINER_ID,";"),
+                        Estatus: rvs_tgg_editEstatus_Innova.Value,
+                        IDList: IdListRglContainer,
+                        RazonSocial_old: varRazonSocial,
+                        ContainerType_old: varContainerType,
+                        Container_old: varContainer,
+                        //ContainerID_old: varContainerID,
+                        Estatus_old: varEstatus,
+                        Year_Solicitud: Value(Year(Now())),
+                        IdMes: Month(Now())
+                    }
+                    );
+                
+                    //__ Invocamos el Flujo de Automate
+                Set(varJSONRegla,JSON(colReglaVolProduct));
+                Set(responseSave,'[CPC]_EditRuleVolumenContainer'.Run(varJSONRegla));
+                Set(responseNewProd,responseSave.response);
+                //__ Realizamos Clear a la coleccion de Solicitud
+                If(responseNewProd = "Ok",
+                    UpdateContext({vsbEditRglContainer:false});
+                    Reset(rvs_dpd_editRazonSocial_Innova);
+                    Reset(rvs_dpd_editSubcategory_Innova);
+                    Reset(rvs_dpd_editBrand_Innova);
+                    Reset(rvs_tgg_editEstatus_Innova);
+                    Refresh(JerarquiaGeografica);
+                    UpdateContext({vsbPopUpOk:true});
+                    Set(responseSave,Blank());
+                    Refresh(ContainerVolumeRule);
+                // Obtenemos Catalogo Volumen Product completo
+                ClearCollect(
+                        colContainerVlmRule,
+                        Filter(ContainerVolumeRule, IDRegla <= 2000),
+                        Filter(ContainerVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                );
+                    );
+                );
+                
+                // Desactivamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:false});
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Text: ="Actualizar"
+            Visible: =vsbEditRglInnova
+            Width: =130
+            X: =616
+            Y: =547
+            ZIndex: =90
+
+        rvs_lbl_editMsj_Innova As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =59
+            Text: =responseSave.response
+            Visible: =vsbEditRglInnova
+            Width: =438
+            X: =462
+            Y: =602
+            ZIndex: =91
+
+        rvs_lbl_ediStatus_Innova As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Text: ="Estatus"
+            Visible: =vsbEditRglInnova
+            Width: =100
+            X: =462
+            Y: =531
+            ZIndex: =92
+
+        rvs_tgg_editEstatus_Innova As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varEstatus
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =35
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbEditRglInnova
+            Width: =50
+            X: =487
+            Y: =559
+            ZIndex: =93
+
+        rvs_cbx_edit3MesesRegla As checkbox:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(5, 28, 87, 1)
+            Default: =varCheckMeses
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="3 Meses de Volumen"
+            Visible: =vsbEditRglInnova
+            Width: =233
+            X: =567
+            Y: =471
+            ZIndex: =94
 
