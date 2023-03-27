@@ -221,11 +221,11 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="País"
-            Width: =418
-            X: =93
+            Width: =198
+            X: =129
             ZIndex: =2
 
-        gs_btc_headerPeriodo_1 As button:
+        tc_btc_headerPeriodo_1 As button:
             Color: =RGBA(0, 18, 107, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(204, 231, 246, 1)
@@ -252,7 +252,7 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Año"
-            X: =gs_btc_headerPeriodo_1.X + gs_btc_headerPeriodo_1.Width
+            X: =tc_btc_headerPeriodo_1.X + tc_btc_headerPeriodo_1.Width
             ZIndex: =4
 
         tc_btn_headerTipoC_1 As button:
@@ -283,7 +283,7 @@ TipoCambio_Screen As screen:
             Size: =14
             Text: ="Estatus"
             Width: =116
-            X: =991
+            X: =tc_btn_headerTipoC_1.X + tc_btn_headerTipoC_1.Width
             ZIndex: =7
 
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
