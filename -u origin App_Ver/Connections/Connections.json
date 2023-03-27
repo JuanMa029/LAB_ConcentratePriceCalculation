@@ -146,9 +146,6 @@
           },
           "Subregion": {
             "tableName": "8ec9f6c7-8993-470f-85cc-50207a4ca872"
-          },
-          "VolumeRuleConversion": {
-            "tableName": "eb76644e-8705-446f-b371-cf1c128e5fc6"
           }
         }
       }
@@ -166,8 +163,7 @@
       "ProductVolumeRule",
       "CatalogoPeriodos",
       "ContainerVolumeRule",
-      "InnovationVolumeRule",
-      "VolumeRuleConversion"
+      "InnovationVolumeRule"
     ],
     "dependencies": {},
     "dependents": [
@@ -340,18 +336,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "2d1852a4-e812-43d7-89b4-43baa0a622e4": {
-          "value": "shared_sharepointonline"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"
         }
       },
       "parameterHintsV2": {
-        "shared_sharepointonline": {
-          "value": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "654a99af-7199-4525-b823-19918d000a99"
