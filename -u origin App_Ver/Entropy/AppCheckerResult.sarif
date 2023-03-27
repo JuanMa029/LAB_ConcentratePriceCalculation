@@ -987,7 +987,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 1225,
+                  "charOffset": 1219,
                   "snippet": {
                     "text": "Value"
                   }
@@ -1027,7 +1027,7 @@
                 },
                 "region": {
                   "charLength": 56,
-                  "charOffset": 1179,
+                  "charOffset": 1173,
                   "snippet": {
                     "text": "Concat(rvs_dpd_editBrand_Innova.SelectedItems,Value,\";\")"
                   }

@@ -1554,7 +1554,7 @@
                         ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
                         
                         //__
-                        Set(IdListRglProduct, ThisItem.ID);
+                        Set(IdListRglInnova, ThisItem.ID);
                         Set(varRazonSocial,ThisItem.RAZONSOCIAL);
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
@@ -3362,15 +3362,15 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Innova.Selected.NombreRazonSocial,
-                        ContainerType: Concat(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,";"),
-                        Container: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Value,";"),
-                        //ContainerID: Concat(rvs_dpd_editContainer.SelectedItems,CONTAINER_ID,";"),
+                        Subcategory: Concat(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,";"),
+                        Brand: Concat(rvs_dpd_editBrand_Innova.SelectedItems,Value,";"),
+                        ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
                         Estatus: rvs_tgg_editEstatus_Innova.Value,
-                        IDList: IdListRglContainer,
+                        IDList: IdListRglInnova,
                         RazonSocial_old: varRazonSocial,
-                        ContainerType_old: varContainerType,
-                        Container_old: varContainer,
-                        //ContainerID_old: varContainerID,
+                        Subcategory_old: varSubcategory,
+                        Brand_old: varBrand,
+                        ReglaMesesVlm_old: varCheckMeses,
                         Estatus_old: varEstatus,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
