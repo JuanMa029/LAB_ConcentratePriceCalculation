@@ -318,9 +318,42 @@ TipoCambio_Screen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.Pais
                 Width: =tc_btn_headerPais_1.Width
-                X: =60
-                Y: =15
+                X: =42
+                Y: =18
                 ZIndex: =1
+
+            tc_periodo_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                Height: =42
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Periodo
+                Width: =tc_btn_headerPeriodo_1.Width
+                X: =268
+                Y: =18
+                ZIndex: =2
+
+            tc_anio_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                Height: =42
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Anio
+                Width: =tc_btn_headerAnio_1.Width
+                X: =482
+                Y: =18
+                ZIndex: =3
+
+            tc_tipoCambio_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                Height: =42
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.TipoCambio
+                Width: =tc_btn_headerTipoC_1.Width
+                X: =712
+                Y: =18
+                ZIndex: =4
 
     gs_cnt_btnsCatalogos_1 As groupContainer.manualLayoutContainer:
         Height: =50
