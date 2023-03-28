@@ -1762,7 +1762,7 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: |-
-                    =Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result)
+                    =Distinct(ForAll(Split(varConcatBrandConver,";"), {Result: ThisRecord.Value}),Result)
                 OnChange: |-
                     =/*
                     // Reset al componente Prodcut
@@ -1776,7 +1776,7 @@
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatBrandInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Conver.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatBrandConver,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Conver.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -1955,7 +1955,7 @@
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =300
-                Items: =Search(Search(Filter(colConversionVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
+                Items: =Search(Search(Filter(colConversionVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Conver.Selected.Value || rvs_dpd_razonSocial_Conver.Selected.Value = Blank()),rvs_dpd_subcategory_Conver.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Conver.Selected.Value,"BRAND")
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
@@ -2125,12 +2125,29 @@
             Set(varConcatBrand,Blank());
             Set(varConcatProduct,Blank());
             
-            // Contanier
+            // Desactivamos dtc Contanier
+            UpdateContext({vsbDtcContainer:false});
             Reset(rvs_dpd_razonSocial_Container);
             Reset(rvs_dpd_containerType);
             Reset(rvs_dpd_container);
             Set(varConcatContainerType,Blank());
             Set(varConcatContainer,Blank());
+            
+            // Desactivamos dtc Meses
+            UpdateContext({vsbDtcMeses:false});
+            Reset(rvs_dpd_razonSocial_Meses);
+            Reset(rvs_dpd_subcategory_Meses);
+            Reset(rvs_dpd_brand_Meses);
+            Set(varConcatSubcategoryInnova,Blank());
+            Set(varConcatBrandInnova,Blank());
+            
+            // Desactivamos dtc Conversion
+            UpdateContext({vsbDtcConver:false});
+            Reset(rvs_dpd_razonSocial_Conver);
+            Reset(rvs_dpd_subcategory_Conver);
+            Reset(rvs_dpd_brand_Conver);
+            Set(varConcatSubcategoryConver,Blank());
+            Set(varConcatBrandConver,Blank());
             
             Navigate(Matematica_Screen,ScreenTransition.Cover);
         Width: =30
@@ -4413,9 +4430,9 @@
                 If(IsBlank(rvs_dpd_editRazonSocial_Conver.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Conver.Selected) || IsBlank(rvs_dpd_editSubcategory_Conver.Selected) || IsEmpty(rvs_dpd_editSubcategory_Conver.Selected) || IsBlank(rvs_dpd_editBrand_Conver.Selected) || IsEmpty(rvs_dpd_editBrand_Conver.Selected),
                     Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
                 //__ Guardamos en una colección los datos de la solicitud
-                Clear(colReglaVolInnova);
+                Clear(colReglaEditConver);
                     Collect(
-                    colReglaVolInnova,
+                    colReglaEditConver,
                     {
                         EmailUser: varEmail,
                         GPID: varUserGPID,
@@ -4425,13 +4442,13 @@
                         RazonSocial:rvs_dpd_editRazonSocial_Conver.Selected.NombreRazonSocial,
                         Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Conver.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         Brand: Concat(Sort(rvs_dpd_editBrand_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ReglaMesesVlm: rvs_cbx_editConversionHectolitro.Value,
+                        ConversionHectolt: rvs_cbx_editConversionHectolitro.Value,
                         Estatus: rvs_tgg_editEstatus_Conver.Value,
-                        IDList: IdListRglInnova,
+                        IDList: IdListRglConver,
                         RazonSocial_old: varRazonSocial,
                         Subcategory_old: varSubcategory,
                         Brand_old: varBrand,
-                        ReglaMesesVlm_old: varCheckMeses,
+                        ConversionHectolt_old: varConverHct,
                         Estatus_old: varEstatus,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -4439,24 +4456,24 @@
                     );
                 
                     //__ Invocamos el Flujo de Automate
-                Set(varJSONRegla,JSON(colReglaVolInnova));
-                Set(responseSave,'[CPC]_EditRuleVolumenInnovation'.Run(varJSONRegla));
+                Set(varJSONRegla,JSON(colReglaEditConver));
+                Set(responseSave,'[CPC]_EditRuleVolumenConversion'.Run(varJSONRegla));
                 Set(responseNewProd,responseSave.response);
                 //__ Realizamos Clear a la coleccion de Solicitud
                 If(responseNewProd = "Ok",
-                    UpdateContext({vsbEditRglInnova:false});
+                    UpdateContext({vsbEditRglConversion:false});
                     Reset(rvs_dpd_editRazonSocial_Conver);
                     Reset(rvs_dpd_editSubcategory_Conver);
                     Reset(rvs_dpd_editBrand_Conver);
                     Reset(rvs_tgg_editEstatus_Conver);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
-                    Refresh(InnovationVolumeRule);
+                    Refresh(VolumeRuleConversion);
                 // Obtenemos Catalogo Volumen Product completo
                 ClearCollect(
-                        colInnovationVlmRule,
-                        Filter(InnovationVolumeRule, IDRegla <= 2000),
-                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                        colConversionVlmRule,
+                        Filter(VolumeRuleConversion, IDRegla <= 2000),
+                        Filter(VolumeRuleConversion, IDRegla > 2000 && IDRegla <= 4000)
                 );
                     );
                 );
