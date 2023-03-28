@@ -221,7 +221,7 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="País"
-            Width: =272
+            Width: =226
             X: =87
             Y: =3
             ZIndex: =1
@@ -238,10 +238,61 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Periodo"
-            Width: =272
+            Width: =214
             X: =tc_btn_headerPais_1.X + tc_btn_headerPais_1.Width
             Y: =3
             ZIndex: =2
+
+        tc_btn_headerAnio_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =47
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Año"
+            Width: =230
+            X: =tc_btn_headerPeriodo_1.X + tc_btn_headerPeriodo_1.Width
+            Y: =3
+            ZIndex: =3
+
+        tc_btn_headerTipoC_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =47
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Tipo Cambio"
+            Width: =214
+            X: =tc_btn_headerAnio_1.X + tc_btn_headerAnio_1.Width
+            Y: =3
+            ZIndex: =4
+
+        tc_btn_headerEstatus_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =47
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Estatus"
+            Width: =172
+            X: =tc_btn_headerTipoC_1.X + tc_btn_headerTipoC_1.Width
+            Y: =3
+            ZIndex: =5
 
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
         Height: =425
