@@ -1017,6 +1017,287 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 84,
+                  "snippet": {
+                    "text": "\"NombreRazonSocial\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 255,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 152,
+                  "charOffset": 125,
+                  "snippet": {
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 278,
+                  "snippet": {
+                    "text": "BRAND"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "BRAND"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 168,
+                  "charOffset": 116,
+                  "snippet": {
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Distinct"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 285,
+                  "snippet": {
+                    "text": "Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Error"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.OnChange",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 186,
+                  "charOffset": 109,
+                  "snippet": {
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnChange",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Concat"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "LogConfiguraciones_Screen.cms_lbl_productos_8.FocusedBorderThickness"
                 }
               ],
@@ -21056,19 +21337,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion"
               }
             }
           ],
@@ -21086,19 +21367,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.TabIndex"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.TabIndex",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion"
               }
             }
           ],
@@ -21116,19 +21397,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_subcategory_Conver"
               }
             }
           ],
@@ -21146,19 +21427,229 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel"
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel",
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ReglasVolumen_Screen",
-                "type": "ReglasVolumen_Screen.rvs_cnv_data.DataCard1.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver"
+                "type": "ReglasVolumen_Screen.rvs_cnv_data.rvs_dtc_dataConversionHct.rvs_gal_dataReglasVlmConversion.gal_dpd_brand_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editSubcategory_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editSubcategory_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editSubcategory_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editBrand_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editBrand_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_dpd_editBrand_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_icn_editConver_Cerrar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver.ShowLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver.ShowLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-HelpfulControlSettingNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ReglasVolumen_Screen",
+                "type": "ReglasVolumen_Screen.rvs_tgg_editEstatus_Conver"
               }
             }
           ],
@@ -21487,36 +21978,6 @@
               },
               "properties": {
                 "member": "varListRazonSocial",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varConverHct"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varConverHct",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varConverHct",
                 "module": "App",
                 "type": "App"
               }

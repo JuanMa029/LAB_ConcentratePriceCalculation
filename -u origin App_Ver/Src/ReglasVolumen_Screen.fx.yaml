@@ -1938,7 +1938,7 @@
                 X: =1234
                 ZIndex: =6
 
-        DataCard1 As dataCard.blankCard:
+        rvs_dtc_dataConversionHct As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -2069,7 +2069,7 @@
                         Set(varListBrand,Split(ThisItem.BRAND,";"));
                         
                         
-                        UpdateContext({vsbEditRglInnova:true});
+                        UpdateContext({vsbEditRglConversion:true});
                         
                         UpdateContext({vsbLoadingNewRglProd:false});
                     PressedFill: =RGBA(56, 136, 210, 0.2)
@@ -2113,6 +2113,8 @@
             UpdateContext({vsbBtnConversion:true});
             UpdateContext({vsbDtcProduct:false});
             UpdateContext({vsbDtcContainer:false});
+            UpdateContext({vsbDtcConver:false});
+            UpdateContext({vsbDtcMeses:false});
             
             //_PRODUCT
             Reset(rvs_dpd_razonSocial_Product);
@@ -3948,10 +3950,6 @@
             Y: =471
             ZIndex: =94
 
-    rvs_cmp_loading As Loading:
-        Visible: =vsbLoadingNewRglProd
-        ZIndex: =108
-
     rvs_grp_newConversion As group:
         Height: =5
         Width: =5
@@ -4213,4 +4211,315 @@
             X: =464
             Y: =641
             ZIndex: =107
+
+    rvs_cmp_loading As Loading:
+        Visible: =vsbLoadingNewRglProd
+        ZIndex: =123
+
+    rvs_grp_editConversion As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =124
+
+        rvs_fig_fondoEditConver As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =vsbEditRglConversion
+            Width: =1366
+            ZIndex: =108
+
+        rvs_fig_subfondoEditConver As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =If(IsBlank(responseSave.response),465,545)
+            Visible: =vsbEditRglConversion
+            Width: =466
+            X: =448
+            Y: =145
+            ZIndex: =109
+
+        rvs_lbl_tituloEditConver As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =15
+            Text: ="Editar Regla de Volumen"
+            Visible: =vsbEditRglConversion
+            Width: =466
+            X: =448
+            Y: =145
+            ZIndex: =110
+
+        rvs_lbl_editRazonSocial_Conver As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Razón Social"
+            Visible: =vsbEditRglConversion
+            X: =606
+            Y: =223
+            ZIndex: =111
+
+        rvs_dpd_editRazonSocial_Conver As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    Filter(RazonSocial,Estatus = true),NombreRazonSocial = varRazonSocial)
+            DisplayFields: =["NombreRazonSocial"]
+            Font: =Font.Lato
+            Height: =41
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Items: =Filter(RazonSocial,Estatus = true)
+            OnChange: |
+                =// Reset al componente Brand
+                Reset(rvs_dpd_brand_Product);
+                // Generamos la lista Brand
+                Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,"SUBCATEGORY0"),BRAND),Value,";"))
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["NombreRazonSocial"]
+            SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_editRazonSocial_Conver.SearchText,"NombreRazonSocial")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbEditRglConversion
+            Width: =437
+            X: =462
+            Y: =247
+            ZIndex: =112
+
+        rvs_lbl_editSubcategory_Conver As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="SubCategory"
+            Visible: =vsbEditRglConversion
+            X: =606
+            Y: =302
+            ZIndex: =113
+
+        rvs_dpd_editSubcategory_Conver As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value}),Value in ForAll(varListSubcategory,{Value:ThisRecord.Value}))
+            DisplayFields: =["Value"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            IsSearchable: =false
+            Items: |-
+                =ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value})
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["Value"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Visible: =vsbEditRglConversion
+            Width: =438
+            X: =462
+            Y: =327
+            ZIndex: =114
+
+        rvs_lbl_editBrand_Conver As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Brand"
+            Visible: =vsbEditRglConversion
+            X: =606
+            Y: =381
+            ZIndex: =115
+
+        rvs_dpd_editBrand_Conver As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DefaultSelectedItems: |-
+                =Filter(
+                    ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Conver.SelectedItems),BRAND), {Result: ThisRecord.Value}),Result in ForAll(varListBrand,{Value:ThisRecord.Value}))
+            DisplayFields: =["Result"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            Items: |-
+                =ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Conver.SelectedItems),BRAND), {Result: ThisRecord.Value})
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["Result"]
+            SearchItems: |-
+                =Search(ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_editSubcategory_Conver.SelectedItems),BRAND), {Result: ThisRecord.Value}),rvs_dpd_editBrand_Conver.SearchText,"Result")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Visible: =vsbEditRglConversion
+            Width: =438
+            X: =462
+            Y: =406
+            ZIndex: =116
+
+        rvs_icn_editConver_Cerrar As icon.CancelBadge:
+            Color: =RGBA(71, 71, 71, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =// Realizamos Reset a los componentes
+                Reset(rvs_dpd_editRazonSocial_Conver);
+                Reset(rvs_dpd_editSubcategory_Conver);
+                Reset(rvs_dpd_editBrand_Conver);
+                Reset(rvs_tgg_editEstatus_Conver);
+                Set(responseSave,Blank());
+                UpdateContext({vsbEditRglConversion:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbEditRglConversion
+            Width: =35
+            X: =865
+            Y: =152
+            ZIndex: =117
+
+        rvs_btn_editConver_Actualizar As button:
+            Fill: =RGBA(107, 165, 231, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+            OnSelect: |
+                =// Activamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:true});
+                Set(responseSave,Blank());
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rvs_dpd_editRazonSocial_Conver.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Conver.Selected) || IsBlank(rvs_dpd_editSubcategory_Conver.Selected) || IsEmpty(rvs_dpd_editSubcategory_Conver.Selected) || IsBlank(rvs_dpd_editBrand_Conver.Selected) || IsEmpty(rvs_dpd_editBrand_Conver.Selected),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
+                //__ Guardamos en una colección los datos de la solicitud
+                Clear(colReglaVolInnova);
+                    Collect(
+                    colReglaVolInnova,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        RazonSocial:rvs_dpd_editRazonSocial_Conver.Selected.NombreRazonSocial,
+                        Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Conver.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                        Brand: Concat(Sort(rvs_dpd_editBrand_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                        ReglaMesesVlm: rvs_cbx_editConversionHectolitro.Value,
+                        Estatus: rvs_tgg_editEstatus_Conver.Value,
+                        IDList: IdListRglInnova,
+                        RazonSocial_old: varRazonSocial,
+                        Subcategory_old: varSubcategory,
+                        Brand_old: varBrand,
+                        ReglaMesesVlm_old: varCheckMeses,
+                        Estatus_old: varEstatus,
+                        Year_Solicitud: Value(Year(Now())),
+                        IdMes: Month(Now())
+                    }
+                    );
+                
+                    //__ Invocamos el Flujo de Automate
+                Set(varJSONRegla,JSON(colReglaVolInnova));
+                Set(responseSave,'[CPC]_EditRuleVolumenInnovation'.Run(varJSONRegla));
+                Set(responseNewProd,responseSave.response);
+                //__ Realizamos Clear a la coleccion de Solicitud
+                If(responseNewProd = "Ok",
+                    UpdateContext({vsbEditRglInnova:false});
+                    Reset(rvs_dpd_editRazonSocial_Conver);
+                    Reset(rvs_dpd_editSubcategory_Conver);
+                    Reset(rvs_dpd_editBrand_Conver);
+                    Reset(rvs_tgg_editEstatus_Conver);
+                    UpdateContext({vsbPopUpOk:true});
+                    Set(responseSave,Blank());
+                    Refresh(InnovationVolumeRule);
+                // Obtenemos Catalogo Volumen Product completo
+                ClearCollect(
+                        colInnovationVlmRule,
+                        Filter(InnovationVolumeRule, IDRegla <= 2000),
+                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                );
+                    );
+                );
+                
+                // Desactivamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:false});
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Text: ="Actualizar"
+            Visible: =vsbEditRglConversion
+            Width: =130
+            X: =616
+            Y: =547
+            ZIndex: =118
+
+        rvs_lbl_editMsj_Conver As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =59
+            Text: =responseSave.response
+            Visible: =vsbEditRglConversion
+            Width: =438
+            X: =462
+            Y: =602
+            ZIndex: =119
+
+        rvs_lbl_ediStatus_Conver As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            Text: ="Estatus"
+            Visible: =vsbEditRglConversion
+            Width: =100
+            X: =462
+            Y: =531
+            ZIndex: =120
+
+        rvs_tgg_editEstatus_Conver As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varEstatus
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =35
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbEditRglConversion
+            Width: =50
+            X: =487
+            Y: =559
+            ZIndex: =121
+
+        rvs_cbx_editConversionHectolitro As checkbox:
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(5, 28, 87, 1)
+            Default: =varConverHct
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Conversion a Hectolitros"
+            Visible: =vsbEditRglConversion
+            Width: =240
+            X: =563
+            Y: =464
+            ZIndex: =122
 
