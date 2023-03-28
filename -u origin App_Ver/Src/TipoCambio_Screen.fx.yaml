@@ -203,7 +203,7 @@ TipoCambio_Screen As screen:
             Y: =15
             ZIndex: =12
 
-    gs_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
+    tc_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
         Height: =50
         Width: =1366
         Y: =220
@@ -221,8 +221,8 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="País"
-            Width: =198
-            X: =225
+            Width: =322
+            X: =101
             ZIndex: =2
 
         tc_btc_headerPeriodo_1 As button:
@@ -237,6 +237,7 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Periodo"
+            Width: =220
             X: =tc_btn_headerPais_1.X + tc_btn_headerPais_1.Width
             ZIndex: =3
 
@@ -252,6 +253,7 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Año"
+            Width: =202
             X: =tc_btc_headerPeriodo_1.X + tc_btc_headerPeriodo_1.Width
             ZIndex: =4
 
@@ -267,6 +269,7 @@ TipoCambio_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Tipo Cambio"
+            Width: =178
             X: =tc_btn_headerAnio_1.X + tc_btn_headerAnio_1.Width
             ZIndex: =5
 
@@ -292,14 +295,27 @@ TipoCambio_Screen As screen:
         Y: =270
         ZIndex: =7
 
-        "tc_gs_TipoC_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-            Height: =425
+        tc_gs_TipoC_1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =371
             Items: =ConfiguracionTipoCambio
             Layout: =Layout.Vertical
-            TemplatePadding: =0
-            TemplateSize: =Min(160, Self.Height - 60)
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            Width: =1210
             X: =40
             ZIndex: =1
+
+            tc_pais_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                Height: =42
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.Pais
+                Width: =tc_btn_headerPais_1.Width
+                X: =60
+                Y: =15
+                ZIndex: =1
 
     gs_cnt_btnsCatalogos_1 As groupContainer.manualLayoutContainer:
         Height: =50
