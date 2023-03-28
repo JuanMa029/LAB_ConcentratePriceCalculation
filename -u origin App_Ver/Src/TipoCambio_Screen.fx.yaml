@@ -209,93 +209,13 @@ TipoCambio_Screen As screen:
         Y: =220
         ZIndex: =6
 
-        tc_btn_headerPais_1 As button:
-            Color: =RGBA(0, 18, 107, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 231, 246, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="País"
-            Width: =322
-            X: =101
-            ZIndex: =2
-
-        tc_btc_headerPeriodo_1 As button:
-            Color: =RGBA(0, 18, 107, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 231, 246, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Periodo"
-            Width: =220
-            X: =tc_btn_headerPais_1.X + tc_btn_headerPais_1.Width
-            ZIndex: =3
-
-        tc_btn_headerAnio_1 As button:
-            Color: =RGBA(0, 18, 107, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 231, 246, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Año"
-            Width: =202
-            X: =tc_btc_headerPeriodo_1.X + tc_btc_headerPeriodo_1.Width
-            ZIndex: =4
-
-        tc_btn_headerTipoC_1 As button:
-            Color: =RGBA(0, 18, 107, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 231, 246, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Tipo Cambio"
-            Width: =178
-            X: =tc_btn_headerAnio_1.X + tc_btn_headerAnio_1.Width
-            ZIndex: =5
-
-        tc_btn_headerEstatus_1 As button:
-            Color: =RGBA(0, 18, 107, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(204, 231, 246, 1)
-            Font: =Font.Lato
-            Height: =50
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =14
-            Text: ="Estatus"
-            Width: =116
-            X: =tc_btn_headerTipoC_1.X + tc_btn_headerTipoC_1.Width
-            ZIndex: =7
-
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
         Height: =425
         Width: =1366
         Y: =270
         ZIndex: =7
 
-        tc_gs_TipoC_1 As gallery.galleryVertical:
+        "tc_gs_TipoC_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             DelayItemLoading: =true
             Height: =371
             Items: =ConfiguracionTipoCambio

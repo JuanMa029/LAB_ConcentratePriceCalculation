@@ -114,6 +114,14 @@ Matematica_Screen As screen:
                     Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
             );
             
+            // Obtenemos Catalogo Volumen Conversion completo
+            ClearCollect(
+                    colConversionVlmRule,
+                    Filter(VolumeRuleConversion, IDRegla <= 2000),
+                    Filter(VolumeRuleConversion, IDRegla > 2000 && IDRegla <= 4000)
+            );
+            
+            
             Navigate(ReglasVolumen_Screen,ScreenTransition.CoverRight);
         PressedFill: =Color.Transparent
         Text: =""
