@@ -1,10 +1,19 @@
 Screen2 As screen:
 
+    Rectangle1 As rectangle:
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =387
+        Width: =373
+        X: =485
+        Y: =52
+        ZIndex: =1
+
     Label2 As label:
         Text: ="Razon Social"
         X: =596
         Y: =52
-        ZIndex: =1
+        ZIndex: =2
 
     Dropdown2 As dropdown:
         AllowEmptySelection: =true
@@ -13,13 +22,13 @@ Screen2 As screen:
         Reset: =true
         X: =507
         Y: =92
-        ZIndex: =2
+        ZIndex: =3
 
     Label2_1 As label:
         Text: ="Archivo Fuente"
         X: =596
         Y: =146
-        ZIndex: =3
+        ZIndex: =4
 
     Dropdown2_1 As dropdown:
         AllowEmptySelection: =true
@@ -28,7 +37,7 @@ Screen2 As screen:
         Reset: =true
         X: =507
         Y: =186
-        ZIndex: =4
+        ZIndex: =5
 
     Label2_2 As label:
         Align: =Align.Center
@@ -36,7 +45,7 @@ Screen2 As screen:
         Width: =328
         X: =507
         Y: =240
-        ZIndex: =5
+        ZIndex: =6
 
     Label2_3 As label:
         Text: ="Producto Pepsi"
@@ -49,7 +58,7 @@ Screen2 As screen:
         Width: =328
         X: =507
         Y: =280
-        ZIndex: =9
+        ZIndex: =8
 
     ComboBox5 As combobox:
         DisplayFields: =["Value"]
@@ -59,5 +68,15 @@ Screen2 As screen:
         SelectMultiple: =false
         X: =507
         Y: =374
+        ZIndex: =9
+
+    Label3 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 18, 107, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        Size: =18
+        Text: ="Xref Productos"
+        Width: =1366
         ZIndex: =10
 
