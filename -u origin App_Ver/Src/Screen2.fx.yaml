@@ -1,0 +1,63 @@
+Screen2 As screen:
+
+    Label2 As label:
+        Text: ="Razon Social"
+        X: =596
+        Y: =52
+        ZIndex: =1
+
+    Dropdown2 As dropdown:
+        AllowEmptySelection: =true
+        Default: =""
+        Items: =Filter(RazonSocial,Estatus = true)
+        Reset: =true
+        X: =507
+        Y: =92
+        ZIndex: =2
+
+    Label2_1 As label:
+        Text: ="Archivo Fuente"
+        X: =596
+        Y: =146
+        ZIndex: =3
+
+    Dropdown2_1 As dropdown:
+        AllowEmptySelection: =true
+        Default: =""
+        Items: =["Costos","ListaPrecio","NetRevnue"]
+        Reset: =true
+        X: =507
+        Y: =186
+        ZIndex: =4
+
+    Label2_2 As label:
+        Align: =Align.Center
+        Text: ="Producto Embotellador"
+        Width: =328
+        X: =507
+        Y: =240
+        ZIndex: =5
+
+    Label2_3 As label:
+        Text: ="Producto Pepsi"
+        X: =596
+        Y: =334
+        ZIndex: =7
+
+    TextInput1 As text:
+        Default: =""
+        Width: =328
+        X: =507
+        Y: =280
+        ZIndex: =9
+
+    ComboBox5 As combobox:
+        DisplayFields: =["Value"]
+        Items: =Distinct(LAB_PRODUCT,PRODUCT)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(LAB_PRODUCT,PRODUCT),ComboBox5.SearchText,"Value")
+        SelectMultiple: =false
+        X: =507
+        Y: =374
+        ZIndex: =10
+
