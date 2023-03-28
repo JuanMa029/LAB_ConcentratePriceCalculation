@@ -146,6 +146,9 @@
           },
           "Subregion": {
             "tableName": "8ec9f6c7-8993-470f-85cc-50207a4ca872"
+          },
+          "VolumeRuleConversion": {
+            "tableName": "eb76644e-8705-446f-b371-cf1c128e5fc6"
           }
         }
       }
@@ -163,7 +166,8 @@
       "ProductVolumeRule",
       "CatalogoPeriodos",
       "ContainerVolumeRule",
-      "InnovationVolumeRule"
+      "InnovationVolumeRule",
+      "VolumeRuleConversion"
     ],
     "dependencies": {},
     "dependents": [
