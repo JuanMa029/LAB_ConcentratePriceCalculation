@@ -209,6 +209,40 @@ TipoCambio_Screen As screen:
         Y: =220
         ZIndex: =6
 
+        tc_btn_headerPais_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =47
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="País"
+            Width: =272
+            X: =87
+            Y: =3
+            ZIndex: =1
+
+        tc_btn_headerPeriodo_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =47
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Periodo"
+            Width: =272
+            X: =tc_btn_headerPais_1.X + tc_btn_headerPais_1.Width
+            Y: =3
+            ZIndex: =2
+
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
         Height: =425
         Width: =1366
