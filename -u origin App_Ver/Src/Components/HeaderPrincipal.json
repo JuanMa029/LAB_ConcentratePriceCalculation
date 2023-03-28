@@ -386,7 +386,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638155505062035397",
+    "LastModifiedTimestamp": "638155594492490874",
     "Name": "HeaderPrincipal",
     "Rules": [
       {
@@ -445,7 +445,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638155505062035397",
+  "LastModifiedTimestamp": "638155594492490874",
   "Name": "788514e80092479eaf17d680a0490f34",
   "OverridableProperties": {},
   "Version": "638144226932524418"

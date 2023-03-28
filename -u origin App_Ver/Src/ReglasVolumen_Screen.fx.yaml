@@ -1731,7 +1731,7 @@
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatSubcategoryInnova,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Conver.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatSubcategoryConver,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Conver.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
