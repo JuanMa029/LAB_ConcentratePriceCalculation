@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-03-23T22:56:10.4780000Z",
+      "LastChangedTimeString": "2023-03-27T17:53:37.1330000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -33,8 +33,10 @@
       "ID": "ID",
       "IDRegla": "IDRegla",
       "Modified": "Modificado",
-      "OData__x0033_MONTHSVOLUME": "3MONTHSVOLUME",
+      "PRODUCT": "PRODUCT",
+      "PRODUCT_ID": "PRODUCT_ID",
       "RAZONSOCIAL": "RAZONSOCIAL",
+      "RAZONSOCIAL#Id": "RAZONSOCIAL Id",
       "STATUS": "STATUS",
       "SUBCATEGORY": "SUBCATEGORY",
       "Title": "Título"
@@ -43,7 +45,7 @@
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "InnovationVolumeRule",
+    "Name": "VolumeRuleProduct",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

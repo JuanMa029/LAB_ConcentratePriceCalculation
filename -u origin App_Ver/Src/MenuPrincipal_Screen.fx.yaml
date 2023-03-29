@@ -8,7 +8,7 @@ MenuPrincipal_Screen As screen:
         FontWeight: =FontWeight.Bold
         Height: =27
         Size: =11
-        Text: ="V.240323.1.00"
+        Text: ="V.290323.1.00"
         Y: =740
         ZIndex: =1
 
