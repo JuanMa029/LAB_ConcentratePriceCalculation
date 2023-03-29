@@ -1978,12 +1978,12 @@
                     DisplayFields: =["Result"]
                     DisplayMode: =DisplayMode.View
                     Font: =Font.Lato
+                    IsSearchable: =false
                     Items: |-
                         =ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value})
                     OnSelect: =Select(Parent)
                     SearchFields: =["Result"]
-                    SearchItems: |-
-                        =Search(ForAll(Split(ThisItem.SUBCATEGORY, ";" ), {Result: ThisRecord.Value}),gal_dpd_subcategory_Conver.SearchText,"Result")
+                    SearchItems: =[]
                     Width: =rvs_btn_headerSubcategory_Prd.Width
                     X: =440
                     ZIndex: =2
