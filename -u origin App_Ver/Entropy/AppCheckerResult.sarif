@@ -1298,12 +1298,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_fondo_2.Visible"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_fig_fondo_1.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_fondo_2.Visible",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_fig_fondo_1.Visible",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1317,7 +1317,7 @@
               "properties": {
                 "member": "Visible",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.rs_fig_fondo_2"
+                "type": "TipoCambio_Screen.tc_fig_fondo_1"
               }
             }
           ],
@@ -1338,12 +1338,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_subfondo_2.Visible"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_fig_subfondo_1.Visible"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_subfondo_2.Visible",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_fig_subfondo_1.Visible",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1357,7 +1357,7 @@
               "properties": {
                 "member": "Visible",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.rs_fig_subfondo_2"
+                "type": "TipoCambio_Screen.tc_fig_subfondo_1"
               }
             }
           ],
