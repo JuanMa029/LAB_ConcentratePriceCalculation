@@ -1028,3 +1028,13 @@ TipoCambio_Screen As screen:
     HeaderPrincipal_1 As HeaderPrincipal:
         ZIndex: =56
 
+    rvs_icn_regresar_1 As icon.Link:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Matematica_Screen,ScreenTransition.Cover);
+        Width: =30
+        X: =12
+        Y: =15
+        ZIndex: =57
+
