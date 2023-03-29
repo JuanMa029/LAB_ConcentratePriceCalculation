@@ -114,6 +114,9 @@
           "CatalogoFrecuencia": {
             "tableName": "ce0b16aa-370d-4ac6-86bd-87b62c115add"
           },
+          "ConfiguracionTipoCambio_1": {
+            "tableName": "b3f666a5-4073-483a-aff4-39c6e145f3ce"
+          },
           "ContainerVolumeRule": {
             "tableName": "4e2fe87b-cf41-4e9d-9aa7-e4582b96e05a"
           },
@@ -167,7 +170,8 @@
       "CatalogoPeriodos",
       "ContainerVolumeRule",
       "InnovationVolumeRule",
-      "VolumeRuleConversion"
+      "VolumeRuleConversion",
+      "ConfiguracionTipoCambio_1"
     ],
     "dependencies": {},
     "dependents": [

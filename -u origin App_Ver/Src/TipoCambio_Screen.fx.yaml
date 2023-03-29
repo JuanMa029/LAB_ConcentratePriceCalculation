@@ -276,11 +276,11 @@ TipoCambio_Screen As screen:
 
         tc_fig_subfondo_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =526
-            Visible: =vsbNewTipoCambio
-            Width: =978
-            X: =186
-            Y: =175
+            Height: =636
+            Visible: =true//vsbNewTipoCambio
+            Width: =1106
+            X: =78
+            Y: =84
             ZIndex: =10
 
     tc_grp_EditTipoC_1 As group:
@@ -597,4 +597,10 @@ TipoCambio_Screen As screen:
         X: =12
         Y: =15
         ZIndex: =57
+
+    Form1 As form:
+        Height: =617
+        X: =116
+        Y: =127
+        ZIndex: =58
 
