@@ -100,6 +100,14 @@ TipoCambio_Screen As screen:
             X: =601
             ZIndex: =15
 
+        Button2 As button:
+            OnSelect: |-
+                =UpdateContext({vsbNewTipoCambio:true})
+            Text: ="Nuevo"
+            X: =905
+            Y: =40
+            ZIndex: =16
+
     tc_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
         Height: =50
         Width: =1366
@@ -252,7 +260,7 @@ TipoCambio_Screen As screen:
                 Y: =18
                 ZIndex: =4
 
-    gs_grp_NewJerarquia_1 As group:
+    tc_grp_NewTipoC_1 As group:
         Height: =5
         Width: =5
         X: =40
@@ -275,7 +283,7 @@ TipoCambio_Screen As screen:
             Y: =175
             ZIndex: =10
 
-    gs_grp_EditJerarquia_1 As group:
+    tc_grp_EditTipoC_1 As group:
         Height: =5
         Width: =5
         X: =40
