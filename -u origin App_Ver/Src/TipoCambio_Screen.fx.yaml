@@ -15,9 +15,10 @@ TipoCambio_Screen As screen:
         ZIndex: =4
 
     tc_cnt_filter_1 As groupContainer.manualLayoutContainer:
-        Height: =70
-        Width: =1366
-        Y: =182
+        Height: =97
+        Width: =1354
+        X: =12
+        Y: =155
         ZIndex: =5
 
         tc_dpd_buscarPais_1 As dropdown:
@@ -32,8 +33,8 @@ TipoCambio_Screen As screen:
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =217
-            Y: =15
+            X: =72
+            Y: =40
             ZIndex: =1
 
         tc_dpd_buscarPeriodo_1 As dropdown:
@@ -49,99 +50,9 @@ TipoCambio_Screen As screen:
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =646
-            Y: =15
+            X: =333
+            Y: =40
             ZIndex: =3
-
-        tc_btn_pais_1 As button:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            Color: =RGBA(5, 28, 87, 1)
-            DisabledBorderColor: =RGBA(107, 165, 231, 1)
-            DisabledColor: =RGBA(255, 255, 255, 1)
-            DisabledFill: =RGBA(107, 165, 231, 1)
-            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
-            OnSelect: |-
-                =// Desabilitamos el boton Product
-                UpdateContext({vsbBtnProduct:false});
-                // Habilitamos los botones Container y Meses
-                UpdateContext({vsbBtnContainer:true});
-                UpdateContext({vsbBtnMeses:true});
-                UpdateContext({vsbBtnConversion:true});
-                // Activamos visibilidad para dtc de Product
-                UpdateContext({vsbDtcProduct:true});
-                
-                // Desactivamos dtc Contanier
-                UpdateContext({vsbDtcContainer:false});
-                Reset(rvs_dpd_razonSocial_Container);
-                Reset(rvs_dpd_containerType);
-                Reset(rvs_dpd_container);
-                Set(varConcatContainerType,Blank());
-                Set(varConcatContainer,Blank());
-                
-                // Desactivamos dtc Meses
-                UpdateContext({vsbDtcMeses:false});
-                Reset(rvs_dpd_razonSocial_Meses);
-                Reset(rvs_dpd_subcategory_Meses);
-                Reset(rvs_dpd_brand_Meses);
-                Set(varConcatSubcategoryInnova,Blank());
-                Set(varConcatBrandInnova,Blank());
-            PressedBorderColor: =RGBA(107, 165, 231, 1)
-            PressedFill: =RGBA(107, 165, 231, 1)
-            Size: =13
-            Text: ="País"
-            Width: =154
-            X: =48
-            Y: =15
-            ZIndex: =9
-
-        tc_btn_periodo_1 As button:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            Color: =RGBA(5, 28, 87, 1)
-            DisabledBorderColor: =RGBA(107, 165, 231, 1)
-            DisabledColor: =RGBA(255, 255, 255, 1)
-            DisabledFill: =RGBA(107, 165, 231, 1)
-            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
-            OnSelect: |-
-                =// Desabilitamos el boton Product
-                UpdateContext({vsbBtnProduct:false});
-                // Habilitamos los botones Container y Meses
-                UpdateContext({vsbBtnContainer:true});
-                UpdateContext({vsbBtnMeses:true});
-                UpdateContext({vsbBtnConversion:true});
-                // Activamos visibilidad para dtc de Product
-                UpdateContext({vsbDtcProduct:true});
-                
-                // Desactivamos dtc Contanier
-                UpdateContext({vsbDtcContainer:false});
-                Reset(rvs_dpd_razonSocial_Container);
-                Reset(rvs_dpd_containerType);
-                Reset(rvs_dpd_container);
-                Set(varConcatContainerType,Blank());
-                Set(varConcatContainer,Blank());
-                
-                // Desactivamos dtc Meses
-                UpdateContext({vsbDtcMeses:false});
-                Reset(rvs_dpd_razonSocial_Meses);
-                Reset(rvs_dpd_subcategory_Meses);
-                Reset(rvs_dpd_brand_Meses);
-                Set(varConcatSubcategoryInnova,Blank());
-                Set(varConcatBrandInnova,Blank());
-            PressedBorderColor: =RGBA(107, 165, 231, 1)
-            PressedFill: =RGBA(107, 165, 231, 1)
-            Size: =13
-            Text: ="Periodo"
-            Width: =154
-            X: =478
-            Y: =15
-            ZIndex: =10
 
         tc_dpd_buscarPais_2 As dropdown:
             AllowEmptySelection: =true
@@ -155,54 +66,39 @@ TipoCambio_Screen As screen:
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
-            X: =1076
-            Y: =15
+            X: =601
+            Y: =40
             ZIndex: =11
 
-        tc_btn_anio_1 As button:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            Color: =RGBA(5, 28, 87, 1)
-            DisabledBorderColor: =RGBA(107, 165, 231, 1)
-            DisabledColor: =RGBA(255, 255, 255, 1)
-            DisabledFill: =RGBA(107, 165, 231, 1)
-            DisplayMode: =If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
-            Fill: =RGBA(255, 255, 255, 1)
+        tc_lbl_pais_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
             Font: =Font.Lato
-            HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
-            OnSelect: |-
-                =// Desabilitamos el boton Product
-                UpdateContext({vsbBtnProduct:false});
-                // Habilitamos los botones Container y Meses
-                UpdateContext({vsbBtnContainer:true});
-                UpdateContext({vsbBtnMeses:true});
-                UpdateContext({vsbBtnConversion:true});
-                // Activamos visibilidad para dtc de Product
-                UpdateContext({vsbDtcProduct:true});
-                
-                // Desactivamos dtc Contanier
-                UpdateContext({vsbDtcContainer:false});
-                Reset(rvs_dpd_razonSocial_Container);
-                Reset(rvs_dpd_containerType);
-                Reset(rvs_dpd_container);
-                Set(varConcatContainerType,Blank());
-                Set(varConcatContainer,Blank());
-                
-                // Desactivamos dtc Meses
-                UpdateContext({vsbDtcMeses:false});
-                Reset(rvs_dpd_razonSocial_Meses);
-                Reset(rvs_dpd_subcategory_Meses);
-                Reset(rvs_dpd_brand_Meses);
-                Set(varConcatSubcategoryInnova,Blank());
-                Set(varConcatBrandInnova,Blank());
-            PressedBorderColor: =RGBA(107, 165, 231, 1)
-            PressedFill: =RGBA(107, 165, 231, 1)
-            Size: =13
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="País"
+            Width: =220
+            X: =72
+            ZIndex: =13
+
+        tc_lbl_periodo_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="Periodo"
+            Width: =220
+            X: =336
+            ZIndex: =14
+
+        tc_lbl_anio_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =14
             Text: ="Año"
-            Width: =154
-            X: =910
-            Y: =15
-            ZIndex: =12
+            Width: =220
+            X: =601
+            ZIndex: =15
 
     tc_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
         Height: =50
