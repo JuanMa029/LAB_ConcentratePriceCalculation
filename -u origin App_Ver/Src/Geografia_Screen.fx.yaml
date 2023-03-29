@@ -289,13 +289,13 @@ Geografia_Screen As screen:
                     Filter(
                         JerarquiaGeografica,
                         StartsWith(
-                            Subregion,
+                            SUBREGION.Value,
                             ""
                         ) 
-                        && (Pais = gs_dpd_buscarPais.Selected.NombrePais || gs_dpd_buscarPais.Selected.NombrePais = Blank())
-                        && (Region = gs_dpd_buscarRegion.Selected.NombreRegion || gs_dpd_buscarRegion.Selected.NombreRegion = Blank())
+                        && (PAIS.Value = gs_dpd_buscarPais.Selected.NombrePais || gs_dpd_buscarPais.Selected.NombrePais = Blank())
+                        && (REGION.Value = gs_dpd_buscarRegion.Selected.NombreRegion || gs_dpd_buscarRegion.Selected.NombreRegion = Blank())
                     ),
-                    "IdJerarquiaGeografica",
+                    "IDJERARQUIAGEOGRAFICA",
                     SortOrder.Ascending
                 )
             Layout: =Layout.Vertical
@@ -305,7 +305,7 @@ Geografia_Screen As screen:
             ZIndex: =1
 
             gs_txt_id As text:
-                Default: =ThisItem.IdJerarquiaGeografica
+                Default: =ThisItem.IDJERARQUIAGEOGRAFICA
                 DisplayMode: =DisplayMode.View
                 OnSelect: =Select(Parent)
                 Width: =gs_btn_id.Width
@@ -313,7 +313,7 @@ Geografia_Screen As screen:
                 ZIndex: =1
 
             gs_txt_razonSocial As text:
-                Default: =ThisItem.RazonSocial
+                Default: =ThisItem.RAZONSOCIAL.Value
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -326,7 +326,7 @@ Geografia_Screen As screen:
                 ZIndex: =2
 
             gs_txt_embotellador As text:
-                Default: =ThisItem.Embotellador
+                Default: =ThisItem.EMBOTELLADOR.Value
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -339,7 +339,7 @@ Geografia_Screen As screen:
                 ZIndex: =3
 
             gs_txt_pais As text:
-                Default: =ThisItem.Pais
+                Default: =ThisItem.PAIS.Value
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -351,7 +351,7 @@ Geografia_Screen As screen:
                 ZIndex: =4
 
             gs_txt_region As text:
-                Default: =ThisItem.Region
+                Default: =ThisItem.REGION.Value
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -363,7 +363,7 @@ Geografia_Screen As screen:
                 ZIndex: =5
 
             gs_txt_subregion As text:
-                Default: =ThisItem.Subregion
+                Default: =ThisItem.SUBREGION.Value
                 DisabledBorderColor: =RGBA(0, 18, 107, 1)
                 DisabledColor: =RGBA(0, 0, 0, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
@@ -375,7 +375,7 @@ Geografia_Screen As screen:
                 ZIndex: =6
 
             gs_icn_estatus As circle:
-                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
+                Fill: =If(ThisItem.ESTATUS = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
                 Height: =30
                 OnSelect: =Select(Parent)
                 Width: =40
@@ -409,13 +409,18 @@ Geografia_Screen As screen:
                     
                     Select(Parent);
                     Set(varTempID,ThisItem.ID);
-                    Set(varTempIDJerarqui,ThisItem.IdJerarquiaGeografica);
-                    Set(varTempRazonSoc,ThisItem.RazonSocial);
-                    Set(varTempEmbotellador,ThisItem.Embotellador);
-                    Set(varTempPais,ThisItem.Pais);
-                    Set(varTempRegion,ThisItem.Region);
-                    Set(varTempSubregion,ThisItem.Subregion);
-                    Set(varTempEstatusJ,ThisItem.Estatus);
+                    Set(varTempIDJerarqui,ThisItem.IDJERARQUIAGEOGRAFICA);
+                    Set(varTempRazonSoc,ThisItem.RAZONSOCIAL.Value);
+                    Set(varIdRazonSocial,ThisItem.RAZONSOCIAL.Id);
+                    Set(varTempEmbotellador,ThisItem.EMBOTELLADOR.Value);
+                    Set(varIdEmbotellador,ThisItem.EMBOTELLADOR.Id);
+                    Set(varTempPais,ThisItem.PAIS.Value);
+                    Set(varIdPais,ThisItem.PAIS.Id);
+                    Set(varTempRegion,ThisItem.REGION.Value);
+                    Set(varIdRegion,ThisItem.REGION.Id);
+                    Set(varTempSubregion,ThisItem.SUBREGION.Value);
+                    Set(varIdSubregion,ThisItem.SUBREGION.Id);
+                    Set(varTempEstatusJ,ThisItem.ESTATUS);
                     
                     //__ Creamos colecciones para los catalogos
                     ClearCollect(colRazonSoc_Jer,Filter(RazonSocial,Estatus = true));
@@ -643,10 +648,15 @@ Geografia_Screen As screen:
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial: ComboBox1.Selected.NombreRazonSocial,
+                        IdRazonSocial:Value(ComboBox1.Selected.ID),
                         Embotellador: ComboBox1_1.Selected.NombreEmbotelladores,
+                        IdEmbotellador: Value(ComboBox1_1.Selected.ID),
                         Pais: ComboBox1_2.Selected.NombrePais,
+                        IdPais: Value(ComboBox1_2.Selected.ID),
                         Region: ComboBox1_3.Selected.NombreRegion,
+                        IdRegion: Value(ComboBox1_3.Selected.ID),
                         Subregion: ComboBox1_4.Selected.NombreSubregion,
+                        IdSubregion: Value(ComboBox1_4.Selected.ID),
                         TipoCatalogo: "Jerarquia Geografica",
                         MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
                         YearSolicitud:Value(Year(Now()))
@@ -1015,10 +1025,15 @@ Geografia_Screen As screen:
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial: gs_dpd_editNombreRazonS.Selected.NombreRazonSocial,
+                        IdRazonSocial:Value(gs_dpd_editNombreRazonS.Selected.ID),
                         Embotellador: gs_dpd_editEmbotellador.Selected.NombreEmbotelladores,
+                        IdEmbotellador: Value(gs_dpd_editEmbotellador.Selected.ID),
                         Pais: gs_dpd_editPais.Selected.NombrePais,
+                        IdPais: Value(gs_dpd_editPais.Selected.ID),
                         Region: gs_dpd_editRegion.Selected.NombreRegion,
+                        IdRegion: Value(gs_dpd_editRegion.Selected.ID),
                         Subregion: gs_dpd_subregion.Selected.NombreSubregion,
+                        IdSubregion: Value(gs_dpd_subregion.Selected.ID),
                         Estatus: gs_tgg_editEstatusJerar.Value,
                         //__ data old
                         RazonSocial_old: varTempRazonSoc,
