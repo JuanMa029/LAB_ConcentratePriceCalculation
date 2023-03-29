@@ -219,7 +219,7 @@
                     Text: ="Rule 3 - Innovación > 3 Meses"
                     Width: =230
                     X: =719
-                    Y: =28
+                    Y: =21
                     ZIndex: =4
 
                 rvs_btn_conversion As button:
