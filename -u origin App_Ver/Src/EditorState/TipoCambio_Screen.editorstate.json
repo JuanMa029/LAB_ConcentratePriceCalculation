@@ -3308,7 +3308,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "gs_lbl_editID__1",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9432,7 +9432,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_cnt_filter_1",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10989,7 +10989,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_fig_subfondo_1",
-      "ParentIndex": 13,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
