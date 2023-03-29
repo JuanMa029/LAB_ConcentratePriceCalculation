@@ -219,7 +219,7 @@
                     Text: ="Rule 3 - Innovación > 3 Meses"
                     Width: =230
                     X: =719
-                    Y: =28
+                    Y: =21
                     ZIndex: =4
 
                 rvs_btn_conversion As button:
@@ -4175,6 +4175,7 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_newRazonSocial_Conver.Selected.NombreRazonSocial,
+                        IdRazonSocial: Value(rvs_dpd_newRazonSocial_Conver.Selected.ID),
                         Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         Brand: Concat(Sort(rvs_dpd_newBrand_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         ConversionHectolt: rvs_cbx_conversionHect.Value,
