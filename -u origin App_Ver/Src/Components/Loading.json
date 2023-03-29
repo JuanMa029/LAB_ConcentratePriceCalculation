@@ -79,7 +79,7 @@
         "Name": "Image1",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1535,
+        "PublishOrderIndex": 1504,
         "Rules": [
           {
             "Category": "Data",
@@ -302,7 +302,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638157043176189720",
+    "LastModifiedTimestamp": "638157247952012114",
     "Name": "Loading",
     "Rules": [
       {
@@ -361,7 +361,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638157043176189720",
+  "LastModifiedTimestamp": "638157247952012114",
   "Name": "61d3d12536ce45bba87413ad03f9b9c1",
   "OverridableProperties": {},
   "Version": "638125282571012221"
