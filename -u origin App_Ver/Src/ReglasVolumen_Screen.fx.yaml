@@ -1681,6 +1681,7 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
+                IsSearchable: =false
                 Items: =Distinct(colConversionVlmRule,RAZONSOCIAL.Value)
                 OnChange: |
                     =// Reset al componente SubCategory
@@ -1690,7 +1691,7 @@
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(colConversionVlmRule,RAZONSOCIAL.Value),rvs_dpd_razonSocial_Conver.SearchText,"Value")
+                SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400

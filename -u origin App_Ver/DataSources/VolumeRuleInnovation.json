@@ -30,7 +30,6 @@
       "Created": "Creado",
       "Editor": "Modificado por",
       "Editor#Claims": "Modificado por Claims",
-      "HECTOLITORSCONVERSION": "HECTOLITORSCONVERSION",
       "ID": "ID",
       "IDRegla": "IDRegla",
       "Modified": "Modificado",
@@ -38,13 +37,14 @@
       "RAZONSOCIAL#Id": "RAZONSOCIAL Id",
       "STATUS": "STATUS",
       "SUBCATEGORY": "SUBCATEGORY",
+      "THREEMONTHSVOLUME": "THREEMONTHSVOLUME",
       "Title": "Title"
     },
     "DatasetName": "https://pepsico.sharepoint.com/teams/LAB_ConcentratePriceCalculation",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "VolumeRuleConversion",
+    "Name": "VolumeRuleInnovation",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

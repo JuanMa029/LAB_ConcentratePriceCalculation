@@ -149,6 +149,9 @@
           },
           "VolumeRuleConversion": {
             "tableName": "eb76644e-8705-446f-b371-cf1c128e5fc6"
+          },
+          "VolumeRuleInnovation": {
+            "tableName": "3d78333e-c3d3-4468-b6e7-00e0011be296"
           }
         }
       }
@@ -167,7 +170,8 @@
       "CatalogoPeriodos",
       "ContainerVolumeRule",
       "InnovationVolumeRule",
-      "VolumeRuleConversion"
+      "VolumeRuleConversion",
+      "VolumeRuleInnovation"
     ],
     "dependencies": {},
     "dependents": [
