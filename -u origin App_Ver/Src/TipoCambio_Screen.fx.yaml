@@ -11,12 +11,13 @@ TipoCambio_Screen As screen:
         Size: =35
         Text: ="Configuración de tipo de cambio"
         Width: =1366
+        Y: =67
         ZIndex: =4
 
     tc_cnt_filter_1 As groupContainer.manualLayoutContainer:
         Height: =70
         Width: =1366
-        Y: =100
+        Y: =182
         ZIndex: =5
 
         tc_dpd_buscarPais_1 As dropdown:
@@ -206,7 +207,7 @@ TipoCambio_Screen As screen:
     tc_cnt_headerBtn_1 As groupContainer.manualLayoutContainer:
         Height: =50
         Width: =1366
-        Y: =220
+        Y: =269
         ZIndex: =6
 
         tc_btn_headerPais_1 As button:
@@ -297,7 +298,7 @@ TipoCambio_Screen As screen:
     tc_cnt_dataTipoC_1 As groupContainer.manualLayoutContainer:
         Height: =425
         Width: =1366
-        Y: =270
+        Y: =337
         ZIndex: =7
 
         "tc_gs_TipoC_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -354,120 +355,6 @@ TipoCambio_Screen As screen:
                 X: =712
                 Y: =18
                 ZIndex: =4
-
-    gs_cnt_btnsCatalogos_1 As groupContainer.manualLayoutContainer:
-        Height: =50
-        Width: =1366
-        Y: =718
-        ZIndex: =8
-
-        gs_btn_embotelladorCat_1 As button:
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =RGBA(9, 33, 98, 1)
-            OnSelect: |-
-                =Navigate(Embotellador_Screen,ScreenTransition.UnCover);
-                Refresh(Embotelladores);
-            PressedColor: =RGBA(9, 33, 98, 1)
-            PressedFill: =Color.White
-            Size: =13
-            Text: ="Embotellador"
-            Visible: =false
-            X: =280
-            ZIndex: =1
-
-        gs_btn_paisCat_1 As button:
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =RGBA(9, 33, 98, 1)
-            OnSelect: |-
-                =Refresh(Pais);
-                Navigate(Pais_Screen,ScreenTransition.UnCover)
-            PressedColor: =RGBA(9, 33, 98, 1)
-            PressedFill: =Color.White
-            Size: =13
-            Text: ="Pais"
-            Visible: =false
-            X: =440
-            ZIndex: =2
-
-        gs_btn_razonSocialCat_1 As button:
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =RGBA(9, 33, 98, 1)
-            OnSelect: |-
-                =Navigate(RazonSocial_Screen,ScreenTransition.UnCover);
-                Refresh(RazonSocial);
-            PressedColor: =RGBA(9, 33, 98, 1)
-            PressedFill: =Color.White
-            Size: =13
-            Text: ="Razon Social"
-            Visible: =false
-            X: =600
-            ZIndex: =3
-
-        gs_btn_regionCat_1 As button:
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =RGBA(9, 33, 98, 1)
-            OnSelect: |-
-                =Refresh(Region);
-                Navigate(Region_Screen,ScreenTransition.UnCover);
-            PressedColor: =RGBA(9, 33, 98, 1)
-            PressedFill: =Color.White
-            Size: =13
-            Text: ="Region"
-            Visible: =false
-            X: =760
-            ZIndex: =4
-
-        gs_btn_subregionCat_1 As button:
-            Color: =RGBA(0, 0, 0, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.Lato
-            HoverFill: =RGBA(9, 33, 98, 1)
-            OnSelect: |-
-                =Navigate(Subregion_Screen,ScreenTransition.UnCover);
-                Refresh(Subregion);
-            PressedColor: =RGBA(9, 33, 98, 1)
-            PressedFill: =Color.White
-            Size: =13
-            Text: ="Subregión"
-            Visible: =false
-            X: =920
-            ZIndex: =5
-
-        gs_img_backP_1 As image:
-            Height: =47
-            Image: =back
-            PaddingBottom: =3
-            PaddingTop: =3
-            Width: =58
-            X: =40
-            Y: =3
-            ZIndex: =6
-
-        gs_btn_backP_1 As button:
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            Fill: =Color.Transparent
-            Height: =47
-            HoverFill: =Color.Transparent
-            OnSelect: |-
-                =Navigate(CatalogosMaestros_Screen,ScreenTransition.UnCover);
-                Reset(tc_dpd_buscarPais_1);
-                Reset(tc_dpd_buscarPeriodo_1);
-            PressedFill: =Color.Transparent
-            Text: =""
-            Width: =58
-            X: =40
-            Y: =3
-            ZIndex: =7
 
     gs_grp_NewJerarquia_1 As group:
         Height: =5
@@ -1137,4 +1024,7 @@ TipoCambio_Screen As screen:
             X: =651
             Y: =243
             ZIndex: =54
+
+    HeaderPrincipal_1 As HeaderPrincipal:
+        ZIndex: =56
 
