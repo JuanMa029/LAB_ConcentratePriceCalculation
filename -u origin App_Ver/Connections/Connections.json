@@ -114,9 +114,6 @@
           "CatalogoFrecuencia": {
             "tableName": "ce0b16aa-370d-4ac6-86bd-87b62c115add"
           },
-          "ContainerVolumeRule": {
-            "tableName": "4e2fe87b-cf41-4e9d-9aa7-e4582b96e05a"
-          },
           "Embotelladores": {
             "tableName": "29baceed-22ae-4c27-8d18-dfdd6e57b589"
           },
@@ -132,9 +129,6 @@
           "Pais": {
             "tableName": "1bb910da-0642-4259-807f-c26cf00b9f03"
           },
-          "ProductVolumeRule": {
-            "tableName": "10c7befe-e346-4f49-8f19-14df652bbe72"
-          },
           "RazonSocial": {
             "tableName": "a957faa0-9ff7-4fed-9543-ecbadc98ffea"
           },
@@ -144,11 +138,17 @@
           "Subregion": {
             "tableName": "8ec9f6c7-8993-470f-85cc-50207a4ca872"
           },
+          "VolumeRuleContainer": {
+            "tableName": "864392da-3cef-48f2-a825-4cb80dd62a3a"
+          },
           "VolumeRuleConversion": {
             "tableName": "eb76644e-8705-446f-b371-cf1c128e5fc6"
           },
           "VolumeRuleInnovation": {
             "tableName": "3d78333e-c3d3-4468-b6e7-00e0011be296"
+          },
+          "VolumeRuleProduct": {
+            "tableName": "3d22fc0d-60de-4395-adae-17f31f8865a4"
           }
         }
       }
@@ -163,11 +163,11 @@
       "CatalogoFrecuencia",
       "LAB_PRODUCT",
       "LAB_CONTAINER",
-      "ProductVolumeRule",
       "CatalogoPeriodos",
-      "ContainerVolumeRule",
       "VolumeRuleConversion",
-      "VolumeRuleInnovation"
+      "VolumeRuleInnovation",
+      "VolumeRuleContainer",
+      "VolumeRuleProduct"
     ],
     "dependencies": {},
     "dependents": [

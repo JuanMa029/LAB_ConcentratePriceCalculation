@@ -96,15 +96,15 @@ Matematica_Screen As screen:
             =// Obtenemos Catalogo Volumen Product completo
             ClearCollect(
                     colProductVlmRule,
-                    Filter(ProductVolumeRule, IDRegla <= 2000),
-                    Filter(ProductVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                    Filter(VolumeRuleProduct, IDRegla <= 2000),
+                    Filter(VolumeRuleProduct, IDRegla > 2000 && IDRegla <= 4000)
             );
             
             // Obtenemos Catalogo Volumen Container completo
             ClearCollect(
                     colContainerVlmRule,
-                    Filter(ContainerVolumeRule, IDRegla <= 2000),
-                    Filter(ContainerVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                    Filter(VolumeRuleContainer, IDRegla <= 2000),
+                    Filter(VolumeRuleContainer, IDRegla > 2000 && IDRegla <= 4000)
             );
             
             // Obtenemos Catalogo Volumen Innovation completo
