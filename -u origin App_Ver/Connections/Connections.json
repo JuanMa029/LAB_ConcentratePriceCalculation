@@ -120,9 +120,6 @@
           "Embotelladores": {
             "tableName": "29baceed-22ae-4c27-8d18-dfdd6e57b589"
           },
-          "InnovationVolumeRule": {
-            "tableName": "cd1cb7da-3074-4bd0-b368-f4ec04f8717c"
-          },
           "JerarquiaGeografica": {
             "tableName": "e61a10d4-98a6-4e69-bcc1-7a0770110eb2"
           },
@@ -169,7 +166,6 @@
       "ProductVolumeRule",
       "CatalogoPeriodos",
       "ContainerVolumeRule",
-      "InnovationVolumeRule",
       "VolumeRuleConversion",
       "VolumeRuleInnovation"
     ],

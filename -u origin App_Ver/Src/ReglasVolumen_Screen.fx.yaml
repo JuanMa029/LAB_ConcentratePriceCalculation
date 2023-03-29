@@ -1228,16 +1228,16 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL)
+                Items: =Distinct(colInnovationVlmRule,RAZONSOCIAL.Value)
                 OnChange: |
                     =// Reset al componente SubCategory
                     Reset(rvs_dpd_subcategory_Meses);
                     // Generamos la lista Subcategory
-                    Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),SUBCATEGORY),Value,";"))
+                    Set(varConcatSubcategoryInnova,Concat(Distinct(Filter(colInnovationVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Meses.Selected.Value),SUBCATEGORY),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(colInnovationVlmRule,RAZONSOCIAL),rvs_dpd_razonSocial_Meses.SearchText,"Value")
+                SearchItems: =Search(Distinct(colInnovationVlmRule,RAZONSOCIAL.Value),rvs_dpd_razonSocial_Meses.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400
@@ -1273,7 +1273,7 @@
                     =// Reset al componente Brand
                     Reset(rvs_dpd_brand_Meses);
                     // Generamos la lista Brand
-                    Set(varConcatBrandInnova,Concat(Distinct(Search(Filter(colInnovationVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
+                    Set(varConcatBrandInnova,Concat(Distinct(Search(Filter(colInnovationVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Meses.Selected.Value),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
@@ -1502,7 +1502,7 @@
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =300
-                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
+                Items: =Search(Search(Filter(colInnovationVlmRule,RAZONSOCIAL.Value = rvs_dpd_razonSocial_Meses.Selected.Value || rvs_dpd_razonSocial_Meses.Selected.Value = Blank()),rvs_dpd_subcategory_Meses.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Meses.Selected.Value,"BRAND")
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
@@ -1514,7 +1514,7 @@
                     Color: =RGBA(65, 65, 65, 1)
                     Font: =Font.Lato
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.RAZONSOCIAL
+                    Text: =ThisItem.RAZONSOCIAL.Value
                     Width: =rvs_btn_headerRazonSocial_Prd.Width
                     ZIndex: =1
 
@@ -1559,7 +1559,7 @@
                     ZIndex: =4
 
                 gal_cbx_mesesVlm As checkbox:
-                    Default: =ThisItem.'3MONTHSVOLUME'
+                    Default: =ThisItem.THREEMONTHSVOLUME
                     DisplayMode: =DisplayMode.View
                     Height: =40
                     OnSelect: =Select(Parent)
@@ -1605,13 +1605,14 @@
                         
                         //__
                         Set(IdListRglInnova, ThisItem.ID);
-                        Set(varRazonSocial,ThisItem.RAZONSOCIAL);
+                        Set(varRazonSocial,ThisItem.RAZONSOCIAL.Value);
+                        Set(varIdRazonSocial,Value(ThisItem.RAZONSOCIAL.Id));
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varCheckMeses,ThisItem.'3MONTHSVOLUME');
+                        Set(varCheckMeses,ThisItem.THREEMONTHSVOLUME);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
-                        Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL,";"));
+                        Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL.Value,";"));
                         Set(varListSubcategory,Split(ThisItem.SUBCATEGORY,";"));
                         Set(varListBrand,Split(ThisItem.BRAND,";"));
                         
@@ -3608,6 +3609,7 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_newRazonSocial_Meses.Selected.NombreRazonSocial,
+                        IdRazonSocial: rvs_dpd_newRazonSocial_Meses.Selected.ID,
                         Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         Brand: Concat(Sort(rvs_dpd_newBrand_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
@@ -3629,12 +3631,12 @@
                     Reset(rvs_cbx_3MesesRegla);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
-                    Refresh(InnovationVolumeRule);
+                    Refresh(VolumeRuleInnovation);
                 // Obtenemos Catalogo Volumen Container completo
                 ClearCollect(
                         colInnovationVlmRule,
-                        Filter(InnovationVolumeRule, IDRegla <= 2000),
-                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                        Filter(VolumeRuleInnovation, IDRegla <= 2000),
+                        Filter(VolumeRuleInnovation, IDRegla > 2000 && IDRegla <= 4000)
                 );
                     );
                 );
@@ -3869,6 +3871,7 @@
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:rvs_dpd_editRazonSocial_Innova.Selected.NombreRazonSocial,
+                        IdRazonSocial: Value(rvs_dpd_editRazonSocial_Innova.Selected.ID),
                         Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         Brand: Concat(Sort(rvs_dpd_editBrand_Innova.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
@@ -3897,12 +3900,12 @@
                     Reset(rvs_tgg_editEstatus_Innova);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
-                    Refresh(InnovationVolumeRule);
+                    Refresh(VolumeRuleInnovation);
                 // Obtenemos Catalogo Volumen Product completo
                 ClearCollect(
                         colInnovationVlmRule,
-                        Filter(InnovationVolumeRule, IDRegla <= 2000),
-                        Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                        Filter(VolumeRuleInnovation, IDRegla <= 2000),
+                        Filter(VolumeRuleInnovation, IDRegla > 2000 && IDRegla <= 4000)
                 );
                     );
                 );

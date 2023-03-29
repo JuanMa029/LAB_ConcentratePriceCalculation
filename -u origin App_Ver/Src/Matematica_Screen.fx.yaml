@@ -110,8 +110,8 @@ Matematica_Screen As screen:
             // Obtenemos Catalogo Volumen Innovation completo
             ClearCollect(
                     colInnovationVlmRule,
-                    Filter(InnovationVolumeRule, IDRegla <= 2000),
-                    Filter(InnovationVolumeRule, IDRegla > 2000 && IDRegla <= 4000)
+                    Filter(VolumeRuleInnovation, IDRegla <= 2000),
+                    Filter(VolumeRuleInnovation, IDRegla > 2000 && IDRegla <= 4000)
             );
             
             // Obtenemos Catalogo Volumen Conversion completo
