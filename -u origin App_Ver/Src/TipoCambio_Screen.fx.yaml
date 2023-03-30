@@ -284,24 +284,6 @@ TipoCambio_Screen As screen:
         Y: =40
         ZIndex: =16
 
-        rs_fig_fondo_2 As rectangle:
-            BorderColor: =Color.DarkBlue
-            Fill: =RGBA(0, 18, 107, 0.5)
-            Height: =768
-            Visible: =vsbNewTipoCambio
-            Width: =1366
-            ZIndex: =8
-
-        rs_fig_subfondo_2 As rectangle:
-            BorderColor: =Color.DarkBlue
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =629
-            Visible: =true//vsbNewTipoCambio
-            Width: =1228
-            X: =42
-            Y: =106
-            ZIndex: =9
-
         tc_dcv_archivos_1 As attachments:
             BorderColor: =Color.DarkBlue
             Height: =348
@@ -316,27 +298,6 @@ TipoCambio_Screen As screen:
             X: =866
             Y: =252
             ZIndex: =10
-
-        Dropdown3_1 As dropdown:
-            BorderColor: =Color.DarkBlue
-            Items: =Distinct(CatalogoPeriodos,Anio)
-            X: =197
-            Y: =364
-            ZIndex: =12
-
-        Dropdown3_2 As dropdown:
-            BorderColor: =Color.DarkBlue
-            Items: =Distinct(CatalogoPeriodos,Frecuencia)
-            X: =197
-            Y: =456
-            ZIndex: =13
-
-        TextInput3 As text:
-            BorderColor: =Color.DarkBlue
-            Default: ="Entrada de texto"
-            X: =201
-            Y: =279
-            ZIndex: =14
 
         Button3 As button:
             Text: ="Botón"
