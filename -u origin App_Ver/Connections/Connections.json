@@ -200,7 +200,8 @@
       "475d7d5f-0e04-4cdb-8601-5caaba779325",
       "466669ef-35ff-4413-b5dc-260a01a64d84",
       "33ee41d1-1b8a-49f9-b470-49ee1231d4de",
-      "7b07d296-dd11-493d-a0be-bddc3cad8bf8"
+      "7b07d296-dd11-493d-a0be-bddc3cad8bf8",
+      "523f2f0d-8a69-43e9-b9b5-6ce3c949db1f"
     ],
     "id": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
   },
@@ -570,6 +571,41 @@
       "da1fb183-c672-448c-87f0-43ceea7f3964"
     ],
     "id": "504d6cb3-a9d5-42a8-b5aa-679e0ccc4a01"
+  },
+  "523f2f0d-8a69-43e9-b9b5-6ce3c949db1f": {
+    "connectionParameters": {
+      "logicAppHostType": "ARM",
+      "workFlowCallbackUri": "https://prod-23.westus.logic.azure.com:443/workflows/7af5f2b35d2749ed8bd69a09387ef251/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Op5xOp7H8pa239akPpXNzMwq3-a1dTm70wlgLorkjAA",
+      "workflowEndpoint": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/42cc3295cd0e449cb98e5ce5b560c1d3-7d1201d3c5834573ab935989a4d506c8/providers/Microsoft.Logic/workflows/959e3257-5ac1-4064-a4bf-faf60dc8b37c",
+      "workflowName": "959e3257-5ac1-4064-a4bf-faf60dc8b37c",
+      "workflowPath": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/42cc3295cd0e449cb98e5ce5b560c1d3-7d1201d3c5834573ab935989a4d506c8/providers/Microsoft.Logic/workflows/959e3257-5ac1-4064-a4bf-faf60dc8b37c"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "959e3257-5ac1-4064-a4bf-faf60dc8b37c"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "959e3257-5ac1-4064-a4bf-faf60dc8b37c"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "[CPC]_GestionarArchivos"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "2d1852a4-e812-43d7-89b4-43baa0a622e4"
+    },
+    "dependents": [],
+    "id": "523f2f0d-8a69-43e9-b9b5-6ce3c949db1f"
   },
   "58463360-9d52-42a0-a335-b59f548f09fa": {
     "connectionParameters": {
