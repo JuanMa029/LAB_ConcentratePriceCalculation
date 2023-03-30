@@ -377,6 +377,7 @@ TipoCambio_Screen As screen:
         Height: =39
         HoverColor: =RGBA(65, 65, 65, 1)
         IsSearchable: =false
+        Items: =Filter(RazonSocial, Estatus = true)
         OnChange: =
         PressedColor: =RGBA(65, 65, 65, 1)
         PressedFill: =RGBA(56, 136, 210, 1)
