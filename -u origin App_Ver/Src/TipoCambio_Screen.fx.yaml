@@ -308,7 +308,7 @@ TipoCambio_Screen As screen:
 
         Button3 As button:
             OnSelect: |-
-                ='[CPC]_GestionarArchivos'.Run({contentBytes:First(tc_dcv_archivos_1.Attachments).Value,name:First(tc_dcv_archivos_1.Attachments).Name},tc_itxt_razonS_1.Text,tc_cc_anio_1.Selected.Value,tc_cc_periodo_1.Selected.Value)
+                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_itxt_razonS_1.Text,tc_cc_anio_1.Selected.Value,tc_cc_periodo_1.Selected.Value));
             Text: ="Botón"
             X: =297
             Y: =586
