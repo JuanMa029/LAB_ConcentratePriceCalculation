@@ -21720,6 +21720,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_razonSocial_.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_razonSocial_.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cc_razonSocial_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.flagNoUser"
                 }
               ],

@@ -277,6 +277,16 @@ TipoCambio_Screen As screen:
         Y: =15
         ZIndex: =8
 
+    tc_cc_razonSocial_ As combobox:
+        DisplayFields: =["ComplianceAssetId"]
+        IsSearchable: =false
+        Items: =RazonSocial
+        SearchFields: =["ComplianceAssetId"]
+        SearchItems: =[]
+        X: =217
+        Y: =319
+        ZIndex: =15
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -293,17 +303,17 @@ TipoCambio_Screen As screen:
 
         rs_fig_subfondo_2 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =584
+            Height: =576
             Visible: =true//vsbNewTipoCambio
-            Width: =976
-            X: =177
+            Width: =990
+            X: =162
             Y: =127
             ZIndex: =9
 
         tc_itxt_razonS_1 As text:
             Default: ="Entrada de texto"
             X: =217
-            Y: =265
+            Y: =252
             ZIndex: =10
 
         Button3 As button:
@@ -348,4 +358,19 @@ TipoCambio_Screen As screen:
             X: =217
             Y: =461
             ZIndex: =14
+
+    tc_lbl_tituloNewTipoC_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(71, 71, 71, 1)
+        Fill: =RGBA(196, 222, 251, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =62
+        Size: =18
+        Text: ="Tipo de cambio"
+        Visible: =true//vsbNewTipoCambio
+        Width: =991
+        X: =162
+        Y: =127
+        ZIndex: =16
 
