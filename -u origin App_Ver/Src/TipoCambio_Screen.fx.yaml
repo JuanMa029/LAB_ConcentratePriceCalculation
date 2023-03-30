@@ -308,7 +308,7 @@ TipoCambio_Screen As screen:
 
         Button3 As button:
             OnSelect: |-
-                ='[CPC]_GestionarArchivos'.Run({contentBytes:First(tc_dcv_archivos_1.Attachments).Value,name:First(tc_dcv_archivos_1.Attachments).Name})
+                ='[CPC]_GestionarArchivos'.Run({contentBytes:First(tc_dcv_archivos_1.Attachments).Value,name:First(tc_dcv_archivos_1.Attachments).Name},tc_itxt_razonS_1.Text,"2023","1")
             Text: ="Botón"
             X: =297
             Y: =586
