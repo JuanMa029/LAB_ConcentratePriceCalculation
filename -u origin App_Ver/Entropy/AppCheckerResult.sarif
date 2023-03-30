@@ -21720,19 +21720,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_razonSocial_.AccessibleLabel"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_razonSocial_.AccessibleLabel",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cc_razonSocial_"
+                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
               }
             }
           ],

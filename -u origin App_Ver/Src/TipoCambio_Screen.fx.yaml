@@ -277,16 +277,6 @@ TipoCambio_Screen As screen:
         Y: =15
         ZIndex: =8
 
-    tc_cc_razonSocial_ As combobox:
-        DisplayFields: =["ComplianceAssetId"]
-        IsSearchable: =false
-        Items: =RazonSocial
-        SearchFields: =["ComplianceAssetId"]
-        SearchItems: =[]
-        X: =217
-        Y: =319
-        ZIndex: =15
-
     Group1 As group:
         Height: =5
         Width: =5
@@ -373,4 +363,30 @@ TipoCambio_Screen As screen:
         X: =162
         Y: =127
         ZIndex: =16
+
+    tc_dpd_newRazonSocial_1 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(65, 65, 65, 1)
+        DisplayFields: =["NombreRazonSocial"]
+        Font: =Font.Lato
+        Height: =39
+        HoverColor: =RGBA(65, 65, 65, 1)
+        IsSearchable: =false
+        OnChange: =
+        PressedColor: =RGBA(65, 65, 65, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["NombreRazonSocial"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        SelectMultiple: =false
+        Visible: =true//vsbNewTipoCambio
+        Width: =348
+        X: =217
+        Y: =319
+        ZIndex: =17
 
