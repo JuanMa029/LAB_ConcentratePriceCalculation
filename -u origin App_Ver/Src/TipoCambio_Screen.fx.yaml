@@ -323,16 +323,6 @@ TipoCambio_Screen As screen:
             Y: =265
             ZIndex: =12
 
-        tc_cc_anio_1 As combobox:
-            DisplayFields: =["ComplianceAssetId"]
-            IsSearchable: =false
-            Items: =Distinct(CatalogoPeriodos,Anio)
-            SearchFields: =["ComplianceAssetId"]
-            SearchItems: =[]
-            X: =217
-            Y: =377
-            ZIndex: =13
-
         tc_cc_periodo_1 As combobox:
             DisplayFields: =["Value"]
             IsSearchable: =false
@@ -382,7 +372,7 @@ TipoCambio_Screen As screen:
         Y: =274
         ZIndex: =17
 
-    tc_lbl_newPais_1 As label:
+    tc_lbl_newRazonSocial_1 As label:
         Color: =RGBA(65, 65, 65, 1)
         Font: =Font.Lato
         FontWeight: =FontWeight.Semibold
@@ -392,4 +382,40 @@ TipoCambio_Screen As screen:
         X: =217
         Y: =225
         ZIndex: =18
+
+    tc_dpd_newAnio_1 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(65, 65, 65, 1)
+        DisplayFields: =["ComplianceAssetId"]
+        Font: =Font.Lato
+        HoverColor: =RGBA(65, 65, 65, 1)
+        IsSearchable: =false
+        Items: =Distinct(CatalogoPeriodos,Anio)
+        OnChange: =
+        PressedColor: =RGBA(65, 65, 65, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["ComplianceAssetId"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        SelectMultiple: =false
+        Visible: =true//vsbNewTipoCambio
+        X: =217
+        Y: =370
+        ZIndex: =19
+
+    tc_lbl_newAnio_1 As label:
+        Color: =RGBA(65, 65, 65, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Size: =14
+        Text: ="Razón Social"
+        Width: =220
+        X: =217
+        Y: =330
+        ZIndex: =20
 
