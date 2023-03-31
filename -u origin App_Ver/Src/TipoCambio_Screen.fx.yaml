@@ -302,7 +302,7 @@ TipoCambio_Screen As screen:
 
         Button3 As button:
             OnSelect: |-
-                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected.NombreRazonSocial,tc_cc_anio_1.Selected.Value,tc_cc_periodo_1.Selected.Value));
+                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected.NombreRazonSocial,tc_dpd_newAnio_1.Selected.Value,tc_dpd_newPeriodo_1.Selected.Value));
             Text: ="Botón"
             X: =297
             Y: =586
