@@ -1584,7 +1584,7 @@
                         Set(varIdRazonSocial,Value(ThisItem.RAZONSOCIAL.Id));
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varCheckMeses,ThisItem.THREEMONTHSVOLUME);
+                        //Set(varCheckMeses,ThisItem.THREEMONTHSVOLUME);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL.Value,";"));
@@ -1835,7 +1835,7 @@
                 Size: =14
                 Text: ="Razón Social"
                 Width: =440
-                X: =24
+                X: =136
                 ZIndex: =1
 
             rvs_btn_headerSubcategory_Mes_1 As button:
@@ -1851,7 +1851,7 @@
                 Size: =14
                 Text: ="SubCategory"
                 Width: =220
-                X: =464
+                X: =576
                 ZIndex: =2
 
             rvs_btn_headerBrand_Mes_1 As button:
@@ -1867,24 +1867,8 @@
                 Size: =14
                 Text: ="Brand"
                 Width: =220
-                X: =684
+                X: =796
                 ZIndex: =3
-
-            rvs_btn_header3MesesVlm_1 As button:
-                Align: =Align.Left
-                Color: =RGBA(65, 65, 65, 1)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(196, 222, 251, 1)
-                Font: =Font.Lato
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =14
-                Text: ="Conversion Hectolitros"
-                Width: =220
-                X: =904
-                ZIndex: =4
 
             rvs_btn_headerStatus_Mes_1 As button:
                 Color: =RGBA(65, 65, 65, 1)
@@ -1898,7 +1882,7 @@
                 Size: =14
                 Text: ="Status"
                 Width: =110
-                X: =1124
+                X: =1016
                 ZIndex: =5
 
             rvs_btn_headerEdit_Mes_1 As button:
@@ -1912,7 +1896,7 @@
                 RadiusTopRight: =0
                 Text: =""
                 Width: =110
-                X: =1234
+                X: =1126
                 ZIndex: =6
 
         rvs_dtc_dataConversionHct As dataCard.blankCard:
@@ -1936,8 +1920,8 @@
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
-                Width: =1320
-                X: =24
+                Width: =1098
+                X: =136
                 ZIndex: =1
 
                 gal_dpd_razonSocial_Conver As label:
@@ -1988,23 +1972,13 @@
                     Y: =39
                     ZIndex: =4
 
-                gal_cbx_conversionHectolitro As checkbox:
-                    Default: =ThisItem.HECTOLITORSCONVERSION
-                    DisplayMode: =DisplayMode.View
-                    Height: =40
-                    OnSelect: =Select(Parent)
-                    Text: =""
-                    Width: =40
-                    X: =915
-                    ZIndex: =5
-
                 gal_fig_status_Conver As circle:
                     DisplayMode: =DisplayMode.View
                     Fill: =If(ThisItem.STATUS = true,RGBA(101, 201, 135, 1),RGBA(227, 55, 44, 1))
                     Height: =15
                     OnSelect: =Select(Parent)
                     Width: =15
-                    X: =1143
+                    X: =926
                     Y: =13
                     ZIndex: =6
 
@@ -2013,7 +1987,7 @@
                     Image: =btnEdit
                     OnSelect: =Select(Parent)
                     Width: =25
-                    X: =1236
+                    X: =1019
                     Y: =9
                     ZIndex: =7
 
@@ -2039,7 +2013,7 @@
                         Set(varIdRazonSocial,Value(ThisItem.RAZONSOCIAL.Id));
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varConverHct,ThisItem.HECTOLITORSCONVERSION);
+                        //Set(varConverHct,ThisItem.HECTOLITORSCONVERSION);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL.Value,";"));
@@ -2053,7 +2027,7 @@
                     PressedFill: =RGBA(56, 136, 210, 0.2)
                     Text: =""
                     Width: =25
-                    X: =1236
+                    X: =1019
                     Y: =9
                     ZIndex: =8
 
@@ -3397,7 +3371,7 @@
 
         rvs_fig_subfondoNewMeses As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),475,562)
+            Height: =If(IsBlank(responseSave.response),400,475)
             Visible: =vsbNewRglMeses
             Width: =466
             X: =450
@@ -3539,7 +3513,7 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="3 Meses de Volumen"
-            Visible: =vsbNewRglMeses
+            Visible: =false
             Width: =233
             X: =565
             Y: =486
@@ -3554,7 +3528,7 @@
                 Reset(rvs_dpd_newRazonSocial_Meses);
                 Reset(rvs_dpd_newSubcategory_Meses);
                 Reset(rvs_dpd_newBrand_Meses);
-                Reset(rvs_cbx_3MesesRegla);
+                //Reset(rvs_cbx_3MesesRegla);
                 Set(responseSave,Blank());
                 UpdateContext({vsbNewRglMeses:false});
             PaddingBottom: =5
@@ -3592,7 +3566,7 @@
                         IdRazonSocial: rvs_dpd_newRazonSocial_Meses.Selected.ID,
                         Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         Brand: Concat(Sort(rvs_dpd_newBrand_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
+                        //ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
                     }
@@ -3608,7 +3582,7 @@
                     Reset(rvs_dpd_newRazonSocial_Meses);
                     Reset(rvs_dpd_newSubcategory_Meses);
                     Reset(rvs_dpd_newBrand_Meses);
-                    Reset(rvs_cbx_3MesesRegla);
+                    //Reset(rvs_cbx_3MesesRegla);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
                     Refresh(VolumeRuleInnovation);
@@ -3627,8 +3601,8 @@
             Text: ="Agregar"
             Visible: =vsbNewRglMeses
             Width: =130
-            X: =618
-            Y: =578
+            X: =615
+            Y: =500
             ZIndex: =78
 
         rvs_lbl_newMsj_Meses As label:
@@ -3640,8 +3614,8 @@
             Text: =responseSave.response
             Visible: =vsbNewRglMeses
             Width: =438
-            X: =464
-            Y: =641
+            X: =465
+            Y: =551
             ZIndex: =79
 
     rvs_grp_editInnovation As group:
@@ -3660,7 +3634,7 @@
 
         rvs_fig_subfondoEditInnova As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),465,545)
+            Height: =If(IsBlank(responseSave.response),410,465)
             Visible: =vsbEditRglInnova
             Width: =466
             X: =448
@@ -3854,13 +3828,13 @@
                         IdRazonSocial: Value(rvs_dpd_editRazonSocial_Innova.Selected.ID),
                         Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         Brand: Concat(Sort(rvs_dpd_editBrand_Innova.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
+                        //ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
                         Estatus: rvs_tgg_editEstatus_Innova.Value,
                         IDList: IdListRglInnova,
                         RazonSocial_old: varRazonSocial,
                         Subcategory_old: varSubcategory,
                         Brand_old: varBrand,
-                        ReglaMesesVlm_old: varCheckMeses,
+                        //ReglaMesesVlm_old: varCheckMeses,
                         Estatus_old: varEstatus,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -3897,7 +3871,7 @@
             Visible: =vsbEditRglInnova
             Width: =130
             X: =616
-            Y: =547
+            Y: =486
             ZIndex: =90
 
         rvs_lbl_editMsj_Innova As label:
@@ -3910,7 +3884,7 @@
             Visible: =vsbEditRglInnova
             Width: =438
             X: =462
-            Y: =602
+            Y: =541
             ZIndex: =91
 
         rvs_lbl_ediStatus_Innova As label:
@@ -3922,8 +3896,8 @@
             Text: ="Estatus"
             Visible: =vsbEditRglInnova
             Width: =100
-            X: =462
-            Y: =531
+            X: =467
+            Y: =466
             ZIndex: =92
 
         rvs_tgg_editEstatus_Innova As toggleSwitch:
@@ -3936,17 +3910,17 @@
             Visible: =vsbEditRglInnova
             Width: =50
             X: =487
-            Y: =559
+            Y: =498
             ZIndex: =93
 
         rvs_cbx_edit3MesesRegla As checkbox:
             BorderStyle: =BorderStyle.None
             Color: =RGBA(5, 28, 87, 1)
-            Default: =varCheckMeses
+            Default: =false//varCheckMeses
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="3 Meses de Volumen"
-            Visible: =vsbEditRglInnova
+            Visible: =false
             Width: =233
             X: =567
             Y: =471
@@ -3968,7 +3942,7 @@
 
         rvs_fig_subfondoNewConver As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),475,562)
+            Height: =If(IsBlank(responseSave.response),410,475)
             Visible: =vsbNewRglConver
             Width: =466
             X: =450
@@ -4110,7 +4084,7 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="Conversión a Hectolitros"
-            Visible: =vsbNewRglConver
+            Visible: =false
             Width: =254
             X: =553
             Y: =486
@@ -4125,7 +4099,7 @@
                 Reset(rvs_dpd_newRazonSocial_Conver);
                 Reset(rvs_dpd_newSubcategory_Conver);
                 Reset(rvs_dpd_newBrand_Conver);
-                Reset(rvs_cbx_conversionHect);
+                //Reset(rvs_cbx_conversionHect);
                 Set(responseSave,Blank());
                 UpdateContext({vsbNewRglConver:false});
             PaddingBottom: =5
@@ -4163,7 +4137,7 @@
                         IdRazonSocial: Value(rvs_dpd_newRazonSocial_Conver.Selected.ID),
                         Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         Brand: Concat(Sort(rvs_dpd_newBrand_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ConversionHectolt: rvs_cbx_conversionHect.Value,
+                        //ConversionHectolt: rvs_cbx_conversionHect.Value,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
                     }
@@ -4179,7 +4153,7 @@
                     Reset(rvs_dpd_newRazonSocial_Conver);
                     Reset(rvs_dpd_newSubcategory_Conver);
                     Reset(rvs_dpd_newBrand_Conver);
-                    Reset(rvs_cbx_conversionHect);
+                    //Reset(rvs_cbx_conversionHect);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
                     Refresh(VolumeRuleConversion);
@@ -4199,7 +4173,7 @@
             Visible: =vsbNewRglConver
             Width: =130
             X: =618
-            Y: =578
+            Y: =506
             ZIndex: =106
 
         rvs_lbl_newMsj_Conver As label:
@@ -4212,7 +4186,7 @@
             Visible: =vsbNewRglConver
             Width: =438
             X: =464
-            Y: =641
+            Y: =569
             ZIndex: =107
 
     rvs_cmp_loading As Loading:
@@ -4235,7 +4209,7 @@
 
         rvs_fig_subfondoEditConver As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),465,545)
+            Height: =If(IsBlank(responseSave.response),410,465)
             Visible: =vsbEditRglConversion
             Width: =466
             X: =448
@@ -4429,13 +4403,13 @@
                         IdRazonSocial:rvs_dpd_editRazonSocial_Conver.Selected.ID,
                         Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Conver.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         Brand: Concat(Sort(rvs_dpd_editBrand_Conver.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ConversionHectolt: rvs_cbx_editConversionHectolitro.Value,
+                        //ConversionHectolt: rvs_cbx_editConversionHectolitro.Value,
                         Estatus: rvs_tgg_editEstatus_Conver.Value,
                         IDList: IdListRglConver,
                         RazonSocial_old: varRazonSocial,
                         Subcategory_old: varSubcategory,
                         Brand_old: varBrand,
-                        ConversionHectolt_old: varConverHct,
+                        //ConversionHectolt_old: varConverHct,
                         Estatus_old: varEstatus,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -4471,8 +4445,8 @@
             Text: ="Actualizar"
             Visible: =vsbEditRglConversion
             Width: =130
-            X: =616
-            Y: =547
+            X: =615
+            Y: =488
             ZIndex: =118
 
         rvs_lbl_editMsj_Conver As label:
@@ -4484,8 +4458,8 @@
             Text: =responseSave.response
             Visible: =vsbEditRglConversion
             Width: =438
-            X: =462
-            Y: =602
+            X: =461
+            Y: =543
             ZIndex: =119
 
         rvs_lbl_ediStatus_Conver As label:
@@ -4497,8 +4471,8 @@
             Text: ="Estatus"
             Visible: =vsbEditRglConversion
             Width: =100
-            X: =462
-            Y: =531
+            X: =461
+            Y: =472
             ZIndex: =120
 
         rvs_tgg_editEstatus_Conver As toggleSwitch:
@@ -4510,18 +4484,18 @@
             TrueFill: =RGBA(54, 176, 75, 1)
             Visible: =vsbEditRglConversion
             Width: =50
-            X: =487
-            Y: =559
+            X: =486
+            Y: =500
             ZIndex: =121
 
         rvs_cbx_editConversionHectolitro As checkbox:
             BorderStyle: =BorderStyle.None
             Color: =RGBA(5, 28, 87, 1)
-            Default: =varConverHct
+            Default: =false//varConverHct
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="Conversion a Hectolitros"
-            Visible: =vsbEditRglConversion
+            Visible: =false//vsbEditRglConversion
             Width: =240
             X: =563
             Y: =464
