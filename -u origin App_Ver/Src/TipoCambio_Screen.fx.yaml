@@ -300,15 +300,9 @@ TipoCambio_Screen As screen:
             Y: =127
             ZIndex: =9
 
-        tc_itxt_razonS_1 As text:
-            Default: ="Entrada de texto"
-            X: =217
-            Y: =252
-            ZIndex: =10
-
         Button3 As button:
             OnSelect: |-
-                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_itxt_razonS_1.Text,tc_cc_anio_1.Selected.Value,tc_cc_periodo_1.Selected.Value));
+                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected,tc_cc_anio_1.Selected.Value,tc_cc_periodo_1.Selected.Value));
             Text: ="Botón"
             X: =297
             Y: =586
@@ -374,20 +368,28 @@ TipoCambio_Screen As screen:
         Color: =RGBA(65, 65, 65, 1)
         DisplayFields: =["NombreRazonSocial"]
         Font: =Font.Lato
-        Height: =39
         HoverColor: =RGBA(65, 65, 65, 1)
-        IsSearchable: =false
         Items: =Filter(RazonSocial, Estatus = true)
         OnChange: =
         PressedColor: =RGBA(65, 65, 65, 1)
         PressedFill: =RGBA(56, 136, 210, 1)
         SearchFields: =["NombreRazonSocial"]
-        SearchItems: =[]
+        SearchItems: =Search(Filter(RazonSocial, Estatus = true),tc_dpd_newRazonSocial_1.SearchText,"NombreRazonSocial")
         SelectionFill: =RGBA(107, 165, 231, 1)
         SelectMultiple: =false
         Visible: =true//vsbNewTipoCambio
-        Width: =348
         X: =217
         Y: =319
         ZIndex: =17
+
+    tc_lbl_pais_2 As label:
+        Color: =RGBA(65, 65, 65, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Size: =14
+        Text: ="País"
+        Width: =220
+        X: =92
+        Y: =20
+        ZIndex: =18
 

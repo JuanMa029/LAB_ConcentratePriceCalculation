@@ -1529,9 +1529,9 @@
     "tc_dpd_buscarPeriodo_1": 1292,
     "tc_dpd_newRazonSocial_1": 1543,
     "tc_gs_TipoC_1": 1302,
-    "tc_itxt_razonS_1": 1534,
     "tc_lbl_anio_1": 1290,
     "tc_lbl_pais_1": 1288,
+    "tc_lbl_pais_2": 1546,
     "tc_lbl_periodo_1": 1289,
     "tc_lbl_titulo_1": 1286,
     "tc_lbl_tituloNewTipoC_1": 1542,
@@ -1545,7 +1545,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/30/2023 23:46:30",
+  "HeaderLastSavedDateTimeUTC": "03/30/2023 23:59:48",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d388ce0-914b-4f05-9f0f-ae6297681ed5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/0b4ce9e9325b48f3917706201ca54074\"",
@@ -1766,12 +1766,11 @@
     },
     "Group1": {
       "Button3": 3,
-      "rs_fig_fondo_2": 6,
-      "rs_fig_subfondo_2": 5,
+      "rs_fig_fondo_2": 5,
+      "rs_fig_subfondo_2": 4,
       "tc_cc_anio_1": 0,
       "tc_cc_periodo_1": 1,
-      "tc_dcv_archivos_1": 2,
-      "tc_itxt_razonS_1": 4
+      "tc_dcv_archivos_1": 2
     },
     "gs_grp_EditJerarquia": {
       "gs_dpd_editEmbotellador": 8,
@@ -4183,9 +4182,9 @@
     "tc_dpd_buscarPeriodo_1": {},
     "tc_dpd_newRazonSocial_1": {},
     "tc_gs_TipoC_1": {},
-    "tc_itxt_razonS_1": {},
     "tc_lbl_anio_1": {},
     "tc_lbl_pais_1": {},
+    "tc_lbl_pais_2": {},
     "tc_lbl_periodo_1": {},
     "tc_lbl_titulo_1": {},
     "tc_lbl_tituloNewTipoC_1": {},
@@ -5724,9 +5723,9 @@
     "tc_dpd_buscarPeriodo_1": 284,
     "tc_dpd_newRazonSocial_1": 1402,
     "tc_gs_TipoC_1": 295,
-    "tc_itxt_razonS_1": 0,
     "tc_lbl_anio_1": 282,
     "tc_lbl_pais_1": 280,
+    "tc_lbl_pais_2": 280,
     "tc_lbl_periodo_1": 281,
     "tc_lbl_titulo_1": 278,
     "tc_lbl_tituloNewTipoC_1": 1373,
@@ -5780,7 +5779,7 @@
       "groupContainer": 38,
       "icon": 66,
       "image": 107,
-      "label": 269,
+      "label": 270,
       "listbox": 1,
       "rectangle": 91,
       "screen": 26,
@@ -5789,7 +5788,7 @@
       "toggleSwitch": 11
     },
     "DeserializationLoadTime": 13.5555736,
-    "ErrorCount": 40
+    "ErrorCount": 43
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

@@ -1462,6 +1462,87 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 157,
+                  "snippet": {
+                    "text": ".Selected"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.Button3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Record"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 175,
+                  "charOffset": 51,
+                  "snippet": {
+                    "text": "'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value;name:documentos.Name};tc_dpd_newRazonSocial_1.Selected;tc_cc_anio_1.Selected.Value;tc_cc_periodo_1.Selected.Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.Button3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Run"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
                 }
               ],
@@ -1608,6 +1689,46 @@
           "message": {
             "arguments": [
               "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 78,
+                  "snippet": {
+                    "text": "\"NombreRazonSocial\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
             ],
             "id": "issue"
           },
@@ -21613,36 +21734,6 @@
                 "member": "AccessibleLabel",
                 "module": "Geografia_Screen",
                 "type": "Geografia_Screen.gs_tgg_editEstatusJerar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_itxt_razonS_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_itxt_razonS_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_itxt_razonS_1"
               }
             }
           ],
