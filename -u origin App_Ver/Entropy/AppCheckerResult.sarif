@@ -1585,6 +1585,120 @@
                   "relativeAddress": 0
                 },
                 "region": {
+                  "charLength": 15,
+                  "charOffset": 213,
+                  "snippet": {
+                    "text": "tc_cc_periodo_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.Button3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tc_cc_periodo_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 228,
+                  "snippet": {
+                    "text": ".Selected"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.Button3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 237,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.Button3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.Button3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
                   "charLength": 193,
                   "charOffset": 51,
                   "snippet": {
@@ -21824,19 +21938,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_periodo_1.AccessibleLabel"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cc_periodo_1.AccessibleLabel",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cc_periodo_1"
+                "type": "TipoCambio_Screen.tc_dpd_newAnio_2"
               }
             }
           ],

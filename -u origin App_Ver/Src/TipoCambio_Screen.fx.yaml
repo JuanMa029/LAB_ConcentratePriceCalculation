@@ -323,16 +323,6 @@ TipoCambio_Screen As screen:
             Y: =265
             ZIndex: =12
 
-        tc_cc_periodo_1 As combobox:
-            DisplayFields: =["Value"]
-            IsSearchable: =false
-            Items: =Distinct(CatalogoPeriodos,Frecuencia)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            X: =217
-            Y: =461
-            ZIndex: =14
-
     tc_lbl_tituloNewTipoC_1 As label:
         Align: =Align.Center
         Color: =RGBA(71, 71, 71, 1)
@@ -369,7 +359,7 @@ TipoCambio_Screen As screen:
         SelectMultiple: =false
         Visible: =true//vsbNewTipoCambio
         X: =217
-        Y: =274
+        Y: =253
         ZIndex: =17
 
     tc_lbl_newRazonSocial_1 As label:
@@ -380,7 +370,7 @@ TipoCambio_Screen As screen:
         Text: ="Razón Social"
         Width: =220
         X: =217
-        Y: =225
+        Y: =204
         ZIndex: =18
 
     tc_dpd_newAnio_1 As combobox:
@@ -405,7 +395,7 @@ TipoCambio_Screen As screen:
         SelectMultiple: =false
         Visible: =true//vsbNewTipoCambio
         X: =217
-        Y: =370
+        Y: =351
         ZIndex: =19
 
     tc_lbl_newAnio_1 As label:
@@ -413,9 +403,45 @@ TipoCambio_Screen As screen:
         Font: =Font.Lato
         FontWeight: =FontWeight.Semibold
         Size: =14
-        Text: ="Razón Social"
+        Text: ="Año"
         Width: =220
         X: =217
-        Y: =330
+        Y: =311
         ZIndex: =20
+
+    tc_dpd_newAnio_2 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(65, 65, 65, 1)
+        DisplayFields: =["ComplianceAssetId"]
+        Font: =Font.Lato
+        HoverColor: =RGBA(65, 65, 65, 1)
+        IsSearchable: =false
+        Items: =Distinct(CatalogoPeriodos,Anio)
+        OnChange: =
+        PressedColor: =RGBA(65, 65, 65, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["ComplianceAssetId"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        SelectMultiple: =false
+        Visible: =true//vsbNewTipoCambio
+        X: =217
+        Y: =448
+        ZIndex: =21
+
+    tc_lbl_newPeriodo_1 As label:
+        Color: =RGBA(65, 65, 65, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Size: =14
+        Text: ="Periodo"
+        Width: =220
+        X: =217
+        Y: =399
+        ZIndex: =22
 
