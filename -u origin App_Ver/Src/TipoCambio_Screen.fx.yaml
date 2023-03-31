@@ -277,52 +277,6 @@ TipoCambio_Screen As screen:
         Y: =15
         ZIndex: =8
 
-    Group1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =15
-
-        rs_fig_fondo_2 As rectangle:
-            Fill: =RGBA(0, 18, 107, 0.5)
-            Height: =768
-            Visible: =vsbNewTipoCambio
-            Width: =1366
-            ZIndex: =1
-
-        rs_fig_subfondo_2 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =576
-            Visible: =true//vsbNewTipoCambio
-            Width: =990
-            X: =162
-            Y: =127
-            ZIndex: =9
-
-        Button3 As button:
-            OnSelect: |-
-                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected.NombreRazonSocial,tc_dpd_newAnio_1.Selected.Value,tc_dpd_newPeriodo_1.Selected.Value));
-            Text: ="Botón"
-            X: =297
-            Y: =586
-            ZIndex: =11
-
-        tc_dcv_archivos_1 As attachments:
-            BorderColor: =Color.DarkBlue
-            Height: =348
-            IsInDataCard: =true
-            Items: =Blank()
-            PaddingBottom: =5
-            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-            PaddingRight: =5
-            PaddingTop: =5
-            Tooltip: ="Añade Documentos"
-            Width: =246
-            X: =810
-            Y: =265
-            ZIndex: =12
-
     tc_lbl_tituloNewTipoC_1 As label:
         Align: =Align.Center
         Color: =RGBA(71, 71, 71, 1)
@@ -336,7 +290,7 @@ TipoCambio_Screen As screen:
         Width: =991
         X: =162
         Y: =127
-        ZIndex: =16
+        ZIndex: =12
 
     tc_dpd_newRazonSocial_1 As combobox:
         BorderColor: =RGBA(107, 165, 231, 1)
@@ -360,7 +314,7 @@ TipoCambio_Screen As screen:
         Visible: =true//vsbNewTipoCambio
         X: =217
         Y: =253
-        ZIndex: =17
+        ZIndex: =13
 
     tc_lbl_newRazonSocial_1 As label:
         Color: =RGBA(65, 65, 65, 1)
@@ -371,7 +325,7 @@ TipoCambio_Screen As screen:
         Width: =220
         X: =217
         Y: =204
-        ZIndex: =18
+        ZIndex: =14
 
     tc_dpd_newAnio_1 As combobox:
         BorderColor: =RGBA(107, 165, 231, 1)
@@ -396,7 +350,54 @@ TipoCambio_Screen As screen:
         Visible: =true//vsbNewTipoCambio
         X: =217
         Y: =351
-        ZIndex: =19
+        ZIndex: =15
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        rs_fig_fondo_2 As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbNewTipoCambio
+            Width: =1366
+            ZIndex: =1
+
+        rs_fig_subfondo_2 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =576
+            Visible: =true//vsbNewTipoCambio
+            Width: =990
+            X: =162
+            Y: =127
+            ZIndex: =9
+
+        tc_btn_newTipoC_1 As button:
+            Fill: =RGBA(102, 182, 227, 1)
+            OnSelect: |-
+                =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected.NombreRazonSocial,tc_dpd_newAnio_1.Selected.Value,tc_dpd_newPeriodo_1.Selected.Value));
+            Text: ="Aceptar"
+            X: =217
+            Y: =588
+            ZIndex: =10
+
+        tc_dcv_archivos_1 As attachments:
+            BorderColor: =Color.DarkBlue
+            Height: =348
+            IsInDataCard: =true
+            Items: =Blank()
+            PaddingBottom: =5
+            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+            PaddingRight: =5
+            PaddingTop: =5
+            Tooltip: ="Añade Documentos"
+            Width: =246
+            X: =810
+            Y: =265
+            ZIndex: =11
 
     tc_lbl_newAnio_1 As label:
         Color: =RGBA(65, 65, 65, 1)
@@ -407,7 +408,7 @@ TipoCambio_Screen As screen:
         Width: =220
         X: =217
         Y: =311
-        ZIndex: =20
+        ZIndex: =16
 
     tc_dpd_newPeriodo_1 As combobox:
         BorderColor: =RGBA(107, 165, 231, 1)
@@ -432,7 +433,7 @@ TipoCambio_Screen As screen:
         Visible: =true//vsbNewTipoCambio
         X: =217
         Y: =448
-        ZIndex: =21
+        ZIndex: =17
 
     tc_lbl_newFrecuencia_1 As label:
         Color: =RGBA(65, 65, 65, 1)
@@ -443,5 +444,27 @@ TipoCambio_Screen As screen:
         Width: =220
         X: =217
         Y: =399
-        ZIndex: =22
+        ZIndex: =18
+
+    tc_icn_newTipoC_Cerrar_1 As icon.CancelBadge:
+        Color: =RGBA(71, 71, 71, 1)
+        Height: =35
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =// Realizamos Reset a los componentes
+            Reset(tc_dcv_archivos_1);
+            Reset(tc_dpd_newRazonSocial_1);
+            Reset(tc_dpd_newAnio_1);
+            Reset(tc_dpd_newPeriodo_1);
+            //Set(responseSave;Blank());;
+            UpdateContext({vsbNewTipoCambio:false});
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Visible: =vsbNewTipoCambio
+        Width: =35
+        X: =1105
+        Y: =140
+        ZIndex: =19
 
