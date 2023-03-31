@@ -379,17 +379,17 @@ TipoCambio_Screen As screen:
         SelectMultiple: =false
         Visible: =true//vsbNewTipoCambio
         X: =217
-        Y: =319
+        Y: =274
         ZIndex: =17
 
-    tc_lbl_pais_2 As label:
+    tc_lbl_newPais_1 As label:
         Color: =RGBA(65, 65, 65, 1)
         Font: =Font.Lato
         FontWeight: =FontWeight.Semibold
         Size: =14
-        Text: ="País"
+        Text: ="Razón Social"
         Width: =220
-        X: =92
-        Y: =20
+        X: =217
+        Y: =225
         ZIndex: =18
 
