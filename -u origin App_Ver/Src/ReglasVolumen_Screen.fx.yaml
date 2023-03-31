@@ -2817,6 +2817,9 @@
                         Product: Concat(Sort(rvs_dpd_newProduct.SelectedItems,PRODUCT,SortOrder.Ascending),PRODUCT,";"),
                         ProductID: Concat(rvs_dpd_newProduct.SelectedItems,PRODUCT_ID,";"),
                         Year_Solicitud: Value(Year(Now())),
+                        NumSubcategory: Value(CountRows(rvs_dpd_newSubcategory_Product.SelectedItems)),
+                        NumBrand: Value(CountRows(rvs_dpd_newBrand_Product.SelectedItems)),
+                        NumProduct: Value(CountRows(rvs_dpd_newProduct.SelectedItems)),
                         IdMes: Month(Now())
                     }
                     );

@@ -383,7 +383,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "gs_cmp_loading_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -471,7 +471,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "HeaderPrincipal_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -697,7 +697,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rs_fig_subfondo_2",
-      "ParentIndex": 1,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -889,7 +889,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_icn_regresar_1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3021,7 +3021,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_btn_newTipoC_1",
-      "ParentIndex": 13,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3248,7 +3248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_cnt_dataTipoC_1",
-      "ParentIndex": 12,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3402,7 +3402,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_cnt_filter_1",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3556,7 +3556,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_cnt_headerBtn_1",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3773,7 +3773,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_dcv_archivos_1",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5369,7 +5369,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_dpd_newAnio_1",
-      "ParentIndex": 16,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6257,7 +6257,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_dpd_newRazonSocial_1",
-      "ParentIndex": 18,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6779,7 +6779,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_icn_newTipoC_Cerrar_1",
-      "ParentIndex": 15,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7331,7 +7331,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_lbl_newAnio_1",
-      "ParentIndex": 7,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7641,7 +7641,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_lbl_newFrecuencia_1",
-      "ParentIndex": 8,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8861,7 +8861,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_lbl_titulo_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9180,7 +9180,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_lbl_tituloNewTipoC_1",
-      "ParentIndex": 14,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
