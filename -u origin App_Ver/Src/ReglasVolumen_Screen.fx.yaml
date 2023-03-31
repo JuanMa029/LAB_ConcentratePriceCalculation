@@ -3779,13 +3779,13 @@
             DisplayFields: =["Value"]
             Font: =Font.Lato
             HoverColor: =RGBA(71, 71, 71, 1)
-            IsSearchable: =false
             Items: |-
                 =ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value})
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["Value"]
-            SearchItems: =[]
+            SearchItems: |-
+                =Search(ForAll(Distinct(colLabProductCompleto,SUBCATEGORY),{Value:ThisRecord.Value}),rvs_dpd_editSubcategory_Innova.SearchText,"Value")
             SelectionFill: =RGBA(107, 165, 231, 1)
             Visible: =vsbEditRglInnova
             Width: =438
