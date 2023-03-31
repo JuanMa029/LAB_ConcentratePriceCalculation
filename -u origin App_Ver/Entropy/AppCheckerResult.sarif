@@ -21938,19 +21938,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_2.AccessibleLabel"
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_2.AccessibleLabel",
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dpd_newAnio_2"
+                "type": "TipoCambio_Screen.tc_dpd_newPeriodo_1"
               }
             }
           ],

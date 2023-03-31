@@ -409,7 +409,7 @@ TipoCambio_Screen As screen:
         Y: =311
         ZIndex: =20
 
-    tc_dpd_newAnio_2 As combobox:
+    tc_dpd_newPeriodo_1 As combobox:
         BorderColor: =RGBA(107, 165, 231, 1)
         BorderThickness: =1
         ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -421,7 +421,7 @@ TipoCambio_Screen As screen:
         Font: =Font.Lato
         HoverColor: =RGBA(65, 65, 65, 1)
         IsSearchable: =false
-        Items: =Distinct(CatalogoPeriodos,Anio)
+        Items: =Distinct(CatalogoPeriodos,Frecuencia)
         OnChange: =
         PressedColor: =RGBA(65, 65, 65, 1)
         PressedFill: =RGBA(56, 136, 210, 1)
@@ -434,12 +434,12 @@ TipoCambio_Screen As screen:
         Y: =448
         ZIndex: =21
 
-    tc_lbl_newPeriodo_1 As label:
+    tc_lbl_newFrecuencia_1 As label:
         Color: =RGBA(65, 65, 65, 1)
         Font: =Font.Lato
         FontWeight: =FontWeight.Semibold
         Size: =14
-        Text: ="Periodo"
+        Text: ="Frecuencia"
         Width: =220
         X: =217
         Y: =399
