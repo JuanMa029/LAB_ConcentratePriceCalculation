@@ -29,7 +29,7 @@ TipoCambio_Screen As screen:
             Color: =RGBA(65, 65, 65, 1)
             Font: =Font.Lato
             Items: =Filter(Pais,Estatus = true)
-            OnChange: =Reset(tc_dpd_buscarPeriodo_1);
+            OnChange: =Reset(tc_dpd_buscarFrecuencia_1);
             Reset: =true
             SelectionFill: =RGBA(102, 182, 227, 1)
             Width: =220
@@ -37,7 +37,7 @@ TipoCambio_Screen As screen:
             Y: =40
             ZIndex: =1
 
-        tc_dpd_buscarPeriodo_1 As dropdown:
+        tc_dpd_buscarFrecuencia_1 As dropdown:
             AllowEmptySelection: =true
             BorderColor: =RGBA(107, 165, 231, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -54,7 +54,7 @@ TipoCambio_Screen As screen:
             Y: =40
             ZIndex: =2
 
-        tc_dpd_buscarPais_2 As dropdown:
+        tc_dpd_buscarAnio_1 As dropdown:
             AllowEmptySelection: =true
             BorderColor: =RGBA(107, 165, 231, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -85,7 +85,7 @@ TipoCambio_Screen As screen:
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Size: =14
-            Text: ="Periodo"
+            Text: ="Frecuencia"
             Width: =220
             X: =336
             ZIndex: =5
