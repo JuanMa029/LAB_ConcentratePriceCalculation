@@ -422,7 +422,7 @@ TipoCambio_Screen As screen:
             ChevronHoverBackground: =RGBA(255, 255, 255, 1)
             ChevronHoverFill: =RGBA(0, 18, 107, 1)
             Color: =RGBA(65, 65, 65, 1)
-            DisplayFields: =["ComplianceAssetId"]
+            DisplayFields: =["Value"]
             Font: =Font.Lato
             HoverColor: =RGBA(65, 65, 65, 1)
             IsSearchable: =false
@@ -430,7 +430,7 @@ TipoCambio_Screen As screen:
             OnChange: =
             PressedColor: =RGBA(65, 65, 65, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
-            SearchFields: =["ComplianceAssetId"]
+            SearchFields: =["Value"]
             SearchItems: =[]
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
