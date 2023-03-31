@@ -273,7 +273,7 @@
     "galleryTemplate3_3": 1072,
     "galleryTemplate4": 1303,
     "Geografia_Screen": 1439,
-    "Group1": 1540,
+    "Group2": 1552,
     "gs_btn_backP": 1527,
     "gs_btn_buscarEmbotellador": 1448,
     "gs_btn_buscarRegion": 1452,
@@ -1548,7 +1548,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "03/31/2023 00:23:21",
+  "HeaderLastSavedDateTimeUTC": "03/31/2023 00:28:07",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d388ce0-914b-4f05-9f0f-ae6297681ed5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/0b4ce9e9325b48f3917706201ca54074\"",
@@ -1767,11 +1767,19 @@
       "es_lbl_tituloNuevoEmbotellador": 2,
       "es_txt_nuevoNombreEmbotellador": 4
     },
-    "Group1": {
-      "rs_fig_fondo_2": 3,
-      "rs_fig_subfondo_2": 2,
-      "tc_btn_newTipoC_1": 1,
-      "tc_dcv_archivos_1": 0
+    "Group2": {
+      "rs_fig_fondo_2": 0,
+      "rs_fig_subfondo_2": 1,
+      "tc_btn_newTipoC_1": 2,
+      "tc_dcv_archivos_1": 3,
+      "tc_dpd_newAnio_1": 7,
+      "tc_dpd_newPeriodo_1": 9,
+      "tc_dpd_newRazonSocial_1": 5,
+      "tc_icn_newTipoC_Cerrar_1": 11,
+      "tc_lbl_newAnio_1": 8,
+      "tc_lbl_newFrecuencia_1": 10,
+      "tc_lbl_newRazonSocial_1": 6,
+      "tc_lbl_tituloNewTipoC_1": 4
     },
     "gs_grp_EditJerarquia": {
       "gs_dpd_editEmbotellador": 8,
@@ -2927,7 +2935,7 @@
     "galleryTemplate3_3": {},
     "galleryTemplate4": {},
     "Geografia_Screen": {},
-    "Group1": {},
+    "Group2": {},
     "gs_btn_backP": {},
     "gs_btn_buscarEmbotellador": {},
     "gs_btn_buscarRegion": {},
@@ -4471,7 +4479,7 @@
     "galleryTemplate3_3": 1352,
     "galleryTemplate4": 296,
     "Geografia_Screen": 124,
-    "Group1": 0,
+    "Group2": 0,
     "gs_btn_backP": 273,
     "gs_btn_buscarEmbotellador": 194,
     "gs_btn_buscarRegion": 198,
@@ -5795,7 +5803,7 @@
       "toggleSwitch": 11
     },
     "DeserializationLoadTime": 13.5555736,
-    "ErrorCount": 41
+    "ErrorCount": 42
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

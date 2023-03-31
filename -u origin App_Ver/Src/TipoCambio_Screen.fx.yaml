@@ -277,87 +277,12 @@ TipoCambio_Screen As screen:
         Y: =15
         ZIndex: =8
 
-    tc_lbl_tituloNewTipoC_1 As label:
-        Align: =Align.Center
-        Color: =RGBA(71, 71, 71, 1)
-        Fill: =RGBA(196, 222, 251, 1)
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        Height: =62
-        Size: =18
-        Text: ="Tipo de cambio"
-        Visible: =true//vsbNewTipoCambio
-        Width: =991
-        X: =162
-        Y: =127
-        ZIndex: =12
-
-    tc_dpd_newRazonSocial_1 As combobox:
-        BorderColor: =RGBA(107, 165, 231, 1)
-        BorderThickness: =1
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-        ChevronHoverFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(65, 65, 65, 1)
-        DisplayFields: =["NombreRazonSocial"]
-        Font: =Font.Lato
-        HoverColor: =RGBA(65, 65, 65, 1)
-        Items: =Filter(RazonSocial, Estatus = true)
-        OnChange: =
-        PressedColor: =RGBA(65, 65, 65, 1)
-        PressedFill: =RGBA(56, 136, 210, 1)
-        SearchFields: =["NombreRazonSocial"]
-        SearchItems: =Search(Filter(RazonSocial, Estatus = true),tc_dpd_newRazonSocial_1.SearchText,"NombreRazonSocial")
-        SelectionFill: =RGBA(107, 165, 231, 1)
-        SelectMultiple: =false
-        Visible: =true//vsbNewTipoCambio
-        X: =217
-        Y: =253
-        ZIndex: =13
-
-    tc_lbl_newRazonSocial_1 As label:
-        Color: =RGBA(65, 65, 65, 1)
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        Size: =14
-        Text: ="Razón Social"
-        Width: =220
-        X: =217
-        Y: =204
-        ZIndex: =14
-
-    tc_dpd_newAnio_1 As combobox:
-        BorderColor: =RGBA(107, 165, 231, 1)
-        BorderThickness: =1
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-        ChevronHoverFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(65, 65, 65, 1)
-        DisplayFields: =["ComplianceAssetId"]
-        Font: =Font.Lato
-        HoverColor: =RGBA(65, 65, 65, 1)
-        IsSearchable: =false
-        Items: =Distinct(CatalogoPeriodos,Anio)
-        OnChange: =
-        PressedColor: =RGBA(65, 65, 65, 1)
-        PressedFill: =RGBA(56, 136, 210, 1)
-        SearchFields: =["ComplianceAssetId"]
-        SearchItems: =[]
-        SelectionFill: =RGBA(107, 165, 231, 1)
-        SelectMultiple: =false
-        Visible: =true//vsbNewTipoCambio
-        X: =217
-        Y: =351
-        ZIndex: =15
-
-    Group1 As group:
+    Group2 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =15
+        ZIndex: =20
 
         rs_fig_fondo_2 As rectangle:
             Fill: =RGBA(0, 18, 107, 0.5)
@@ -369,7 +294,7 @@ TipoCambio_Screen As screen:
         rs_fig_subfondo_2 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =576
-            Visible: =true//vsbNewTipoCambio
+            Visible: =vsbNewTipoCambiovsbNewTipoCambio
             Width: =990
             X: =162
             Y: =127
@@ -380,6 +305,7 @@ TipoCambio_Screen As screen:
             OnSelect: |-
                 =ForAll(tc_dcv_archivos_1.Attachments As documentos,'[CPC]_GestionarArchivos'.Run({contentBytes:documentos.Value,name:documentos.Name},tc_dpd_newRazonSocial_1.Selected.NombreRazonSocial,tc_dpd_newAnio_1.Selected.Value,tc_dpd_newPeriodo_1.Selected.Value));
             Text: ="Aceptar"
+            Visible: =vsbNewTipoCambio
             X: =217
             Y: =588
             ZIndex: =10
@@ -394,77 +320,156 @@ TipoCambio_Screen As screen:
             PaddingRight: =5
             PaddingTop: =5
             Tooltip: ="Añade Documentos"
+            Visible: =vsbNewTipoCambio
             Width: =246
             X: =810
             Y: =265
             ZIndex: =11
 
-    tc_lbl_newAnio_1 As label:
-        Color: =RGBA(65, 65, 65, 1)
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        Size: =14
-        Text: ="Año"
-        Width: =220
-        X: =217
-        Y: =311
-        ZIndex: =16
+        tc_lbl_tituloNewTipoC_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =18
+            Text: ="Nuevo Tipo de cambio"
+            Visible: =vsbNewTipoCambio
+            Width: =991
+            X: =162
+            Y: =127
+            ZIndex: =12
 
-    tc_dpd_newPeriodo_1 As combobox:
-        BorderColor: =RGBA(107, 165, 231, 1)
-        BorderThickness: =1
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronFill: =RGBA(0, 18, 107, 1)
-        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-        ChevronHoverFill: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(65, 65, 65, 1)
-        DisplayFields: =["ComplianceAssetId"]
-        Font: =Font.Lato
-        HoverColor: =RGBA(65, 65, 65, 1)
-        IsSearchable: =false
-        Items: =Distinct(CatalogoPeriodos,Frecuencia)
-        OnChange: =
-        PressedColor: =RGBA(65, 65, 65, 1)
-        PressedFill: =RGBA(56, 136, 210, 1)
-        SearchFields: =["ComplianceAssetId"]
-        SearchItems: =[]
-        SelectionFill: =RGBA(107, 165, 231, 1)
-        SelectMultiple: =false
-        Visible: =true//vsbNewTipoCambio
-        X: =217
-        Y: =448
-        ZIndex: =17
+        tc_dpd_newRazonSocial_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayFields: =["NombreRazonSocial"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Items: =Filter(RazonSocial, Estatus = true)
+            OnChange: =
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["NombreRazonSocial"]
+            SearchItems: =Search(Filter(RazonSocial, Estatus = true),tc_dpd_newRazonSocial_1.SearchText,"NombreRazonSocial")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbNewTipoCambio
+            X: =217
+            Y: =253
+            ZIndex: =13
 
-    tc_lbl_newFrecuencia_1 As label:
-        Color: =RGBA(65, 65, 65, 1)
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        Size: =14
-        Text: ="Frecuencia"
-        Width: =220
-        X: =217
-        Y: =399
-        ZIndex: =18
+        tc_lbl_newRazonSocial_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="Razón Social"
+            Visible: =vsbNewTipoCambio
+            Width: =220
+            X: =217
+            Y: =204
+            ZIndex: =14
 
-    tc_icn_newTipoC_Cerrar_1 As icon.CancelBadge:
-        Color: =RGBA(71, 71, 71, 1)
-        Height: =35
-        Icon: =Icon.CancelBadge
-        OnSelect: |-
-            =// Realizamos Reset a los componentes
-            Reset(tc_dcv_archivos_1);
-            Reset(tc_dpd_newRazonSocial_1);
-            Reset(tc_dpd_newAnio_1);
-            Reset(tc_dpd_newPeriodo_1);
-            //Set(responseSave;Blank());;
-            UpdateContext({vsbNewTipoCambio:false});
-        PaddingBottom: =5
-        PaddingLeft: =5
-        PaddingRight: =5
-        PaddingTop: =5
-        Visible: =vsbNewTipoCambio
-        Width: =35
-        X: =1105
-        Y: =140
-        ZIndex: =19
+        tc_dpd_newAnio_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayFields: =["ComplianceAssetId"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(65, 65, 65, 1)
+            IsSearchable: =false
+            Items: =Distinct(CatalogoPeriodos,Anio)
+            OnChange: =
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["ComplianceAssetId"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbNewTipoCambio
+            X: =217
+            Y: =351
+            ZIndex: =15
+
+        tc_lbl_newAnio_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="Año"
+            Visible: =vsbNewTipoCambio
+            Width: =220
+            X: =217
+            Y: =311
+            ZIndex: =16
+
+        tc_dpd_newPeriodo_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayFields: =["ComplianceAssetId"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(65, 65, 65, 1)
+            IsSearchable: =false
+            Items: =Distinct(CatalogoPeriodos,Frecuencia)
+            OnChange: =
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["ComplianceAssetId"]
+            SearchItems: =[]
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbNewTipoCambio
+            X: =217
+            Y: =448
+            ZIndex: =17
+
+        tc_lbl_newFrecuencia_1 As label:
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: ="Frecuencia"
+            Visible: =vsbNewTipoCambio
+            Width: =220
+            X: =217
+            Y: =399
+            ZIndex: =18
+
+        tc_icn_newTipoC_Cerrar_1 As icon.CancelBadge:
+            Color: =RGBA(71, 71, 71, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =// Realizamos Reset a los componentes
+                Reset(tc_dcv_archivos_1);
+                Reset(tc_dpd_newRazonSocial_1);
+                Reset(tc_dpd_newAnio_1);
+                Reset(tc_dpd_newPeriodo_1);
+                //Set(responseSave;Blank());;
+                UpdateContext({vsbNewTipoCambio:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbNewTipoCambio
+            Width: =35
+            X: =1105
+            Y: =140
+            ZIndex: =19
 

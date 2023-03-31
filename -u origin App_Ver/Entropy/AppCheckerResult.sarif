@@ -1622,6 +1622,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_subfondo_2.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.rs_fig_subfondo_2.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "vsbNewTipoCambiovsbNewTipoCambio"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.rs_fig_subfondo_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "vsbNewTipoCambiovsbNewTipoCambio"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems"
                 }
               ],
