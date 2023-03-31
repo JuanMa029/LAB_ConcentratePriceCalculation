@@ -37,6 +37,7 @@
       "RAZONSOCIAL#Id": "RAZONSOCIAL Id",
       "STATUS": "STATUS",
       "SUBCATEGORY": "SUBCATEGORY",
+      "THREEMONTHSVOLUME": "THREEMONTHSVOLUME",
       "Title": "Title"
     },
     "DatasetName": "https://pepsico.sharepoint.com/teams/LAB_ConcentratePriceCalculation",
