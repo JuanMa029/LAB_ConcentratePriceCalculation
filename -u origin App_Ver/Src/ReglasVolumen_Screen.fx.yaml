@@ -1584,7 +1584,7 @@
                         Set(varIdRazonSocial,Value(ThisItem.RAZONSOCIAL.Id));
                         Set(varSubcategory,ThisItem.SUBCATEGORY);
                         Set(varBrand,ThisItem.BRAND);
-                        Set(varCheckMeses,ThisItem.THREEMONTHSVOLUME);
+                        //Set(varCheckMeses,ThisItem.THREEMONTHSVOLUME);
                         Set(varEstatus,ThisItem.STATUS);
                         //__ generar los datos seleccionados en los combox
                         Set(varListRazonSocial,Split(ThisItem.RAZONSOCIAL.Value,";"));
@@ -3397,7 +3397,7 @@
 
         rvs_fig_subfondoNewMeses As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),475,562)
+            Height: =If(IsBlank(responseSave.response),400,475)
             Visible: =vsbNewRglMeses
             Width: =466
             X: =450
@@ -3539,7 +3539,7 @@
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="3 Meses de Volumen"
-            Visible: =vsbNewRglMeses
+            Visible: =false
             Width: =233
             X: =565
             Y: =486
@@ -3554,7 +3554,7 @@
                 Reset(rvs_dpd_newRazonSocial_Meses);
                 Reset(rvs_dpd_newSubcategory_Meses);
                 Reset(rvs_dpd_newBrand_Meses);
-                Reset(rvs_cbx_3MesesRegla);
+                //Reset(rvs_cbx_3MesesRegla);
                 Set(responseSave,Blank());
                 UpdateContext({vsbNewRglMeses:false});
             PaddingBottom: =5
@@ -3592,7 +3592,7 @@
                         IdRazonSocial: rvs_dpd_newRazonSocial_Meses.Selected.ID,
                         Subcategory: Concat(Sort(rvs_dpd_newSubcategory_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
                         Brand: Concat(Sort(rvs_dpd_newBrand_Meses.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
+                        //ReglaMesesVlm: rvs_cbx_3MesesRegla.Value,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
                     }
@@ -3608,7 +3608,7 @@
                     Reset(rvs_dpd_newRazonSocial_Meses);
                     Reset(rvs_dpd_newSubcategory_Meses);
                     Reset(rvs_dpd_newBrand_Meses);
-                    Reset(rvs_cbx_3MesesRegla);
+                    //Reset(rvs_cbx_3MesesRegla);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
                     Refresh(VolumeRuleInnovation);
@@ -3627,8 +3627,8 @@
             Text: ="Agregar"
             Visible: =vsbNewRglMeses
             Width: =130
-            X: =618
-            Y: =578
+            X: =615
+            Y: =500
             ZIndex: =78
 
         rvs_lbl_newMsj_Meses As label:
@@ -3640,8 +3640,8 @@
             Text: =responseSave.response
             Visible: =vsbNewRglMeses
             Width: =438
-            X: =464
-            Y: =641
+            X: =465
+            Y: =551
             ZIndex: =79
 
     rvs_grp_editInnovation As group:
@@ -3660,7 +3660,7 @@
 
         rvs_fig_subfondoEditInnova As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),465,545)
+            Height: =If(IsBlank(responseSave.response),410,465)
             Visible: =vsbEditRglInnova
             Width: =466
             X: =448
@@ -3854,13 +3854,13 @@
                         IdRazonSocial: Value(rvs_dpd_editRazonSocial_Innova.Selected.ID),
                         Subcategory: Concat(Sort(rvs_dpd_editSubcategory_Innova.SelectedItems,Value,SortOrder.Ascending),Value,";"),
                         Brand: Concat(Sort(rvs_dpd_editBrand_Innova.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
+                        //ReglaMesesVlm: rvs_cbx_edit3MesesRegla.Value,
                         Estatus: rvs_tgg_editEstatus_Innova.Value,
                         IDList: IdListRglInnova,
                         RazonSocial_old: varRazonSocial,
                         Subcategory_old: varSubcategory,
                         Brand_old: varBrand,
-                        ReglaMesesVlm_old: varCheckMeses,
+                        //ReglaMesesVlm_old: varCheckMeses,
                         Estatus_old: varEstatus,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
@@ -3897,7 +3897,7 @@
             Visible: =vsbEditRglInnova
             Width: =130
             X: =616
-            Y: =547
+            Y: =486
             ZIndex: =90
 
         rvs_lbl_editMsj_Innova As label:
@@ -3910,7 +3910,7 @@
             Visible: =vsbEditRglInnova
             Width: =438
             X: =462
-            Y: =602
+            Y: =541
             ZIndex: =91
 
         rvs_lbl_ediStatus_Innova As label:
@@ -3922,8 +3922,8 @@
             Text: ="Estatus"
             Visible: =vsbEditRglInnova
             Width: =100
-            X: =462
-            Y: =531
+            X: =467
+            Y: =466
             ZIndex: =92
 
         rvs_tgg_editEstatus_Innova As toggleSwitch:
@@ -3936,17 +3936,17 @@
             Visible: =vsbEditRglInnova
             Width: =50
             X: =487
-            Y: =559
+            Y: =498
             ZIndex: =93
 
         rvs_cbx_edit3MesesRegla As checkbox:
             BorderStyle: =BorderStyle.None
             Color: =RGBA(5, 28, 87, 1)
-            Default: =varCheckMeses
+            Default: =false//varCheckMeses
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="3 Meses de Volumen"
-            Visible: =vsbEditRglInnova
+            Visible: =false
             Width: =233
             X: =567
             Y: =471
