@@ -2720,6 +2720,7 @@
             HoverColor: =RGBA(71, 71, 71, 1)
             Items: |-
                 =ForAll(Distinct(Filter(colLabProductCompleto,SUBCATEGORY in rvs_dpd_newSubcategory_Product.SelectedItems),BRAND), {Result: ThisRecord.Value})
+            OnChange: =
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["Result"]
@@ -2817,9 +2818,6 @@
                         Product: Concat(rvs_dpd_newProduct.SelectedItems,PRODUCT,";"),
                         ProductID: Concat(rvs_dpd_newProduct.SelectedItems,PRODUCT_ID,";"),
                         Year_Solicitud: Value(Year(Now())),
-                        NumSubcategory: Value(CountRows(rvs_dpd_newSubcategory_Product.SelectedItems)),
-                        NumBrand: Value(CountRows(rvs_dpd_newBrand_Product.SelectedItems)),
-                        NumProduct: Value(CountRows(rvs_dpd_newProduct.SelectedItems)),
                         IdMes: Month(Now())
                     }
                     );
