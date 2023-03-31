@@ -1406,7 +1406,7 @@
                 Size: =14
                 Text: ="Razón Social"
                 Width: =440
-                X: =24
+                X: =136
                 ZIndex: =1
 
             rvs_btn_headerSubcategory_Mes As button:
@@ -1422,7 +1422,7 @@
                 Size: =14
                 Text: ="SubCategory"
                 Width: =220
-                X: =464
+                X: =576
                 ZIndex: =2
 
             rvs_btn_headerBrand_Mes As button:
@@ -1438,24 +1438,8 @@
                 Size: =14
                 Text: ="Brand"
                 Width: =220
-                X: =684
+                X: =796
                 ZIndex: =3
-
-            rvs_btn_header3MesesVlm As button:
-                Align: =Align.Left
-                Color: =RGBA(65, 65, 65, 1)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(196, 222, 251, 1)
-                Font: =Font.Lato
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =14
-                Text: ="3 Meses Volumen"
-                Width: =220
-                X: =904
-                ZIndex: =4
 
             rvs_btn_headerStatus_Mes As button:
                 Color: =RGBA(65, 65, 65, 1)
@@ -1469,7 +1453,7 @@
                 Size: =14
                 Text: ="Status"
                 Width: =110
-                X: =1124
+                X: =1016
                 ZIndex: =5
 
             rvs_btn_headerEdit_Mes As button:
@@ -1483,7 +1467,7 @@
                 RadiusTopRight: =0
                 Text: =""
                 Width: =110
-                X: =1234
+                X: =1126
                 ZIndex: =6
 
         rvs_dtc_dataReglaMeses As dataCard.blankCard:
@@ -1507,8 +1491,8 @@
                 Layout: =Layout.Vertical
                 TemplatePadding: =1
                 TemplateSize: =40
-                Width: =1320
-                X: =24
+                Width: =1100
+                X: =136
                 ZIndex: =1
 
                 gal_dpd_razonSocial_Innova As label:
@@ -1559,23 +1543,13 @@
                     Y: =39
                     ZIndex: =4
 
-                gal_cbx_mesesVlm As checkbox:
-                    Default: =ThisItem.THREEMONTHSVOLUME
-                    DisplayMode: =DisplayMode.View
-                    Height: =40
-                    OnSelect: =Select(Parent)
-                    Text: =""
-                    Width: =40
-                    X: =915
-                    ZIndex: =5
-
                 gal_fig_status_Innova As circle:
                     DisplayMode: =DisplayMode.View
                     Fill: =If(ThisItem.STATUS = true,RGBA(101, 201, 135, 1),RGBA(227, 55, 44, 1))
                     Height: =15
                     OnSelect: =Select(Parent)
                     Width: =15
-                    X: =1143
+                    X: =926
                     Y: =13
                     ZIndex: =6
 
@@ -1584,8 +1558,8 @@
                     Image: =btnEdit
                     OnSelect: =Select(Parent)
                     Width: =25
-                    X: =1236
-                    Y: =9
+                    X: =1023
+                    Y: =8
                     ZIndex: =7
 
                 gal_btn_edit_Innova As button:
@@ -1624,8 +1598,8 @@
                     PressedFill: =RGBA(56, 136, 210, 0.2)
                     Text: =""
                     Width: =25
-                    X: =1236
-                    Y: =9
+                    X: =1023
+                    Y: =8
                     ZIndex: =8
 
             rvs_btn_innovation_Descrgar As button:
