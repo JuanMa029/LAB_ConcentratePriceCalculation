@@ -114,7 +114,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =75
             Width: =1366
             X: =0
             Y: =3
@@ -272,7 +272,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =50
             Width: =1366
             X: =0
             Y: =4
@@ -308,7 +308,7 @@
                 Size: =14
                 Text: ="Archivo Fuente"
                 Width: =220
-                X: =435
+                X: =crc_btn_headerRazonSocial_1.X + crc_btn_headerRazonSocial_1.Width
                 Y: =40
                 ZIndex: =2
 
@@ -325,7 +325,7 @@
                 Size: =14
                 Text: ="Container Pepsico"
                 Width: =220
-                X: =655
+                X: =crc_btn_headerArchivoF_1.X + crc_btn_headerArchivoF_1.Width
                 Y: =40
                 ZIndex: =3
 
@@ -342,7 +342,7 @@
                 Size: =14
                 Text: ="Container Embotellador"
                 Width: =220
-                X: =875
+                X: =crc_btn_headerCPepsico_1.X + crc_btn_headerCPepsico_1.Width
                 Y: =40
                 ZIndex: =4
 
@@ -358,7 +358,7 @@
                 Size: =14
                 Text: ="Status"
                 Width: =110
-                X: =1095
+                X: =crc_btn_headerCEmbote_1.X + crc_btn_headerCEmbote_1.Width
                 Y: =40
                 ZIndex: =5
 
@@ -373,7 +373,7 @@
                 RadiusTopRight: =0
                 Text: =""
                 Width: =110
-                X: =1205
+                X: =crc_btn_headerStatus_1.X + crc_btn_headerStatus_1.Width
                 Y: =40
                 ZIndex: =6
 
