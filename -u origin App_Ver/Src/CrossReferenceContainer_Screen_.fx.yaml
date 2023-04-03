@@ -267,6 +267,116 @@
                 Y: =60
                 ZIndex: =8
 
+        crc_dtc_header_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            crc_btn_headerRazonSocial_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Razón Social"
+                Width: =395
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            crc_btn_headerArchivoF_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Archivo Fuente"
+                Width: =220
+                X: =435
+                Y: =40
+                ZIndex: =2
+
+            crc_btn_headerCPepsico_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Container Pepsico"
+                Width: =220
+                X: =655
+                Y: =40
+                ZIndex: =3
+
+            crc_btn_headerCEmbote_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Container Embotellador"
+                Width: =220
+                X: =875
+                Y: =40
+                ZIndex: =4
+
+            crc_btn_headerStatus_1 As button:
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Status"
+                Width: =110
+                X: =1095
+                Y: =40
+                ZIndex: =5
+
+            crc_btn_headerEdit_1 As button:
+                Color: =RGBA(71, 71, 71, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: =""
+                Width: =110
+                X: =1205
+                Y: =40
+                ZIndex: =6
+
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
         ZIndex: =4
 
