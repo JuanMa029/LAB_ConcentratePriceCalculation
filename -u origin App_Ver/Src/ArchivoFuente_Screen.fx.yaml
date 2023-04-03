@@ -1,0 +1,602 @@
+ArchivoFuente_Screen As screen:
+    BackgroundImage: =fondoPrincipal
+    ImagePosition: =ImagePosition.Stretch
+
+    afs_cmp_headerPrincipal As HeaderPrincipal:
+
+    afs_lbl_titulo As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =26
+        Text: ="Catálogo Archivo Maestro"
+        Width: =1366
+        Y: =60
+        ZIndex: =3
+
+    afs_cnt_headerArchivoFuente As groupContainer.manualLayoutContainer:
+        Height: =50
+        Width: =1366
+        Y: =243
+        ZIndex: =6
+
+        rs_btn_headerID_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="ID"
+            Width: =91
+            X: =345
+            ZIndex: =1
+
+        rs_btn_headerNombre_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre"
+            Width: =260
+            X: =rs_btn_headerID_1.X + rs_btn_headerID_1.Width
+            ZIndex: =2
+
+        rs_btn_headerEstatus_1 As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            Height: =50
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Estatus"
+            X: =rs_btn_headerNombre_1.X + rs_btn_headerNombre_1.Width
+            ZIndex: =3
+
+        rs_img_nuevo_1 As image:
+            Height: =40
+            Image: =add
+            Width: =63
+            X: =1132
+            Y: =5
+            ZIndex: =5
+
+        rs_btn_nuevo_1 As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            HoverFill: =Color.Transparent
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewReg:true})
+            PressedFill: =Color.Transparent
+            Text: =""
+            Width: =63
+            X: =1132
+            Y: =5
+            ZIndex: =6
+
+    rs_cnt_dataRegion_1 As groupContainer.manualLayoutContainer:
+        Height: =366
+        Width: =1366
+        Y: =349
+        ZIndex: =7
+
+        rs_gal_dataRegion_1 As gallery.galleryVertical:
+            Height: =490
+            Items: |-
+                =SortByColumns(
+                    Filter(
+                        Region,
+                        StartsWith(
+                            NombreRegion,
+                            afs_txt_buscarNombre.Text
+                        ) 
+                    ),
+                    "IdRegion",
+                    SortOrder.Ascending
+                )
+            Layout: =Layout.Vertical
+            TemplateSize: =41
+            Width: =1366
+            ZIndex: =1
+
+            rs_txt_id_1 As text:
+                Align: =Align.Center
+                Default: =ThisItem.IdRegion
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =rs_btn_headerID_1.Width
+                X: =rs_btn_headerID_1.X
+                ZIndex: =1
+
+            rs_txt_nombre_1 As text:
+                Align: =Align.Center
+                Default: =ThisItem.NombreRegion
+                DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                DisabledColor: =RGBA(0, 0, 0, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Font: =Font.Lato
+                Size: =12
+                Width: =rs_btn_headerNombre_1.Width
+                X: =rs_btn_headerNombre_1.X
+                ZIndex: =2
+
+            rs_icn_estatus_1 As circle:
+                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
+                Height: =30
+                OnSelect: =Select(Parent)
+                Width: =40
+                X: =747
+                Y: =5
+                ZIndex: =5
+
+            rs_img_edit_1 As image:
+                Height: =35
+                Image: =btnEdit
+                OnSelect: =Select(Parent)
+                PaddingBottom: =3
+                PaddingLeft: =3
+                PaddingRight: =3
+                PaddingTop: =3
+                Width: =41
+                X: =875
+                ZIndex: =6
+
+            rs_btn_edit_1 As button:
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Fill: =Color.Transparent
+                Height: =35
+                HoverFill: =Color.Transparent
+                OnSelect: |-
+                    =Select(Parent);
+                    Set(varTempID,ThisItem.ID);
+                    Set(varTempIDRegion,ThisItem.IdRegion);
+                    Set(varTempNombreReg,ThisItem.NombreRegion);
+                    Set(varTempEstatusReg,ThisItem.Estatus);
+                    UpdateContext({vsbPopupEditReg:true});
+                PressedFill: =Color.Transparent
+                Text: =""
+                Width: =41
+                X: =875
+                ZIndex: =7
+
+    afs_cnt_dataFilterArchivoF As groupContainer.manualLayoutContainer:
+        Height: =100
+        Width: =1366
+        Y: =141
+        ZIndex: =8
+
+        afs_btn_buscarNombre As button:
+            Align: =Align.Left
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =Font.Lato
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =14
+            Text: ="Nombre Archivo Fuente"
+            Width: =356
+            X: =505
+            ZIndex: =1
+
+        afs_txt_buscarNombre As text:
+            Default: =""
+            HoverFill: =RGBA(255, 255, 255, 1)
+            Width: =356
+            X: =505
+            Y: =40
+            ZIndex: =2
+
+    rs_grp_nuevoRegion_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        rs_fig_fondo_3 As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupNewReg
+            Width: =1366
+            ZIndex: =9
+
+        rs_fig_subfondo_3 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =184
+            Visible: =vsbPopupNewReg
+            Width: =524
+            X: =432
+            Y: =259
+            ZIndex: =10
+
+        rs_lbl_tituloNuevoRegion_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Nueva Región"
+            Visible: =vsbPopupNewReg
+            Width: =524
+            X: =432
+            Y: =259
+            ZIndex: =11
+
+        rs_lbl_nuevoNombreReg_6 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre Región"
+            Visible: =vsbPopupNewReg
+            X: =442
+            Y: =309
+            ZIndex: =12
+
+        rs_txt_nuevoNombreReg_1 As text:
+            Default: =""
+            Font: =Font.Lato
+            OnChange: =
+            Visible: =vsbPopupNewReg
+            X: =602
+            Y: =309
+            ZIndex: =13
+
+        rs_icn_cancelar_2 As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewReg:false});
+                Reset(rs_txt_nuevoNombreReg_1);
+                Set(responseNuevoRegion,Blank());
+            Visible: =vsbPopupNewReg
+            Width: =34
+            X: =917
+            Y: =265
+            ZIndex: =14
+
+        rs_icn_agregar_2 As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingRegion:true});
+                //__ Realizamos Reset
+                Set(responseNuevoRegion,Blank());
+                Clear(colNewRegion);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rs_txt_nuevoNombreReg_1) || IsEmpty(rs_txt_nuevoNombreReg_1),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colNewRegion,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        Region: rs_txt_nuevoNombreReg_1.Text,
+                        TipoCatalogo: "Catalogo Maestro - Region",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now()))
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colNewRegion));
+                Set(responseNuevoRegion,'[CPC]_SaveRegion'.Run(varJSON));
+                Set(responseRegion,responseNuevoRegion.response);
+                If(responseRegion = "Ok",
+                    UpdateContext({vsbPopupNewReg:false});
+                    Reset(rs_txt_nuevoNombreReg_1);
+                    Refresh(Region);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoRegion,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingRegion:false});
+            Visible: =vsbPopupNewReg
+            Width: =34
+            X: =437
+            Y: =265
+            ZIndex: =15
+
+        rs_lbl_msjError_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoRegion.response
+            Visible: =vsbPopupNewReg
+            Width: =514
+            X: =437
+            Y: =365
+            ZIndex: =16
+
+    rs_grp_msjCorrecto_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =22
+
+        ps_fig_fondoOk_3 As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbMsjOk
+            Width: =1366
+            ZIndex: =17
+
+        ps_fig_subfondoOk_3 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =242
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =18
+
+        ps_lbl_tituloOk_3 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =524
+            X: =421
+            Y: =175
+            ZIndex: =19
+
+        ps_lbl_msjOk_3 As label:
+            Align: =Align.Center
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: ="Registro Guardado con Éxito"
+            Visible: =vsbMsjOk
+            Width: =514
+            X: =426
+            Y: =337
+            ZIndex: =20
+
+        ps_icn_ok_3 As icon.Information:
+            Color: =RGBA(54, 176, 75, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =UpdateContext({vsbMsjOk:false});
+            Visible: =vsbMsjOk
+            X: =651
+            Y: =243
+            ZIndex: =21
+
+    rs_cmp_loading_1 As Loading:
+        Visible: =vsbLoadingRegion
+        ZIndex: =34
+
+    crps_icn_regresar_2 As icon.Link:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.BackArrow
+        OnSelect: =
+        Width: =30
+        X: =12
+        Y: =15
+        ZIndex: =35
+
+    rs_grp_editarRegion_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        rs_fig_fondoEdit_1 As rectangle:
+            Fill: =RGBA(0, 18, 107, 0.5)
+            Height: =768
+            Visible: =vsbPopupEditReg
+            Width: =1366
+            ZIndex: =22
+
+        rs_fig_subfondoEdit_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =313
+            Visible: =vsbPopupEditReg
+            Width: =524
+            X: =426
+            Y: =227
+            ZIndex: =23
+
+        rs_lbl_tituloEditRegion_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Text: ="Editar Región"
+            Visible: =vsbPopupEditReg
+            Width: =524
+            X: =426
+            Y: =227
+            ZIndex: =24
+
+        rs_lbl_editIdRegion_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="ID"
+            Visible: =vsbPopupEditReg
+            X: =436
+            Y: =277
+            ZIndex: =25
+
+        rs_txt_editIdRegion_1 As text:
+            Default: =varTempIDRegion
+            DisplayMode: =DisplayMode.View
+            Visible: =vsbPopupEditReg
+            X: =596
+            Y: =277
+            ZIndex: =26
+
+        rs_lbl_editNombreReg_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Nombre"
+            Visible: =vsbPopupEditReg
+            X: =436
+            Y: =332
+            ZIndex: =27
+
+        rs_txt_editNombreReg_1 As text:
+            Default: =varTempNombreReg
+            Visible: =vsbPopupEditReg
+            X: =596
+            Y: =332
+            ZIndex: =28
+
+        rs_lbl_editEstatusReg_1 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Font: =Font.Lato
+            Text: ="Estatus"
+            Visible: =vsbPopupEditReg
+            X: =436
+            Y: =382
+            ZIndex: =29
+
+        rs_tgg_editEstatusReg_1 As toggleSwitch:
+            BorderStyle: =BorderStyle.None
+            Default: =varTempEstatusReg
+            FalseFill: =RGBA(255, 0, 0, 1)
+            Height: =40
+            ShowLabel: =false
+            TrueFill: =RGBA(54, 176, 75, 1)
+            Visible: =vsbPopupEditReg
+            Width: =206
+            X: =596
+            Y: =382
+            ZIndex: =30
+
+        rs_icn_cancelarEdit_1 As icon.CancelBadge:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =28
+            Icon: =Icon.CancelBadge
+            OnSelect: |
+                =UpdateContext({vsbPopupEditReg:false});
+                Set(responseNuevoRegion,Blank());
+                Reset(rs_tgg_editEstatusReg_1);
+                Reset(rs_txt_editNombreReg_1);
+            Visible: =vsbPopupEditReg
+            Width: =34
+            X: =911
+            Y: =233
+            ZIndex: =31
+
+        rs_icn_agregarEdit_1 As icon.CancelBadge:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =28
+            Icon: =Icon.CheckBadge
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingRegion:true});
+                //__ Realizamos Reset
+                Set(responseNuevoRegion,Blank());
+                Clear(colEditRegion);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rs_txt_editIdRegion_1) || IsEmpty(rs_txt_editIdRegion_1) || IsBlank(rs_txt_editNombreReg_1) || IsEmpty(rs_txt_editNombreReg_1),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colEditRegion,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        Region: rs_txt_editNombreReg_1.Text,
+                        Estatus: rs_tgg_editEstatusReg_1.Value,
+                        TipoCatalogo: "Catalogo Maestro - Region",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        ID_List: varTempID,
+                        Region_old: varTempNombreReg,
+                        Estatus_old:varTempEstatusReg
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditRegion));
+                Set(responseNuevoRegion,'[CPC]_EditRegion'.Run(varJSON));
+                Set(responseRegion,responseNuevoRegion.response);
+                If(responseRegion = "Ok",
+                    UpdateContext({vsbPopupEditReg:false});
+                    Reset(rs_tgg_editEstatusReg_1);
+                    Reset(rs_txt_editNombreReg_1);
+                    Refresh(Region);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseNuevoRegion,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingRegion:false});
+            Visible: =vsbPopupEditReg
+            Width: =34
+            X: =431
+            Y: =233
+            ZIndex: =32
+
+        rs_lbl_msjErrorEdit_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoRegion.response
+            Visible: =vsbPopupEditReg
+            Width: =514
+            X: =431
+            Y: =455
+            ZIndex: =33
+
