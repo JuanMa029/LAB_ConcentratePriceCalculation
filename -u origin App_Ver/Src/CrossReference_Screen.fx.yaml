@@ -87,6 +87,28 @@
                 Y: =23
                 ZIndex: =1
 
+            rvs_btn_producto_2 As button:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                Color: =RGBA(5, 28, 87, 1)
+                DisabledBorderColor: =RGBA(107, 165, 231, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(107, 165, 231, 1)
+                DisplayMode: =//If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.Lato
+                Height: =50
+                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+                OnSelect: =
+                PressedBorderColor: =RGBA(107, 165, 231, 1)
+                PressedFill: =RGBA(107, 165, 231, 1)
+                Size: =13
+                Text: ="Container"
+                Width: =230
+                X: =574
+                Y: =23
+                ZIndex: =2
+
     crs_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =4
 
