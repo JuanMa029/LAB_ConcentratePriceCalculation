@@ -109,6 +109,248 @@
                 Y: =23
                 ZIndex: =2
 
+            rvs_img_newReglaProduct_1 As image:
+                Height: =50
+                Image: =add
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1185
+                Y: =23
+                ZIndex: =3
+
+            rvs_btn_newReglaProduct_1 As button:
+                Fill: =Color.Transparent
+                Height: =50
+                HoverFill: =RGBA(56, 136, 210, 0.5)
+                OnSelect: |-
+                    =// Iniciamos loading
+                    UpdateContext({vsbLoadingNewRglProd:true});
+                    //Obtenemos Catalogo LAB_PRODUCT completo
+                    ClearCollect(
+                        colLabProductCompleto,
+                        Filter(LAB_PRODUCT,NumberProduct <=2000),
+                        Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
+                        );
+                    //Aplicamos Distinct SubCategory
+                    ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
+                    
+                    UpdateContext({vsbNewRglProduct:true});
+                    // Finalizamos loading
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 0.2)
+                Text: =""
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1185
+                Y: =23
+                ZIndex: =4
+
+            rvs_img_newReglaProduct_2 As image:
+                Height: =50
+                Image: =books
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1256
+                Y: =23
+                ZIndex: =5
+
+            rvs_btn_newReglaProduct_2 As button:
+                Fill: =Color.Transparent
+                Height: =50
+                HoverFill: =RGBA(56, 136, 210, 0.5)
+                OnSelect: |-
+                    =// Iniciamos loading
+                    UpdateContext({vsbLoadingNewRglProd:true});
+                    //Obtenemos Catalogo LAB_PRODUCT completo
+                    ClearCollect(
+                        colLabProductCompleto,
+                        Filter(LAB_PRODUCT,NumberProduct <=2000),
+                        Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
+                        );
+                    //Aplicamos Distinct SubCategory
+                    ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
+                    
+                    UpdateContext({vsbNewRglProduct:true});
+                    // Finalizamos loading
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 0.2)
+                Text: =""
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1256
+                Y: =23
+                ZIndex: =6
+
+        crps_dtc_filtros As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =3
+            ZIndex: =4
+
+            crps_lbl_razonSocial_Filter As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Razón Social"
+                Width: =400
+                X: =31
+                Y: =7
+                ZIndex: =1
+
+            crps_dpd_razonSocial_Filter As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: =Distinct(colProductVlmRule,RAZONSOCIAL.Value)
+                OnChange: |
+                    =// Reset al componente SubCategory
+                    Reset(rvs_dpd_subcategory_Product);
+                    // Generamos la lista Subcategory
+                    Set(varConcatSubcategory,Concat(Distinct(Filter(colProductVlmRule, RAZONSOCIAL.Value = crps_dpd_razonSocial_Filter.Selected.Value),SUBCATEGORY),Value,";"))
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Search(Distinct(colProductVlmRule,RAZONSOCIAL.Value),crps_dpd_razonSocial_Filter.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =400
+                X: =31
+                Y: =47
+                ZIndex: =2
+
+            rvs_lbl_subCategory_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Archivo Fuente"
+                Width: =250
+                X: =459
+                Y: =7
+                ZIndex: =3
+
+            rvs_dpd_subcategory_Product_1 As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: |-
+                    =Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result)
+                OnChange: |
+                    =// Reset al componente Brand
+                    Reset(rvs_dpd_brand_Product_1);
+                    // Generamos la lista Brand
+                    Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Product_1.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =250
+                X: =459
+                Y: =47
+                ZIndex: =4
+
+            rvs_lbl_brand_Product_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Producto Pepsico"
+                Width: =250
+                X: =737
+                Y: =7
+                ZIndex: =5
+
+            rvs_dpd_brand_Product_1 As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: |-
+                    =Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result)
+                OnChange: |
+                    =// Reset al componente Prodcut
+                    Reset(rvs_dpd_Product_1);
+                    // Generamos lista Product
+                    Set(varConcatProduct,Concat(Distinct(Search(
+                        Search(Filter(colProductVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_1.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Product_1.Selected.Value,"BRAND")
+                        ,PRODUCT),Value,";"))
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Product_1.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =250
+                X: =737
+                Y: =47
+                ZIndex: =6
+
+            rvs_lbl_Product_1 As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Size: =14
+                Text: ="Product Embotellador"
+                Width: =250
+                X: =1015
+                Y: =7
+                ZIndex: =7
+
+            rvs_dpd_Product_1 As combobox:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronFill: =RGBA(0, 18, 107, 1)
+                ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                ChevronHoverFill: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayFields: =["Value"]
+                Font: =Font.Lato
+                HoverColor: =RGBA(65, 65, 65, 1)
+                Items: |-
+                    =Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result)
+                PressedColor: =RGBA(65, 65, 65, 1)
+                PressedFill: =RGBA(56, 136, 210, 1)
+                SearchFields: =["Value"]
+                SearchItems: |-
+                    =Search(Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_Product_1.SearchText,"Value")
+                SelectionFill: =RGBA(107, 165, 231, 1)
+                SelectMultiple: =false
+                Width: =250
+                X: =1015
+                Y: =47
+                ZIndex: =8
+
     crps_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =4
 
