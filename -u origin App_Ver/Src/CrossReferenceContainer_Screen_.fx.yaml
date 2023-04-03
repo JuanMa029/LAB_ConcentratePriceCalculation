@@ -219,7 +219,7 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Filter(CrossReferenceContainer,Estatus = true)
+                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Pepsico')
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
@@ -251,14 +251,14 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["ArchivoFuente"]
+                DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =CrossReferenceContainer
+                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Embotellador')
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["ArchivoFuente"]
+                SearchFields: =["Value"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
