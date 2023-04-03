@@ -17,17 +17,16 @@ ArchivoFuente_Screen As screen:
         ZIndex: =3
 
     afs_cnt_headerArchivoFuente As groupContainer.manualLayoutContainer:
-        Height: =50
+        Height: =40
         Width: =1366
-        Y: =243
+        Y: =257
         ZIndex: =6
 
-        rs_btn_headerID_1 As button:
+        afs_btn_headerID As button:
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -35,15 +34,14 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="ID"
             Width: =91
-            X: =345
+            X: =391
             ZIndex: =1
 
-        rs_btn_headerNombre_1 As button:
+        afs_btn_headerNombre As button:
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -51,33 +49,31 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="Nombre"
             Width: =260
-            X: =rs_btn_headerID_1.X + rs_btn_headerID_1.Width
+            X: =482
             ZIndex: =2
 
-        rs_btn_headerEstatus_1 As button:
+        afs_btn_headerEstatus As button:
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =14
             Text: ="Estatus"
-            X: =rs_btn_headerNombre_1.X + rs_btn_headerNombre_1.Width
+            X: =742
             ZIndex: =3
 
-        rs_img_nuevo_1 As image:
+        afs_img_nuevo As image:
             Height: =40
             Image: =add
-            Width: =63
+            Width: =40
             X: =1132
-            Y: =5
             ZIndex: =5
 
-        rs_btn_nuevo_1 As button:
+        afs_btn_nuevo As button:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(0, 0, 0, 0)
             DisabledFill: =RGBA(0, 0, 0, 0)
@@ -87,15 +83,27 @@ ArchivoFuente_Screen As screen:
                 =UpdateContext({vsbPopupNewReg:true})
             PressedFill: =Color.Transparent
             Text: =""
-            Width: =63
+            Width: =40
             X: =1132
-            Y: =5
             ZIndex: =6
 
-    rs_cnt_dataRegion_1 As groupContainer.manualLayoutContainer:
-        Height: =366
+        afs_btn_accion As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: =""
+            Width: =100
+            X: =902
+            ZIndex: =7
+
+    afs_cnt_dataArchivoFuente As groupContainer.manualLayoutContainer:
+        Height: =418
         Width: =1366
-        Y: =349
+        Y: =297
         ZIndex: =7
 
         rs_gal_dataRegion_1 As gallery.galleryVertical:
@@ -126,8 +134,8 @@ ArchivoFuente_Screen As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Font: =Font.Lato
                 Size: =12
-                Width: =rs_btn_headerID_1.Width
-                X: =rs_btn_headerID_1.X
+                Width: =afs_btn_headerID.Width
+                X: =afs_btn_headerID.X
                 ZIndex: =1
 
             rs_txt_nombre_1 As text:
@@ -139,8 +147,8 @@ ArchivoFuente_Screen As screen:
                 DisplayMode: =DisplayMode.Disabled
                 Font: =Font.Lato
                 Size: =12
-                Width: =rs_btn_headerNombre_1.Width
-                X: =rs_btn_headerNombre_1.X
+                Width: =afs_btn_headerNombre.Width
+                X: =afs_btn_headerNombre.X
                 ZIndex: =2
 
             rs_icn_estatus_1 As circle:
