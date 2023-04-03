@@ -1,0 +1,92 @@
+"CrossReference_Screen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: =fondoPrincipal
+    ImagePosition: =ImagePosition.Stretch
+
+    crs_cnv_Principal As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =708
+        Width: =Parent.Width
+        Y: =60
+        ZIndex: =3
+
+        crs_dtc_titulo As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            crs_lbl_tituloScreen As label:
+                Align: =Align.Center
+                Color: =RGBA(5, 28, 87, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =35
+                Text: ="Volumen"
+                Width: =1366
+                ZIndex: =1
+
+        crs_dtc_subTitulo As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =30
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            crs_lbl_subTitulo As label:
+                Align: =Align.Center
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="Estas tablas aplican para los inputs de Listas de precios,costos y netrevenue"
+                Width: =1366
+                ZIndex: =1
+
+        DataCard3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =80
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            rvs_btn_producto_1 As button:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                Color: =RGBA(5, 28, 87, 1)
+                DisabledBorderColor: =RGBA(107, 165, 231, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(107, 165, 231, 1)
+                DisplayMode: =//If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.Lato
+                Height: =50
+                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+                OnSelect: =
+                PressedBorderColor: =RGBA(107, 165, 231, 1)
+                PressedFill: =RGBA(107, 165, 231, 1)
+                Size: =13
+                Text: ="Product"
+                Width: =230
+                X: =344
+                Y: =23
+                ZIndex: =1
+
+    crs_cmp_headerPrincipal As HeaderPrincipal:
+        ZIndex: =4
+

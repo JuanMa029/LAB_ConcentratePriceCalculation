@@ -3062,7 +3062,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_btn_newTipoC_1",
-      "ParentIndex": 7,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4975,7 +4975,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_dpd_buscarPais_1",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7029,7 +7029,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tc_img_newTipoC",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
