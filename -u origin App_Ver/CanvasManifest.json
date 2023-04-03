@@ -139,6 +139,7 @@
     "Periodos_Screen_v2",
     "MaestroProductos_Screen",
     "ReglasVolumen_Screen",
-    "CrossReference_Screen"
+    "CrossReference_Screen",
+    "CrossReferenceProduct_Screen"
   ]
 }

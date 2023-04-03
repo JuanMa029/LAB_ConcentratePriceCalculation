@@ -1,15 +1,15 @@
-"CrossReference_Screen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"CrossReferenceProduct_Screen As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     BackgroundImage: =fondoPrincipal
     ImagePosition: =ImagePosition.Stretch
 
-    crs_cnv_Principal As fluidGrid.fluidGridWithBlankCard:
+    crps_cnv_Principal As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =708
         Width: =Parent.Width
         Y: =60
         ZIndex: =3
 
-        crs_dtc_titulo As dataCard:
+        crps_dtc_titulo As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
@@ -21,7 +21,7 @@
             Y: =0
             ZIndex: =1
 
-            crs_lbl_tituloScreen As label:
+            crps_lbl_tituloScreen As label:
                 Align: =Align.Center
                 Color: =RGBA(5, 28, 87, 1)
                 Font: =Font.Lato
@@ -32,7 +32,7 @@
                 Width: =1366
                 ZIndex: =1
 
-        crs_dtc_subTitulo As dataCard.blankCard:
+        crps_dtc_subTitulo As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -43,7 +43,7 @@
             Y: =1
             ZIndex: =2
 
-            crs_lbl_subTitulo As label:
+            crps_lbl_subTitulo As label:
                 Align: =Align.Center
                 Color: =RGBA(65, 65, 65, 1)
                 Font: =Font.Lato
@@ -54,7 +54,7 @@
                 Width: =1366
                 ZIndex: =1
 
-        crs_dtc_botones As dataCard.blankCard:
+        crps_dtc_botones As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -65,7 +65,7 @@
             Y: =2
             ZIndex: =3
 
-            crs_btn_producto As button:
+            crps_btn_producto As button:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 Color: =RGBA(5, 28, 87, 1)
@@ -87,7 +87,7 @@
                 Y: =23
                 ZIndex: =1
 
-            crs_btn_container As button:
+            crps_btn_container As button:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 Color: =RGBA(5, 28, 87, 1)
@@ -109,10 +109,10 @@
                 Y: =23
                 ZIndex: =2
 
-    crs_cmp_headerPrincipal As HeaderPrincipal:
+    crps_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =4
 
-    crs_icn_regresar As icon.Link:
+    crps_icn_regresar As icon.Link:
         Color: =RGBA(255, 255, 255, 1)
         Height: =30
         Icon: =Icon.BackArrow
