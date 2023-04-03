@@ -205,7 +205,7 @@
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
                 Size: =14
-                Text: ="Contenedores Embotellador"
+                Text: ="Container Pepsico"
                 Width: =250
                 X: =746
                 Y: =20
@@ -248,7 +248,7 @@
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
                 Size: =14
-                Text: ="Container Pepsico"
+                Text: ="Container Embotellador"
                 Width: =250
                 X: =1024
                 Y: =20
