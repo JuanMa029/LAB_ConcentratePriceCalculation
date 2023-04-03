@@ -142,6 +142,7 @@
     "ReglasVolumen_Screen",
     "CrossReference_Screen",
     "CrossReferenceProduct_Screen",
-    "Screen1"
+    "Screen1",
+    "CrossReferenceContainer_Screen_"
   ]
 }
