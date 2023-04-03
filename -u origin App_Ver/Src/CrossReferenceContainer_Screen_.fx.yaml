@@ -65,6 +65,50 @@
             Y: =2
             ZIndex: =3
 
+            crc_btn_producto_1 As button:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                Color: =RGBA(5, 28, 87, 1)
+                DisabledBorderColor: =RGBA(107, 165, 231, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(107, 165, 231, 1)
+                DisplayMode: =DisplayMode.Disabled
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.Lato
+                Height: =50
+                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+                OnSelect: =
+                PressedBorderColor: =RGBA(107, 165, 231, 1)
+                PressedFill: =RGBA(107, 165, 231, 1)
+                Size: =13
+                Text: ="Product"
+                Width: =230
+                X: =442
+                Y: =10
+                ZIndex: =1
+
+            crc_btn_container_1 As button:
+                BorderColor: =RGBA(107, 165, 231, 1)
+                BorderThickness: =1
+                Color: =RGBA(5, 28, 87, 1)
+                DisabledBorderColor: =RGBA(107, 165, 231, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(107, 165, 231, 1)
+                DisplayMode: =//If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+                Fill: =RGBA(255, 255, 255, 1)
+                Font: =Font.Lato
+                Height: =50
+                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
+                OnSelect: =
+                PressedBorderColor: =RGBA(107, 165, 231, 1)
+                PressedFill: =RGBA(107, 165, 231, 1)
+                Size: =13
+                Text: ="Container"
+                Width: =230
+                X: =740
+                Y: =10
+                ZIndex: =2
+
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
         ZIndex: =4
 
