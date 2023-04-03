@@ -28,7 +28,7 @@
                 FontWeight: =FontWeight.Bold
                 Height: =70
                 Size: =35
-                Text: ="Volumen"
+                Text: ="Cross Reference"
                 Width: =1366
                 ZIndex: =1
 
@@ -83,7 +83,7 @@
                 Size: =13
                 Text: ="Product"
                 Width: =230
-                X: =344
+                X: =421
                 Y: =23
                 ZIndex: =1
 
@@ -105,10 +105,20 @@
                 Size: =13
                 Text: ="Container"
                 Width: =230
-                X: =574
+                X: =721
                 Y: =23
                 ZIndex: =2
 
     crs_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =4
+
+    rvs_icn_regresar_2 As icon.Link:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.BackArrow
+        OnSelect: =
+        Width: =30
+        X: =12
+        Y: =15
+        ZIndex: =5
 
