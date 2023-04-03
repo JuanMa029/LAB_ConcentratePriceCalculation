@@ -21,17 +21,6 @@
             Y: =0
             ZIndex: =1
 
-            crps_lbl_tituloScreen_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(5, 28, 87, 1)
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Bold
-                Height: =70
-                Size: =35
-                Text: ="Cross Reference"
-                Width: =1366
-                ZIndex: =1
-
         crc_dtc_subTitulo_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -43,17 +32,6 @@
             Y: =1
             ZIndex: =2
 
-            crps_lbl_subTitulo_1 As label:
-                Align: =Align.Center
-                Color: =RGBA(65, 65, 65, 1)
-                Font: =Font.Lato
-                FontWeight: =FontWeight.Semibold
-                Height: =30
-                Size: =12
-                Text: ="Estas tablas aplican para los inputs de Listas de precios,costos y netrevenue"
-                Width: =1366
-                ZIndex: =1
-
         crc_dtc_botones_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -64,50 +42,6 @@
             X: =0
             Y: =2
             ZIndex: =3
-
-            crps_btn_producto_1 As button:
-                BorderColor: =RGBA(107, 165, 231, 1)
-                BorderThickness: =1
-                Color: =RGBA(5, 28, 87, 1)
-                DisabledBorderColor: =RGBA(107, 165, 231, 1)
-                DisabledColor: =RGBA(255, 255, 255, 1)
-                DisabledFill: =RGBA(107, 165, 231, 1)
-                DisplayMode: =DisplayMode.Disabled
-                Fill: =RGBA(255, 255, 255, 1)
-                Font: =Font.Lato
-                Height: =50
-                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
-                OnSelect: =
-                PressedBorderColor: =RGBA(107, 165, 231, 1)
-                PressedFill: =RGBA(107, 165, 231, 1)
-                Size: =13
-                Text: ="Product"
-                Width: =230
-                X: =421
-                Y: =23
-                ZIndex: =1
-
-            crps_btn_container_1 As button:
-                BorderColor: =RGBA(107, 165, 231, 1)
-                BorderThickness: =1
-                Color: =RGBA(5, 28, 87, 1)
-                DisabledBorderColor: =RGBA(107, 165, 231, 1)
-                DisabledColor: =RGBA(255, 255, 255, 1)
-                DisabledFill: =RGBA(107, 165, 231, 1)
-                DisplayMode: =//If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
-                Fill: =RGBA(255, 255, 255, 1)
-                Font: =Font.Lato
-                Height: =50
-                HoverFill: =ColorFade(RGBA(107, 165, 231, 1),-20%)
-                OnSelect: =
-                PressedBorderColor: =RGBA(107, 165, 231, 1)
-                PressedFill: =RGBA(107, 165, 231, 1)
-                Size: =13
-                Text: ="Container"
-                Width: =230
-                X: =721
-                Y: =23
-                ZIndex: =2
 
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
         ZIndex: =4

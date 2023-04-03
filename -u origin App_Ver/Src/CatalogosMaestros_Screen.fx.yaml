@@ -146,6 +146,7 @@ CatalogosMaestros_Screen As screen:
         Fill: =Color.Transparent
         Height: =140
         HoverFill: =Color.Transparent
+        OnSelect: =Navigate(CrossReference_Screen,ScreenTransition.CoverRight)
         PressedFill: =Color.Transparent
         Text: =""
         Visible: =vsbBtn
