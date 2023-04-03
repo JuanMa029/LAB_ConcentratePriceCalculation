@@ -11441,6 +11441,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crps_dpd_razonSocial_Filter_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crps_dpd_razonSocial_Filter_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crps_dpd_razonSocial_Filter_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_subcategory_Product_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_subcategory_Product_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_subcategory_Product_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_brand_Product_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_brand_Product_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_brand_Product_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_Product_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_Product_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.rvs_dpd_Product_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.flagNoUser"
                 }
               ],
