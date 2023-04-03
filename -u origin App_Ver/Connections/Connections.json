@@ -111,8 +111,14 @@
     "datasets": {
       "https://pepsico.sharepoint.com/teams/LAB_ConcentratePriceCalculation": {
         "dataSources": {
+          "ArchivoFuente_1": {
+            "tableName": "63a7e45a-f623-4aa0-aca1-96fc0c434c70"
+          },
           "CatalogoFrecuencia": {
             "tableName": "ce0b16aa-370d-4ac6-86bd-87b62c115add"
+          },
+          "CrossReferenceContainer": {
+            "tableName": "458be5ab-6a10-47a2-a309-9933bf6989e4"
           },
           "Embotelladores": {
             "tableName": "29baceed-22ae-4c27-8d18-dfdd6e57b589"
@@ -167,7 +173,9 @@
       "VolumeRuleConversion",
       "VolumeRuleInnovation",
       "VolumeRuleContainer",
-      "VolumeRuleProduct"
+      "VolumeRuleProduct",
+      "ArchivoFuente_1",
+      "CrossReferenceContainer"
     ],
     "dependencies": {},
     "dependents": [

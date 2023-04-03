@@ -131,7 +131,7 @@
                 Y: =20
                 ZIndex: =1
 
-            crps_dpd_razonSocial_Filter_1 As combobox:
+            crc_dpd_razonSocial_Filter_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -147,11 +147,11 @@
                     =// Reset al componente SubCategory
                     Reset(rvs_dpd_subcategory_Product);
                     // Generamos la lista Subcategory
-                    Set(varConcatSubcategory,Concat(Distinct(Filter(colProductVlmRule, RAZONSOCIAL.Value = crps_dpd_razonSocial_Filter_1.Selected.Value),SUBCATEGORY),Value,";"))
+                    Set(varConcatSubcategory,Concat(Distinct(Filter(colProductVlmRule, RAZONSOCIAL.Value = crc_dpd_razonSocial_Filter_1.Selected.Value),SUBCATEGORY),Value,";"))
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Search(Distinct(colProductVlmRule,RAZONSOCIAL.Value),crps_dpd_razonSocial_Filter_1.SearchText,"Value")
+                SearchItems: =Search(Distinct(colProductVlmRule,RAZONSOCIAL.Value),crc_dpd_razonSocial_Filter_1.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =400
@@ -170,7 +170,7 @@
                 Y: =20
                 ZIndex: =3
 
-            rvs_dpd_subcategory_Product_2 As combobox:
+            crc_dpd_archivoFuente_filter_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -181,18 +181,13 @@
                 DisplayFields: =["Value"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: |-
-                    =Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result)
+                IsSearchable: =false
                 OnChange: |
-                    =// Reset al componente Brand
-                    Reset(rvs_dpd_brand_Product_2);
-                    // Generamos la lista Brand
-                    Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_2.Selected.Value,"SUBCATEGORY"),BRAND),Value,";"))
+                    =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
-                SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatSubcategory,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_subcategory_Product_2.SearchText,"Value")
+                SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -211,7 +206,7 @@
                 Y: =20
                 ZIndex: =5
 
-            rvs_dpd_brand_Product_2 As combobox:
+            crc_dpd_cPepsico_filter_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -224,18 +219,12 @@
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: |-
                     =Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result)
-                OnChange: |
-                    =// Reset al componente Prodcut
-                    Reset(rvs_dpd_Product_2);
-                    // Generamos lista Product
-                    Set(varConcatProduct,Concat(Distinct(Search(
-                        Search(Filter(colProductVlmRule, RAZONSOCIAL.Value = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_subcategory_Product_2.Selected.Value,"SUBCATEGORY"),rvs_dpd_brand_Product_2.Selected.Value,"BRAND")
-                        ,PRODUCT),Value,";"))
+                OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_brand_Product_2.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result),crc_dpd_cPepsico_filter_1.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -254,7 +243,7 @@
                 Y: =20
                 ZIndex: =7
 
-            rvs_dpd_Product_2 As combobox:
+            crc_dpd_cEmbotellador_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -271,7 +260,7 @@
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
                 SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result),rvs_dpd_Product_2.SearchText,"Value")
+                    =Search(Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result),crc_dpd_cEmbotellador_1.SearchText,"Value")
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
