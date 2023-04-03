@@ -21,6 +21,17 @@
             Y: =0
             ZIndex: =1
 
+            crc_lbl_tituloScreen_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(5, 28, 87, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Bold
+                Height: =70
+                Size: =35
+                Text: ="Cross Reference"
+                Width: =1366
+                ZIndex: =1
+
         crc_dtc_subTitulo_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -31,6 +42,17 @@
             X: =0
             Y: =1
             ZIndex: =2
+
+            crc_lbl_subTitulo_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =30
+                Size: =12
+                Text: ="Estas tablas aplican para los inputs de Listas de precios,costos y netrevenue"
+                Width: =1366
+                ZIndex: =1
 
         crc_dtc_botones_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
