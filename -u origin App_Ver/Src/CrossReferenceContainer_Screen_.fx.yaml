@@ -178,15 +178,16 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["Value"]
+                DisplayFields: =["ComplianceAssetId"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
+                Items: =Filter(ArchivoFuente, Estatus = true)
                 OnChange: |
                     =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["Value"]
+                SearchFields: =["ComplianceAssetId"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
@@ -214,17 +215,16 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["Value"]
+                DisplayFields: =["ArchivoFuente"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: |-
-                    =Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result)
+                IsSearchable: =false
+                Items: =Filter(CrossReferenceContainer,Estatus = true)
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["Value"]
-                SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatBrand,";"), {Result: ThisRecord.Value}),Result),crc_dpd_cPepsico_filter_1.SearchText,"Value")
+                SearchFields: =["ArchivoFuente"]
+                SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
@@ -251,16 +251,15 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["Value"]
+                DisplayFields: =["ArchivoFuente"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
-                Items: |-
-                    =Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result)
+                IsSearchable: =false
+                Items: =CrossReferenceContainer
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["Value"]
-                SearchItems: |-
-                    =Search(Distinct(ForAll(Split(varConcatProduct,";"), {Result: ThisRecord.Value}),Result),crc_dpd_cEmbotellador_1.SearchText,"Value")
+                SearchFields: =["ArchivoFuente"]
+                SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
                 Width: =250
