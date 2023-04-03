@@ -106,6 +106,16 @@ ArchivoFuente_Screen As screen:
         Y: =297
         ZIndex: =7
 
+        Gallery1 As gallery.galleryVertical:
+            DelayItemLoading: =true
+            Height: =418
+            Items: =ArchivoFuente
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            X: =40
+            ZIndex: =1
+
     afs_cnt_dataFilterArchivoF As groupContainer.manualLayoutContainer:
         Height: =100
         Width: =1366
