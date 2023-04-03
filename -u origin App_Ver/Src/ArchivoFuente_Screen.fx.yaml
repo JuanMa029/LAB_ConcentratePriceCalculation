@@ -17,17 +17,17 @@ ArchivoFuente_Screen As screen:
         ZIndex: =3
 
     afs_cnt_headerArchivoFuente As groupContainer.manualLayoutContainer:
-        Height: =50
+        Height: =40
         Width: =1366
-        Y: =243
+        Y: =257
         ZIndex: =6
 
-        rs_btn_headerID_1 As button:
+        afs_btn_headerID As button:
+            Align: =Align.Left
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -35,15 +35,15 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="ID"
             Width: =91
-            X: =345
+            X: =391
             ZIndex: =1
 
-        rs_btn_headerNombre_1 As button:
+        afs_btn_headerNombre As button:
+            Align: =Align.Left
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -51,138 +51,80 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="Nombre"
             Width: =260
-            X: =rs_btn_headerID_1.X + rs_btn_headerID_1.Width
+            X: =482
             ZIndex: =2
 
-        rs_btn_headerEstatus_1 As button:
+        afs_btn_headerEstatus As button:
+            Align: =Align.Left
             Color: =RGBA(65, 65, 65, 1)
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
-            Height: =50
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =14
             Text: ="Estatus"
-            X: =rs_btn_headerNombre_1.X + rs_btn_headerNombre_1.Width
+            X: =742
             ZIndex: =3
 
-        rs_img_nuevo_1 As image:
-            Height: =40
-            Image: =add
-            Width: =63
-            X: =1132
-            Y: =5
-            ZIndex: =5
-
-        rs_btn_nuevo_1 As button:
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            Fill: =Color.Transparent
-            HoverFill: =Color.Transparent
-            OnSelect: |-
-                =UpdateContext({vsbPopupNewReg:true})
-            PressedFill: =Color.Transparent
+        afs_btn_accion As button:
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =RGBA(196, 222, 251, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Text: =""
-            Width: =63
-            X: =1132
-            Y: =5
-            ZIndex: =6
+            Width: =102
+            X: =902
+            ZIndex: =7
 
-    rs_cnt_dataRegion_1 As groupContainer.manualLayoutContainer:
-        Height: =366
+    afs_cnt_dataArchivoFuente As groupContainer.manualLayoutContainer:
+        Height: =418
         Width: =1366
-        Y: =349
+        Y: =297
         ZIndex: =7
 
-        rs_gal_dataRegion_1 As gallery.galleryVertical:
-            Height: =490
-            Items: |-
-                =SortByColumns(
-                    Filter(
-                        Region,
-                        StartsWith(
-                            NombreRegion,
-                            afs_txt_buscarNombre.Text
-                        ) 
-                    ),
-                    "IdRegion",
-                    SortOrder.Ascending
-                )
+        afs_gal_dataArchivoFuente As gallery.galleryVertical:
+            BorderColor: =RGBA(56, 136, 210, 1)
+            BorderThickness: =1
+            DelayItemLoading: =true
+            Height: =394
+            Items: =ArchivoFuente
             Layout: =Layout.Vertical
-            TemplateSize: =41
-            Width: =1366
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =1
+            TemplateSize: =40
+            Width: =612
+            X: =391
             ZIndex: =1
 
-            rs_txt_id_1 As text:
-                Align: =Align.Center
-                Default: =ThisItem.IdRegion
-                DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                DisabledColor: =RGBA(0, 0, 0, 1)
-                DisabledFill: =RGBA(255, 255, 255, 1)
-                DisplayMode: =DisplayMode.Disabled
-                Font: =Font.Lato
-                Size: =12
-                Width: =rs_btn_headerID_1.Width
-                X: =rs_btn_headerID_1.X
+            gal_fig_separador_Product_2 As rectangle:
+                Fill: =RGBA(201, 201, 201, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =40
                 ZIndex: =1
 
-            rs_txt_nombre_1 As text:
-                Align: =Align.Center
-                Default: =ThisItem.NombreRegion
-                DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                DisabledColor: =RGBA(0, 0, 0, 1)
-                DisabledFill: =RGBA(255, 255, 255, 1)
-                DisplayMode: =DisplayMode.Disabled
+            afs_lbl_idArchivoFuente_Gal As label:
                 Font: =Font.Lato
-                Size: =12
-                Width: =rs_btn_headerNombre_1.Width
-                X: =rs_btn_headerNombre_1.X
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.IdArchivoFuente
+                Width: =afs_btn_headerID.Width
                 ZIndex: =2
 
-            rs_icn_estatus_1 As circle:
-                Fill: =If(ThisItem.Estatus = false,RGBA(255, 0, 0, 1),RGBA(54, 176, 75, 1))
-                Height: =30
+            afs_lbl_nombreArchivoFuente_Gal As label:
+                Color: =RGBA(65, 65, 65, 1)
+                Font: =Font.Lato
                 OnSelect: =Select(Parent)
-                Width: =40
-                X: =747
-                Y: =5
-                ZIndex: =5
-
-            rs_img_edit_1 As image:
-                Height: =35
-                Image: =btnEdit
-                OnSelect: =Select(Parent)
-                PaddingBottom: =3
-                PaddingLeft: =3
-                PaddingRight: =3
-                PaddingTop: =3
-                Width: =41
-                X: =875
-                ZIndex: =6
-
-            rs_btn_edit_1 As button:
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(0, 0, 0, 0)
-                DisabledFill: =RGBA(0, 0, 0, 0)
-                Fill: =Color.Transparent
-                Height: =35
-                HoverFill: =Color.Transparent
-                OnSelect: |-
-                    =Select(Parent);
-                    Set(varTempID,ThisItem.ID);
-                    Set(varTempIDRegion,ThisItem.IdRegion);
-                    Set(varTempNombreReg,ThisItem.NombreRegion);
-                    Set(varTempEstatusReg,ThisItem.Estatus);
-                    UpdateContext({vsbPopupEditReg:true});
-                PressedFill: =Color.Transparent
-                Text: =""
-                Width: =41
-                X: =875
-                ZIndex: =7
+                Text: =ThisItem.NombreArchivoFuente
+                Width: =afs_btn_headerNombre.Width
+                X: =91
+                ZIndex: =3
 
     afs_cnt_dataFilterArchivoF As groupContainer.manualLayoutContainer:
         Height: =100
@@ -207,12 +149,43 @@ ArchivoFuente_Screen As screen:
             ZIndex: =1
 
         afs_txt_buscarNombre As text:
+            BorderColor: =RGBA(56, 136, 210, 1)
+            BorderThickness: =1
+            Clear: =true
+            Color: =RGBA(65, 65, 65, 1)
             Default: =""
+            Font: =Font.Lato
+            HoverBorderColor: =RGBA(56, 136, 210, 1)
+            HoverColor: =RGBA(65, 65, 65, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             Width: =356
             X: =505
             Y: =40
             ZIndex: =2
+
+        afs_img_nuevo As image:
+            Height: =50
+            Image: =add
+            Width: =50
+            X: =947
+            Y: =30
+            ZIndex: =3
+
+        afs_btn_nuevo As button:
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =Color.Transparent
+            Height: =50
+            HoverFill: =RGBA(56, 136, 210, 0.5)
+            OnSelect: |-
+                =UpdateContext({vsbPopupNewReg:true})
+            PressedFill: =RGBA(56, 136, 210, 0.2)
+            Text: =""
+            Width: =50
+            X: =947
+            Y: =30
+            ZIndex: =4
 
     rs_grp_nuevoRegion_1 As group:
         Height: =5
