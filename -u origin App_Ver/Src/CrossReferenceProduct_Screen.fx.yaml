@@ -72,7 +72,7 @@
                 DisabledBorderColor: =RGBA(107, 165, 231, 1)
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(107, 165, 231, 1)
-                DisplayMode: =//If(vsbBtnProduct = true,DisplayMode.Edit,DisplayMode.Disabled)
+                DisplayMode: =DisplayMode.Disabled
                 Fill: =RGBA(255, 255, 255, 1)
                 Font: =Font.Lato
                 Height: =50
