@@ -377,6 +377,137 @@
                 Y: =40
                 ZIndex: =6
 
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =267
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            crc_gal_dataContainer_1 As gallery.galleryVertical:
+                Height: =367
+                Items: =CrossReferenceContainer
+                Layout: =Layout.Vertical
+                TemplateSize: =41
+                Width: =1344
+                X: =22
+                ZIndex: =1
+
+                po_txt_category_3 As text:
+                    Default: =ThisItem.'Archivo Fuente'
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Width: =crc_btn_headerArchivoF_1.Width
+                    X: =crc_btn_headerArchivoF_1.X
+                    ZIndex: =2
+
+                po_txt_competitive_3 As text:
+                    Default: =ThisItem.COMPETITIVE_CATEGORY
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Width: =po_btn_competitive_1.Width
+                    X: =po_btn_competitive_1.X
+                    ZIndex: =3
+
+                po_txt_subcategory_3 As text:
+                    Default: =ThisItem.SUBCATEGORY
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_subcategory_1.Width
+                    X: =po_btn_subcategory_1.X
+                    ZIndex: =4
+
+                po_txt_region_3 As text:
+                    Default: =ThisItem.BRAND
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_brand_1.Width
+                    X: =po_btn_brand_1.X
+                    ZIndex: =5
+
+                po_txt_sugarC_3 As text:
+                    Default: =ThisItem.SUGAR_CONTENT
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_sugarC_1.Width
+                    X: =po_btn_sugarC_1.X
+                    ZIndex: =6
+
+                po_txt_ownerG_3 As text:
+                    Default: =ThisItem.OWNER_GROUP
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_OwnerG_1.Width
+                    X: =1200
+                    ZIndex: =7
+
+                po_txt_hfmC_3 As text:
+                    Default: =ThisItem.HFM_CATEGORY
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_hfmC_1.Width
+                    X: =1200
+                    ZIndex: =8
+
+                po_txt_hfmS_3 As text:
+                    Default: =ThisItem.HFM_SUBCATEGORY
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    Size: =12
+                    Width: =po_btn_hfmS_1.Width
+                    X: =1200
+                    ZIndex: =9
+
+                po_txt_product_2 As text:
+                    Default: =ThisItem.'Razon Social'
+                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledColor: =RGBA(0, 0, 0, 1)
+                    DisabledFill: =RGBA(255, 255, 255, 1)
+                    DisplayMode: =DisplayMode.Disabled
+                    Font: =Font.Lato
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Width: =crc_btn_headerRazonSocial_1.Width
+                    X: =crc_btn_headerRazonSocial_1.X
+                    ZIndex: =10
+
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
         ZIndex: =4
 
