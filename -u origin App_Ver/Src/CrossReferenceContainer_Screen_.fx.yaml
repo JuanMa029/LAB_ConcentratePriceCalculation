@@ -425,6 +425,82 @@
         Y: =15
         ZIndex: =5
 
+    crc_btn_newCRContainer_agregar_1 As button:
+        Fill: =RGBA(107, 165, 231, 1)
+        Font: =Font.Lato
+        HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+        OnSelect: |
+            =// Activamos componente loading
+            UpdateContext({vsbLoadingNewRglProd:true});
+            Set(responseSave,Blank());
+            //__ Validamos que no existan campos vacios
+            If(IsBlank(rvs_dpd_newRazonSocial_Container.Selected) || IsEmpty(rvs_dpd_newRazonSocial_Container.Selected) || IsBlank(rvs_dpd_newContainerType.Selected) || IsEmpty(rvs_dpd_newContainerType.Selected) || IsBlank(rvs_dpd_newContainer.Selected) || IsEmpty(rvs_dpd_newContainer.Selected),
+                Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
+            //__ Guardamos en una colección los datos de la solicitud
+            Clear(colReglaVolContainer);
+                Collect(
+                colReglaVolContainer,
+                {
+                    EmailUser: varEmail,
+                    GPID: varUserGPID,
+                    NombreUser: varUserName,
+                    FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                    HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                    RazonSocial:rvs_dpd_newRazonSocial_Container.Selected.NombreRazonSocial,
+                    IdRazonSocial: rvs_dpd_newRazonSocial_Container.Selected.ID,
+                    ContainerType: Concat(Sort(rvs_dpd_newContainerType.SelectedItems,Result,SortOrder.Ascending),Result,";"),
+                    Container: Concat(Sort(rvs_dpd_newContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                    //ContainerID: Concat(rvs_dpd_newContainer.SelectedItems,CONTAINER_ID,";"),
+                    Year_Solicitud: Value(Year(Now())),
+                    IdMes: Month(Now())
+                }
+                );
+            
+                //__ Invocamos el Flujo de Automate
+            Set(varJSONRegla,JSON(colReglaVolContainer));
+            Set(responseSave,'[CPC]_SaveRuleVolumenContainer'.Run(varJSONRegla));
+            Set(responseNewProd,responseSave.response);
+            //__ Realizamos Clear a la coleccion de Solicitud
+            If(responseNewProd = "Ok",
+                UpdateContext({vsbNewRglContainer:false});
+                Reset(rvs_dpd_newRazonSocial_Container);
+                Reset(rvs_dpd_newContainerType);
+                Reset(rvs_dpd_newContainer);
+                UpdateContext({vsbPopUpOk:true});
+                Set(responseSave,Blank());
+                Refresh(VolumeRuleContainer);
+            // Obtenemos Catalogo Volumen Container completo
+            ClearCollect(
+                    colContainerVlmRule,
+                    Filter(VolumeRuleContainer, IDRegla <= 2000),
+                    Filter(VolumeRuleContainer, IDRegla > 2000 && IDRegla <= 4000)
+            );
+                );
+            );
+            
+            // Desactivamos componente loading
+            UpdateContext({vsbLoadingNewRglProd:false});
+        PressedFill: =RGBA(56, 136, 210, 1)
+        Text: ="Agregar"
+        Visible: =vsbNewCRContainer
+        Width: =130
+        X: =619
+        Y: =580
+        ZIndex: =16
+
+    crc_lbl_newMsj_Container_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        Text: =responseSave.response
+        Visible: =vsbNewCRContainer
+        Width: =438
+        X: =464
+        Y: =620
+        ZIndex: =17
+
     rvs_cmp_loading_1 As Loading:
         Visible: =vsbLoading
         ZIndex: =18
@@ -596,82 +672,6 @@
             X: =922
             Y: =164
             ZIndex: =15
-
-        crc_btn_newCRContainer_agregar_1 As button:
-            Fill: =RGBA(107, 165, 231, 1)
-            Font: =Font.Lato
-            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
-            OnSelect: |
-                =// Activamos componente loading
-                UpdateContext({vsbLoadingNewRglProd:true});
-                Set(responseSave,Blank());
-                //__ Validamos que no existan campos vacios
-                If(IsBlank(rvs_dpd_newRazonSocial_Container.Selected) || IsEmpty(rvs_dpd_newRazonSocial_Container.Selected) || IsBlank(rvs_dpd_newContainerType.Selected) || IsEmpty(rvs_dpd_newContainerType.Selected) || IsBlank(rvs_dpd_newContainer.Selected) || IsEmpty(rvs_dpd_newContainer.Selected),
-                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
-                //__ Guardamos en una colección los datos de la solicitud
-                Clear(colReglaVolContainer);
-                    Collect(
-                    colReglaVolContainer,
-                    {
-                        EmailUser: varEmail,
-                        GPID: varUserGPID,
-                        NombreUser: varUserName,
-                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
-                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        RazonSocial:rvs_dpd_newRazonSocial_Container.Selected.NombreRazonSocial,
-                        IdRazonSocial: rvs_dpd_newRazonSocial_Container.Selected.ID,
-                        ContainerType: Concat(Sort(rvs_dpd_newContainerType.SelectedItems,Result,SortOrder.Ascending),Result,";"),
-                        Container: Concat(Sort(rvs_dpd_newContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
-                        //ContainerID: Concat(rvs_dpd_newContainer.SelectedItems,CONTAINER_ID,";"),
-                        Year_Solicitud: Value(Year(Now())),
-                        IdMes: Month(Now())
-                    }
-                    );
-                
-                    //__ Invocamos el Flujo de Automate
-                Set(varJSONRegla,JSON(colReglaVolContainer));
-                Set(responseSave,'[CPC]_SaveRuleVolumenContainer'.Run(varJSONRegla));
-                Set(responseNewProd,responseSave.response);
-                //__ Realizamos Clear a la coleccion de Solicitud
-                If(responseNewProd = "Ok",
-                    UpdateContext({vsbNewRglContainer:false});
-                    Reset(rvs_dpd_newRazonSocial_Container);
-                    Reset(rvs_dpd_newContainerType);
-                    Reset(rvs_dpd_newContainer);
-                    UpdateContext({vsbPopUpOk:true});
-                    Set(responseSave,Blank());
-                    Refresh(VolumeRuleContainer);
-                // Obtenemos Catalogo Volumen Container completo
-                ClearCollect(
-                        colContainerVlmRule,
-                        Filter(VolumeRuleContainer, IDRegla <= 2000),
-                        Filter(VolumeRuleContainer, IDRegla > 2000 && IDRegla <= 4000)
-                );
-                    );
-                );
-                
-                // Desactivamos componente loading
-                UpdateContext({vsbLoadingNewRglProd:false});
-            PressedFill: =RGBA(56, 136, 210, 1)
-            Text: ="Agregar"
-            Visible: =vsbNewCRContainer
-            Width: =130
-            X: =619
-            Y: =580
-            ZIndex: =16
-
-        crc_lbl_newMsj_Container_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(184, 0, 0, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =59
-            Text: =responseSave.response
-            Visible: =vsbNewCRContainer
-            Width: =438
-            X: =464
-            Y: =620
-            ZIndex: =17
 
         crc_lbl_newCEmbotellador_1 As label:
             Align: =Align.Center
