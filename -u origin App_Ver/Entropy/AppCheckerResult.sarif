@@ -1662,6 +1662,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 88,
+                  "snippet": {
+                    "text": "\"NombreRazonSocial\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "CrossReferenceProduct_Screen.crps_cnv_Principal.crps_dtc_filtros.crps_dpd_razonSocial_Filter.AccessibleLabel"
                 }
               ],
@@ -1765,6 +1805,96 @@
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceProduct_Screen",
                 "type": "CrossReferenceProduct_Screen.crps_cnv_Principal.crps_dtc_filtros.rvs_dpd_Product_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.Icon1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.Icon1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceProduct_Screen",
+                "type": "CrossReferenceProduct_Screen.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.Icon1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.Icon1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CrossReferenceProduct_Screen",
+                "type": "CrossReferenceProduct_Screen.Icon1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.ListBox1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceProduct_Screen.ListBox1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CrossReferenceProduct_Screen",
+                "type": "CrossReferenceProduct_Screen.ListBox1"
               }
             }
           ],
@@ -11952,19 +12082,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1"
+                "type": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1"
               }
             }
           ],
@@ -11982,19 +12112,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.TabIndex"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.TabIndex",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1"
+                "type": "CrossReferenceContainer_Screen_.rvs_icn_newContainer_cerrar_1"
               }
             }
           ],
@@ -12012,19 +12142,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1"
+                "type": "CrossReferenceContainer_Screen_.rvs_dpd_newRazonSocial_Container_1"
               }
             }
           ],
@@ -12042,19 +12172,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newContainerType_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newContainerType_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1"
+                "type": "CrossReferenceContainer_Screen_.rvs_dpd_newContainerType_1"
               }
             }
           ],
@@ -12072,109 +12202,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newContainer_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.rvs_dpd_newContainer_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1"
+                "type": "CrossReferenceContainer_Screen_.rvs_dpd_newContainer_1"
               }
             }
           ],
@@ -12814,6 +12854,96 @@
           },
           "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbLoadingNewRglProd"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbLoadingNewRglProd",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbLoadingNewRglProd",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbNewRglContainer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbNewRglContainer",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbNewRglContainer",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbPopUpOk"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbPopUpOk",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbPopUpOk",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
         }
       ],
       "tool": {
