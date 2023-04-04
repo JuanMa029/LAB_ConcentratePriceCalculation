@@ -416,7 +416,7 @@
             Items: =Filter(TiposCatalogos, Estatus = true)
             OnChange: |-
                 =//__ Validamos la seleccion
-                Switch( gs_lbx_catalogos.Selected.Value, 
+                Switch( crps_lst_catalogos.Selected.Descripcion, 
                     "Embotellador", Refresh(Embotelladores);Navigate(Embotellador_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
                     "País", Refresh(Pais);Navigate(Pais_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
                     "Razón Social", Refresh(RazonSocial);Navigate(RazonSocial_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
