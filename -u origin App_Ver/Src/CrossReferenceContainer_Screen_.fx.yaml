@@ -215,15 +215,18 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["ArchivoFuente"]
+                DisplayFields: =["Result"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Pepsico')
+                Items: |-
+                    =ForAll(Distinct(Filter(CrossReferenceContainer, Estatus = true && 
+                    (ArchivoFuente = crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente || crc_dpd_archivoFuente_filter_1.Selected.Result = Blank()))
+                    ,'Container Pepsico'), {Result: ThisRecord.Value})
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["ArchivoFuente"]
+                SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
