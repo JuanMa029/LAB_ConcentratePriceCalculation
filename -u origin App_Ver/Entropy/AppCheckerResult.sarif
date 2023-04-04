@@ -12162,19 +12162,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregar_2.TabIndex"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregar_2.TabIndex",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_agregar_2"
+                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
               }
             }
           ],
@@ -12192,19 +12192,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregar_2.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregar_2.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_agregar_2"
+                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
               }
             }
           ],
@@ -12222,79 +12222,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelar_2.TabIndex"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelar_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_cancelar_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelar_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelar_2.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_cancelar_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_nuevoNombreReg_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_nuevoNombreReg_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_txt_nuevoNombreReg_1"
+                "type": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo"
               }
             }
           ],

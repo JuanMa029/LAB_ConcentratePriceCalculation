@@ -312,74 +312,102 @@ ArchivoFuente_Screen As screen:
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =33
+        ZIndex: =34
 
-        rs_fig_fondo_3 As rectangle:
-            Fill: =RGBA(0, 18, 107, 0.5)
+        afss_fig_fondo_New As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
             Visible: =vsbPopupNewArchivoF
             Width: =1366
             ZIndex: =19
 
-        rs_fig_subfondo_3 As rectangle:
+        afs_fig_subfondo_New As rectangle:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =184
+            Height: =If(IsBlank(responseSave.response),220,298)
             Visible: =vsbPopupNewArchivoF
             Width: =524
-            X: =432
-            Y: =259
+            X: =437
+            Y: =203
             ZIndex: =20
 
-        rs_lbl_tituloNuevoRegion_2 As label:
+        afs_lbl_tituloNuevoArchivo As label:
             Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Text: ="Nueva Región"
+            Height: =50
+            Text: ="Nuevo Archivo Fuente"
             Visible: =vsbPopupNewArchivoF
             Width: =524
-            X: =432
-            Y: =259
+            X: =437
+            Y: =203
             ZIndex: =21
 
-        rs_lbl_nuevoNombreReg_6 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+        afs_lbl_nuevoNombreArchivo As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
-            Text: ="Nombre Región"
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Nombre"
             Visible: =vsbPopupNewArchivoF
-            X: =442
-            Y: =309
+            Width: =130
+            X: =634
+            Y: =276
             ZIndex: =22
 
-        rs_txt_nuevoNombreReg_1 As text:
+        afs_txt_nuevoNombreArchivo As text:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            Color: =RGBA(65, 65, 65, 1)
             Default: =""
             Font: =Font.Lato
+            HoverBorderColor: =RGBA(107, 165, 231, 1)
             OnChange: =
             Visible: =vsbPopupNewArchivoF
-            X: =602
-            Y: =309
+            X: =539
+            Y: =301
             ZIndex: =23
 
-        rs_icn_cancelar_2 As icon.CancelBadge:
-            Color: =RGBA(255, 0, 0, 1)
-            Height: =28
+        afs_icn_cancelar_New As icon.CancelBadge:
+            Color: =RGBA(65, 65, 65, 1)
+            Height: =35
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =UpdateContext({vsbPopupNewArchivoF:false});
-                Reset(rs_txt_nuevoNombreReg_1);
+                Reset(afs_txt_nuevoNombreArchivo);
                 Set(responseNuevoRegion,Blank());
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
             Visible: =vsbPopupNewArchivoF
-            Width: =34
-            X: =917
-            Y: =265
+            Width: =35
+            X: =913
+            Y: =210
             ZIndex: =24
 
-        rs_icn_agregar_2 As icon.CancelBadge:
-            Color: =RGBA(54, 176, 75, 1)
-            Height: =28
-            Icon: =Icon.CheckBadge
+        afs_lbl_msjError_New As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =62
+            Size: =12
+            Text: =responseNuevoRegion.response
+            Visible: =vsbPopupNewArchivoF
+            Width: =514
+            X: =442
+            Y: =419
+            ZIndex: =25
+
+        rvs_btn_newProduct_Agregar_2 As button:
+            Fill: =RGBA(107, 165, 231, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
             OnSelect: |-
                 =//__ Activamos componente loading
                 UpdateContext({vsbLoadingRegion:true});
@@ -387,7 +415,7 @@ ArchivoFuente_Screen As screen:
                 Set(responseNuevoRegion,Blank());
                 Clear(colNewRegion);
                 //__ Validamos que no existan campos vacios
-                If(IsBlank(rs_txt_nuevoNombreReg_1) || IsEmpty(rs_txt_nuevoNombreReg_1),
+                If(IsBlank(afs_txt_nuevoNombreArchivo) || IsEmpty(afs_txt_nuevoNombreArchivo),
                     Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
                 //__ Guardamos en una colección los datos de la busqueda
                     Collect(
@@ -398,7 +426,7 @@ ArchivoFuente_Screen As screen:
                         NombreUser: varUserName,
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        Region: rs_txt_nuevoNombreReg_1.Text,
+                        Region: afs_txt_nuevoNombreArchivo.Text,
                         TipoCatalogo: "Catalogo Maestro - Region",
                         MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
                         YearSolicitud:Value(Year(Now()))
@@ -411,7 +439,7 @@ ArchivoFuente_Screen As screen:
                 Set(responseRegion,responseNuevoRegion.response);
                 If(responseRegion = "Ok",
                     UpdateContext({vsbPopupNewReg:false});
-                    Reset(rs_txt_nuevoNombreReg_1);
+                    Reset(afs_txt_nuevoNombreArchivo);
                     Refresh(Region);
                     UpdateContext({vsbMsjOk:true});
                     Set(responseNuevoRegion,Blank());
@@ -421,24 +449,12 @@ ArchivoFuente_Screen As screen:
                 
                 //__ Activamos componente loading
                 UpdateContext({vsbLoadingRegion:false});
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Text: ="Agregar"
             Visible: =vsbPopupNewArchivoF
-            Width: =34
-            X: =437
-            Y: =265
-            ZIndex: =25
-
-        rs_lbl_msjError_2 As label:
-            Align: =Align.Center
-            Color: =RGBA(184, 0, 0, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =62
-            Size: =12
-            Text: =responseNuevoRegion.response
-            Visible: =vsbPopupNewArchivoF
-            Width: =514
-            X: =437
-            Y: =365
+            Width: =130
+            X: =634
+            Y: =366
             ZIndex: =26
 
     rs_grp_editarRegion_1 As group:
