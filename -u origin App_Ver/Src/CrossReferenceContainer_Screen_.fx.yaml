@@ -434,7 +434,7 @@
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =18
+        ZIndex: =21
 
         rvs_fig_fondoNewContainer_1 As rectangle:
             Fill: =RGBA(31, 95, 169, 0.5)
@@ -445,29 +445,29 @@
 
         rvs_fig_subfondoNewContainer_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),458,543)
+            Height: =475
             Visible: =vsbNewCRContainer
-            Width: =466
-            X: =450
+            Width: =570
+            X: =399
             Y: =161
             ZIndex: =7
 
-        rvs_lbl_tituloNewContainer_1 As label:
+        crc_lbl_tituloNewCRContainer_1 As label:
             Align: =Align.Center
             Color: =RGBA(71, 71, 71, 1)
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Height: =50
+            Height: =42
             Size: =15
-            Text: ="Nueva Regla de Volumen"
+            Text: ="Nueva Cross Reference Container"
             Visible: =vsbNewCRContainer
-            Width: =466
-            X: =450
+            Width: =570
+            X: =399
             Y: =161
             ZIndex: =8
 
-        rvs_lbl_newRazonSocial_Container_1 As label:
+        crc_lbl_newRazonSocial_1 As label:
             Align: =Align.Center
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
@@ -479,7 +479,7 @@
             Y: =239
             ZIndex: =9
 
-        rvs_dpd_newRazonSocial_Container_1 As combobox:
+        crc_dpd_newRazonSocial_1 As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -496,7 +496,7 @@
             PressedColor: =RGBA(65, 65, 65, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["NombreRazonSocial"]
-            SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_newRazonSocial_Container_1.SearchText,"NombreRazonSocial")
+            SearchItems: =Search(Filter(RazonSocial,Estatus = true),crc_dpd_newRazonSocial_1.SearchText,"NombreRazonSocial")
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
             Visible: =vsbNewCRContainer
@@ -505,19 +505,19 @@
             Y: =265
             ZIndex: =10
 
-        rvs_lbl_newContainerType_1 As label:
+        crc_lbl_newArchivoFuente_1 As label:
             Align: =Align.Center
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Height: =25
-            Text: ="Container Type"
+            Text: ="Archivo Fuente"
             Visible: =vsbNewCRContainer
             X: =608
             Y: =318
             ZIndex: =11
 
-        rvs_dpd_newContainerType_1 As combobox:
+        crc_dpd_newArchivoFuente_1 As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -532,7 +532,7 @@
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["Result"]
-            SearchItems: =Search(colCatContainerType,rvs_dpd_newContainerType_1.SearchText,"Result")
+            SearchItems: =Search(colCatContainerType,crc_dpd_newArchivoFuente_1.SearchText,"Result")
             SelectionFill: =RGBA(107, 165, 231, 1)
             Visible: =vsbNewCRContainer
             Width: =438
@@ -540,19 +540,20 @@
             Y: =343
             ZIndex: =12
 
-        rvs_lbl_newContainer_1 As label:
+        crc_lbl_newCPepsico_1 As label:
             Align: =Align.Center
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Height: =25
-            Text: ="Container"
+            Height: =31
+            Text: ="Container Pepsico"
             Visible: =vsbNewCRContainer
-            X: =608
-            Y: =397
+            Width: =218
+            X: =573
+            Y: =395
             ZIndex: =13
 
-        rvs_dpd_newContainer_1 As combobox:
+        crc_dpd_newCPepsico_1 As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -563,27 +564,27 @@
             DisplayFields: =["Value"]
             Font: =Font.Lato
             HoverColor: =RGBA(71, 71, 71, 1)
-            Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_newContainerType_1.SelectedItems),CONTAINER)
+            Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_newArchivoFuente_1.SelectedItems),CONTAINER)
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_newContainerType_1.SelectedItems),CONTAINER),rvs_dpd_newContainer_1.SearchText,"Value")
+            SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_newArchivoFuente_1.SelectedItems),CONTAINER),crc_dpd_newCPepsico_1.SearchText,"Value")
             SelectionFill: =RGBA(107, 165, 231, 1)
             Visible: =vsbNewCRContainer
             Width: =438
             X: =464
-            Y: =422
+            Y: =426
             ZIndex: =14
 
-        rvs_icn_newContainer_cerrar_1 As icon.CancelBadge:
+        crc_icn_newCRContainer_cerrar_1 As icon.CancelBadge:
             Color: =RGBA(71, 71, 71, 1)
             Height: =35
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =// Realizamos Reset a los componentes
-                Reset(rvs_dpd_newRazonSocial_Container_1);
-                Reset(rvs_dpd_newContainerType_1);
-                Reset(rvs_dpd_newContainer_1);
+                Reset(crc_dpd_newRazonSocial_1);
+                Reset(crc_dpd_newArchivoFuente_1);
+                Reset(crc_dpd_newCPepsico_1);
                 Set(responseSave,Blank());
                 UpdateContext({vsbNewRglContainer:false});
             PaddingBottom: =5
@@ -592,11 +593,11 @@
             PaddingTop: =5
             Visible: =vsbNewCRContainer
             Width: =35
-            X: =867
-            Y: =168
+            X: =922
+            Y: =164
             ZIndex: =15
 
-        rvs_btn_newContainer_agregar_1 As button:
+        crc_btn_newCRContainer_agregar_1 As button:
             Fill: =RGBA(107, 165, 231, 1)
             Font: =Font.Lato
             HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
@@ -655,11 +656,11 @@
             Text: ="Agregar"
             Visible: =vsbNewCRContainer
             Width: =130
-            X: =618
-            Y: =557
+            X: =619
+            Y: =580
             ZIndex: =16
 
-        rvs_lbl_newMsj_Container_1 As label:
+        crc_lbl_newMsj_Container_1 As label:
             Align: =Align.Center
             Color: =RGBA(184, 0, 0, 1)
             Font: =Font.Lato
@@ -671,4 +672,25 @@
             X: =464
             Y: =620
             ZIndex: =17
+
+        crc_lbl_newCEmbotellador_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            Text: ="Container Embotellador"
+            Visible: =vsbNewCRContainer
+            Width: =218
+            X: =575
+            Y: =476
+            ZIndex: =19
+
+        crc_txt_newCEmbotellador_1 As text:
+            Default: =""
+            Visible: =vsbNewCRContainer
+            Width: =438
+            X: =464
+            Y: =507
+            ZIndex: =20
 
