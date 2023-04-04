@@ -109,10 +109,9 @@
                 Y: =10
                 ZIndex: =2
 
-            rvs_img_newCRContainer_1 As image:
+            crc_img_newCRContainer_3 As image:
                 Height: =50
                 Image: =add
-                Visible: =If(varUserRol = "Administrador",true,false)
                 Width: =50
                 X: =1087
                 Y: =10
