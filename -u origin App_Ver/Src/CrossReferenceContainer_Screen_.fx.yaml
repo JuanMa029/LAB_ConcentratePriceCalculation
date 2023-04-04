@@ -696,7 +696,7 @@
             Y: =507
             ZIndex: =20
 
-    rvs_grp_editContainer_1 As group:
+    crc_grp_editCRC_1 As group:
         Height: =5
         Width: =5
         X: =40
@@ -706,14 +706,14 @@
         rvs_fig_fondoEditContainer_1 As rectangle:
             Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =1366
             ZIndex: =21
 
         rvs_fig_subfondoEditContainer_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =If(IsBlank(responseSave.response),400,465)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =466
             X: =451
             Y: =155
@@ -728,7 +728,7 @@
             Height: =50
             Size: =15
             Text: ="Editar Regla de Volumen"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =466
             X: =451
             Y: =155
@@ -741,7 +741,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             Text: ="Razón Social"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             X: =609
             Y: =233
             ZIndex: =24
@@ -773,7 +773,7 @@
             SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_editRazonSocial_Container_1.SearchText,"NombreRazonSocial")
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =437
             X: =465
             Y: =257
@@ -786,7 +786,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             Text: ="Container Type"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             X: =609
             Y: =312
             ZIndex: =26
@@ -814,7 +814,7 @@
             SearchFields: =["Value"]
             SearchItems: =[]
             SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
             X: =465
             Y: =337
@@ -827,7 +827,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             Text: ="Container"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             X: =609
             Y: =391
             ZIndex: =28
@@ -853,7 +853,7 @@
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_editContainerType_1.SelectedItems),CONTAINER),rvs_dpd_editContainer_1.SearchText,"Value")
             SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
             X: =465
             Y: =416
@@ -875,7 +875,7 @@
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =35
             X: =868
             Y: =162
@@ -946,7 +946,7 @@
                 UpdateContext({vsbLoadingNewRglProd:false});
             PressedFill: =RGBA(56, 136, 210, 1)
             Text: ="Actualizar"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =130
             X: =619
             Y: =494
@@ -959,7 +959,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =59
             Text: =responseSave.response
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
             X: =465
             Y: =549
@@ -972,7 +972,7 @@
             FontWeight: =FontWeight.Semibold
             Height: =28
             Text: ="Estatus"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =100
             X: =465
             Y: =478
@@ -985,7 +985,7 @@
             Height: =35
             ShowLabel: =false
             TrueFill: =RGBA(54, 176, 75, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =50
             X: =490
             Y: =506
