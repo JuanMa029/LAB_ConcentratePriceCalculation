@@ -419,8 +419,8 @@
                     Font: =Font.Lato
                     OnSelect: =Select(Parent)
                     Size: =12
-                    Width: =po_btn_competitive_1.Width
-                    X: =po_btn_competitive_1.X
+                    Width: =crc_btn_headerCPepsico_1.Width
+                    X: =crc_btn_headerCPepsico_1.X
                     ZIndex: =3
 
                 po_txt_subcategory_3 As text:
@@ -431,8 +431,8 @@
                     DisplayMode: =DisplayMode.Disabled
                     Font: =Font.Lato
                     Size: =12
-                    Width: =po_btn_subcategory_1.Width
-                    X: =po_btn_subcategory_1.X
+                    Width: =crc_btn_headerCEmbote_1.Width
+                    X: =crc_btn_headerCEmbote_1.X
                     ZIndex: =4
 
                 po_txt_region_3 As text:
@@ -443,8 +443,8 @@
                     DisplayMode: =DisplayMode.Disabled
                     Font: =Font.Lato
                     Size: =12
-                    Width: =po_btn_brand_1.Width
-                    X: =po_btn_brand_1.X
+                    Width: =crc_btn_headerStatus_1.Width
+                    X: =crc_btn_headerStatus_1.X
                     ZIndex: =5
 
                 po_txt_sugarC_3 As text:
@@ -455,8 +455,8 @@
                     DisplayMode: =DisplayMode.Disabled
                     Font: =Font.Lato
                     Size: =12
-                    Width: =po_btn_sugarC_1.Width
-                    X: =po_btn_sugarC_1.X
+                    Width: =crc_btn_headerEdit_1.Width
+                    X: =crc_btn_headerEdit_1.X
                     ZIndex: =6
 
                 po_txt_ownerG_3 As text:
