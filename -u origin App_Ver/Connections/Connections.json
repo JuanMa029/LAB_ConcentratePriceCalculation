@@ -188,6 +188,9 @@
           "Subregion": {
             "tableName": "8ec9f6c7-8993-470f-85cc-50207a4ca872"
           },
+          "TiposCatalogos": {
+            "tableName": "e4938e3b-b7c2-4faf-8e0a-23ffba14abac"
+          },
           "VolumeRuleContainer": {
             "tableName": "864392da-3cef-48f2-a825-4cb80dd62a3a"
           },
@@ -220,7 +223,8 @@
       "VolumeRuleProduct",
       "ArchivoFuente",
       "CrossReferenceContainer",
-      "ConfiguracionTipoCambio"
+      "ConfiguracionTipoCambio",
+      "TiposCatalogos"
     ],
     "dependencies": {},
     "dependents": [
