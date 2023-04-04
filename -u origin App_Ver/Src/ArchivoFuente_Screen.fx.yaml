@@ -247,10 +247,6 @@ ArchivoFuente_Screen As screen:
             Y: =40
             ZIndex: =5
 
-    afs_cmp_loading As Loading:
-        Visible: =vsbLoadingArchivoFuente
-        ZIndex: =22
-
     afs_grp_msjOk As group:
         Height: =5
         Width: =5
@@ -338,6 +334,10 @@ ArchivoFuente_Screen As screen:
             X: =651
             Y: =285
             ZIndex: =21
+
+    afs_cmp_loading As Loading:
+        Visible: =vsbLoadingArchivoFuente
+        ZIndex: =34
 
     afs_grp_nuevoArchivoFuente As group:
         Height: =5
@@ -502,16 +502,16 @@ ArchivoFuente_Screen As screen:
             Height: =768
             Visible: =vsbPopupEditArchivoF
             Width: =1366
-            ZIndex: =23
+            ZIndex: =22
 
         afs_fig_subfondo_Edit As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =406
+            Height: =If(IsBlank(responseEditArchivoF.response),345,406)
             Visible: =vsbPopupEditArchivoF
             Width: =524
             X: =422
             Y: =181
-            ZIndex: =24
+            ZIndex: =23
 
         afs_lbl_tituloArchivoF_Edit As label:
             Align: =Align.Center
@@ -525,7 +525,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =422
             Y: =181
-            ZIndex: =25
+            ZIndex: =24
 
         afs_lbl_idArchivoF_Edit As label:
             Align: =Align.Center
@@ -539,7 +539,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =422
             Y: =255
-            ZIndex: =26
+            ZIndex: =25
 
         afs_txt_idArchivoF_Edit As text:
             Align: =Align.Center
@@ -549,7 +549,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditArchivoF
             X: =520
             Y: =282
-            ZIndex: =27
+            ZIndex: =26
 
         afs_lbl_nombreArchivoF_Edit As label:
             Align: =Align.Center
@@ -563,7 +563,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =422
             Y: =334
-            ZIndex: =28
+            ZIndex: =27
 
         afs_txt_nombreArchivoF_Edit As text:
             Align: =Align.Center
@@ -577,7 +577,7 @@ ArchivoFuente_Screen As screen:
             Width: =437
             X: =465
             Y: =360
-            ZIndex: =29
+            ZIndex: =28
 
         afs_lbl_estatusArchivoF_Edit As label:
             Align: =Align.Center
@@ -590,7 +590,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditArchivoF
             X: =427
             Y: =447
-            ZIndex: =30
+            ZIndex: =29
 
         afs_tgg_estatusArchivoF_Edit As toggleSwitch:
             BorderStyle: =BorderStyle.None
@@ -603,7 +603,7 @@ ArchivoFuente_Screen As screen:
             Width: =50
             X: =473
             Y: =472
-            ZIndex: =31
+            ZIndex: =30
 
         afs_icn_cancelarArchivoF_Edit As icon.CancelBadge:
             Color: =RGBA(65, 65, 65, 1)
@@ -622,7 +622,7 @@ ArchivoFuente_Screen As screen:
             Width: =35
             X: =897
             Y: =188
-            ZIndex: =32
+            ZIndex: =31
 
         afs_lbl_msjErrorArchivoF_Edit As label:
             Align: =Align.Center
@@ -631,23 +631,68 @@ ArchivoFuente_Screen As screen:
             FontWeight: =FontWeight.Semibold
             Height: =62
             Size: =12
-            Text: =responseNuevoRegion.response
+            Text: =responseEditArchivoF.response
             Visible: =vsbPopupEditArchivoF
             Width: =514
             X: =427
             Y: =513
-            ZIndex: =34
+            ZIndex: =32
 
         afs_btn_editArchivoF_Actualizar As button:
             Fill: =RGBA(107, 165, 231, 1)
             Font: =Font.Lato
             HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
-            OnSelect: =
+            OnSelect: |-
+                =//__ Activamos componente loading
+                UpdateContext({vsbLoadingArchivoFuente:true});
+                //__ Realizamos Reset
+                Set(responseNuevoSubreg,Blank());
+                Clear(colEditArchivoF);
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(afs_txt_nombreArchivoF_Edit) || IsEmpty(afs_txt_nombreArchivoF_Edit) ,
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
+                //__ Guardamos en una colección los datos de la busqueda
+                    Collect(
+                    colEditArchivoF,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        ArchivoFuente: ss_txt_editNombreSubreg.Text,
+                        Estatus: ss_tgg_editEstatusSubreg.Value,
+                        TipoCatalogo: "Catalogo Maestro - Archivo Fuente",
+                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
+                        YearSolicitud:Value(Year(Now())),
+                        ID_List: varIdListAF,
+                        ArchivoFuente_old: varNombre_old,
+                        Estatus_old: varEstatus_old
+                    }
+                    );
+                
+                //__ Invocamos el Flujo de Automate
+                Set(varJSON,JSON(colEditArchivoF));
+                Set(responseEditArchivoF,'[CPC]_EditSubregion'.Run(varJSON));
+                Set(responseArchivoF,responseEditArchivoF.response);
+                If(responseArchivoF = "Ok",
+                    UpdateContext({vsbPopupEditArchivoF:false});
+                    Reset(ss_tgg_editEstatusSubreg);
+                    Reset(ss_txt_editNombreSubreg);
+                    Refresh(ArchivoFuente);
+                    UpdateContext({vsbMsjOk:true});
+                    Set(responseEditArchivoF,Blank());
+                    );
+                
+                );
+                
+                //__ Activamos componente loading
+                UpdateContext({vsbLoadingArchivoFuente:false});
             PressedFill: =RGBA(56, 136, 210, 1)
             Text: ="Actualizar"
             Visible: =vsbPopupEditArchivoF
             Width: =130
             X: =630
             Y: =454
-            ZIndex: =35
+            ZIndex: =33
 
