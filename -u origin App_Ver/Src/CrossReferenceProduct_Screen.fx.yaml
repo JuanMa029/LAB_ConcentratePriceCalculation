@@ -7,7 +7,7 @@
         Height: =708
         Width: =Parent.Width
         Y: =60
-        ZIndex: =3
+        ZIndex: =1
 
         crps_dtc_titulo As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -124,19 +124,18 @@
                 HoverFill: =RGBA(56, 136, 210, 0.5)
                 OnSelect: |-
                     =// Iniciamos loading
-                    UpdateContext({vsbLoadingNewRglProd:true});
+                    UpdateContext({vsbLoadingXrefProduct:true});
                     //Obtenemos Catalogo LAB_PRODUCT completo
                     ClearCollect(
                         colLabProductCompleto,
                         Filter(LAB_PRODUCT,NumberProduct <=2000),
                         Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
                         );
-                    //Aplicamos Distinct SubCategory
-                    ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
                     
-                    UpdateContext({vsbNewRglProduct:true});
+                    ClearCollect(colProductDist,Distinct(colLabProductCompleto,PRODUCT));
+                    UpdateContext({vsbNewXrefProduct:true});
                     // Finalizamos loading
-                    UpdateContext({vsbLoadingNewRglProd:false});
+                    UpdateContext({vsbLoadingXrefProduct:false});
                 PressedFill: =RGBA(56, 136, 210, 0.2)
                 Text: =""
                 Visible: =If(varUserRol = "Administrador",true,false)
@@ -424,7 +423,7 @@
                 ZIndex: =4
 
     crps_cmp_headerPrincipal As HeaderPrincipal:
-        ZIndex: =4
+        ZIndex: =2
 
     crps_icn_regresar As icon.Link:
         Color: =RGBA(255, 255, 255, 1)
@@ -434,7 +433,7 @@
         Width: =30
         X: =12
         Y: =15
-        ZIndex: =5
+        ZIndex: =3
 
     crps_grp_catalogos As group:
         Height: =5
@@ -448,7 +447,7 @@
             Height: =768
             Visible: =popUpCatalogos
             Width: =1366
-            ZIndex: =6
+            ZIndex: =4
 
         crps_fig_subfondo_Cat As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -457,7 +456,7 @@
             Width: =437
             X: =455
             Y: =223
-            ZIndex: =7
+            ZIndex: =5
 
         crps_lbl_etiqueta_Cat As label:
             Align: =Align.Center
@@ -471,7 +470,7 @@
             Width: =437
             X: =455
             Y: =223
-            ZIndex: =8
+            ZIndex: =6
 
         crps_icn_cerrar_Cat As icon.CancelBadge:
             Color: =RGBA(65, 65, 65, 1)
@@ -487,7 +486,7 @@
             Width: =35
             X: =843
             Y: =230
-            ZIndex: =9
+            ZIndex: =7
 
         crps_lst_catalogos As listbox:
             BorderColor: =RGBA(196, 222, 251, 1)
@@ -518,5 +517,366 @@
             Visible: =popUpCatalogos
             X: =515
             Y: =297
+            ZIndex: =8
+
+    rvs_grp_msjOk_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        rvs_fig_fondoAdd_1 As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =vsbPopUpOk
+            Width: =1366
+            ZIndex: =9
+
+        rvs_fig_subfondoAdd_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =284
+            Visible: =vsbPopUpOk
+            Width: =598
+            X: =385
+            Y: =192
             ZIndex: =10
+
+        rvs_lbl_tituloAdd_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =45
+            Text: =""
+            Visible: =vsbPopUpOk
+            Width: =598
+            X: =385
+            Y: =192
+            ZIndex: =11
+
+        rvs_lbl_msjAdd_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =56
+            Text: ="Registro Guardado con Éxito"
+            Visible: =vsbPopUpOk
+            Width: =598
+            X: =384
+            Y: =371
+            ZIndex: =12
+
+        rvs_lbl_headerTituloAdd_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Text: =""
+            Visible: =vsbPopUpOk
+            Width: =599
+            X: =384
+            Y: =192
+            ZIndex: =13
+
+        rvs_icn_cerrarAdd_1 As icon.ChevronDown:
+            Color: =RGBA(65, 65, 65, 1)
+            Height: =40
+            Icon: =Icon.BackArrow
+            OnSelect: |-
+                =UpdateContext({vsbPopUpOk:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbPopUpOk
+            Width: =40
+            X: =398
+            Y: =194
+            ZIndex: =14
+
+        rvs_icn_okAdd_1 As icon.Calculator:
+            Color: =RGBA(56, 136, 210, 1)
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.CheckBadge
+            Visible: =vsbPopUpOk
+            X: =651
+            Y: =285
+            ZIndex: =15
+
+    Loading_1 As Loading:
+        Visible: =vsbLoadingXrefProduct
+        ZIndex: =30
+
+    crps_grp_newXrefProduct As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        rvs_fig_fondoNewProduct_1 As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =vsbNewXrefProduct
+            Width: =1366
+            ZIndex: =16
+
+        rvs_fig_subfondoNew_Product_1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =If(IsBlank(responseSave.response),458,543)
+            Visible: =vsbNewXrefProduct
+            Width: =466
+            X: =450
+            Y: =161
+            ZIndex: =17
+
+        rvs_lbl_tituloNewProduct_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =15
+            Text: ="Cross Reference"
+            Visible: =vsbNewXrefProduct
+            Width: =466
+            X: =450
+            Y: =161
+            ZIndex: =18
+
+        rvs_lbl_newRazonSocial_Product_1 As label:
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =26
+            Text: ="Razón Social"
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =239
+            ZIndex: =19
+
+        rvs_dpd_newRazonSocial_Product_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            DisplayFields: =["NombreRazonSocial"]
+            Font: =Font.Lato
+            Height: =39
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Items: =Filter(RazonSocial,Estatus = true)
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["NombreRazonSocial"]
+            SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_newRazonSocial_Product_1.SearchText,"NombreRazonSocial")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =265
+            ZIndex: =20
+
+        rvs_lbl_newSubcategory_Product_1 As label:
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Archivo Fuente"
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =318
+            ZIndex: =21
+
+        rvs_dpd_newSubcategory_Product_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DisplayFields: =["NombreArchivoFuente"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            Items: =Filter(ArchivoFuente, Estatus = true)
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["NombreArchivoFuente"]
+            SearchItems: =Search(Filter(ArchivoFuente, Estatus = true),rvs_dpd_newSubcategory_Product_1.SearchText,"NombreArchivoFuente")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            SelectMultiple: =false
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =343
+            ZIndex: =22
+
+        rvs_lbl_newBrand_Product_1 As label:
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Producto Embotellador"
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =397
+            ZIndex: =23
+
+        TextInput1 As text:
+            BorderThickness: =1
+            Clear: =true
+            Default: ="Entrada de texto"
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =422
+            ZIndex: =24
+
+        rvs_lbl_newProduct_1 As label:
+            Color: =RGBA(5, 28, 87, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
+            Text: ="Producto Pepsi"
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =476
+            ZIndex: =25
+
+        rvs_dpd_newProduct_1 As combobox:
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(71, 71, 71, 1)
+            DisplayFields: =["Value"]
+            Font: =Font.Lato
+            HoverColor: =RGBA(71, 71, 71, 1)
+            Items: =colProductDist
+            PressedColor: =RGBA(71, 71, 71, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            SearchFields: =["Value"]
+            SearchItems: =Search(colProductDist,rvs_dpd_newProduct_1.SearchText,"Value")
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =501
+            ZIndex: =26
+
+        rvs_icn_newProduct_Cerrar_1 As icon.CancelBadge:
+            Color: =RGBA(71, 71, 71, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =// Realizamos Reset a los componentes
+                Reset(rvs_dpd_newRazonSocial_Product_1);
+                Reset(rvs_dpd_newSubcategory_Product_1);
+                Reset(TextInput1);
+                Reset(rvs_dpd_newProduct_1);
+                Set(responseSave,Blank());
+                UpdateContext({vsbNewXrefProduct:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbNewXrefProduct
+            Width: =35
+            X: =867
+            Y: =168
+            ZIndex: =27
+
+        rvs_btn_newProduct_Agregar_3 As button:
+            Fill: =RGBA(107, 165, 231, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+            OnSelect: |
+                =// Activamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:true});
+                Set(responseSave,Blank());
+                //__ Validamos que no existan campos vacios
+                If(IsBlank(rvs_dpd_newRazonSocial_Product_1.Selected) || IsEmpty(rvs_dpd_newRazonSocial_Product_1.Selected) || IsBlank(rvs_dpd_newSubcategory_Product_1.Selected) || IsEmpty(rvs_dpd_newSubcategory_Product_1.Selected) || IsBlank(rvs_dpd_newBrand_Product_1.Selected) || IsEmpty(rvs_dpd_newBrand_Product_1.Selected) || IsBlank(rvs_dpd_newProduct_1.Selected) || IsEmpty(rvs_dpd_newProduct_1.Selected),
+                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
+                //__ Guardamos en una colección los datos de la solicitud
+                Clear(colReglaVolProduct_);
+                    Collect(
+                    colReglaVolProduct_,
+                    {
+                        EmailUser: varEmail,
+                        GPID: varUserGPID,
+                        NombreUser: varUserName,
+                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                        RazonSocial:rvs_dpd_newRazonSocial_Product_1.Selected.NombreRazonSocial,
+                        IdRazonSocial: rvs_dpd_newRazonSocial_Product_1.Selected.ID,
+                        Subcategory: Concat(rvs_dpd_newSubcategory_Product_1.SelectedItems,Result,";"),
+                        Brand: Concat(rvs_dpd_newBrand_Product_1.SelectedItems,Result,";"),
+                        Product: Concat(rvs_dpd_newProduct_1.SelectedItems,PRODUCT,";"),
+                        ProductID: Concat(rvs_dpd_newProduct_1.SelectedItems,PRODUCT_ID,";"),
+                        Year_Solicitud: Value(Year(Now())),
+                        IdMes: Month(Now())
+                    }
+                    );
+                
+                    //__ Invocamos el Flujo de Automate
+                Set(varJSONRegla,JSON(colReglaVolProduct_));
+                Set(responseSave,'[CPC]_SaveRuleVolumenProduct'.Run(varJSONRegla));
+                Set(responseNewProd,responseSave.response);
+                //__ Realizamos Clear a la coleccion de Solicitud
+                If(responseNewProd = "Ok",
+                    UpdateContext({vsbNewRglProduct:false});
+                    Reset(rvs_dpd_newRazonSocial_Product_1);
+                    Reset(rvs_dpd_newSubcategory_Product_1);
+                    Reset(TextInput1);
+                    Reset(rvs_dpd_newProduct_1);
+                    Refresh(JerarquiaGeografica);
+                    UpdateContext({vsbPopUpOk:true});
+                    Set(responseSave,Blank());
+                    Refresh(VolumeRuleProduct);
+                // Obtenemos Catalogo Volumen Product completo
+                ClearCollect(
+                        colProductVlmRule,
+                        Filter(VolumeRuleProduct, IDRegla <= 2000),
+                        Filter(VolumeRuleProduct, IDRegla > 2000 && IDRegla <= 4000)
+                );
+                    );
+                );
+                
+                // Desactivamos componente loading
+                UpdateContext({vsbLoadingNewRglProd:false});
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Text: ="Agregar"
+            Visible: =vsbNewXrefProduct
+            Width: =130
+            X: =618
+            Y: =557
+            ZIndex: =28
+
+        rvs_lbl_newMsj_Product_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(184, 0, 0, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =59
+            Text: =responseSave.response
+            Visible: =vsbNewXrefProduct
+            Width: =438
+            X: =464
+            Y: =620
+            ZIndex: =29
 
