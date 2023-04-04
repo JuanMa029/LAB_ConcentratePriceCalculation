@@ -12612,6 +12612,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varIdListAF"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varIdListAF",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varIdListAF",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varNombre_old"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varNombre_old",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varNombre_old",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varEstatus_old"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varEstatus_old",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varEstatus_old",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.fondoAzul"
                 }
               ],
@@ -12731,17 +12821,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingNewRglProd"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingRegion"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingNewRglProd",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingRegion",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "vsbLoadingNewRglProd",
+                "member": "vsbLoadingRegion",
                 "module": "ArchivoFuente_Screen",
                 "type": "ArchivoFuente_Screen"
               }
@@ -12761,17 +12851,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingRegion"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbPopupEditReg"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbLoadingRegion",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.vsbPopupEditReg",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "vsbLoadingRegion",
+                "member": "vsbPopupEditReg",
                 "module": "ArchivoFuente_Screen",
                 "type": "ArchivoFuente_Screen"
               }
