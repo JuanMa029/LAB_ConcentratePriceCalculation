@@ -397,7 +397,7 @@
                 X: =22
                 ZIndex: =1
 
-                po_txt_category_3 As text:
+                crc_txt_archivoFuente_1 As text:
                     Default: =ThisItem.'Archivo Fuente'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -410,7 +410,7 @@
                     X: =411
                     ZIndex: =2
 
-                po_txt_competitive_3 As text:
+                crc_txt_dataCPepsico_1 As text:
                     Default: =ThisItem.'Container Pepsico'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -423,7 +423,7 @@
                     X: =631
                     ZIndex: =3
 
-                po_txt_subcategory_3 As text:
+                crc_txt_dataCEmbotellador_1 As text:
                     Default: =ThisItem.'Container Embotellador'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -435,7 +435,7 @@
                     X: =851
                     ZIndex: =4
 
-                po_txt_region_3 As text:
+                crc_txt_dataStatus_1 As text:
                     Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -447,7 +447,7 @@
                     X: =1071
                     ZIndex: =5
 
-                po_txt_sugarC_3 As text:
+                crc_txt_dataEdit_1 As text:
                     Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -459,7 +459,7 @@
                     X: =1181
                     ZIndex: =6
 
-                po_txt_product_2 As text:
+                crc_txt_dataRazonSocial_1 As text:
                     Default: =ThisItem.'Razon Social'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
