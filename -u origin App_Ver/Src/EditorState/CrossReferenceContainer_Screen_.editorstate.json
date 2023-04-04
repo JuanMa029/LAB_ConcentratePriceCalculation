@@ -2707,7 +2707,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_btn_newCRContainer_agregar_1",
-      "ParentIndex": 16,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4777,7 +4777,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_dpd_newArchivoFuente_1",
-      "ParentIndex": 11,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5174,7 +5174,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_dpd_newCPepsico_1",
-      "ParentIndex": 13,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5594,7 +5594,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_dpd_newRazonSocial_1",
-      "ParentIndex": 9,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6783,7 +6783,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_fig_fondoNewCRC_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6921,7 +6921,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CRC_fig_subfondoNewCRC_1",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7027,7 +7027,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_grp_newCRContainer_1",
-      "ParentIndex": 18,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7165,7 +7165,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_icn_newCRContainer_cerrar_1",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8786,7 +8786,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newArchivoFuente_1",
-      "ParentIndex": 10,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9103,7 +9103,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newCEmbotellador_1",
-      "ParentIndex": 14,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9420,7 +9420,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newCPepsico_1",
-      "ParentIndex": 12,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9723,7 +9723,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newMsj_Container_1",
-      "ParentIndex": 17,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10040,7 +10040,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newRazonSocial_1",
-      "ParentIndex": 8,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11557,7 +11557,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_txt_newCEmbotellador_1",
-      "ParentIndex": 15,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12037,7 +12037,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_btn_editContainer_Actualizar_1",
-      "ParentIndex": 26,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12283,7 +12283,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "rvs_cmp_loading_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12503,7 +12503,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editContainer_1",
-      "ParentIndex": 22,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12907,7 +12907,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editContainerType_1",
-      "ParentIndex": 18,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13346,7 +13346,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_dpd_editRazonSocial_Container_1",
-      "ParentIndex": 14,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13637,7 +13637,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_fondoEditContainer_1",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13775,7 +13775,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_fig_subfondoEditContainer_1",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14019,7 +14019,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_icn_editContainer_Cerrar_1",
-      "ParentIndex": 10,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14281,7 +14281,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_ediStatus_Container_1",
-      "ParentIndex": 25,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14598,7 +14598,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editContainer_1",
-      "ParentIndex": 20,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14915,7 +14915,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editContainerType_1",
-      "ParentIndex": 16,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15218,7 +15218,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editMsj_Container_1",
-      "ParentIndex": 29,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15535,7 +15535,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_editRazonSocial_Container_1",
-      "ParentIndex": 12,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15859,7 +15859,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_lbl_tituloEditContainer_1",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16171,7 +16171,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "rvs_tgg_editContainer_1",
-      "ParentIndex": 27,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
