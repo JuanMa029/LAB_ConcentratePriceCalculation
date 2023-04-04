@@ -41,7 +41,8 @@ Pais_Screen As screen:
         Height: =47
         HoverFill: =Color.Transparent
         OnSelect: |-
-            =Navigate(Geografia_Screen,ScreenTransition.UnCoverRight);
+            =Back();
+            //Navigate(Geografia_Screen,ScreenTransition.UnCoverRight);
             Reset(ps_txt_buscarNombre);
         PressedFill: =Color.Transparent
         Text: =""

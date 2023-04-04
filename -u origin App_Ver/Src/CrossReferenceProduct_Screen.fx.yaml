@@ -416,12 +416,13 @@
             Items: =Filter(TiposCatalogos, Estatus = true)
             OnChange: |-
                 =//__ Validamos la seleccion
-                Switch( gs_lbx_catalogos.Selected.Value, 
-                    "Embotellador", Refresh(Embotelladores);Navigate(Embotellador_Screen,ScreenTransition.UnCover);UpdateContext({vsbPopupSeleccionarCat:false});Reset(gs_lbx_catalogos), 
-                    "País", Refresh(Pais);Navigate(Pais_Screen,ScreenTransition.UnCover);UpdateContext({vsbPopupSeleccionarCat:false});Reset(gs_lbx_catalogos),
-                    "Razón Social", Refresh(RazonSocial);Navigate(RazonSocial_Screen,ScreenTransition.UnCover);UpdateContext({vsbPopupSeleccionarCat:false});Reset(gs_lbx_catalogos),
-                    "Región", Refresh(Region);Navigate(Region_Screen,ScreenTransition.UnCover);UpdateContext({vsbPopupSeleccionarCat:false});Reset(gs_lbx_catalogos),
-                    "Subregión", Refresh(Subregion);Navigate(Subregion_Screen,ScreenTransition.UnCover);UpdateContext({vsbPopupSeleccionarCat:false});Reset(gs_lbx_catalogos)
+                Switch( crps_lst_catalogos.Selected.Descripcion, 
+                    "Embotellador", Refresh(Embotelladores);Navigate(Embotellador_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
+                    "País", Refresh(Pais);Navigate(Pais_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
+                    "Razón Social", Refresh(RazonSocial);Navigate(RazonSocial_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
+                    "Región", Refresh(Region);Navigate(Region_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
+                    "Subregión", Refresh(Subregion);Navigate(Subregion_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos),
+                    "Archivo Fuente", Refresh(ArchivoFuente);Navigate(ArchivoFuente_Screen,ScreenTransition.UnCover);UpdateContext({popUpCatalogos:false});Reset(crps_lst_catalogos)
                     )
                     
             PressedColor: =RGBA(65, 65, 65, 1)
