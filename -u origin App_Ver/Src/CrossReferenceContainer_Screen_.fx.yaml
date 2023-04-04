@@ -215,18 +215,15 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["Result"]
+                DisplayFields: =["ArchivoFuente"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: |-
-                    =ForAll(Distinct(Filter(CrossReferenceContainer, Estatus = true && 
-                    (ArchivoFuente = crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente || crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente = Blank()))
-                    ,'Container Pepsico'), {Result: ThisRecord.Value})
+                Items: =CrossReferenceContainer
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["Result"]
+                SearchFields: =["ArchivoFuente"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
@@ -254,14 +251,14 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["Value"]
+                DisplayFields: =["ArchivoFuente"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(CrossReferenceContaine,Estatus = true),'Container Embotellador')
+                Items: =CrossReferenceContainer
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["Value"]
+                SearchFields: =["ArchivoFuente"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
