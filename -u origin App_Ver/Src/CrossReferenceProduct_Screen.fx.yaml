@@ -109,7 +109,7 @@
                 Y: =23
                 ZIndex: =2
 
-            rvs_img_newReglaProduct_1 As image:
+            crps_img_newXrefProduct As image:
                 Height: =50
                 Image: =add
                 Visible: =If(varUserRol = "Administrador",true,false)
@@ -118,7 +118,7 @@
                 Y: =23
                 ZIndex: =3
 
-            rvs_btn_newReglaProduct_1 As button:
+            crps_btn_newXrefProduct As button:
                 Fill: =Color.Transparent
                 Height: =50
                 HoverFill: =RGBA(56, 136, 210, 0.5)
@@ -144,7 +144,7 @@
                 Y: =23
                 ZIndex: =4
 
-            rvs_img_newReglaProduct_2 As image:
+            crps_img_catalogos As image:
                 Height: =50
                 Image: =books
                 Visible: =If(varUserRol = "Administrador",true,false)
@@ -153,7 +153,7 @@
                 Y: =23
                 ZIndex: =5
 
-            rvs_btn_newReglaProduct_2 As button:
+            crps_btn_catalogos As button:
                 Fill: =Color.Transparent
                 Height: =50
                 HoverFill: =RGBA(56, 136, 210, 0.5)
@@ -735,9 +735,14 @@
             ZIndex: =23
 
         TextInput1 As text:
+            BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             Clear: =true
-            Default: ="Entrada de texto"
+            Color: =RGBA(65, 65, 65, 1)
+            Default: =""
+            Font: =Font.Lato
+            HoverBorderColor: =RGBA(107, 165, 231, 1)
+            HoverColor: =RGBA(65, 65, 65, 1)
             Visible: =vsbNewXrefProduct
             Width: =438
             X: =464
