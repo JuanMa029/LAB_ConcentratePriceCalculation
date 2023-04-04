@@ -409,7 +409,7 @@
                 Y: =40
                 ZIndex: =6
 
-        DataCard2 As dataCard.blankCard:
+        crc_dtc_data_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -419,90 +419,6 @@
             X: =0
             Y: =5
             ZIndex: =6
-
-            crc_gal_dataContainer_1 As gallery.galleryVertical:
-                Height: =367
-                Items: =CrossReferenceContainer
-                Layout: =Layout.Vertical
-                TemplateSize: =41
-                Width: =1344
-                X: =22
-                ZIndex: =1
-
-                crc_txt_archivoFuente_1 As text:
-                    Default: =ThisItem.'Archivo Fuente'
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    OnSelect: =Select(Parent)
-                    Size: =12
-                    Width: =crc_btn_headerArchivoF_1.Width
-                    X: =411
-                    ZIndex: =2
-
-                crc_txt_dataCPepsico_1 As text:
-                    Default: =ThisItem.'Container Pepsico'
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    OnSelect: =Select(Parent)
-                    Size: =12
-                    Width: =crc_btn_headerCPepsico_1.Width
-                    X: =631
-                    ZIndex: =3
-
-                crc_txt_dataCEmbotellador_1 As text:
-                    Default: =ThisItem.'Container Embotellador'
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =crc_btn_headerCEmbote_1.Width
-                    X: =851
-                    ZIndex: =4
-
-                crc_txt_dataStatus_1 As text:
-                    Default: =
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =crc_btn_headerStatus_1.Width
-                    X: =1071
-                    ZIndex: =5
-
-                crc_txt_dataEdit_1 As text:
-                    Default: =
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =crc_btn_headerEdit_1.Width
-                    X: =1181
-                    ZIndex: =6
-
-                crc_txt_dataRazonSocial_1 As text:
-                    Default: =ThisItem.'Razon Social'
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    OnSelect: =Select(Parent)
-                    Size: =12
-                    Width: =crc_btn_headerRazonSocial_1.Width
-                    X: =16
-                    ZIndex: =10
 
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
         ZIndex: =4
