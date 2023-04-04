@@ -588,7 +588,7 @@ ArchivoFuente_Screen As screen:
             Height: =28
             Icon: =Icon.CancelBadge
             OnSelect: |
-                =UpdateContext({vsbPopupEditReg:false});
+                =UpdateContext({vsbPopupEditArchivoF:false});
                 Set(responseNuevoRegion,Blank());
                 Reset(rs_tgg_editEstatusReg_1);
                 Reset(rs_txt_editNombreReg_1);
