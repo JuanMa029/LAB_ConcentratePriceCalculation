@@ -338,6 +338,91 @@
                 Y: =47
                 ZIndex: =8
 
+        crps_dtc_lineXrefProduct As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =30
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+        crps_dtc_headerXrefProduct As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            rvs_btn_headerRazonSocial_Prd_1 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Razón Social"
+                Width: =440
+                ZIndex: =1
+
+            crps_btn_headerArchivoFuente As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Archivo Fuente"
+                Width: =231
+                X: =440
+                ZIndex: =2
+
+            rvs_btn_headerRazonSocial_Prd_2 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Producto Embotellador"
+                Width: =350
+                X: =671
+                ZIndex: =3
+
+            rvs_btn_headerRazonSocial_Prd_3 As button:
+                Align: =Align.Left
+                Color: =RGBA(65, 65, 65, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(196, 222, 251, 1)
+                Font: =Font.Lato
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =14
+                Text: ="Producto Pepsico"
+                Width: =313
+                X: =1021
+                ZIndex: =4
+
     crps_cmp_headerPrincipal As HeaderPrincipal:
         ZIndex: =4
 
