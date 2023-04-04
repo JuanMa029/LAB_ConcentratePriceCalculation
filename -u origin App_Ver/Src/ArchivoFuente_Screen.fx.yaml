@@ -244,68 +244,97 @@ ArchivoFuente_Screen As screen:
             Y: =40
             ZIndex: =5
 
-    rs_grp_msjCorrecto_1 As group:
+    afs_grp_msjOk As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =22
+        ZIndex: =33
 
-        ps_fig_fondoOk_3 As rectangle:
-            Fill: =RGBA(0, 18, 107, 0.5)
+        afs_fig_fondo_MsjOk As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
             Visible: =vsbMsjOk
             Width: =1366
             ZIndex: =27
 
-        ps_fig_subfondoOk_3 As rectangle:
+        afs_fig_subfondo_MsjOk As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =242
+            Height: =284
             Visible: =vsbMsjOk
-            Width: =524
-            X: =421
-            Y: =175
+            Width: =598
+            X: =385
+            Y: =192
             ZIndex: =28
 
-        ps_lbl_tituloOk_3 As label:
+        afs_lbl_titulo_MsjOk As label:
             Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
+            Height: =45
             Text: =""
             Visible: =vsbMsjOk
-            Width: =524
-            X: =421
-            Y: =175
+            Width: =598
+            X: =385
+            Y: =192
             ZIndex: =29
 
-        ps_lbl_msjOk_3 As label:
+        "'afs_lbl_msj_ Ok' As label":
             Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Height: =62
-            Size: =12
+            Height: =56
             Text: ="Registro Guardado con Éxito"
             Visible: =vsbMsjOk
-            Width: =514
-            X: =426
-            Y: =337
+            Width: =598
+            X: =384
+            Y: =371
             ZIndex: =30
 
-        ps_icn_ok_3 As icon.Information:
-            Color: =RGBA(54, 176, 75, 1)
-            Icon: =Icon.CheckBadge
+        afs_lbl_headerTitulo_MsjOk As label:
+            Align: =Align.Center
+            Color: =RGBA(71, 71, 71, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Text: =""
+            Visible: =vsbMsjOk
+            Width: =599
+            X: =384
+            Y: =192
+            ZIndex: =31
+
+        afs_icn_cerrar_MsjOk As icon.ChevronDown:
+            Color: =RGBA(65, 65, 65, 1)
+            Height: =40
+            Icon: =Icon.BackArrow
             OnSelect: |-
                 =UpdateContext({vsbMsjOk:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =vsbMsjOk
+            Width: =40
+            X: =398
+            Y: =194
+            ZIndex: =32
+
+        afs_icn_ok_Msj As icon.Calculator:
+            Color: =RGBA(56, 136, 210, 1)
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.CheckBadge
             Visible: =vsbMsjOk
             X: =651
-            Y: =243
-            ZIndex: =31
+            Y: =285
+            ZIndex: =33
 
     afs_cmp_loading As Loading:
         Visible: =vsbLoadingArchivoFuente
-        ZIndex: =32
+        ZIndex: =34
 
     afs_grp_nuevoArchivoFuente As group:
         Height: =5
@@ -325,7 +354,7 @@ ArchivoFuente_Screen As screen:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),220,298)
+            Height: =If(IsBlank(responseNuevoArchivoF.response),220,298)
             Visible: =vsbPopupNewArchivoF
             Width: =524
             X: =437
@@ -397,7 +426,7 @@ ArchivoFuente_Screen As screen:
             FontWeight: =FontWeight.Semibold
             Height: =62
             Size: =12
-            Text: =responseNuevoRegion.response
+            Text: =responseNuevoArchivoF.response
             Visible: =vsbPopupNewArchivoF
             Width: =514
             X: =442
@@ -412,37 +441,37 @@ ArchivoFuente_Screen As screen:
                 =//__ Activamos componente loading
                 UpdateContext({vsbLoadingArchivoFuente:true});
                 //__ Realizamos Reset
-                Set(responseNuevoRegion,Blank());
-                Clear(colNewRegion);
+                Set(responseNuevoArchivoF,Blank());
+                Clear(colNewArchivoFuente);
                 //__ Validamos que no existan campos vacios
                 If(IsBlank(afs_txt_nuevoNombreArchivo) || IsEmpty(afs_txt_nuevoNombreArchivo),
                     Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
                 //__ Guardamos en una colección los datos de la busqueda
                     Collect(
-                    colNewRegion,
+                    colNewArchivoFuente,
                     {
                         EmailUser: varEmail,
                         GPID: varUserGPID,
                         NombreUser: varUserName,
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        Region: afs_txt_nuevoNombreArchivo.Text,
-                        TipoCatalogo: "Catalogo Maestro - Region",
+                        ArchivoFuente: afs_txt_nuevoNombreArchivo.Text,
+                        TipoCatalogo: "Catalogo Maestro - Archivo Fuente",
                         MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
                         YearSolicitud:Value(Year(Now()))
                     }
                     );
                 
                 //__ Invocamos el Flujo de Automate
-                Set(varJSON,JSON(colNewRegion));
-                Set(responseNuevoRegion,'[CPC]_SaveRegion'.Run(varJSON));
-                Set(responseRegion,responseNuevoRegion.response);
-                If(responseRegion = "Ok",
-                    UpdateContext({vsbPopupNewReg:false});
+                Set(varJSON,JSON(colNewArchivoFuente));
+                Set(responseNuevoArchivoF,'[CPC]_SaveArchivoFuente'.Run(varJSON));
+                Set(responseAF,responseNuevoArchivoF.response);
+                If(responseAF = "Ok",
+                    UpdateContext({vsbPopupNewArchivoF:false});
                     Reset(afs_txt_nuevoNombreArchivo);
-                    Refresh(Region);
+                    Refresh(ArchivoFuente);
                     UpdateContext({vsbMsjOk:true});
-                    Set(responseNuevoRegion,Blank());
+                    Set(responseNuevoArchivoF,Blank());
                     );
                 
                 );
