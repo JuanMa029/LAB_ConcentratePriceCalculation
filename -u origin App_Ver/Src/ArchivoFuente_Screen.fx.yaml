@@ -646,7 +646,7 @@ ArchivoFuente_Screen As screen:
                 =//__ Activamos componente loading
                 UpdateContext({vsbLoadingArchivoFuente:true});
                 //__ Realizamos Reset
-                Set(responseNuevoSubreg,Blank());
+                Set(responseEditArchivoF,Blank());
                 Clear(colEditArchivoF);
                 //__ Validamos que no existan campos vacios
                 If(IsBlank(afs_txt_nombreArchivoF_Edit) || IsEmpty(afs_txt_nombreArchivoF_Edit) ,
@@ -660,7 +660,7 @@ ArchivoFuente_Screen As screen:
                         NombreUser: varUserName,
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        ArchivoFuente: ss_txt_editNombreSubreg.Text,
+                        ArchivoFuente: afs_txt_nombreArchivoF_Edit.Text,
                         Estatus: ss_tgg_editEstatusSubreg.Value,
                         TipoCatalogo: "Catalogo Maestro - Archivo Fuente",
                         MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
@@ -673,7 +673,7 @@ ArchivoFuente_Screen As screen:
                 
                 //__ Invocamos el Flujo de Automate
                 Set(varJSON,JSON(colEditArchivoF));
-                Set(responseEditArchivoF,'[CPC]_EditSubregion'.Run(varJSON));
+                Set(responseEditArchivoF,'[CPC]_EditArchivoFuente'.Run(varJSON));
                 Set(responseArchivoF,responseEditArchivoF.response);
                 If(responseArchivoF = "Ok",
                     UpdateContext({vsbPopupEditArchivoF:false});
