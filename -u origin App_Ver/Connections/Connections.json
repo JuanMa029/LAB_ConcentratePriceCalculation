@@ -117,6 +117,12 @@
           "CatalogoFrecuencia": {
             "tableName": "ce0b16aa-370d-4ac6-86bd-87b62c115add"
           },
+          "ConfiguracionTipoCambio": {
+            "tableName": "b3f666a5-4073-483a-aff4-39c6e145f3ce"
+          },
+          "CrossReferenceContainer": {
+            "tableName": "458be5ab-6a10-47a2-a309-9933bf6989e4"
+          },
           "Embotelladores": {
             "tableName": "29baceed-22ae-4c27-8d18-dfdd6e57b589"
           },
@@ -171,7 +177,9 @@
       "VolumeRuleInnovation",
       "VolumeRuleContainer",
       "VolumeRuleProduct",
-      "ArchivoFuente"
+      "ArchivoFuente",
+      "CrossReferenceContainer",
+      "ConfiguracionTipoCambio"
     ],
     "dependencies": {},
     "dependents": [
