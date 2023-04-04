@@ -410,7 +410,7 @@ ArchivoFuente_Screen As screen:
             HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
             OnSelect: |-
                 =//__ Activamos componente loading
-                UpdateContext({vsbLoadingRegion:true});
+                UpdateContext({vsbLoadingArchivoFuente:true});
                 //__ Realizamos Reset
                 Set(responseNuevoRegion,Blank());
                 Clear(colNewRegion);
@@ -448,7 +448,7 @@ ArchivoFuente_Screen As screen:
                 );
                 
                 //__ Activamos componente loading
-                UpdateContext({vsbLoadingRegion:false});
+                UpdateContext({vsbLoadingArchivoFuente:false});
             PressedFill: =RGBA(56, 136, 210, 1)
             Text: ="Agregar"
             Visible: =vsbPopupNewArchivoF
