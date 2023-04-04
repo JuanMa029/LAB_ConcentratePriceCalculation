@@ -661,8 +661,9 @@
                 Reset(crc_dpd_newRazonSocial_1);
                 Reset(crc_dpd_newArchivoFuente_1);
                 Reset(crc_dpd_newCPepsico_1);
-                Set(responseSave,Blank());
-                UpdateContext({vsbNewRglContainer:false});
+                Reset(crc_txt_newCEmbotellador_1);
+                //Set(responseSave;Blank());;
+                UpdateContext({vsbNewCRContainer:false});
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
