@@ -247,6 +247,10 @@ ArchivoFuente_Screen As screen:
             Y: =40
             ZIndex: =5
 
+    afs_cmp_loading As Loading:
+        Visible: =vsbLoadingArchivoFuente
+        ZIndex: =22
+
     afs_grp_msjOk As group:
         Height: =5
         Width: =5
@@ -259,7 +263,7 @@ ArchivoFuente_Screen As screen:
             Height: =768
             Visible: =vsbMsjOk
             Width: =1366
-            ZIndex: =27
+            ZIndex: =15
 
         afs_fig_subfondo_MsjOk As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -268,7 +272,7 @@ ArchivoFuente_Screen As screen:
             Width: =598
             X: =385
             Y: =192
-            ZIndex: =28
+            ZIndex: =16
 
         afs_lbl_titulo_MsjOk As label:
             Align: =Align.Center
@@ -282,7 +286,7 @@ ArchivoFuente_Screen As screen:
             Width: =598
             X: =385
             Y: =192
-            ZIndex: =29
+            ZIndex: =17
 
         "'afs_lbl_msj_ Ok' As label":
             Align: =Align.Center
@@ -295,7 +299,7 @@ ArchivoFuente_Screen As screen:
             Width: =598
             X: =384
             Y: =371
-            ZIndex: =30
+            ZIndex: =18
 
         afs_lbl_headerTitulo_MsjOk As label:
             Align: =Align.Center
@@ -308,7 +312,7 @@ ArchivoFuente_Screen As screen:
             Width: =599
             X: =384
             Y: =192
-            ZIndex: =31
+            ZIndex: =19
 
         afs_icn_cerrar_MsjOk As icon.ChevronDown:
             Color: =RGBA(65, 65, 65, 1)
@@ -324,7 +328,7 @@ ArchivoFuente_Screen As screen:
             Width: =40
             X: =398
             Y: =194
-            ZIndex: =32
+            ZIndex: =20
 
         afs_icn_ok_Msj As icon.Calculator:
             Color: =RGBA(56, 136, 210, 1)
@@ -333,11 +337,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbMsjOk
             X: =651
             Y: =285
-            ZIndex: =33
-
-    afs_cmp_loading As Loading:
-        Visible: =vsbLoadingArchivoFuente
-        ZIndex: =34
+            ZIndex: =21
 
     afs_grp_nuevoArchivoFuente As group:
         Height: =5
@@ -351,7 +351,7 @@ ArchivoFuente_Screen As screen:
             Height: =768
             Visible: =vsbPopupNewArchivoF
             Width: =1366
-            ZIndex: =19
+            ZIndex: =7
 
         afs_fig_subfondo_New As rectangle:
             BorderColor: =RGBA(107, 165, 231, 1)
@@ -362,7 +362,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =437
             Y: =203
-            ZIndex: =20
+            ZIndex: =8
 
         afs_lbl_tituloNuevoArchivo As label:
             Align: =Align.Center
@@ -376,7 +376,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =437
             Y: =203
-            ZIndex: =21
+            ZIndex: =9
 
         afs_lbl_nuevoNombreArchivo As label:
             Align: =Align.Center
@@ -389,7 +389,7 @@ ArchivoFuente_Screen As screen:
             Width: =130
             X: =634
             Y: =276
-            ZIndex: =22
+            ZIndex: =10
 
         afs_txt_nuevoNombreArchivo As text:
             BorderColor: =RGBA(107, 165, 231, 1)
@@ -398,11 +398,12 @@ ArchivoFuente_Screen As screen:
             Default: =""
             Font: =Font.Lato
             HoverBorderColor: =RGBA(107, 165, 231, 1)
+            HoverColor: =RGBA(65, 65, 65, 1)
             OnChange: =
             Visible: =vsbPopupNewArchivoF
             X: =539
             Y: =301
-            ZIndex: =23
+            ZIndex: =11
 
         afs_icn_cancelar_New As icon.CancelBadge:
             Color: =RGBA(65, 65, 65, 1)
@@ -411,7 +412,7 @@ ArchivoFuente_Screen As screen:
             OnSelect: |-
                 =UpdateContext({vsbPopupNewArchivoF:false});
                 Reset(afs_txt_nuevoNombreArchivo);
-                Set(responseNuevoRegion,Blank());
+                Set(responseNuevoArchivoF,Blank());
             PaddingBottom: =5
             PaddingLeft: =5
             PaddingRight: =5
@@ -420,7 +421,7 @@ ArchivoFuente_Screen As screen:
             Width: =35
             X: =913
             Y: =210
-            ZIndex: =24
+            ZIndex: =12
 
         afs_lbl_msjError_New As label:
             Align: =Align.Center
@@ -434,7 +435,7 @@ ArchivoFuente_Screen As screen:
             Width: =514
             X: =442
             Y: =419
-            ZIndex: =25
+            ZIndex: =13
 
         rvs_btn_newProduct_Agregar_2 As button:
             Fill: =RGBA(107, 165, 231, 1)
@@ -487,174 +488,143 @@ ArchivoFuente_Screen As screen:
             Width: =130
             X: =634
             Y: =366
-            ZIndex: =26
+            ZIndex: =14
 
-    rs_grp_editarRegion_1 As group:
+    afs_grp_editarArchivoFuente As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =36
 
-        rs_fig_fondoEdit_1 As rectangle:
+        afs_fig_fondo_Edit As rectangle:
             Fill: =RGBA(0, 18, 107, 0.5)
             Height: =768
             Visible: =vsbPopupEditArchivoF
             Width: =1366
-            ZIndex: =7
+            ZIndex: =23
 
-        rs_fig_subfondoEdit_1 As rectangle:
+        afs_fig_subfondo_Edit As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =313
+            Height: =406
             Visible: =vsbPopupEditArchivoF
             Width: =524
-            X: =426
-            Y: =227
-            ZIndex: =8
+            X: =422
+            Y: =181
+            ZIndex: =24
 
-        rs_lbl_tituloEditRegion_1 As label:
+        afs_lbl_tituloArchivoF_Edit As label:
             Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Text: ="Editar Región"
+            Height: =50
+            Text: ="Editar Archivo Fuente"
             Visible: =vsbPopupEditArchivoF
             Width: =524
-            X: =426
-            Y: =227
-            ZIndex: =9
+            X: =422
+            Y: =181
+            ZIndex: =25
 
-        rs_lbl_editIdRegion_1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+        afs_lbl_idArchivoF_Edit As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Fill: =RGBA(255, 255, 255, 1)
             Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
             Text: ="ID"
             Visible: =vsbPopupEditArchivoF
-            X: =436
-            Y: =277
-            ZIndex: =10
+            Width: =524
+            X: =422
+            Y: =255
+            ZIndex: =26
 
-        rs_txt_editIdRegion_1 As text:
-            Default: =varTempIDRegion
+        afs_txt_idArchivoF_Edit As text:
+            Align: =Align.Center
+            Default: =varIdListAF
             DisplayMode: =DisplayMode.View
-            Visible: =vsbPopupEditArchivoF
-            X: =596
-            Y: =277
-            ZIndex: =11
-
-        rs_lbl_editNombreReg_1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.Lato
+            Visible: =vsbPopupEditArchivoF
+            X: =520
+            Y: =282
+            ZIndex: =27
+
+        afs_lbl_nombreArchivoF_Edit As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
             Text: ="Nombre"
             Visible: =vsbPopupEditArchivoF
-            X: =436
-            Y: =332
-            ZIndex: =12
+            Width: =524
+            X: =422
+            Y: =334
+            ZIndex: =28
 
-        rs_txt_editNombreReg_1 As text:
-            Default: =varTempNombreReg
-            Visible: =vsbPopupEditArchivoF
-            X: =596
-            Y: =332
-            ZIndex: =13
-
-        rs_lbl_editEstatusReg_1 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(0, 18, 107, 1)
+        afs_txt_nombreArchivoF_Edit As text:
+            Align: =Align.Center
+            BorderColor: =RGBA(107, 165, 231, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Default: =varNombre_old
             Font: =Font.Lato
+            HoverBorderColor: =RGBA(107, 165, 231, 1)
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Visible: =vsbPopupEditArchivoF
+            Width: =437
+            X: =465
+            Y: =360
+            ZIndex: =29
+
+        afs_lbl_estatusArchivoF_Edit As label:
+            Align: =Align.Center
+            Color: =RGBA(5, 28, 87, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =25
             Text: ="Estatus"
             Visible: =vsbPopupEditArchivoF
-            X: =436
-            Y: =382
-            ZIndex: =14
+            X: =427
+            Y: =447
+            ZIndex: =30
 
-        rs_tgg_editEstatusReg_1 As toggleSwitch:
+        afs_tgg_estatusArchivoF_Edit As toggleSwitch:
             BorderStyle: =BorderStyle.None
-            Default: =varTempEstatusReg
+            Default: =varEstatus_old
             FalseFill: =RGBA(255, 0, 0, 1)
-            Height: =40
+            Height: =35
             ShowLabel: =false
             TrueFill: =RGBA(54, 176, 75, 1)
             Visible: =vsbPopupEditArchivoF
-            Width: =206
-            X: =596
-            Y: =382
-            ZIndex: =15
+            Width: =50
+            X: =473
+            Y: =472
+            ZIndex: =31
 
-        rs_icn_cancelarEdit_1 As icon.CancelBadge:
+        afs_icn_cancelarArchivoF_Edit As icon.CancelBadge:
             Color: =RGBA(255, 0, 0, 1)
-            Height: =28
+            Height: =40
             Icon: =Icon.CancelBadge
             OnSelect: |
                 =UpdateContext({vsbPopupEditArchivoF:false});
                 Set(responseNuevoRegion,Blank());
-                Reset(rs_tgg_editEstatusReg_1);
-                Reset(rs_txt_editNombreReg_1);
+                Reset(afs_tgg_estatusArchivoF_Edit);
+                Reset(afs_txt_nombreArchivoF_Edit);
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
             Visible: =vsbPopupEditArchivoF
-            Width: =34
-            X: =911
-            Y: =233
-            ZIndex: =16
+            Width: =40
+            X: =901
+            Y: =181
+            ZIndex: =32
 
-        rs_icn_agregarEdit_1 As icon.CancelBadge:
-            Color: =RGBA(54, 176, 75, 1)
-            Height: =28
-            Icon: =Icon.CheckBadge
-            OnSelect: |-
-                =//__ Activamos componente loading
-                UpdateContext({vsbLoadingRegion:true});
-                //__ Realizamos Reset
-                Set(responseNuevoRegion,Blank());
-                Clear(colEditRegion);
-                //__ Validamos que no existan campos vacios
-                If(IsBlank(rs_txt_editIdRegion_1) || IsEmpty(rs_txt_editIdRegion_1) || IsBlank(rs_txt_editNombreReg_1) || IsEmpty(rs_txt_editNombreReg_1),
-                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Error,5000),
-                //__ Guardamos en una colección los datos de la busqueda
-                    Collect(
-                    colEditRegion,
-                    {
-                        EmailUser: varEmail,
-                        GPID: varUserGPID,
-                        NombreUser: varUserName,
-                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
-                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        Region: rs_txt_editNombreReg_1.Text,
-                        Estatus: rs_tgg_editEstatusReg_1.Value,
-                        TipoCatalogo: "Catalogo Maestro - Region",
-                        MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
-                        YearSolicitud:Value(Year(Now())),
-                        ID_List: varTempID,
-                        Region_old: varTempNombreReg,
-                        Estatus_old:varTempEstatusReg
-                    }
-                    );
-                
-                //__ Invocamos el Flujo de Automate
-                Set(varJSON,JSON(colEditRegion));
-                Set(responseNuevoRegion,'[CPC]_EditRegion'.Run(varJSON));
-                Set(responseRegion,responseNuevoRegion.response);
-                If(responseRegion = "Ok",
-                    UpdateContext({vsbPopupEditReg:false});
-                    Reset(rs_tgg_editEstatusReg_1);
-                    Reset(rs_txt_editNombreReg_1);
-                    Refresh(Region);
-                    UpdateContext({vsbMsjOk:true});
-                    Set(responseNuevoRegion,Blank());
-                    );
-                
-                );
-                
-                //__ Activamos componente loading
-                UpdateContext({vsbLoadingRegion:false});
-            Visible: =vsbPopupEditArchivoF
-            Width: =34
-            X: =431
-            Y: =233
-            ZIndex: =17
-
-        rs_lbl_msjErrorEdit_1 As label:
+        afs_lbl_msjErrorArchivoF_Edit As label:
             Align: =Align.Center
             Color: =RGBA(184, 0, 0, 1)
             Font: =Font.Lato
@@ -664,7 +634,20 @@ ArchivoFuente_Screen As screen:
             Text: =responseNuevoRegion.response
             Visible: =vsbPopupEditArchivoF
             Width: =514
-            X: =431
-            Y: =455
-            ZIndex: =18
+            X: =427
+            Y: =513
+            ZIndex: =34
+
+        afs_btn_editArchivoF_Actualizar As button:
+            Fill: =RGBA(107, 165, 231, 1)
+            Font: =Font.Lato
+            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+            OnSelect: =
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Text: ="Actualizar"
+            Visible: =vsbPopupEditArchivoF
+            Width: =130
+            X: =630
+            Y: =454
+            ZIndex: =35
 
