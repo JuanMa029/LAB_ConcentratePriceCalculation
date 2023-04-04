@@ -11,16 +11,16 @@ ArchivoFuente_Screen As screen:
         FontWeight: =FontWeight.Bold
         Height: =60
         Size: =26
-        Text: ="Catálogo Archivo Maestro"
+        Text: ="Catálogo Archivo Fuente"
         Width: =1366
         Y: =60
-        ZIndex: =3
+        ZIndex: =2
 
     afs_cnt_headerArchivoFuente As groupContainer.manualLayoutContainer:
         Height: =40
         Width: =1366
         Y: =257
-        ZIndex: =6
+        ZIndex: =3
 
         afs_btn_headerID As button:
             Align: =Align.Left
@@ -35,7 +35,7 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="ID"
             Width: =91
-            X: =391
+            X: =412
             ZIndex: =1
 
         afs_btn_headerNombre As button:
@@ -51,7 +51,7 @@ ArchivoFuente_Screen As screen:
             Size: =14
             Text: ="Nombre"
             Width: =260
-            X: =482
+            X: =503
             ZIndex: =2
 
         afs_btn_headerEstatus As button:
@@ -66,7 +66,8 @@ ArchivoFuente_Screen As screen:
             RadiusTopRight: =0
             Size: =14
             Text: ="Estatus"
-            X: =742
+            Width: =110
+            X: =763
             ZIndex: =3
 
         afs_btn_accion As button:
@@ -79,27 +80,29 @@ ArchivoFuente_Screen As screen:
             RadiusTopRight: =0
             Text: =""
             Width: =102
-            X: =902
+            X: =873
             ZIndex: =7
 
     afs_cnt_dataArchivoFuente As groupContainer.manualLayoutContainer:
         Height: =418
         Width: =1366
         Y: =297
-        ZIndex: =7
+        ZIndex: =4
 
         afs_gal_dataArchivoFuente As gallery.galleryVertical:
             BorderColor: =RGBA(56, 136, 210, 1)
             BorderThickness: =1
             DelayItemLoading: =true
-            Height: =394
-            Items: =ArchivoFuente
+            Height: =350
+            Items: |
+                =
+                Filter(ArchivoFuente,NombreArchivoFuente = afs_dpd_filterNombre.Selected.NombreArchivoFuente || afs_dpd_filterNombre.Selected.NombreArchivoFuente = Blank())
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =1
             TemplateSize: =40
-            Width: =612
-            X: =391
+            Width: =562
+            X: =412
             ZIndex: =1
 
             gal_fig_separador_Product_2 As rectangle:
@@ -126,11 +129,46 @@ ArchivoFuente_Screen As screen:
                 X: =91
                 ZIndex: =3
 
+            afs_fig_statusArchivoFuente_Gal As circle:
+                DisplayMode: =DisplayMode.View
+                Fill: =If(ThisItem.Estatus = true,RGBA(101, 201, 135, 1),RGBA(227, 55, 44, 1))
+                Height: =15
+                OnSelect: =Select(Parent)
+                Width: =15
+                X: =380
+                Y: =12
+                ZIndex: =4
+
+            afs_img_editArchivoFuente_Gal As image:
+                Height: =25
+                Image: =btnEdit
+                OnSelect: =Select(Parent)
+                Width: =25
+                X: =495
+                Y: =7
+                ZIndex: =5
+
+            afs_btn_editArchivoFuente_Gal As button:
+                Fill: =Color.Transparent
+                Height: =25
+                HoverFill: =RGBA(56, 136, 210, 0.5)
+                OnSelect: |-
+                    =UpdateContext({vsbLoadingNewRglProd:true});
+                    Select(Parent);
+                    
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 0.2)
+                Text: =""
+                Width: =25
+                X: =495
+                Y: =7
+                ZIndex: =6
+
     afs_cnt_dataFilterArchivoF As groupContainer.manualLayoutContainer:
         Height: =100
         Width: =1366
         Y: =141
-        ZIndex: =8
+        ZIndex: =5
 
         afs_btn_buscarNombre As button:
             Align: =Align.Left
@@ -148,26 +186,11 @@ ArchivoFuente_Screen As screen:
             X: =505
             ZIndex: =1
 
-        afs_txt_buscarNombre As text:
-            BorderColor: =RGBA(56, 136, 210, 1)
-            BorderThickness: =1
-            Clear: =true
-            Color: =RGBA(65, 65, 65, 1)
-            Default: =""
-            Font: =Font.Lato
-            HoverBorderColor: =RGBA(56, 136, 210, 1)
-            HoverColor: =RGBA(65, 65, 65, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Width: =356
-            X: =505
-            Y: =40
-            ZIndex: =2
-
         afs_img_nuevo As image:
             Height: =50
             Image: =add
             Width: =50
-            X: =947
+            X: =924
             Y: =30
             ZIndex: =3
 
@@ -179,15 +202,39 @@ ArchivoFuente_Screen As screen:
             Height: =50
             HoverFill: =RGBA(56, 136, 210, 0.5)
             OnSelect: |-
-                =UpdateContext({vsbPopupNewReg:true})
+                =UpdateContext({vsbLoadingArchivoFuente:true});
+                UpdateContext({vsbPopupNewArchivoF:true});
+                UpdateContext({vsbLoadingArchivoFuente:false});
             PressedFill: =RGBA(56, 136, 210, 0.2)
             Text: =""
             Width: =50
-            X: =947
+            X: =924
             Y: =30
             ZIndex: =4
 
-    rs_grp_nuevoRegion_1 As group:
+        afs_dpd_filterNombre As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(107, 165, 231, 1)
+            BorderThickness: =1
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronFill: =RGBA(0, 18, 107, 1)
+            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverFill: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Default: =""
+            Font: =Font.Lato
+            HoverColor: =RGBA(65, 65, 65, 1)
+            Items: =ArchivoFuente
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(56, 136, 210, 1)
+            Reset: =true
+            SelectionFill: =RGBA(107, 165, 231, 1)
+            Width: =356
+            X: =505
+            Y: =40
+            ZIndex: =5
+
+    afs_grp_nuevoArchivoFuente As group:
         Height: =5
         Width: =5
         X: =40
@@ -197,18 +244,18 @@ ArchivoFuente_Screen As screen:
         rs_fig_fondo_3 As rectangle:
             Fill: =RGBA(0, 18, 107, 0.5)
             Height: =768
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =1366
-            ZIndex: =9
+            ZIndex: =6
 
         rs_fig_subfondo_3 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =184
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =524
             X: =432
             Y: =259
-            ZIndex: =10
+            ZIndex: =7
 
         rs_lbl_tituloNuevoRegion_2 As label:
             Align: =Align.Center
@@ -217,44 +264,44 @@ ArchivoFuente_Screen As screen:
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="Nueva Región"
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =524
             X: =432
             Y: =259
-            ZIndex: =11
+            ZIndex: =8
 
         rs_lbl_nuevoNombreReg_6 As label:
             Color: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.Lato
             Text: ="Nombre Región"
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             X: =442
             Y: =309
-            ZIndex: =12
+            ZIndex: =9
 
         rs_txt_nuevoNombreReg_1 As text:
             Default: =""
             Font: =Font.Lato
             OnChange: =
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             X: =602
             Y: =309
-            ZIndex: =13
+            ZIndex: =10
 
         rs_icn_cancelar_2 As icon.CancelBadge:
             Color: =RGBA(255, 0, 0, 1)
             Height: =28
             Icon: =Icon.CancelBadge
             OnSelect: |-
-                =UpdateContext({vsbPopupNewReg:false});
+                =UpdateContext({vsbPopupNewArchivoF:false});
                 Reset(rs_txt_nuevoNombreReg_1);
                 Set(responseNuevoRegion,Blank());
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =34
             X: =917
             Y: =265
-            ZIndex: =14
+            ZIndex: =11
 
         rs_icn_agregar_2 As icon.CancelBadge:
             Color: =RGBA(54, 176, 75, 1)
@@ -301,11 +348,11 @@ ArchivoFuente_Screen As screen:
                 
                 //__ Activamos componente loading
                 UpdateContext({vsbLoadingRegion:false});
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =34
             X: =437
             Y: =265
-            ZIndex: =15
+            ZIndex: =12
 
         rs_lbl_msjError_2 As label:
             Align: =Align.Center
@@ -315,11 +362,11 @@ ArchivoFuente_Screen As screen:
             Height: =62
             Size: =12
             Text: =responseNuevoRegion.response
-            Visible: =vsbPopupNewReg
+            Visible: =vsbPopupNewArchivoF
             Width: =514
             X: =437
             Y: =365
-            ZIndex: =16
+            ZIndex: =13
 
     rs_grp_msjCorrecto_1 As group:
         Height: =5
@@ -333,7 +380,7 @@ ArchivoFuente_Screen As screen:
             Height: =768
             Visible: =vsbMsjOk
             Width: =1366
-            ZIndex: =17
+            ZIndex: =14
 
         ps_fig_subfondoOk_3 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -342,7 +389,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =421
             Y: =175
-            ZIndex: =18
+            ZIndex: =15
 
         ps_lbl_tituloOk_3 As label:
             Align: =Align.Center
@@ -355,7 +402,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =421
             Y: =175
-            ZIndex: =19
+            ZIndex: =16
 
         ps_lbl_msjOk_3 As label:
             Align: =Align.Center
@@ -368,7 +415,7 @@ ArchivoFuente_Screen As screen:
             Width: =514
             X: =426
             Y: =337
-            ZIndex: =20
+            ZIndex: =17
 
         ps_icn_ok_3 As icon.Information:
             Color: =RGBA(54, 176, 75, 1)
@@ -378,13 +425,9 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbMsjOk
             X: =651
             Y: =243
-            ZIndex: =21
+            ZIndex: =18
 
-    rs_cmp_loading_1 As Loading:
-        Visible: =vsbLoadingRegion
-        ZIndex: =34
-
-    crps_icn_regresar_2 As icon.Link:
+    afs_icn_regresar As icon.Link:
         Color: =RGBA(255, 255, 255, 1)
         Height: =30
         Icon: =Icon.BackArrow
@@ -392,7 +435,11 @@ ArchivoFuente_Screen As screen:
         Width: =30
         X: =12
         Y: =15
-        ZIndex: =35
+        ZIndex: =31
+
+    afs_cmp_loading As Loading:
+        Visible: =vsbLoadingArchivoFuente
+        ZIndex: =32
 
     rs_grp_editarRegion_1 As group:
         Height: =5
@@ -406,7 +453,7 @@ ArchivoFuente_Screen As screen:
             Height: =768
             Visible: =vsbPopupEditReg
             Width: =1366
-            ZIndex: =22
+            ZIndex: =19
 
         rs_fig_subfondoEdit_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -415,7 +462,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =426
             Y: =227
-            ZIndex: =23
+            ZIndex: =20
 
         rs_lbl_tituloEditRegion_1 As label:
             Align: =Align.Center
@@ -428,7 +475,7 @@ ArchivoFuente_Screen As screen:
             Width: =524
             X: =426
             Y: =227
-            ZIndex: =24
+            ZIndex: =21
 
         rs_lbl_editIdRegion_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -438,7 +485,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditReg
             X: =436
             Y: =277
-            ZIndex: =25
+            ZIndex: =22
 
         rs_txt_editIdRegion_1 As text:
             Default: =varTempIDRegion
@@ -446,7 +493,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditReg
             X: =596
             Y: =277
-            ZIndex: =26
+            ZIndex: =23
 
         rs_lbl_editNombreReg_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -456,14 +503,14 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditReg
             X: =436
             Y: =332
-            ZIndex: =27
+            ZIndex: =24
 
         rs_txt_editNombreReg_1 As text:
             Default: =varTempNombreReg
             Visible: =vsbPopupEditReg
             X: =596
             Y: =332
-            ZIndex: =28
+            ZIndex: =25
 
         rs_lbl_editEstatusReg_1 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -473,7 +520,7 @@ ArchivoFuente_Screen As screen:
             Visible: =vsbPopupEditReg
             X: =436
             Y: =382
-            ZIndex: =29
+            ZIndex: =26
 
         rs_tgg_editEstatusReg_1 As toggleSwitch:
             BorderStyle: =BorderStyle.None
@@ -486,7 +533,7 @@ ArchivoFuente_Screen As screen:
             Width: =206
             X: =596
             Y: =382
-            ZIndex: =30
+            ZIndex: =27
 
         rs_icn_cancelarEdit_1 As icon.CancelBadge:
             Color: =RGBA(255, 0, 0, 1)
@@ -501,7 +548,7 @@ ArchivoFuente_Screen As screen:
             Width: =34
             X: =911
             Y: =233
-            ZIndex: =31
+            ZIndex: =28
 
         rs_icn_agregarEdit_1 As icon.CancelBadge:
             Color: =RGBA(54, 176, 75, 1)
@@ -557,7 +604,7 @@ ArchivoFuente_Screen As screen:
             Width: =34
             X: =431
             Y: =233
-            ZIndex: =32
+            ZIndex: =29
 
         rs_lbl_msjErrorEdit_1 As label:
             Align: =Align.Center
@@ -571,5 +618,5 @@ ArchivoFuente_Screen As screen:
             Width: =514
             X: =431
             Y: =455
-            ZIndex: =33
+            ZIndex: =30
 
