@@ -12641,6 +12641,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbLoadingNewRglProd"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbLoadingNewRglProd",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbLoadingNewRglProd",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbNewRglProduct"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.vsbNewRglProduct",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbNewRglProduct",
+                "module": "CrossReferenceContainer_Screen_",
+                "type": "CrossReferenceContainer_Screen_"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Pais_Screen.ps_cnt_dataPais.ps_gal_dataPais.ps_tgg_estatus.Width"
                 }
               ],

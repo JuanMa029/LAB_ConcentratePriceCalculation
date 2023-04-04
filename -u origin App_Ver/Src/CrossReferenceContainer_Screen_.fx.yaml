@@ -109,6 +109,42 @@
                 Y: =10
                 ZIndex: =2
 
+            rvs_img_newCRContainer_1 As image:
+                Height: =50
+                Image: =add
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1087
+                Y: =10
+                ZIndex: =3
+
+            crc_btn_newCRContainer_1 As button:
+                Fill: =Color.Transparent
+                Height: =50
+                HoverFill: =RGBA(56, 136, 210, 0.5)
+                OnSelect: |-
+                    =// Iniciamos loading
+                    UpdateContext({vsbLoadingNewRglProd:true});
+                    //Obtenemos Catalogo LAB_PRODUCT completo
+                    ClearCollect(
+                        colLabProductCompleto,
+                        Filter(LAB_PRODUCT,NumberProduct <=2000),
+                        Filter(LAB_PRODUCT,NumberProduct > 2000 && NumberProduct <= 4000)
+                        );
+                    //Aplicamos Distinct SubCategory
+                    ClearCollect(colCatSubcategory,ForAll(Distinct(colLabProductCompleto,SUBCATEGORY), {Result: ThisRecord.Value}));
+                    
+                    UpdateContext({vsbNewRglProduct:true});
+                    // Finalizamos loading
+                    UpdateContext({vsbLoadingNewRglProd:false});
+                PressedFill: =RGBA(56, 136, 210, 0.2)
+                Text: =""
+                Visible: =If(varUserRol = "Administrador",true,false)
+                Width: =50
+                X: =1087
+                Y: =10
+                ZIndex: =4
+
         crc_dtc_filtros_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
