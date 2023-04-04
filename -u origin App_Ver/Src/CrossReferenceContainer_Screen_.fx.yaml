@@ -144,10 +144,7 @@
                 HoverColor: =RGBA(65, 65, 65, 1)
                 Items: =Distinct(colProductVlmRule,RAZONSOCIAL.Value)
                 OnChange: |
-                    =// Reset al componente SubCategory
-                    Reset(rvs_dpd_subcategory_Product);
-                    // Generamos la lista Subcategory
-                    Set(varConcatSubcategory,Concat(Distinct(Filter(colProductVlmRule, RAZONSOCIAL.Value = crc_dpd_razonSocial_Filter_1.Selected.Value),SUBCATEGORY),Value,";"))
+                    =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
