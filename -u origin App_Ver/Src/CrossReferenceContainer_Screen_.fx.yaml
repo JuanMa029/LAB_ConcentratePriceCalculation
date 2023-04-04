@@ -255,7 +255,7 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Embotellador')
+                Items: =Distinct(Filter(CrossReferenceContaine,Estatus = true),'Container Embotellador')
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
