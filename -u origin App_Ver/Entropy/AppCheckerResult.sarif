@@ -12794,19 +12794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1.ShowLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1.ShowLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1.ShowLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1.ShowLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "ShowLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1"
+                "type": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1"
               }
             }
           ],
@@ -12824,19 +12824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_tgg_editCRContainer_1"
+                "type": "CrossReferenceContainer_Screen_.crc_tgg_editContainer_1"
               }
             }
           ],
