@@ -221,7 +221,7 @@
                 IsSearchable: =false
                 Items: |-
                     =ForAll(Distinct(Filter(CrossReferenceContainer, Estatus = true && 
-                    (ArchivoFuente = crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente || crc_dpd_archivoFuente_filter_1.Selected.Result = Blank()))
+                    (ArchivoFuente = crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente || crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente = Blank()))
                     ,'Container Pepsico'), {Result: ThisRecord.Value})
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
@@ -246,7 +246,7 @@
                 Y: =20
                 ZIndex: =7
 
-            crc_dpd_cEmbotellador_1 As combobox:
+            crc_dpd_cEmbotellador_filter_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
