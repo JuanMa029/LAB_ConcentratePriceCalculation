@@ -409,7 +409,7 @@
                 Y: =40
                 ZIndex: =6
 
-        DataCard2 As dataCard.blankCard:
+        crc_dtc_data_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -426,7 +426,6 @@
                 Layout: =Layout.Vertical
                 TemplateSize: =41
                 Width: =1344
-                X: =22
                 ZIndex: =1
 
                 crc_txt_archivoFuente_1 As text:

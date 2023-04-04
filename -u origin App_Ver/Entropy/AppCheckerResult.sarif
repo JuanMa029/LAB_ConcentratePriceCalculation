@@ -2262,19 +2262,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1"
               }
             }
           ],
@@ -2292,19 +2292,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.TabIndex"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.TabIndex",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1"
               }
             }
           ],
@@ -2322,19 +2322,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataRazonSocial_1"
               }
             }
           ],
@@ -2352,19 +2352,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_archivoFuente_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_archivoFuente_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_archivoFuente_1"
               }
             }
           ],
@@ -2382,19 +2382,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCPepsico_1"
               }
             }
           ],
@@ -2412,19 +2412,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataCEmbotellador_1"
               }
             }
           ],
@@ -2442,19 +2442,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataStatus_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataStatus_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataStatus_1"
               }
             }
           ],
@@ -2472,19 +2472,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel"
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel",
+                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataEdit_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.DataCard2.crc_gal_dataContainer_1.crc_txt_dataEdit_1"
+                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_data_1.crc_gal_dataContainer_1.crc_txt_dataEdit_1"
               }
             }
           ],
