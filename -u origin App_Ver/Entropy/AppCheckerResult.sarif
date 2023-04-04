@@ -14,447 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 101,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SUBREGION.Value"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 68,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "StartsWith(\r\n            SUBREGION.Value;\r\n            \"\"\r\n        )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 146,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 262,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 78,
-                  "snippet": {
-                    "text": "\"NombreRazonSocial\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 16,
-                  "snippet": {
-                    "text": "CrossReferenceContaine"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CrossReferenceContaine"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 45,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "Filter(CrossReferenceContaine;Estatus = true)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "Estatus"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Estatus"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 47,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Boolean"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 55,
-                  "snippet": {
-                    "text": "'Container Embotellador'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Container Embotellador"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 80,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Distinct(Filter(CrossReferenceContaine;Estatus = true);'Container Embotellador')"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "CrossReferenceContainer_Screen_",
-                "type": "CrossReferenceContainer_Screen_.crc_cnv_Principal_1.crc_dtc_filtros_1.crc_dpd_cEmbotellador_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Distinct"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ReglasVolumen_Screen.rvs_dpd_editRazonSocial_Innova.SearchItems"
                 }
               ],
@@ -488,7 +47,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -505,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 171,
+                  "charOffset": 170,
                   "snippet": {
                     "text": "="
                   }
@@ -529,7 +88,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -546,7 +105,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 256,
+                  "charOffset": 255,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -586,9 +145,9 @@
                 },
                 "region": {
                   "charLength": 152,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -626,7 +185,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 279,
+                  "charOffset": 278,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -666,9 +225,9 @@
                 },
                 "region": {
                   "charLength": 168,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -706,7 +265,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 286,
+                  "charOffset": 285,
                   "snippet": {
                     "text": "Value"
                   }
@@ -730,7 +289,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -747,9 +306,9 @@
                 },
                 "region": {
                   "charLength": 186,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Innova.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Innova.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -810,7 +369,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -827,7 +386,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 171,
+                  "charOffset": 170,
                   "snippet": {
                     "text": "="
                   }
@@ -851,7 +410,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -868,7 +427,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 256,
+                  "charOffset": 255,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -908,9 +467,9 @@
                 },
                 "region": {
                   "charLength": 152,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Conver.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -948,7 +507,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 279,
+                  "charOffset": 278,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -988,9 +547,9 @@
                 },
                 "region": {
                   "charLength": 168,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Conver.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -1028,7 +587,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 286,
+                  "charOffset": 285,
                   "snippet": {
                     "text": "Value"
                   }
@@ -1052,7 +611,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1069,9 +628,9 @@
                 },
                 "region": {
                   "charLength": 186,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Conver.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Conver.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -1132,7 +691,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1149,7 +708,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 171,
+                  "charOffset": 170,
                   "snippet": {
                     "text": "="
                   }
@@ -1173,7 +732,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1190,7 +749,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 257,
+                  "charOffset": 256,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1230,9 +789,9 @@
                 },
                 "region": {
                   "charLength": 153,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -1270,7 +829,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 280,
+                  "charOffset": 279,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -1310,9 +869,9 @@
                 },
                 "region": {
                   "charLength": 169,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -1350,7 +909,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 287,
+                  "charOffset": 286,
                   "snippet": {
                     "text": "Value"
                   }
@@ -1374,7 +933,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1391,9 +950,9 @@
                 },
                 "region": {
                   "charLength": 187,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Product.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Product.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -1454,7 +1013,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1471,7 +1030,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 171,
+                  "charOffset": 170,
                   "snippet": {
                     "text": "="
                   }
@@ -1495,7 +1054,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1512,7 +1071,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 259,
+                  "charOffset": 258,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1552,9 +1111,9 @@
                 },
                 "region": {
                   "charLength": 155,
-                  "charOffset": 126,
+                  "charOffset": 125,
                   "snippet": {
-                    "text": "Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\")"
+                    "text": "Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\")"
                   }
                 }
               },
@@ -1592,7 +1151,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 282,
+                  "charOffset": 281,
                   "snippet": {
                     "text": "BRAND"
                   }
@@ -1632,9 +1191,9 @@
                 },
                 "region": {
                   "charLength": 171,
-                  "charOffset": 117,
+                  "charOffset": 116,
                   "snippet": {
-                    "text": "Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND)"
+                    "text": "Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND)"
                   }
                 }
               },
@@ -1672,7 +1231,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 289,
+                  "charOffset": 288,
                   "snippet": {
                     "text": "Value"
                   }
@@ -1696,7 +1255,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1713,9 +1272,9 @@
                 },
                 "region": {
                   "charLength": 189,
-                  "charOffset": 110,
+                  "charOffset": 109,
                   "snippet": {
-                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule; RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value);rvs_dpd_editRazonSocial_Container.Selected.Value;\"SUBCATEGORY0\");BRAND);Value;\";\")"
+                    "text": "Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),rvs_dpd_editRazonSocial_Container.Selected.Value,\"SUBCATEGORY0\"),BRAND),Value,\";\")"
                   }
                 }
               },
@@ -1776,7 +1335,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1816,7 +1375,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1856,7 +1415,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -1896,600 +1455,230 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador.AccessibleLabel"
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador.AccessibleLabel",
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 101,
+                  "snippet": {
+                    "text": ".Value"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_cancelarSeleccionar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_cancelarSeleccionar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_agregar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_agregar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_cancelar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_cancelar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.rs_icn_agregar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.rs_icn_agregar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.rs_icn_cancelar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.rs_icn_cancelar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_lbx_catalogos.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_lbx_catalogos.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_lbx_catalogos"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editNombreRazonS.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editNombreRazonS.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_dpd_editNombreRazonS"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_ok"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_icn_ok"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.ComboBox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editEmbotellador.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editEmbotellador.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_dpd_editEmbotellador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
+                "member": "Items",
                 "module": "Geografia_Screen",
                 "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "SUBREGION.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 68,
+                  "charOffset": 67,
+                  "snippet": {
+                    "text": "StartsWith(\r\n            SUBREGION.Value,\r\n            \"\"\r\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 146,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 262,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 78,
+                  "snippet": {
+                    "text": "\"NombreRazonSocial\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre"
+              }
+            }
+          ],
+          "message": {
             "id": "issue"
           },
           "properties": {
@@ -2503,19 +1692,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.TabIndex"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.TabIndex",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
               }
             }
           ],
@@ -2533,19 +1752,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_icn_agregarEdit_1"
               }
             }
           ],
@@ -2563,19 +1782,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_icn_agregarEdit_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1"
               }
             }
           ],
@@ -2593,19 +1842,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk"
               }
             }
           ],
@@ -2623,19 +1932,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editIdRegion_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editIdRegion_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_txt_editIdRegion_1"
               }
             }
           ],
@@ -2653,19 +1962,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente"
               }
             }
           ],
@@ -2683,19 +1992,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo"
               }
             }
           ],
@@ -2713,19 +2052,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_1.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editNombreReg_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_1.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editNombreReg_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.ComboBox1_1"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_txt_editNombreReg_1"
               }
             }
           ],
@@ -2743,199 +2082,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editPais.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.ShowLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editPais.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_dpd_editPais"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.ComboBox1_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editRegion.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editRegion.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_dpd_editRegion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.ComboBox1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_subregion.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_subregion.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_dpd_subregion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.ComboBox1_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.ShowLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.ShowLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.ShowLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "ShowLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_tgg_editEstatusJerar"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1"
               }
             }
           ],
@@ -2953,409 +2112,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.AccessibleLabel"
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.AccessibleLabel",
+                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen.gs_tgg_editEstatusJerar"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.rvs_icn_regresar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.rvs_icn_regresar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dcv_archivos_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dcv_archivos_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dcv_archivos_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dpd_newAnio_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TipoCambio_Screen",
-                "type": "TipoCambio_Screen.tc_dpd_newPeriodo_1"
+                "module": "ArchivoFuente_Screen",
+                "type": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1"
               }
             }
           ],
@@ -4777,486 +3546,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_cnt_dataFilterArchivoF.afs_dpd_filterNombre"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_icn_cerrar_MsjOk"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_icn_cancelar_New.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_icn_cancelar_New"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_agregarEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_agregarEdit_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_agregarEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_icn_cancelarEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editIdRegion_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editIdRegion_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_txt_editIdRegion_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_cnt_dataArchivoFuente.afs_gal_dataArchivoFuente"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.afs_txt_nuevoNombreArchivo"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editNombreReg_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_txt_editNombreReg_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_txt_editNombreReg_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.ShowLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.ShowLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "ShowLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-HelpfulControlSettingNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ArchivoFuente_Screen",
-                "type": "ArchivoFuente_Screen.rs_tgg_editEstatusReg_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 6
         },
         {
           "locations": [
@@ -12493,6 +10782,1476 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarEmbotellador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarPais"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_filter.gs_dpd_buscarRegion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_cancelarSeleccionar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelarSeleccionar.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_cancelarSeleccionar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_agregar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_agregar.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_agregar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_cancelar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_cancelar.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_cancelar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.rs_icn_agregar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_agregar_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.rs_icn_agregar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.rs_icn_cancelar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.rs_icn_cancelar_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.rs_icn_cancelar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_lbx_catalogos.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_lbx_catalogos.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_lbx_catalogos"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editNombreRazonS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editNombreRazonS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_dpd_editNombreRazonS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_ok"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_icn_ok.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_icn_ok"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.ComboBox1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editEmbotellador.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editEmbotellador.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_dpd_editEmbotellador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_id"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_razonSocial"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_embotellador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_pais"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_region"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_cnt_dataGeografia.gs_gal_dataJerarquiaGeo.gs_txt_subregion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.ComboBox1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editPais.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editPais.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_dpd_editPais"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.ComboBox1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editRegion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_editRegion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_dpd_editRegion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.ComboBox1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_subregion.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_dpd_subregion.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_dpd_subregion"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.ComboBox1_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.ComboBox1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.ShowLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.ShowLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_tgg_editEstatusJerar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-HelpfulControlSettingNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.gs_tgg_editEstatusJerar.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen.gs_tgg_editEstatusJerar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.rvs_icn_regresar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.rvs_icn_regresar_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.rvs_icn_regresar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_icn_newTipoC_Cerrar_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarPais_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarFrecuencia_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_filter_1.tc_dpd_buscarAnio_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newRazonSocial_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dpd_newRazonSocial_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dcv_archivos_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dcv_archivos_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dcv_archivos_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_cnt_dataTipoC_1.tc_gs_TipoC_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newAnio_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dpd_newAnio_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TipoCambio_Screen.tc_dpd_newPeriodo_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TipoCambio_Screen",
+                "type": "TipoCambio_Screen.tc_dpd_newPeriodo_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.flagNoUser"
                 }
               ],
@@ -12624,6 +12383,66 @@
               },
               "properties": {
                 "member": "varUserEmail",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varMsjError"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varMsjError",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varMsjError",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varListRazonSocial"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varListRazonSocial",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varListRazonSocial",
                 "module": "App",
                 "type": "App"
               }
@@ -12793,66 +12612,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varMsjError"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varMsjError",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varMsjError",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varListRazonSocial"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varListRazonSocial",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varListRazonSocial",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.fondoAzul"
                 }
               ],
@@ -12936,36 +12695,6 @@
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
           "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Geografia_Screen.vsbLoadingJG"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Geografia_Screen.vsbLoadingJG",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "vsbLoadingJG",
-                "module": "Geografia_Screen",
-                "type": "Geografia_Screen"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
         },
         {
           "locations": [
@@ -13175,6 +12904,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Geografia_Screen.vsbLoadingJG"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Geografia_Screen.vsbLoadingJG",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "vsbLoadingJG",
+                "module": "Geografia_Screen",
+                "type": "Geografia_Screen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 11
         }
       ],
       "tool": {
@@ -13182,25 +12941,6 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
-            {
-              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-              "messageStrings": {
-                "issue": {
-                  "text": "Delegation warning. The highlighted part of this formula might not work correctly with column \"{0}\" on large data sets."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
-                  "Try simplifying the formula.",
-                  "Try moving your data to a different data source."
-                ],
-                "level": "Medium",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
             {
               "id": "app-SuggestRemoteExecutionHint",
               "messageStrings": {
@@ -13216,6 +12956,24 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
@@ -13252,24 +13010,6 @@
               }
             },
             {
-              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
-              "messageStrings": {
-                "issue": {
-                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
-                  "If you’re comparing records or tables, the field or column types must match exactly."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrBadType-ExpectedType-ProvidedType",
               "messageStrings": {
                 "issue": {
@@ -13279,6 +13019,25 @@
               "properties": {
                 "componentType": "app",
                 "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly with column \"{0}\" on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }

@@ -163,10 +163,13 @@ ArchivoFuente_Screen As screen:
                 Height: =25
                 HoverFill: =RGBA(56, 136, 210, 0.5)
                 OnSelect: |-
-                    =UpdateContext({vsbLoadingNewRglProd:true});
+                    =UpdateContext({vsbLoadingArchivoFuente:true});
                     Select(Parent);
-                    
-                    UpdateContext({vsbLoadingNewRglProd:false});
+                    Set(varIdListAF, ThisItem.ID);
+                    Set(varNombre_old,ThisItem.NombreArchivoFuente);
+                    Set(varEstatus_old,ThisItem.Estatus);
+                    UpdateContext({vsbPopupEditArchivoF:true});
+                    UpdateContext({vsbLoadingArchivoFuente:false});
                 PressedFill: =RGBA(56, 136, 210, 0.2)
                 Text: =""
                 Width: =25
@@ -496,14 +499,14 @@ ArchivoFuente_Screen As screen:
         rs_fig_fondoEdit_1 As rectangle:
             Fill: =RGBA(0, 18, 107, 0.5)
             Height: =768
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =1366
             ZIndex: =7
 
         rs_fig_subfondoEdit_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =313
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =524
             X: =426
             Y: =227
@@ -516,7 +519,7 @@ ArchivoFuente_Screen As screen:
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
             Text: ="Editar Región"
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =524
             X: =426
             Y: =227
@@ -527,7 +530,7 @@ ArchivoFuente_Screen As screen:
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.Lato
             Text: ="ID"
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             X: =436
             Y: =277
             ZIndex: =10
@@ -535,7 +538,7 @@ ArchivoFuente_Screen As screen:
         rs_txt_editIdRegion_1 As text:
             Default: =varTempIDRegion
             DisplayMode: =DisplayMode.View
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             X: =596
             Y: =277
             ZIndex: =11
@@ -545,14 +548,14 @@ ArchivoFuente_Screen As screen:
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.Lato
             Text: ="Nombre"
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             X: =436
             Y: =332
             ZIndex: =12
 
         rs_txt_editNombreReg_1 As text:
             Default: =varTempNombreReg
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             X: =596
             Y: =332
             ZIndex: =13
@@ -562,7 +565,7 @@ ArchivoFuente_Screen As screen:
             Fill: =RGBA(0, 18, 107, 1)
             Font: =Font.Lato
             Text: ="Estatus"
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             X: =436
             Y: =382
             ZIndex: =14
@@ -574,7 +577,7 @@ ArchivoFuente_Screen As screen:
             Height: =40
             ShowLabel: =false
             TrueFill: =RGBA(54, 176, 75, 1)
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =206
             X: =596
             Y: =382
@@ -585,11 +588,11 @@ ArchivoFuente_Screen As screen:
             Height: =28
             Icon: =Icon.CancelBadge
             OnSelect: |
-                =UpdateContext({vsbPopupEditReg:false});
+                =UpdateContext({vsbPopupEditArchivoF:false});
                 Set(responseNuevoRegion,Blank());
                 Reset(rs_tgg_editEstatusReg_1);
                 Reset(rs_txt_editNombreReg_1);
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =34
             X: =911
             Y: =233
@@ -645,7 +648,7 @@ ArchivoFuente_Screen As screen:
                 
                 //__ Activamos componente loading
                 UpdateContext({vsbLoadingRegion:false});
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =34
             X: =431
             Y: =233
@@ -659,7 +662,7 @@ ArchivoFuente_Screen As screen:
             Height: =62
             Size: =12
             Text: =responseNuevoRegion.response
-            Visible: =vsbPopupEditReg
+            Visible: =vsbPopupEditArchivoF
             Width: =514
             X: =431
             Y: =455
