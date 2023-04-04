@@ -166,6 +166,7 @@ ArchivoFuente_Screen As screen:
                     =UpdateContext({vsbLoadingArchivoFuente:true});
                     Select(Parent);
                     Set(varIdListAF, ThisItem.ID);
+                    Set(varIDArchivoF,ThisItem.IdArchivoFuente);
                     Set(varNombre_old,ThisItem.NombreArchivoFuente);
                     Set(varEstatus_old,ThisItem.Estatus);
                     UpdateContext({vsbPopupEditArchivoF:true});
@@ -543,7 +544,7 @@ ArchivoFuente_Screen As screen:
 
         afs_txt_idArchivoF_Edit As text:
             Align: =Align.Center
-            Default: =varIdListAF
+            Default: =varIDArchivoF
             DisplayMode: =DisplayMode.View
             Font: =Font.Lato
             Visible: =vsbPopupEditArchivoF
@@ -661,7 +662,7 @@ ArchivoFuente_Screen As screen:
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         ArchivoFuente: afs_txt_nombreArchivoF_Edit.Text,
-                        Estatus: ss_tgg_editEstatusSubreg.Value,
+                        Estatus: afs_tgg_estatusArchivoF_Edit.Value,
                         TipoCatalogo: "Catalogo Maestro - Archivo Fuente",
                         MesSolicitud: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "mmmm"),
                         YearSolicitud:Value(Year(Now())),
