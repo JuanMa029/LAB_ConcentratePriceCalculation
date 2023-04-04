@@ -703,14 +703,14 @@
         Y: =40
         ZIndex: =35
 
-        rvs_fig_fondoEditContainer_1 As rectangle:
+        crc_fig_fondoEditCRC_1 As rectangle:
             Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
             Visible: =vsbEditRglContainer
             Width: =1366
             ZIndex: =21
 
-        rvs_fig_subfondoEditContainer_1 As rectangle:
+        crc_fig_subfondoEditCRC_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =If(IsBlank(responseSave.response),400,465)
             Visible: =vsbEditRglContainer
@@ -868,7 +868,7 @@
                 Reset(rvs_dpd_editRazonSocial_Container_1);
                 Reset(rvs_dpd_editContainerType_1);
                 Reset(rvs_dpd_editContainer_1);
-                Reset(rvs_tgg_editContainer_1);
+                Reset(crc_tgg_editCRContainer_1);
                 Set(responseSave,Blank());
                 UpdateContext({vsbEditRglContainer:false});
             PaddingBottom: =5
@@ -978,7 +978,7 @@
             Y: =478
             ZIndex: =33
 
-        rvs_tgg_editContainer_1 As toggleSwitch:
+        crc_tgg_editCRContainer_1 As toggleSwitch:
             BorderStyle: =BorderStyle.None
             Default: =varEstatus
             FalseFill: =RGBA(255, 0, 0, 1)
