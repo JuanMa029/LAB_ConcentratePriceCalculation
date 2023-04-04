@@ -215,15 +215,18 @@
                 ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                 ChevronHoverFill: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(65, 65, 65, 1)
-                DisplayFields: =["ArchivoFuente"]
+                DisplayFields: =["Result"]
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Pepsico')
+                Items: |-
+                    =ForAll(Distinct(Filter(CrossReferenceContainer, Estatus = true && 
+                    (ArchivoFuente = crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente || crc_dpd_archivoFuente_filter_1.Selected.NombreArchivoFuente = Blank()))
+                    ,'Container Pepsico'), {Result: ThisRecord.Value})
                 OnChange: =
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
-                SearchFields: =["ArchivoFuente"]
+                SearchFields: =["Result"]
                 SearchItems: =[]
                 SelectionFill: =RGBA(107, 165, 231, 1)
                 SelectMultiple: =false
@@ -243,7 +246,7 @@
                 Y: =20
                 ZIndex: =7
 
-            crc_dpd_cEmbotellador_1 As combobox:
+            crc_dpd_cEmbotellador_filter_1 As combobox:
                 BorderColor: =RGBA(107, 165, 231, 1)
                 BorderThickness: =1
                 ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -255,7 +258,7 @@
                 Font: =Font.Lato
                 HoverColor: =RGBA(65, 65, 65, 1)
                 IsSearchable: =false
-                Items: =Distinct(Filter(CrossReferenceContainer,Estatus = true),'Container Embotellador')
+                Items: =Distinct(Filter(CrossReferenceContaine,Estatus = true),'Container Embotellador')
                 PressedColor: =RGBA(65, 65, 65, 1)
                 PressedFill: =RGBA(56, 136, 210, 1)
                 SearchFields: =["Value"]
@@ -397,7 +400,7 @@
                 X: =22
                 ZIndex: =1
 
-                po_txt_category_3 As text:
+                crc_txt_archivoFuente_1 As text:
                     Default: =ThisItem.'Archivo Fuente'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -410,7 +413,7 @@
                     X: =411
                     ZIndex: =2
 
-                po_txt_competitive_3 As text:
+                crc_txt_dataCPepsico_1 As text:
                     Default: =ThisItem.'Container Pepsico'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -423,7 +426,7 @@
                     X: =631
                     ZIndex: =3
 
-                po_txt_subcategory_3 As text:
+                crc_txt_dataCEmbotellador_1 As text:
                     Default: =ThisItem.'Container Embotellador'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -435,7 +438,7 @@
                     X: =851
                     ZIndex: =4
 
-                po_txt_region_3 As text:
+                crc_txt_dataStatus_1 As text:
                     Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -447,7 +450,7 @@
                     X: =1071
                     ZIndex: =5
 
-                po_txt_sugarC_3 As text:
+                crc_txt_dataEdit_1 As text:
                     Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
@@ -459,7 +462,7 @@
                     X: =1181
                     ZIndex: =6
 
-                po_txt_product_2 As text:
+                crc_txt_dataRazonSocial_1 As text:
                     Default: =ThisItem.'Razon Social'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
