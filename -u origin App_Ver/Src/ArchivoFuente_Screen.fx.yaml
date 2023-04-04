@@ -499,7 +499,7 @@ ArchivoFuente_Screen As screen:
         ZIndex: =36
 
         afs_fig_fondo_Edit As rectangle:
-            Fill: =RGBA(0, 18, 107, 0.5)
+            Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
             Visible: =vsbPopupEditArchivoF
             Width: =1366

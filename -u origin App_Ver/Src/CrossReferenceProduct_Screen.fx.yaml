@@ -158,7 +158,8 @@
                 Fill: =Color.Transparent
                 Height: =50
                 HoverFill: =RGBA(56, 136, 210, 0.5)
-                OnSelect: =
+                OnSelect: |-
+                    =UpdateContext({popUpCatalogos:true});
                 PressedFill: =RGBA(56, 136, 210, 0.2)
                 Text: =""
                 Visible: =If(varUserRol = "Administrador",true,false)
@@ -349,4 +350,75 @@
         X: =12
         Y: =15
         ZIndex: =5
+
+    crps_grp_catalogos As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        afs_fig_fondo_Edit_1 As rectangle:
+            Fill: =RGBA(31, 95, 169, 0.5)
+            Height: =768
+            Visible: =popUpCatalogos
+            Width: =1366
+            ZIndex: =6
+
+        Rectangle1 As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =378
+            Visible: =popUpCatalogos
+            Width: =437
+            X: =455
+            Y: =223
+            ZIndex: =7
+
+        Label2 As label:
+            Align: =Align.Center
+            Color: =RGBA(65, 65, 65, 1)
+            Fill: =RGBA(196, 222, 251, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Text: ="Texto"
+            Visible: =popUpCatalogos
+            Width: =437
+            X: =455
+            Y: =223
+            ZIndex: =8
+
+        Icon1 As icon.CancelBadge:
+            Color: =RGBA(65, 65, 65, 1)
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =UpdateContext({popUpCatalogos:false});
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            Visible: =popUpCatalogos
+            Width: =35
+            X: =843
+            Y: =230
+            ZIndex: =9
+
+        ListBox1 As listbox:
+            BorderColor: =RGBA(196, 222, 251, 1)
+            Color: =RGBA(65, 65, 65, 1)
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            Height: =262
+            HoverColor: =RGBA(65, 65, 65, 1)
+            HoverFill: =RGBA(107, 165, 231, 0.2)
+            Items: =Filter(TiposCatalogos, Estatus = true)
+            PressedColor: =RGBA(65, 65, 65, 1)
+            PressedFill: =RGBA(107, 165, 231, 0.5)
+            SelectionColor: =RGBA(65, 65, 65, 1)
+            SelectionFill: =RGBA(196, 222, 251, 1)
+            Visible: =popUpCatalogos
+            X: =515
+            Y: =297
+            ZIndex: =10
 
