@@ -125,7 +125,8 @@
                     =// Iniciamos loading
                     UpdateContext({vsbLoading:true});
                     
-                    UpdateContext({vsbNewCRContainer:true});
+                    //UpdateContext({vsbNewCRContainer:true});;
+                    UpdateContext({vsbEditCRContainer:true});
                     // Finalizamos loading
                     UpdateContext({vsbLoading:false});
                 PressedFill: =RGBA(56, 136, 210, 0.2)
@@ -429,6 +430,18 @@
         Visible: =vsbLoading
         ZIndex: =18
 
+    rvs_lbl_editContainer_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =33
+        Text: ="Container"
+        Visible: =vsbEditCRContainer
+        X: =598
+        Y: =318
+        ZIndex: =35
+
     crc_grp_newCRContainer_1 As group:
         Height: =5
         Width: =5
@@ -706,32 +719,32 @@
         crc_fig_fondoEditCRC_1 As rectangle:
             Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =1366
             ZIndex: =21
 
         crc_fig_subfondoEditCRC_1 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =If(IsBlank(responseSave.response),400,465)
-            Visible: =vsbEditRglContainer
-            Width: =466
-            X: =451
-            Y: =155
+            Height: =503
+            Visible: =vsbEditCRContainer
+            Width: =555
+            X: =414
+            Y: =117
             ZIndex: =22
 
-        rvs_lbl_tituloEditContainer_1 As label:
+        crc_lbl_tituloEditCRContainer_1 As label:
             Align: =Align.Center
             Color: =RGBA(71, 71, 71, 1)
             Fill: =RGBA(196, 222, 251, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Height: =50
+            Height: =44
             Size: =15
-            Text: ="Editar Regla de Volumen"
-            Visible: =vsbEditRglContainer
-            Width: =466
-            X: =451
-            Y: =155
+            Text: ="Editar Cross Reference Container"
+            Visible: =vsbEditCRContainer
+            Width: =555
+            X: =414
+            Y: =117
             ZIndex: =23
 
         rvs_lbl_editRazonSocial_Container_1 As label:
@@ -741,9 +754,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             Text: ="Razón Social"
-            Visible: =vsbEditRglContainer
-            X: =609
-            Y: =233
+            Visible: =vsbEditCRContainer
+            X: =595
+            Y: =169
             ZIndex: =24
 
         rvs_dpd_editRazonSocial_Container_1 As combobox:
@@ -773,10 +786,10 @@
             SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_editRazonSocial_Container_1.SearchText,"NombreRazonSocial")
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =437
-            X: =465
-            Y: =257
+            X: =463
+            Y: =192
             ZIndex: =25
 
         rvs_lbl_editContainerType_1 As label:
@@ -786,9 +799,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =25
             Text: ="Container Type"
-            Visible: =vsbEditRglContainer
-            X: =609
-            Y: =312
+            Visible: =vsbEditCRContainer
+            X: =595
+            Y: =244
             ZIndex: =26
 
         rvs_dpd_editContainerType_1 As combobox:
@@ -814,10 +827,10 @@
             SearchFields: =["Value"]
             SearchItems: =[]
             SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
-            X: =465
-            Y: =337
+            X: =463
+            Y: =273
             ZIndex: =27
 
         rvs_lbl_editContainer_1 As label:
@@ -825,11 +838,11 @@
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
-            Height: =25
+            Height: =33
             Text: ="Container"
-            Visible: =vsbEditRglContainer
-            X: =609
-            Y: =391
+            Visible: =vsbEditCRContainer
+            X: =599
+            Y: =389
             ZIndex: =28
 
         rvs_dpd_editContainer_1 As combobox:
@@ -853,13 +866,13 @@
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in rvs_dpd_editContainerType_1.SelectedItems),CONTAINER),rvs_dpd_editContainer_1.SearchText,"Value")
             SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
-            X: =465
+            X: =462
             Y: =416
             ZIndex: =29
 
-        rvs_icn_editContainer_Cerrar_1 As icon.CancelBadge:
+        crc_icn_editCRContainer_Cerrar_1 As icon.CancelBadge:
             Color: =RGBA(71, 71, 71, 1)
             Height: =35
             Icon: =Icon.CancelBadge
@@ -875,10 +888,10 @@
             PaddingLeft: =5
             PaddingRight: =5
             PaddingTop: =5
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =35
-            X: =868
-            Y: =162
+            X: =931
+            Y: =52
             ZIndex: =30
 
         crc_btn_editCRContainer_act_1 As button:
@@ -946,10 +959,10 @@
                 UpdateContext({vsbLoadingNewRglProd:false});
             PressedFill: =RGBA(56, 136, 210, 1)
             Text: ="Actualizar"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =130
-            X: =619
-            Y: =494
+            X: =618
+            Y: =560
             ZIndex: =31
 
         crc_lbl_editMsj_Container_1 As label:
@@ -959,10 +972,10 @@
             FontWeight: =FontWeight.Semibold
             Height: =59
             Text: =responseSave.response
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =438
-            X: =465
-            Y: =549
+            X: =451
+            Y: =620
             ZIndex: =32
 
         crc_lbl_editStatus_1 As label:
@@ -972,10 +985,10 @@
             FontWeight: =FontWeight.Semibold
             Height: =28
             Text: ="Estatus"
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =100
-            X: =465
-            Y: =478
+            X: =439
+            Y: =467
             ZIndex: =33
 
         crc_tgg_editContainer_1 As toggleSwitch:
@@ -985,9 +998,18 @@
             Height: =35
             ShowLabel: =false
             TrueFill: =RGBA(54, 176, 75, 1)
-            Visible: =vsbEditRglContainer
+            Visible: =vsbEditCRContainer
             Width: =50
-            X: =490
-            Y: =506
+            X: =464
+            Y: =500
             ZIndex: =34
+
+    TextInput2 As text:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        Default: ="Entrada de texto"
+        Height: =38
+        Width: =435
+        X: =465
+        Y: =345
+        ZIndex: =36
 
