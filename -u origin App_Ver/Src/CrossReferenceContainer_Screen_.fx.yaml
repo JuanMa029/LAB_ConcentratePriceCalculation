@@ -687,6 +687,7 @@
             ZIndex: =19
 
         crc_txt_newCEmbotellador_1 As text:
+            BorderColor: =RGBA(107, 165, 231, 1)
             Default: =""
             Visible: =vsbNewCRContainer
             Width: =438
