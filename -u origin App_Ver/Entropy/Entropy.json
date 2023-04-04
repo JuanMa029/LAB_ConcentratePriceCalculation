@@ -500,11 +500,8 @@
     "po_txt_competitive_2": 262,
     "po_txt_competitive_3": 1159,
     "po_txt_hfmC_2": 267,
-    "po_txt_hfmC_3": 1164,
     "po_txt_hfmS_2": 268,
-    "po_txt_hfmS_3": 1165,
     "po_txt_ownerG_2": 266,
-    "po_txt_ownerG_3": 1163,
     "po_txt_product_1": 260,
     "po_txt_product_2": 1157,
     "po_txt_region_2": 264,
@@ -1173,7 +1170,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "04/04/2023 00:15:42",
+  "HeaderLastSavedDateTimeUTC": "04/04/2023 00:19:10",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0d388ce0-914b-4f05-9f0f-ae6297681ed5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/0b4ce9e9325b48f3917706201ca54074\"",
@@ -2376,11 +2373,8 @@
     "po_txt_competitive_2": {},
     "po_txt_competitive_3": {},
     "po_txt_hfmC_2": {},
-    "po_txt_hfmC_3": {},
     "po_txt_hfmS_2": {},
-    "po_txt_hfmS_3": {},
     "po_txt_ownerG_2": {},
-    "po_txt_ownerG_3": {},
     "po_txt_product_1": {},
     "po_txt_product_2": {},
     "po_txt_region_2": {},
@@ -3545,11 +3539,8 @@
     "po_txt_competitive_2": 405,
     "po_txt_competitive_3": 405,
     "po_txt_hfmC_2": 410,
-    "po_txt_hfmC_3": 410,
     "po_txt_hfmS_2": 411,
-    "po_txt_hfmS_3": 411,
     "po_txt_ownerG_2": 409,
-    "po_txt_ownerG_3": 409,
     "po_txt_product_1": 403,
     "po_txt_product_2": 403,
     "po_txt_region_2": 407,
@@ -4268,7 +4259,7 @@
       "toggleSwitch": 12
     },
     "DeserializationLoadTime": 8.1106368,
-    "ErrorCount": 48
+    "ErrorCount": 41
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

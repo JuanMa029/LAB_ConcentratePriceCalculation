@@ -407,11 +407,11 @@
                     OnSelect: =Select(Parent)
                     Size: =12
                     Width: =crc_btn_headerArchivoF_1.Width
-                    X: =crc_btn_headerArchivoF_1.X
+                    X: =411
                     ZIndex: =2
 
                 po_txt_competitive_3 As text:
-                    Default: =ThisItem.COMPETITIVE_CATEGORY
+                    Default: =ThisItem.'Container Pepsico'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
@@ -420,11 +420,11 @@
                     OnSelect: =Select(Parent)
                     Size: =12
                     Width: =crc_btn_headerCPepsico_1.Width
-                    X: =crc_btn_headerCPepsico_1.X
+                    X: =631
                     ZIndex: =3
 
                 po_txt_subcategory_3 As text:
-                    Default: =ThisItem.SUBCATEGORY
+                    Default: =ThisItem.'Container Embotellador'
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
@@ -432,11 +432,11 @@
                     Font: =Font.Lato
                     Size: =12
                     Width: =crc_btn_headerCEmbote_1.Width
-                    X: =crc_btn_headerCEmbote_1.X
+                    X: =851
                     ZIndex: =4
 
                 po_txt_region_3 As text:
-                    Default: =ThisItem.BRAND
+                    Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
@@ -444,11 +444,11 @@
                     Font: =Font.Lato
                     Size: =12
                     Width: =crc_btn_headerStatus_1.Width
-                    X: =crc_btn_headerStatus_1.X
+                    X: =1071
                     ZIndex: =5
 
                 po_txt_sugarC_3 As text:
-                    Default: =ThisItem.SUGAR_CONTENT
+                    Default: =
                     DisabledBorderColor: =RGBA(0, 18, 107, 1)
                     DisabledColor: =RGBA(0, 0, 0, 1)
                     DisabledFill: =RGBA(255, 255, 255, 1)
@@ -456,44 +456,8 @@
                     Font: =Font.Lato
                     Size: =12
                     Width: =crc_btn_headerEdit_1.Width
-                    X: =crc_btn_headerEdit_1.X
+                    X: =1181
                     ZIndex: =6
-
-                po_txt_ownerG_3 As text:
-                    Default: =ThisItem.OWNER_GROUP
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =po_btn_OwnerG_1.Width
-                    X: =1200
-                    ZIndex: =7
-
-                po_txt_hfmC_3 As text:
-                    Default: =ThisItem.HFM_CATEGORY
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =po_btn_hfmC_1.Width
-                    X: =1200
-                    ZIndex: =8
-
-                po_txt_hfmS_3 As text:
-                    Default: =ThisItem.HFM_SUBCATEGORY
-                    DisabledBorderColor: =RGBA(0, 18, 107, 1)
-                    DisabledColor: =RGBA(0, 0, 0, 1)
-                    DisabledFill: =RGBA(255, 255, 255, 1)
-                    DisplayMode: =DisplayMode.Disabled
-                    Font: =Font.Lato
-                    Size: =12
-                    Width: =po_btn_hfmS_1.Width
-                    X: =1200
-                    ZIndex: =9
 
                 po_txt_product_2 As text:
                     Default: =ThisItem.'Razon Social'
@@ -505,7 +469,7 @@
                     OnSelect: =Select(Parent)
                     Size: =12
                     Width: =crc_btn_headerRazonSocial_1.Width
-                    X: =crc_btn_headerRazonSocial_1.X
+                    X: =16
                     ZIndex: =10
 
     crps_cmp_headerPrincipal_1 As HeaderPrincipal:
