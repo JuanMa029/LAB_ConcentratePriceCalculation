@@ -430,7 +430,7 @@
         Visible: =vsbLoading
         ZIndex: =18
 
-    rvs_lbl_editContainer_2 As label:
+    crc_lbl_editCEmbotellador_1 As label:
         Align: =Align.Center
         Color: =RGBA(5, 28, 87, 1)
         Font: =Font.Lato
@@ -1004,7 +1004,7 @@
             Y: =500
             ZIndex: =34
 
-    TextInput2 As text:
+    crc_txt_editCEmbotellador_1 As text:
         BorderColor: =RGBA(107, 165, 231, 1)
         Default: ="Entrada de texto"
         Height: =38
