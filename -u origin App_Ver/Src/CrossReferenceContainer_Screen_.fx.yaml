@@ -430,6 +430,19 @@
         Visible: =vsbLoading
         ZIndex: =18
 
+    crc_lbl_editCEmbotellador_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =27
+        Text: ="Container Embotellador"
+        Visible: =vsbEditCRContainer
+        Width: =226
+        X: =570
+        Y: =421
+        ZIndex: =35
+
     crc_grp_newCRContainer_1 As group:
         Height: =5
         Width: =5
@@ -992,19 +1005,6 @@
             X: =461
             Y: =527
             ZIndex: =34
-
-    crc_lbl_editCEmbotellador_1 As label:
-        Align: =Align.Center
-        Color: =RGBA(5, 28, 87, 1)
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        Height: =27
-        Text: ="Container Embotellador"
-        Visible: =vsbEditCRContainer
-        Width: =226
-        X: =570
-        Y: =421
-        ZIndex: =35
 
     crc_txt_editCEmbotellador_1 As text:
         BorderColor: =RGBA(204, 231, 246, 1)

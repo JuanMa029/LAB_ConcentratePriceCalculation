@@ -830,10 +830,10 @@
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
                         RazonSocial:crps_dpd_newRazonSocial_XrefProduct.Selected.NombreRazonSocial,
                         IdRazonSocial: crps_dpd_newRazonSocial_XrefProduct.Selected.ID,
-                        Subcategory: Concat(crps_dpd_newArchivoFuente_XrefProduct.SelectedItems,Result,";"),
-                        Brand: Concat(rvs_dpd_newBrand_Product_1.SelectedItems,Result,";"),
-                        Product: Concat(crps_dpd_newProductPepsico_XrefProduct.SelectedItems,PRODUCT,";"),
-                        ProductID: Concat(crps_dpd_newProductPepsico_XrefProduct.SelectedItems,PRODUCT_ID,";"),
+                        ArchivoFuente: crps_dpd_newArchivoFuente_XrefProduct.Selected.NombreArchivoFuente,
+                        IdArchivoFuente: crps_dpd_newArchivoFuente_XrefProduct.Selected.ID,
+                        ProductoEmbotellador: crps_txt_newProductoEmb_XrefProduct.Text ,
+                        ProductoPepsico: crps_dpd_newProductPepsico_XrefProduct.Selected.Value,
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
                     }
