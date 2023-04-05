@@ -618,14 +618,14 @@
         Y: =40
         ZIndex: =32
 
-        rvs_fig_fondoNewProduct_1 As rectangle:
+        crps_fig_fondoNew_XrefProduct As rectangle:
             Fill: =RGBA(31, 95, 169, 0.5)
             Height: =768
             Visible: =vsbNewXrefProduct
             Width: =1366
             ZIndex: =16
 
-        rvs_fig_subfondoNew_Product_1 As rectangle:
+        crps_fig_subfondoNew_XrefProduct As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =If(IsBlank(responseSave.response),458,543)
             Visible: =vsbNewXrefProduct
@@ -634,7 +634,7 @@
             Y: =161
             ZIndex: =17
 
-        rvs_lbl_tituloNewProduct_1 As label:
+        crps_lbl_tituloNew_XrefProduct As label:
             Align: =Align.Center
             Color: =RGBA(71, 71, 71, 1)
             Fill: =RGBA(196, 222, 251, 1)
@@ -649,7 +649,7 @@
             Y: =161
             ZIndex: =18
 
-        rvs_lbl_newRazonSocial_Product_1 As label:
+        crps_lbl_newRazonSocial_XrefProduct As label:
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
@@ -661,7 +661,7 @@
             Y: =239
             ZIndex: =19
 
-        rvs_dpd_newRazonSocial_Product_1 As combobox:
+        crps_dpd_newRazonSocial_XrefProduct As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -677,7 +677,7 @@
             PressedColor: =RGBA(65, 65, 65, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["NombreRazonSocial"]
-            SearchItems: =Search(Filter(RazonSocial,Estatus = true),rvs_dpd_newRazonSocial_Product_1.SearchText,"NombreRazonSocial")
+            SearchItems: =Search(Filter(RazonSocial,Estatus = true),crps_dpd_newRazonSocial_XrefProduct.SearchText,"NombreRazonSocial")
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
             Visible: =vsbNewXrefProduct
@@ -686,7 +686,7 @@
             Y: =265
             ZIndex: =20
 
-        rvs_lbl_newSubcategory_Product_1 As label:
+        crps_lbl_newArchivoFuente_XrefProduct As label:
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
@@ -698,7 +698,7 @@
             Y: =318
             ZIndex: =21
 
-        rvs_dpd_newSubcategory_Product_1 As combobox:
+        crps_dpd_newArchivoFuente_XrefProduct As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -713,7 +713,7 @@
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["NombreArchivoFuente"]
-            SearchItems: =Search(Filter(ArchivoFuente, Estatus = true),rvs_dpd_newSubcategory_Product_1.SearchText,"NombreArchivoFuente")
+            SearchItems: =Search(Filter(ArchivoFuente, Estatus = true),crps_dpd_newArchivoFuente_XrefProduct.SearchText,"NombreArchivoFuente")
             SelectionFill: =RGBA(107, 165, 231, 1)
             SelectMultiple: =false
             Visible: =vsbNewXrefProduct
@@ -722,7 +722,7 @@
             Y: =343
             ZIndex: =22
 
-        rvs_lbl_newBrand_Product_1 As label:
+        crps_lbl_newProductoEmb_XrefProduct As label:
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
@@ -734,7 +734,7 @@
             Y: =397
             ZIndex: =23
 
-        TextInput1 As text:
+        crps_txt_newProductoEmb_XrefProduct As text:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             Clear: =true
@@ -749,7 +749,7 @@
             Y: =422
             ZIndex: =24
 
-        rvs_lbl_newProduct_1 As label:
+        crps_lbl_newProductoPepsi_XrefProduct As label:
             Color: =RGBA(5, 28, 87, 1)
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
@@ -761,7 +761,7 @@
             Y: =476
             ZIndex: =25
 
-        rvs_dpd_newProduct_1 As combobox:
+        crps_dpd_newProductoPepsi_XrefProduct As combobox:
             BorderColor: =RGBA(107, 165, 231, 1)
             BorderThickness: =1
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -776,7 +776,7 @@
             PressedColor: =RGBA(71, 71, 71, 1)
             PressedFill: =RGBA(56, 136, 210, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(colProductDist,rvs_dpd_newProduct_1.SearchText,"Value")
+            SearchItems: =Search(colProductDist,crps_dpd_newProductoPepsi_XrefProduct.SearchText,"Value")
             SelectionFill: =RGBA(107, 165, 231, 1)
             Visible: =vsbNewXrefProduct
             Width: =438
@@ -784,16 +784,16 @@
             Y: =501
             ZIndex: =26
 
-        rvs_icn_newProduct_Cerrar_1 As icon.CancelBadge:
+        crps_icn_cerrarnew_XrefProduct As icon.CancelBadge:
             Color: =RGBA(71, 71, 71, 1)
             Height: =35
             Icon: =Icon.CancelBadge
             OnSelect: |-
                 =// Realizamos Reset a los componentes
-                Reset(rvs_dpd_newRazonSocial_Product_1);
-                Reset(rvs_dpd_newSubcategory_Product_1);
-                Reset(TextInput1);
-                Reset(rvs_dpd_newProduct_1);
+                Reset(crps_dpd_newRazonSocial_XrefProduct);
+                Reset(crps_dpd_newArchivoFuente_XrefProduct);
+                Reset(crps_txt_newProductoEmb_XrefProduct);
+                Reset(crps_dpd_newProductoPepsi_XrefProduct);
                 Set(responseSave,Blank());
                 UpdateContext({vsbNewXrefProduct:false});
             PaddingBottom: =5
@@ -806,7 +806,7 @@
             Y: =168
             ZIndex: =27
 
-        rvs_btn_newProduct_Agregar_3 As button:
+        crps_btn_agregarNew_XrefProduct As button:
             Fill: =RGBA(107, 165, 231, 1)
             Font: =Font.Lato
             HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
@@ -815,7 +815,7 @@
                 UpdateContext({vsbLoadingNewRglProd:true});
                 Set(responseSave,Blank());
                 //__ Validamos que no existan campos vacios
-                If(IsBlank(rvs_dpd_newRazonSocial_Product_1.Selected) || IsEmpty(rvs_dpd_newRazonSocial_Product_1.Selected) || IsBlank(rvs_dpd_newSubcategory_Product_1.Selected) || IsEmpty(rvs_dpd_newSubcategory_Product_1.Selected) || IsBlank(rvs_dpd_newBrand_Product_1.Selected) || IsEmpty(rvs_dpd_newBrand_Product_1.Selected) || IsBlank(rvs_dpd_newProduct_1.Selected) || IsEmpty(rvs_dpd_newProduct_1.Selected),
+                If(IsBlank(crps_dpd_newRazonSocial_XrefProduct.Selected) || IsEmpty(crps_dpd_newRazonSocial_XrefProduct.Selected) || IsBlank(crps_dpd_newArchivoFuente_XrefProduct.Selected) || IsEmpty(crps_dpd_newArchivoFuente_XrefProduct.Selected) || IsBlank(rvs_dpd_newBrand_Product_1.Selected) || IsEmpty(rvs_dpd_newBrand_Product_1.Selected) || IsBlank(crps_dpd_newProductoPepsi_XrefProduct.Selected) || IsEmpty(crps_dpd_newProductoPepsi_XrefProduct.Selected),
                     Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
                 //__ Guardamos en una colección los datos de la solicitud
                 Clear(colReglaVolProduct_);
@@ -827,12 +827,12 @@
                         NombreUser: varUserName,
                         FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
                         HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        RazonSocial:rvs_dpd_newRazonSocial_Product_1.Selected.NombreRazonSocial,
-                        IdRazonSocial: rvs_dpd_newRazonSocial_Product_1.Selected.ID,
-                        Subcategory: Concat(rvs_dpd_newSubcategory_Product_1.SelectedItems,Result,";"),
+                        RazonSocial:crps_dpd_newRazonSocial_XrefProduct.Selected.NombreRazonSocial,
+                        IdRazonSocial: crps_dpd_newRazonSocial_XrefProduct.Selected.ID,
+                        Subcategory: Concat(crps_dpd_newArchivoFuente_XrefProduct.SelectedItems,Result,";"),
                         Brand: Concat(rvs_dpd_newBrand_Product_1.SelectedItems,Result,";"),
-                        Product: Concat(rvs_dpd_newProduct_1.SelectedItems,PRODUCT,";"),
-                        ProductID: Concat(rvs_dpd_newProduct_1.SelectedItems,PRODUCT_ID,";"),
+                        Product: Concat(crps_dpd_newProductoPepsi_XrefProduct.SelectedItems,PRODUCT,";"),
+                        ProductID: Concat(crps_dpd_newProductoPepsi_XrefProduct.SelectedItems,PRODUCT_ID,";"),
                         Year_Solicitud: Value(Year(Now())),
                         IdMes: Month(Now())
                     }
@@ -845,10 +845,10 @@
                 //__ Realizamos Clear a la coleccion de Solicitud
                 If(responseNewProd = "Ok",
                     UpdateContext({vsbNewRglProduct:false});
-                    Reset(rvs_dpd_newRazonSocial_Product_1);
-                    Reset(rvs_dpd_newSubcategory_Product_1);
-                    Reset(TextInput1);
-                    Reset(rvs_dpd_newProduct_1);
+                    Reset(crps_dpd_newRazonSocial_XrefProduct);
+                    Reset(crps_dpd_newArchivoFuente_XrefProduct);
+                    Reset(crps_txt_newProductoEmb_XrefProduct);
+                    Reset(crps_dpd_newProductoPepsi_XrefProduct);
                     Refresh(JerarquiaGeografica);
                     UpdateContext({vsbPopUpOk:true});
                     Set(responseSave,Blank());
@@ -872,7 +872,7 @@
             Y: =557
             ZIndex: =28
 
-        rvs_lbl_newMsj_Product_1 As label:
+        crps_lbl_newMsj_XrefProduct As label:
             Align: =Align.Center
             Color: =RGBA(184, 0, 0, 1)
             Font: =Font.Lato
