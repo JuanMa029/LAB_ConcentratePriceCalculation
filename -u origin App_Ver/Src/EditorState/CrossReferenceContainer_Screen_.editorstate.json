@@ -6741,7 +6741,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_dpd_newCPepsico_1",
-      "ParentIndex": 24,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10887,7 +10887,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_editCEmbotellador_1",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12458,7 +12458,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_editStatus_1",
-      "ParentIndex": 27,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12775,7 +12775,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newArchivoFuente_1",
-      "ParentIndex": 18,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13092,7 +13092,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newCEmbotellador_1",
-      "ParentIndex": 26,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13409,7 +13409,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_lbl_newCPepsico_1",
-      "ParentIndex": 22,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15908,7 +15908,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_tgg_editContainer_1",
-      "ParentIndex": 29,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16058,14 +16058,7 @@
     "crc_txt_editCEmbotellador_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Default",
         "Mode",
         "Format",
         "VirtualKeyboardMode",
@@ -16073,7 +16066,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingString": "RGBA(0, 18, 107, 1)",
           "InvariantPropertyName": "BorderColor",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -16096,22 +16089,8 @@
         "Align",
         "X",
         "Y",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
+        "Height",
         "DisplayMode",
         "ZIndex",
         "RadiusTopLeft",
@@ -16399,7 +16378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "crc_txt_newCEmbotellador_1",
-      "ParentIndex": 28,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
