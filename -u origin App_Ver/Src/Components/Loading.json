@@ -79,7 +79,7 @@
         "Name": "Image1",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 1199,
+        "PublishOrderIndex": 1198,
         "Rules": [
           {
             "Category": "Data",
