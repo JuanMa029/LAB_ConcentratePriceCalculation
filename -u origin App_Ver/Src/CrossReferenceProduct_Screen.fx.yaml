@@ -607,7 +607,7 @@
             Y: =285
             ZIndex: =15
 
-    Loading_1 As Loading:
+    crps_cmp_loadingXrefProduct As Loading:
         Visible: =vsbLoadingXrefProduct
         ZIndex: =30
 
