@@ -164,9 +164,6 @@
           "CrossReferenceContainer": {
             "tableName": "458be5ab-6a10-47a2-a309-9933bf6989e4"
           },
-          "CrossReferenceProduct": {
-            "tableName": "05679eb5-898e-4b19-a7b3-62996ba2e09d"
-          },
           "Embotelladores": {
             "tableName": "29baceed-22ae-4c27-8d18-dfdd6e57b589"
           },
@@ -227,8 +224,7 @@
       "ArchivoFuente",
       "CrossReferenceContainer",
       "ConfiguracionTipoCambio",
-      "TiposCatalogos",
-      "CrossReferenceProduct"
+      "TiposCatalogos"
     ],
     "dependencies": {},
     "dependents": [
