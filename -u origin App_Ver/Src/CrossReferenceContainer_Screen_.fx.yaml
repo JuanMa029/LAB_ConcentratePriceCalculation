@@ -430,6 +430,295 @@
         Visible: =vsbLoading
         ZIndex: =18
 
+    crc_fig_fondoEditCRC_1 As rectangle:
+        Fill: =RGBA(31, 95, 169, 0.5)
+        Height: =768
+        Visible: =vsbEditCRContainer
+        Width: =1366
+        ZIndex: =21
+
+    crc_fig_subfondoEditCRC_1 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =503
+        Visible: =vsbEditCRContainer
+        Width: =555
+        X: =414
+        Y: =117
+        ZIndex: =22
+
+    crc_lbl_tituloEditCRContainer_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(71, 71, 71, 1)
+        Fill: =RGBA(196, 222, 251, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        Size: =15
+        Text: ="Editar Cross Reference Container"
+        Visible: =vsbEditCRContainer
+        Width: =555
+        X: =414
+        Y: =117
+        ZIndex: =23
+
+    crc_lbl_editRazonSocial_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =25
+        Text: ="Razón Social"
+        Visible: =vsbEditCRContainer
+        X: =576
+        Y: =175
+        ZIndex: =24
+
+    crc_dpd_editRazonSocial_1 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(65, 65, 65, 1)
+        DefaultSelectedItems: |-
+            =Filter(
+                Filter(RazonSocial,Estatus = true),NombreRazonSocial = varRazonSocial)
+        DisplayFields: =["NombreRazonSocial"]
+        Font: =Font.Lato
+        Height: =41
+        HoverColor: =RGBA(65, 65, 65, 1)
+        Items: =Filter(RazonSocial,Estatus = true)
+        OnChange: |
+            =// Reset al componente Brand
+            Reset(rvs_dpd_brand_Product);
+            // Generamos la lista Brand
+            Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),crc_dpd_editRazonSocial_1.Selected.Value,"SUBCATEGORY0"),BRAND),Value,";"))
+        PressedColor: =RGBA(65, 65, 65, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["NombreRazonSocial"]
+        SearchItems: =Search(Filter(RazonSocial,Estatus = true),crc_dpd_editRazonSocial_1.SearchText,"NombreRazonSocial")
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        SelectMultiple: =false
+        Visible: =vsbEditCRContainer
+        Width: =437
+        X: =465
+        Y: =204
+        ZIndex: =25
+
+    crc_lbl_editContainerType_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =25
+        Text: ="Archivo Fuente"
+        Visible: =vsbEditCRContainer
+        X: =595
+        Y: =259
+        ZIndex: =26
+
+    crc_dpd_editArchivoFuente_1 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(71, 71, 71, 1)
+        DefaultSelectedItems: |-
+            =Filter(
+                Filter(
+                    ForAll(Distinct(colLabContainerCompleto,CONTAINER_TYPE),{Value:ThisRecord.Value}),Value in ForAll(varListContainerType,{Value:ThisRecord.Value})),Value in ForAll(varListContainerType,{Value:ThisRecord.Value}))
+        DisplayFields: =["Value"]
+        Font: =Font.Lato
+        HoverColor: =RGBA(71, 71, 71, 1)
+        IsSearchable: =false
+        Items: |-
+            =ForAll(Distinct(colLabContainerCompleto,CONTAINER_TYPE),{Value:ThisRecord.Value})
+        PressedColor: =RGBA(71, 71, 71, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        Visible: =vsbEditCRContainer
+        Width: =438
+        X: =463
+        Y: =288
+        ZIndex: =27
+
+    crc_lbl_editCPepsico_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =27
+        Text: ="Container Pepsico"
+        Visible: =vsbEditCRContainer
+        Width: =192
+        X: =576
+        Y: =335
+        ZIndex: =28
+
+    crc_dpd_editCPepsico_1 As combobox:
+        BorderColor: =RGBA(107, 165, 231, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(0, 18, 107, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverFill: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(71, 71, 71, 1)
+        DefaultSelectedItems: |-
+            =Distinct(
+                Filter(
+                    Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER in ForAll(varListContainer,{Value:ThisRecord.Value})),CONTAINER)
+        DisplayFields: =["Value"]
+        Font: =Font.Lato
+        HoverColor: =RGBA(71, 71, 71, 1)
+        Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER)
+        PressedColor: =RGBA(71, 71, 71, 1)
+        PressedFill: =RGBA(56, 136, 210, 1)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER),crc_dpd_editCPepsico_1.SearchText,"Value")
+        SelectionFill: =RGBA(107, 165, 231, 1)
+        Visible: =vsbEditCRContainer
+        Width: =438
+        X: =465
+        Y: =368
+        ZIndex: =29
+
+    crc_icn_editCRContainer_Cerrar_1 As icon.CancelBadge:
+        Color: =RGBA(71, 71, 71, 1)
+        Height: =35
+        Icon: =Icon.CancelBadge
+        OnSelect: |-
+            =// Realizamos Reset a los componentes
+            Reset(crc_dpd_editRazonSocial_1);
+            Reset(crc_dpd_editArchivoFuente_1);
+            Reset(crc_dpd_editCPepsico_1);
+            Reset(crc_tgg_editContainer_1);
+            Set(responseSave,Blank());
+            UpdateContext({vsbEditRglContainer:false});
+        PaddingBottom: =5
+        PaddingLeft: =5
+        PaddingRight: =5
+        PaddingTop: =5
+        Visible: =vsbEditCRContainer
+        Width: =35
+        X: =925
+        Y: =122
+        ZIndex: =30
+
+    crc_btn_editCRContainer_act_1 As button:
+        Fill: =RGBA(107, 165, 231, 1)
+        Font: =Font.Lato
+        HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
+        OnSelect: |
+            =// Activamos componente loading
+            UpdateContext({vsbLoadingNewRglProd:true});
+            Set(responseSave,Blank());
+            //__ Validamos que no existan campos vacios
+            If(IsBlank(rvs_dpd_editRazonSocial_Container.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Container.Selected) || IsBlank(rvs_dpd_editContainerType.Selected) || IsEmpty(rvs_dpd_editContainerType.Selected) || IsBlank(rvs_dpd_editContainer.Selected) || IsEmpty(rvs_dpd_editContainer.Selected),
+                Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
+            //__ Guardamos en una colección los datos de la solicitud
+            Clear(colReglaVolContainer);
+                Collect(
+                colReglaVolContainer,
+                {
+                    EmailUser: varEmail,
+                    GPID: varUserGPID,
+                    NombreUser: varUserName,
+                    FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
+                    HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
+                    RazonSocial:rvs_dpd_editRazonSocial_Container.Selected.NombreRazonSocial,
+                    IdRazonSocial: rvs_dpd_editRazonSocial_Container.Selected.ID,
+                    ContainerType: Concat(Sort(rvs_dpd_editContainerType.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                    Container: Concat(Sort(rvs_dpd_editContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
+                    //ContainerID: Concat(rvs_dpd_editContainer.SelectedItems,CONTAINER_ID,";"),
+                    Estatus: rvs_tgg_editContainer.Value,
+                    IDList: IdListRglContainer,
+                    RazonSocial_old: varRazonSocial,
+                    ContainerType_old: varContainerType,
+                    Container_old: varContainer,
+                    //ContainerID_old: varContainerID,
+                    Estatus_old: varEstatus,
+                    Year_Solicitud: Value(Year(Now())),
+                    IdMes: Month(Now())
+                }
+                );
+            
+                //__ Invocamos el Flujo de Automate
+            Set(varJSONRegla,JSON(colReglaVolContainer));
+            Set(responseSave,'[CPC]_EditRuleVolumenContainer'.Run(varJSONRegla));
+            Set(responseNewProd,responseSave.response);
+            //__ Realizamos Clear a la coleccion de Solicitud
+            If(responseNewProd = "Ok",
+                UpdateContext({vsbEditRglContainer:false});
+                Reset(rvs_dpd_editRazonSocial_Container);
+                Reset(rvs_dpd_editContainerType);
+                Reset(rvs_dpd_editContainer);
+                Reset(rvs_tgg_editContainer);
+                UpdateContext({vsbPopUpOk:true});
+                Set(responseSave,Blank());
+                Refresh(VolumeRuleContainer);
+            // Obtenemos Catalogo Volumen Product completo
+            ClearCollect(
+                    colContainerVlmRule,
+                    Filter(VolumeRuleContainer, IDRegla <= 2000),
+                    Filter(VolumeRuleContainer, IDRegla > 2000 && IDRegla <= 4000)
+            );
+                );
+            );
+            
+            // Desactivamos componente loading
+            UpdateContext({vsbLoadingNewRglProd:false});
+        PressedFill: =RGBA(56, 136, 210, 1)
+        Text: ="Actualizar"
+        Visible: =vsbEditCRContainer
+        Width: =130
+        X: =618
+        Y: =560
+        ZIndex: =31
+
+    crc_lbl_editMsj_Container_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        Text: =responseSave.response
+        Visible: =vsbEditCRContainer
+        Width: =438
+        X: =472
+        Y: =636
+        ZIndex: =32
+
+    crc_lbl_editStatus_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(5, 28, 87, 1)
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Text: ="Estatus"
+        Visible: =vsbEditCRContainer
+        Width: =100
+        X: =436
+        Y: =494
+        ZIndex: =33
+
+    crc_tgg_editContainer_1 As toggleSwitch:
+        BorderStyle: =BorderStyle.None
+        Default: =varEstatus
+        FalseFill: =RGBA(255, 0, 0, 1)
+        Height: =35
+        ShowLabel: =false
+        TrueFill: =RGBA(54, 176, 75, 1)
+        Visible: =vsbEditCRContainer
+        Width: =50
+        X: =461
+        Y: =527
+        ZIndex: =34
+
     crc_lbl_editCEmbotellador_1 As label:
         Align: =Align.Center
         Color: =RGBA(5, 28, 87, 1)
@@ -709,302 +998,6 @@
             X: =464
             Y: =507
             ZIndex: =20
-
-    rvs_grp_editContainer_1 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =35
-
-        crc_fig_fondoEditCRC_1 As rectangle:
-            Fill: =RGBA(31, 95, 169, 0.5)
-            Height: =768
-            Visible: =vsbEditCRContainer
-            Width: =1366
-            ZIndex: =21
-
-        crc_fig_subfondoEditCRC_1 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =503
-            Visible: =vsbEditCRContainer
-            Width: =555
-            X: =414
-            Y: =117
-            ZIndex: =22
-
-        crc_lbl_tituloEditCRContainer_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(71, 71, 71, 1)
-            Fill: =RGBA(196, 222, 251, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =44
-            Size: =15
-            Text: ="Editar Cross Reference Container"
-            Visible: =vsbEditCRContainer
-            Width: =555
-            X: =414
-            Y: =117
-            ZIndex: =23
-
-        crc_lbl_editRazonSocial_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(5, 28, 87, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =25
-            Text: ="Razón Social"
-            Visible: =vsbEditCRContainer
-            X: =576
-            Y: =175
-            ZIndex: =24
-
-        crc_dpd_editRazonSocial_1 As combobox:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 18, 107, 1)
-            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-            ChevronHoverFill: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(65, 65, 65, 1)
-            DefaultSelectedItems: |-
-                =Filter(
-                    Filter(RazonSocial,Estatus = true),NombreRazonSocial = varRazonSocial)
-            DisplayFields: =["NombreRazonSocial"]
-            Font: =Font.Lato
-            Height: =41
-            HoverColor: =RGBA(65, 65, 65, 1)
-            Items: =Filter(RazonSocial,Estatus = true)
-            OnChange: |
-                =// Reset al componente Brand
-                Reset(rvs_dpd_brand_Product);
-                // Generamos la lista Brand
-                Set(varConcatBrand,Concat(Distinct(Search(Filter(colProductVlmRule, RAZONSOCIAL = rvs_dpd_razonSocial_Product.Selected.Value),crc_dpd_editRazonSocial_1.Selected.Value,"SUBCATEGORY0"),BRAND),Value,";"))
-            PressedColor: =RGBA(65, 65, 65, 1)
-            PressedFill: =RGBA(56, 136, 210, 1)
-            SearchFields: =["NombreRazonSocial"]
-            SearchItems: =Search(Filter(RazonSocial,Estatus = true),crc_dpd_editRazonSocial_1.SearchText,"NombreRazonSocial")
-            SelectionFill: =RGBA(107, 165, 231, 1)
-            SelectMultiple: =false
-            Visible: =vsbEditCRContainer
-            Width: =437
-            X: =465
-            Y: =204
-            ZIndex: =25
-
-        crc_lbl_editContainerType_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(5, 28, 87, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =25
-            Text: ="Archivo Fuente"
-            Visible: =vsbEditCRContainer
-            X: =595
-            Y: =259
-            ZIndex: =26
-
-        crc_dpd_editArchivoFuente_1 As combobox:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 18, 107, 1)
-            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-            ChevronHoverFill: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(71, 71, 71, 1)
-            DefaultSelectedItems: |-
-                =Filter(
-                    Filter(
-                        ForAll(Distinct(colLabContainerCompleto,CONTAINER_TYPE),{Value:ThisRecord.Value}),Value in ForAll(varListContainerType,{Value:ThisRecord.Value})),Value in ForAll(varListContainerType,{Value:ThisRecord.Value}))
-            DisplayFields: =["Value"]
-            Font: =Font.Lato
-            HoverColor: =RGBA(71, 71, 71, 1)
-            IsSearchable: =false
-            Items: |-
-                =ForAll(Distinct(colLabContainerCompleto,CONTAINER_TYPE),{Value:ThisRecord.Value})
-            PressedColor: =RGBA(71, 71, 71, 1)
-            PressedFill: =RGBA(56, 136, 210, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditCRContainer
-            Width: =438
-            X: =463
-            Y: =288
-            ZIndex: =27
-
-        crc_lbl_editCPepsico_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(5, 28, 87, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =27
-            Text: ="Container Pepsico"
-            Visible: =vsbEditCRContainer
-            Width: =192
-            X: =576
-            Y: =335
-            ZIndex: =28
-
-        crc_dpd_editCPepsico_1 As combobox:
-            BorderColor: =RGBA(107, 165, 231, 1)
-            BorderThickness: =1
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronFill: =RGBA(0, 18, 107, 1)
-            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
-            ChevronHoverFill: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(71, 71, 71, 1)
-            DefaultSelectedItems: |-
-                =Distinct(
-                    Filter(
-                        Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER in ForAll(varListContainer,{Value:ThisRecord.Value})),CONTAINER)
-            DisplayFields: =["Value"]
-            Font: =Font.Lato
-            HoverColor: =RGBA(71, 71, 71, 1)
-            Items: =Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER)
-            PressedColor: =RGBA(71, 71, 71, 1)
-            PressedFill: =RGBA(56, 136, 210, 1)
-            SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(Filter(colLabContainerCompleto,CONTAINER_TYPE in crc_dpd_editArchivoFuente_1.SelectedItems),CONTAINER),crc_dpd_editCPepsico_1.SearchText,"Value")
-            SelectionFill: =RGBA(107, 165, 231, 1)
-            Visible: =vsbEditCRContainer
-            Width: =438
-            X: =465
-            Y: =368
-            ZIndex: =29
-
-        crc_icn_editCRContainer_Cerrar_1 As icon.CancelBadge:
-            Color: =RGBA(71, 71, 71, 1)
-            Height: =35
-            Icon: =Icon.CancelBadge
-            OnSelect: |-
-                =// Realizamos Reset a los componentes
-                Reset(crc_dpd_editRazonSocial_1);
-                Reset(crc_dpd_editArchivoFuente_1);
-                Reset(crc_dpd_editCPepsico_1);
-                Reset(crc_tgg_editContainer_1);
-                Set(responseSave,Blank());
-                UpdateContext({vsbEditRglContainer:false});
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
-            Visible: =vsbEditCRContainer
-            Width: =35
-            X: =931
-            Y: =52
-            ZIndex: =30
-
-        crc_btn_editCRContainer_act_1 As button:
-            Fill: =RGBA(107, 165, 231, 1)
-            Font: =Font.Lato
-            HoverFill: =ColorFade(RGBA(56, 136, 210, 1), -20%)
-            OnSelect: |
-                =// Activamos componente loading
-                UpdateContext({vsbLoadingNewRglProd:true});
-                Set(responseSave,Blank());
-                //__ Validamos que no existan campos vacios
-                If(IsBlank(rvs_dpd_editRazonSocial_Container.Selected) || IsEmpty(rvs_dpd_editRazonSocial_Container.Selected) || IsBlank(rvs_dpd_editContainerType.Selected) || IsEmpty(rvs_dpd_editContainerType.Selected) || IsBlank(rvs_dpd_editContainer.Selected) || IsEmpty(rvs_dpd_editContainer.Selected),
-                    Notify("Para continuar, es necesario ingresar los datos correspondientes",NotificationType.Warning,5000),
-                //__ Guardamos en una colección los datos de la solicitud
-                Clear(colReglaVolContainer);
-                    Collect(
-                    colReglaVolContainer,
-                    {
-                        EmailUser: varEmail,
-                        GPID: varUserGPID,
-                        NombreUser: varUserName,
-                        FechaCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "dd/mm/yyyyy"),
-                        HoraCreacion: Text(DateTimeValue(Text( Now(),DateTimeFormat.ShortDateTime24)), "HH:mm"),
-                        RazonSocial:rvs_dpd_editRazonSocial_Container.Selected.NombreRazonSocial,
-                        IdRazonSocial: rvs_dpd_editRazonSocial_Container.Selected.ID,
-                        ContainerType: Concat(Sort(rvs_dpd_editContainerType.SelectedItems,Value,SortOrder.Ascending),Value,";"),
-                        Container: Concat(Sort(rvs_dpd_editContainer.SelectedItems,Value,SortOrder.Ascending),Value,";"),
-                        //ContainerID: Concat(rvs_dpd_editContainer.SelectedItems,CONTAINER_ID,";"),
-                        Estatus: rvs_tgg_editContainer.Value,
-                        IDList: IdListRglContainer,
-                        RazonSocial_old: varRazonSocial,
-                        ContainerType_old: varContainerType,
-                        Container_old: varContainer,
-                        //ContainerID_old: varContainerID,
-                        Estatus_old: varEstatus,
-                        Year_Solicitud: Value(Year(Now())),
-                        IdMes: Month(Now())
-                    }
-                    );
-                
-                    //__ Invocamos el Flujo de Automate
-                Set(varJSONRegla,JSON(colReglaVolContainer));
-                Set(responseSave,'[CPC]_EditRuleVolumenContainer'.Run(varJSONRegla));
-                Set(responseNewProd,responseSave.response);
-                //__ Realizamos Clear a la coleccion de Solicitud
-                If(responseNewProd = "Ok",
-                    UpdateContext({vsbEditRglContainer:false});
-                    Reset(rvs_dpd_editRazonSocial_Container);
-                    Reset(rvs_dpd_editContainerType);
-                    Reset(rvs_dpd_editContainer);
-                    Reset(rvs_tgg_editContainer);
-                    UpdateContext({vsbPopUpOk:true});
-                    Set(responseSave,Blank());
-                    Refresh(VolumeRuleContainer);
-                // Obtenemos Catalogo Volumen Product completo
-                ClearCollect(
-                        colContainerVlmRule,
-                        Filter(VolumeRuleContainer, IDRegla <= 2000),
-                        Filter(VolumeRuleContainer, IDRegla > 2000 && IDRegla <= 4000)
-                );
-                    );
-                );
-                
-                // Desactivamos componente loading
-                UpdateContext({vsbLoadingNewRglProd:false});
-            PressedFill: =RGBA(56, 136, 210, 1)
-            Text: ="Actualizar"
-            Visible: =vsbEditCRContainer
-            Width: =130
-            X: =618
-            Y: =560
-            ZIndex: =31
-
-        crc_lbl_editMsj_Container_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(184, 0, 0, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =59
-            Text: =responseSave.response
-            Visible: =vsbEditCRContainer
-            Width: =438
-            X: =451
-            Y: =620
-            ZIndex: =32
-
-        crc_lbl_editStatus_1 As label:
-            Align: =Align.Center
-            Color: =RGBA(5, 28, 87, 1)
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            Height: =28
-            Text: ="Estatus"
-            Visible: =vsbEditCRContainer
-            Width: =100
-            X: =436
-            Y: =494
-            ZIndex: =33
-
-        crc_tgg_editContainer_1 As toggleSwitch:
-            BorderStyle: =BorderStyle.None
-            Default: =varEstatus
-            FalseFill: =RGBA(255, 0, 0, 1)
-            Height: =35
-            ShowLabel: =false
-            TrueFill: =RGBA(54, 176, 75, 1)
-            Visible: =vsbEditCRContainer
-            Width: =50
-            X: =461
-            Y: =527
-            ZIndex: =34
 
     crc_txt_editCEmbotellador_1 As text:
         BorderColor: =RGBA(204, 231, 246, 1)
